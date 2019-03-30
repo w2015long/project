@@ -60,6 +60,16 @@
 		background: transparent;
 		border: none;
 	}
+	.user-panel{
+		background: #fefefe;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		border-radius: 8px;
+	}
+	.user-panel .btn-register{
+		width: 100%;
+	}
 	.panel-footer .text-muted{
 		margin-right: 15px;
 	}
