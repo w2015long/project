@@ -56,7 +56,9 @@ router.post('/login', (req, res)=> {
 	userModel.findOne({username,password:hmac(password)},"-password -__v")
 	.then(user=>{
 		if(user){//登录
-			result.data = user
+			result.data = user;
+			//设置cookies.set( name, [ value ], [ options ] )
+			req.cookies.set('userInfo',JSON.stringify(user))
 			//并把数据返回到前台
 			res.json(result)
 		}else{//把新用户插入数据库
@@ -72,6 +74,16 @@ router.post('/login', (req, res)=> {
 			result.messige = '服务器出错，请稍后重试';
 			res.json(result)
 	})
+})
+
+//退出登录
+router.get('/logout', (req, res)=> {
+	let result = {
+		status:0,//success
+		messige:''
+	}
+	req.cookies.set('userInfo',null);
+	res.json(result)
 })
 
 module.exports = router

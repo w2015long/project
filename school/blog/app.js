@@ -1,7 +1,8 @@
 const express = require('express');
 const swig = require('swig')
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser') 
+const bodyParser = require('body-parser')
+const Cookies = require('cookies') 
 
 const app = express();
 const port = 3000;
@@ -42,6 +43,18 @@ app.set('view engine', 'html')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+//配置Cookies中间件
+app.use((req,res,next)=>{
+	req.cookies = new Cookies(req, res)
+	//console.log(req.cookies.get('userInfo'))
+	req.userInfo = null;
+	let userInfo = req.cookies.get('userInfo');
+	if(userInfo){
+		req.userInfo = JSON.parse(userInfo);
+	}
+
+	next()
+})
 
 //处理理由
 app.use('/',require('./routes/index.js'))
