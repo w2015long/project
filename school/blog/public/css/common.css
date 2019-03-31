@@ -1,4 +1,7 @@
 /*顶部导航开始*/
+	body{
+		background: #f0f0f0;
+	}
 	.link{
 		text-decoration: none!important;
 	}		
@@ -60,6 +63,7 @@
 		background: transparent;
 		border: none;
 	}
+	/*
 	.user-panel{
 		background: #fefefe;
 		padding-top: 10px;
@@ -70,6 +74,36 @@
 	.user-panel .btn-register{
 		width: 100%;
 	}
+	*/
+/*用户注册登录*/
+	.user-panel{
+		background: #fff;
+		padding-top:20px;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+	}
+	.user-panel .btn{
+		width:100%;
+	}
+	.user-panel .link{
+		margin-top: 10px;
+		display: block;
+		text-align: right;
+	}
+	#user-info{
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+	#user-info .link{
+		text-align: left;
+	}
+	.user-panel .err{
+		height: 30px;
+		line-height: 30px;
+		padding-left: 10px;
+	}
+/*用户注册登录*/
 	.panel-footer .text-muted{
 		margin-right: 15px;
 	}

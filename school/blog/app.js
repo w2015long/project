@@ -1,6 +1,7 @@
 const express = require('express');
 const swig = require('swig')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser') 
 
 const app = express();
 const port = 3000;
@@ -37,13 +38,15 @@ app.set('views', './views')
 app.set('view engine', 'html')
 
 
-app.get('/', (req, res) => {
-    //4.渲染模板
-    //第一个参数是相对于模板目录的文件
-    //第二个参数是传递给模板的数据
-    res.render('main/index')
-	
-});
+//配置bodyParser中间件
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+
+//处理理由
+app.use('/',require('./routes/index.js'))
+app.use("/user",require('./routes/user.js'));
+
 
 app.listen(port, () => console.log(`app listening on port ${port}`));
 
