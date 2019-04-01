@@ -25,7 +25,8 @@ router.post('/register', (req, res)=> {
 		}else{//把新用户插入数据库
 			userModel.insertMany({
 				username,
-				password:hmac(password)
+				password:hmac(password),
+				// isAdmin:true
 			})
 			.then(user=>{
 				res.json(result)
@@ -57,9 +58,12 @@ router.post('/login', (req, res)=> {
 	.then(user=>{
 		if(user){//登录
 			result.data = user;
+			/*
 			//设置cookies.set( name, [ value ], [ options ] )
 			req.cookies.set('userInfo',JSON.stringify(user))
-			//并把数据返回到前台
+			*/
+			//session设置cookies
+			req.session.userInfo = user
 			res.json(result)
 		}else{//把新用户插入数据库
 			result.status = 10;
@@ -82,7 +86,11 @@ router.get('/logout', (req, res)=> {
 		status:0,//success
 		messige:''
 	}
+	/*
+	//cookies方法
 	req.cookies.set('userInfo',null);
+	*/
+	req.session.destroy()
 	res.json(result)
 })
 

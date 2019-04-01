@@ -1,0 +1,33 @@
+{% extends './layout.html' %}
+
+{% block header %}
+  欢迎来到个人博客后台管理系统
+{% endblock %}
+
+{% block content %}
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>用户姓名</th>
+                  <th>用户ID</th>
+                  <th>管理权限</th>
+                </tr>
+              </thead>
+              <tbody>
+              	{% for data in users %}
+                <tr>
+                  <td>{{ data.username }}</td>
+                  <td>{{ data._id.toString() }}</td>
+                  <td>
+                  	{% if data.isAdmin %}
+                  		是
+                  	{% else %}	
+                  		否
+                  	{% endif %}
+                  </td>
+                </tr>
+ 				{% endfor %}
+              </tbody>
+            </table>
+
+{% endblock %}
