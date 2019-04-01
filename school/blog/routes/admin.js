@@ -22,7 +22,6 @@ router.get('/', (req, res)=> {
 router.get('/users', (req, res)=> {
 	userModel.find({},"-password -__v")
 	.then(users=>{
-		console.log(users)
 		res.render('admin/users_list',{
 			userInfo:req.userInfo,
 			users
