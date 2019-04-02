@@ -1,7 +1,7 @@
 
 const express = require('express')
 const router = express.Router()
-const categoryModel = require('../model/category.js')
+const articleModel = require('../model/article.js')
 const pagination = require('../util/pagination.js')
 
 router.use((req,res,next)=>{
@@ -18,26 +18,26 @@ router.get('/', (req, res)=> {
 
 	pagination({
 		page:req.query.page,
-		model:categoryModel,
+		model:articleModel,
 		query:{},
 		projection:"-__v",
 		sort:{order:-1}
 	})
 	.then(data=>{
-		res.render('admin/category_list',{
+		res.render('admin/article_list',{
 			userInfo:req.userInfo,
 			categories:data.docs,
 			page:data.page,
 			list:data.list,
 			pages:data.pages,
-			url:'/category'
+			url:'/article'
 		})		
 	})
 })
 
 //显示分类
 router.get('/add', (req, res)=> {
-  res.render('admin/category_add_edit',{
+  res.render('admin/article_add_edit',{
   	userInfo:req.userInfo
   })
 })
@@ -46,9 +46,9 @@ router.get('/add', (req, res)=> {
 router.post('/add', (req, res)=> {
 	//新增前查询是否数据库分类已存在
 	const {name,order} = req.body;
-	categoryModel.findOne({name})
-	.then(category=>{
-		if(category){//分类已存在
+	articleModel.findOne({name})
+	.then(article=>{
+		if(article){//分类已存在
 			res.render('admin/error',{
 				userInfo:req.userInfo,
 				message:'添加分类失败,分类已存在',
@@ -56,12 +56,12 @@ router.post('/add', (req, res)=> {
 			})
 
 		}else{//新增分类
-			categoryModel.insertMany({name,order})
+			articleModel.insertMany({name,order})
 			.then(categories=>{
 				res.render('admin/success',{
 					userInfo:req.userInfo,
 					message:'添加分类成功',
-					url:'/category'
+					url:'/article'
 
 				})
 			})
@@ -84,11 +84,11 @@ router.post('/add', (req, res)=> {
 //显示编辑页面
 router.get('/edit/:id',(req,res)=>{
 	const {id} = req.params;
-	categoryModel.findById(id)
-	.then(category=>{
-		res.render('admin/category_add_edit',{
+	articleModel.findById(id)
+	.then(article=>{
+		res.render('admin/article_add_edit',{
 			userInfo:req.userInfo,
-			category
+			article
 		})		
 	})
 })
@@ -97,29 +97,29 @@ router.get('/edit/:id',(req,res)=>{
 router.post('/edit',(req,res)=>{
 	const {id,name,order} = req.body;
 
-	categoryModel.findById(id)
-	.then(category=>{
-		if(category.name == name && category.order == order){//没有更改
+	articleModel.findById(id)
+	.then(article=>{
+		if(article.name == name && article.order == order){//没有更改
 			res.render('admin/error',{
 				userInfo:req.userInfo,
 				message:'请修改后在提交'
 			})				
 
 		}else{//查找数据库不存在的分类(不存在才能)
-			categoryModel.findOne({name:name,_id:{$ne:id}})
-			.then(newCategory=>{
-				if(newCategory){
+			articleModel.findOne({name:name,_id:{$ne:id}})
+			.then(newarticle=>{
+				if(newarticle){
 					res.render('admin/error',{
 						userInfo:req.userInfo,
 						message:'修改分类失败,分类已存在'
 					})
 				}else{
-					categoryModel.updateOne({_id:id},{name,order})
+					articleModel.updateOne({_id:id},{name,order})
 					.then(result=>{
 						res.render('admin/success',{
 							userInfo:req.userInfo,
 							message:'修改分类成功',
-							url:'/category'
+							url:'/article'
 						})						
 					})
 					.catch(err=>{
@@ -144,7 +144,7 @@ router.post('/edit',(req,res)=>{
 //处理删除分类
 router.get('/delete/:id',(req,res)=>{
 	const {id} = req.params;
-	categoryModel.deleteOne({_id:id})
+	articleModel.deleteOne({_id:id})
 	.then(result=>{
 		res.render('admin/success',{
 			userInfo:req.userInfo,

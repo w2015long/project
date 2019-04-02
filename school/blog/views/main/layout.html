@@ -27,11 +27,9 @@
 	    <div class="collapse navbar-collapse" id="top-nav">
 	      <ul class="nav navbar-nav">
 	        <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
-	        <li><a href="list.html">HTML/CSS</a></li>
-	        <li><a href="list.html">javaScript</a></li>
-	        <li><a href="list.html">java</a></li>
-	        <li><a href="list.html">node.js</a></li>
-	        <li><a href="list.html">学无止境</a></li>
+	        {% for category in categories %}
+	        <li><a href="list.html">{{category.name}}</a></li>
+			{% endfor %}
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container -->
