@@ -105,9 +105,9 @@ router.post('/edit',(req,res)=>{
 				message:'请修改后在提交'
 			})				
 
-		}else{//查找数据库不存在的分类(不存在才能)
+		}else{//修改的当前分类 查找数据库是否存在
 			categoryModel.findOne({name:name,_id:{$ne:id}})
-			.then(newCategory=>{
+			.then(newCategory=>{//当前分类已存在(修改失败)
 				if(newCategory){
 					res.render('admin/error',{
 						userInfo:req.userInfo,
