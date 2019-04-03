@@ -30,7 +30,6 @@ async function pagination(options){
 	page = parseInt(page);
 
 	const limit = 3;
-
 	//跳页不能为负
 	if(page == 0){
 		page = 1
@@ -40,19 +39,19 @@ async function pagination(options){
 
 	const pages = Math.ceil(count / limit);
 
-	if(pages == 0){
-		page = 1
-	}
-	
+
 	if(page > pages){
 		page = pages
+	}
+
+	if(pages == 0){
+		page = 1
 	}
 
 	let list = [];
 	for(let i=1;i<=pages;i++){
 		list.push(i)
 	}
-
 	let skip = (page - 1) * limit ;	
 
 	const docs = await model.find(query,projection).sort(sort).skip(skip).limit(limit);

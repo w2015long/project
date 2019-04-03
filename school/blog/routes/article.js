@@ -12,21 +12,19 @@ router.use((req,res,next)=>{
 	}
 })
 
-//显示分类列表
+//显示博文列表
 router.get('/', (req, res)=> {
-
-
 	pagination({
 		page:req.query.page,
 		model:articleModel,
 		query:{},
 		projection:"-__v",
-		sort:{order:-1}
+		sort:{_id:-1}
 	})
 	.then(data=>{
 		res.render('admin/article_list',{
 			userInfo:req.userInfo,
-			categories:data.docs,
+			articles:data.docs,
 			page:data.page,
 			list:data.list,
 			pages:data.pages,
@@ -35,6 +33,8 @@ router.get('/', (req, res)=> {
 	})
 })
 
+
+/*
 //显示分类
 router.get('/add', (req, res)=> {
   res.render('admin/article_add_edit',{
@@ -159,4 +159,5 @@ router.get('/delete/:id',(req,res)=>{
 	})	
 })
 
+*/
 module.exports = router

@@ -13,13 +13,16 @@ const articleSchema = new mongoose.Schema({
 	user:{
 		type:mongoose.Schema.Types.ObjectId
 	},
+	category:{
+		type:mongoose.Schema.Types.ObjectId
+	},
 	createAt:{
 		type:Date,
 		default:Date.now
 	},
 	click:{
 		type:Number,
-		default:0
+		default:100
 	}
 });
 
