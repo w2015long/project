@@ -116,7 +116,18 @@
 		}
 	})
 
+	//4.1监听pagination
+	$articlePagination.on('$get-data',function(ev){
 
+	})
+
+	//4.2处理分页ajax
+	var $articlePagination = $('#page-article');
+	$articlePagination.pagination({
+		url:'/article'
+	})
+
+ 
 
 
 })(jQuery);
