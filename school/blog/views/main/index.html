@@ -36,119 +36,32 @@
 	    	<span class="sr-only">Next</span>
 	  	</a>
 	</div>
+{% for article in articles %}
+	<div class="panel panel-default main-panel">
+	  <div class="panel-heading">
+	    <h3 class="panel-title"><a href="list.html" target="_blank" class="link">{{ article.title }}</a></h3>
+	  </div>
+	  <div class="panel-body">
+			{{ article.intro }}
+	  </div>
+	  <div class="panel-footer">
+	  	<span class=" glyphicon glyphicon-user"></span>
+	  	<span class="text-muted">{{ article.user.username }}</span>
+	  	<span class=" glyphicon glyphicon-th-list">
+	  	</span>
+	  	<span class="text-muted">{{ article.category.name }}</span>
+	  	<span class=" glyphicon glyphicon-eye-open">
+	  	</span>
+	  	<span class="text-muted"><em>{{ article.click }}</em>人点击</span>	
+	  	<span class=" glyphicon glyphicon glyphicon-time">
+	  	</span>
+	  	<span class="text-muted">{{ article.createAt | date('Y年m月d日 H:m:i',-8*60) }}</span>					  					  	
+	  </div>
+	</div>
+{% endfor %}	
 
-	<div class="panel panel-default main-panel">
-	  <div class="panel-heading">
-	    <h3 class="panel-title"><a href="list.html" target="_blank" class="link">移动设备优先</a></h3>
-	  </div>
-	  <div class="panel-body">
-	     Bootstrap 专门构建了免费的 CDN 加速服务，访问速度更快、加速效果更明显、没有速度和带宽限制、永久免费。BootCDN 还对大量的前端开源工具库提供了 CDN 加速服务，请进入BootCDN 主页查看更多可用的工具库。
-	     提供以下几种方式帮你快速上手，每一种方式针对具有不同技能等级的开发者和不同的使用场景。继续阅读下面的内容，看看哪种方式适合你的需求吧。
-	     Bootstrap 提供了两种形式的压缩包，在下载下来的压缩包内可以看到以下目录和文件，这些文件按照类别放到了不同的目录内，并且提供了压缩与未压缩两种版本。
-	  </div>
-	  <div class="panel-footer">
-	  	<span class=" glyphicon glyphicon-user"></span>
-	  	<span class="text-muted">Tom</span>
-	  	<span class=" glyphicon glyphicon-th-list">
-	  	</span>
-	  	<span class="text-muted">panel-footer</span>
-	  	<span class=" glyphicon glyphicon-eye-open">
-	  	</span>
-	  	<span class="text-muted"><em>1999</em>已阅读</span>	
-	  	<span class=" glyphicon glyphicon glyphicon-time">
-	  	</span>
-	  	<span class="text-muted">2019-3-13</span>					  					  	
-	  </div>
-	</div>
-	<div class="panel panel-default main-panel">
-	  <div class="panel-heading">
-	    <h3 class="panel-title"><a href="list.html" target="_blank" class="link">移动设备优先</a></h3>
-	  </div>
-	  <div class="panel-body">
-	     Bootstrap 专门构建了免费的 CDN 加速服务，访问速度更快、加速效果更明显、没有速度和带宽限制、永久免费。BootCDN 还对大量的前端开源工具库提供了 CDN 加速服务，请进入BootCDN 主页查看更多可用的工具库。
-	     提供以下几种方式帮你快速上手，每一种方式针对具有不同技能等级的开发者和不同的使用场景。继续阅读下面的内容，看看哪种方式适合你的需求吧。
-	     Bootstrap 提供了两种形式的压缩包，在下载下来的压缩包内可以看到以下目录和文件，这些文件按照类别放到了不同的目录内，并且提供了压缩与未压缩两种版本。
-	  </div>
-	  <div class="panel-footer">
-	  	<span class=" glyphicon glyphicon-user"></span>
-	  	<span class="text-muted">Tom</span>
-	  	<span class=" glyphicon glyphicon-th-list">
-	  	</span>
-	  	<span class="text-muted">panel-footer</span>
-	  	<span class=" glyphicon glyphicon-eye-open">
-	  	</span>
-	  	<span class="text-muted"><em>1999</em>已阅读</span>	
-	  	<span class=" glyphicon glyphicon glyphicon-time">
-	  	</span>
-	  	<span class="text-muted">2019-3-13</span>					  					  	
-	  </div>
-	</div>
-	<div class="panel panel-default main-panel">
-	  <div class="panel-heading">
-	    <h3 class="panel-title"><a href="list.html" target="_blank" class="link">移动设备优先</a></h3>
-	  </div>
-	  <div class="panel-body">
-	     Bootstrap 专门构建了免费的 CDN 加速服务，访问速度更快、加速效果更明显、没有速度和带宽限制、永久免费。BootCDN 还对大量的前端开源工具库提供了 CDN 加速服务，请进入BootCDN 主页查看更多可用的工具库。
-	     提供以下几种方式帮你快速上手，每一种方式针对具有不同技能等级的开发者和不同的使用场景。继续阅读下面的内容，看看哪种方式适合你的需求吧。
-	     Bootstrap 提供了两种形式的压缩包，在下载下来的压缩包内可以看到以下目录和文件，这些文件按照类别放到了不同的目录内，并且提供了压缩与未压缩两种版本。
-	  </div>
-	  <div class="panel-footer">
-	  	<span class=" glyphicon glyphicon-user"></span>
-	  	<span class="text-muted">Tom</span>
-	  	<span class=" glyphicon glyphicon-th-list">
-	  	</span>
-	  	<span class="text-muted">panel-footer</span>
-	  	<span class=" glyphicon glyphicon-eye-open">
-	  	</span>
-	  	<span class="text-muted"><em>1999</em>已阅读</span>	
-	  	<span class=" glyphicon glyphicon glyphicon-time">
-	  	</span>
-	  	<span class="text-muted">2019-3-13</span>					  					  	
-	  </div>
-	</div>
-	<div class="panel panel-default main-panel">
-	  <div class="panel-heading">
-	    <h3 class="panel-title"><a href="list.html" target="_blank" class="link">移动设备优先</a></h3>
-	  </div>
-	  <div class="panel-body">
-	     Bootstrap 专门构建了免费的 CDN 加速服务，访问速度更快、加速效果更明显、没有速度和带宽限制、永久免费。BootCDN 还对大量的前端开源工具库提供了 CDN 加速服务，请进入BootCDN 主页查看更多可用的工具库。
-	     提供以下几种方式帮你快速上手，每一种方式针对具有不同技能等级的开发者和不同的使用场景。继续阅读下面的内容，看看哪种方式适合你的需求吧。
-	     Bootstrap 提供了两种形式的压缩包，在下载下来的压缩包内可以看到以下目录和文件，这些文件按照类别放到了不同的目录内，并且提供了压缩与未压缩两种版本。
-	  </div>
-	  <div class="panel-footer">
-	  	<span class=" glyphicon glyphicon-user"></span>
-	  	<span class="text-muted">Tom</span>
-	  	<span class=" glyphicon glyphicon-th-list">
-	  	</span>
-	  	<span class="text-muted">panel-footer</span>
-	  	<span class=" glyphicon glyphicon-eye-open">
-	  	</span>
-	  	<span class="text-muted"><em>1999</em>已阅读</span>	
-	  	<span class=" glyphicon glyphicon glyphicon-time">
-	  	</span>
-	  	<span class="text-muted">2019-3-13</span>					  					  	
-	  </div>
-	</div>
 
-	<nav aria-label="Page navigation" class="page-footer">
-	  <ul class="pagination">
-	    <li>
-	      <a href="#" aria-label="Previous">
-	        <span aria-hidden="true">&laquo;</span>
-	      </a>
-	    </li>
-	    <li><a href="#">1</a></li>
-	    <li><a href="#">2</a></li>
-	    <li><a href="#">3</a></li>
-	    <li><a href="#">4</a></li>
-	    <li><a href="#">5</a></li>
-	    <li>
-	      <a href="#" aria-label="Next">
-	        <span aria-hidden="true">&raquo;</span>
-	      </a>
-	    </li>
-	  </ul>
-	</nav>	
+{% include './pagination.html' %}
 {% endblock %}
 
 {% block footer %}

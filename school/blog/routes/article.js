@@ -2,7 +2,8 @@
 const express = require('express')
 const router = express.Router()
 const articleModel = require('../model/article.js')
-const pagination = require('../util/pagination.js')
+const categoryModel = require('../model/category.js')
+// const pagination = require('../util/pagination.js')
 
 router.use((req,res,next)=>{
 	if(req.userInfo.isAdmin){
@@ -14,13 +15,19 @@ router.use((req,res,next)=>{
 
 //显示博文列表
 router.get('/', (req, res)=> {
+	/*
 	pagination({
 		page:req.query.page,
 		model:articleModel,
 		query:{},
 		projection:"-__v",
-		sort:{_id:-1}
+		sort:{_id:-1},
+		populates:[{path:'user',select:'username'},{path:'category',select:'name'}]
 	})
+	*/
+
+
+	articleModel.getPaginationArticles(req)
 	.then(data=>{
 		res.render('admin/article_list',{
 			userInfo:req.userInfo,
@@ -34,103 +41,81 @@ router.get('/', (req, res)=> {
 })
 
 
-/*
-//显示分类
+
+//显示博文分类(点击http://localhost:3000/article 页面的新增博文按钮)
+
 router.get('/add', (req, res)=> {
-  res.render('admin/article_add_edit',{
-  	userInfo:req.userInfo
-  })
+	//显示新增博文前先查找博文属于category哪个分类
+	categoryModel.find({},'name')
+	.sort({order:-1})
+	.then(categories=>{
+		res.render('admin/article_add_edit',{
+			userInfo:req.userInfo,
+			categories
+		})		
+	})
+
+
 })
 
-//处理新增分类
+//处理新增博文分类
 router.post('/add', (req, res)=> {
 	//新增前查询是否数据库分类已存在
-	const {name,order} = req.body;
-	articleModel.findOne({name})
-	.then(article=>{
-		if(article){//分类已存在
-			res.render('admin/error',{
-				userInfo:req.userInfo,
-				message:'添加分类失败,分类已存在',
-
-			})
-
-		}else{//新增分类
-			articleModel.insertMany({name,order})
-			.then(categories=>{
-				res.render('admin/success',{
-					userInfo:req.userInfo,
-					message:'添加分类成功',
-					url:'/article'
-
-				})
-			})
-			.catch(err=>{
-				throw err;
-			})
-
-
-		}
+	const {category,title,intro,content} = req.body;
+	articleModel.insertMany({
+		category,
+		title,
+		intro,
+		content,
+		user:req.userInfo._id
 	})
+	.then(article=>{
+		res.render('admin/success',{
+			userInfo:req.userInfo,
+			message:'添加博文成功',
+			url:'/article'
+		})
+	})			
 	.catch(err=>{
 		res.render('admin/error',{
 			userInfo:req.userInfo,
-			message:'添加分类失败,请稍后重试'
+			message:'添加博文失败,请稍后重试'
 		})		
 	})
 
 })
+
+
 
 //显示编辑页面
 router.get('/edit/:id',(req,res)=>{
 	const {id} = req.params;
-	articleModel.findById(id)
-	.then(article=>{
-		res.render('admin/article_add_edit',{
-			userInfo:req.userInfo,
-			article
+	//显示博文编辑前先把此篇博文属于哪一个分类传过来
+	categoryModel.find({},'name')
+	.sort({order:-1})
+	.then(categories=>{
+		articleModel.findById(id)
+		.then(article=>{
+			res.render('admin/article_add_edit',{
+				userInfo:req.userInfo,
+				article,
+				categories
+			})		
 		})		
 	})
+
 })
 
-//处理编辑
+//处理编辑博文
 router.post('/edit',(req,res)=>{
-	const {id,name,order} = req.body;
-
-	articleModel.findById(id)
-	.then(article=>{
-		if(article.name == name && article.order == order){//没有更改
-			res.render('admin/error',{
-				userInfo:req.userInfo,
-				message:'请修改后在提交'
-			})				
-
-		}else{//查找数据库不存在的分类(不存在才能)
-			articleModel.findOne({name:name,_id:{$ne:id}})
-			.then(newarticle=>{
-				if(newarticle){
-					res.render('admin/error',{
-						userInfo:req.userInfo,
-						message:'修改分类失败,分类已存在'
-					})
-				}else{
-					articleModel.updateOne({_id:id},{name,order})
-					.then(result=>{
-						res.render('admin/success',{
-							userInfo:req.userInfo,
-							message:'修改分类成功',
-							url:'/article'
-						})						
-					})
-					.catch(err=>{
-						throw err
-					})
-				}
-			})
-			.catch(err=>{
-				throw err
-			})
-		}
+	const {id,category,title,intro,content} = req.body;
+	articleModel.updateOne({_id:id},{category,title,intro,content})
+	.then(result=>{
+		res.render('admin/success',{
+			userInfo:req.userInfo,
+			message:'修改分类成功',
+			url:'/article'
+		})						
 	})
 	.catch(err=>{
 		res.render('admin/error',{
@@ -141,23 +126,23 @@ router.post('/edit',(req,res)=>{
 })
 
 
-//处理删除分类
+//处理删除博文
 router.get('/delete/:id',(req,res)=>{
 	const {id} = req.params;
 	articleModel.deleteOne({_id:id})
 	.then(result=>{
 		res.render('admin/success',{
 			userInfo:req.userInfo,
-			message:'删除分类成功',
+			message:'删除博文成功',
 		})		
 	})
 	.catch(err=>{
 		res.render('admin/error',{
 			userInfo:req.userInfo,
-			message:'删除分类失败,请稍后重试'
+			message:'删除博文分类失败,请稍后重试'
 		})		
 	})	
 })
 
-*/
+
 module.exports = router

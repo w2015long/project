@@ -5,13 +5,14 @@ page:请求页码
 model:数据模型
 query:查询条件
 projection:投影
-sort:排序
+sort:排序,
+populates:关联数据模型(数组)
 */
 
 async function pagination(options){
 
 
-	let {page,model,query,projection,sort} = options;
+	let {page,model,query,projection,sort,populates} = options;
 
 	/*
 	约定每页显示3条 limit(3)
@@ -52,9 +53,17 @@ async function pagination(options){
 	for(let i=1;i<=pages;i++){
 		list.push(i)
 	}
-	let skip = (page - 1) * limit ;	
+	let skip = (page - 1) * limit ;
 
-	const docs = await model.find(query,projection).sort(sort).skip(skip).limit(limit);
+	let findData = model.find(query,projection);
+
+	if(populates){
+		populates.forEach(populate=>{
+			findData = findData.populate(populate)
+		})
+	}
+
+	const docs = await findData.sort(sort).skip(skip).limit(limit);
 
 	return {
 		docs,

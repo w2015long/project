@@ -1,6 +1,8 @@
 
 const express = require('express')
 const router = express.Router()
+const multer  = require('multer')
+const upload = multer({ dest: 'public/uploads/' })
 const userModel = require('../model/user.js')
 const pagination = require('../util/pagination.js')
 
@@ -42,6 +44,16 @@ router.get('/users', (req, res)=> {
 	
 })
 
+//处理上传图片
+router.post('/uploadImage',upload.single('upload'),(req,res)=>{
+	// console.log(req.file)
+	let uploadedFilePath = '/uploads/' + req.file.filename
+
+	res.json({
+		uploaded:true,
+		url:uploadedFilePath
+	})
+})
 
 
 module.exports = router
