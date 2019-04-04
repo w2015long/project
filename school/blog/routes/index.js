@@ -36,6 +36,16 @@ router.get('/', (req, res)=> {
 	})
 })
 
-
+//处理博文文章分页数据
+router.get('/articles',(req,res)=>{
+	//点击页码发送请求获取博文数据
+	articleModel.getPaginationArticles(req)
+	.then(data=>{
+		res.json({
+			status:0,
+			data
+		})		
+	})
+})
 
 module.exports = router

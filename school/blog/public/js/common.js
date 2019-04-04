@@ -117,14 +117,52 @@
 	})
 
 	//4.1监听pagination
-	$articlePagination.on('$get-data',function(ev){
+	var $articlePagination = $('#page-article');
 
+
+	function buildArticleHtml(articles){
+		var html = '';
+		articles.forEach(function(article){
+			html = `
+				<div class="panel panel-default main-panel">
+				  <div class="panel-heading">
+				    <h3 class="panel-title"><a href="${ article._id.toString() }" target="_blank" class="link">${ article.title }</a></h3>
+				  </div>
+				  <div class="panel-body">
+						${ article.content }
+				  </div>
+				  <div class="panel-footer">
+				  	<span class=" glyphicon glyphicon-user"></span>
+				  	<span class="text-muted">${ article.user.username }</span>
+				  	<span class=" glyphicon glyphicon-th-list">
+				  	</span>
+				  	<span class="text-muted">${ article.category.name }</span>
+				  	<span class=" glyphicon glyphicon-eye-open">
+				  	</span>
+				  	<span class="text-muted"><em>${ article.click }</em>人点击</span>	
+				  	<span class=" glyphicon glyphicon glyphicon-time">
+				  	</span>
+				  	<span class="text-muted">${ article.createAt }</span>					  					  	
+				  </div>
+				</div>
+			`			
+		})
+
+
+		return html;
+	}
+
+	$articlePagination.on('get-data',function(ev,data){
+		//1.构建博文布局
+		$('#article-wrap').html(buildArticleHtml(data.docs));
+
+		//2.构建分页器
 	})
 
 	//4.2处理分页ajax
-	var $articlePagination = $('#page-article');
+	
 	$articlePagination.pagination({
-		url:'/article'
+		url:'/articles'
 	})
 
  
