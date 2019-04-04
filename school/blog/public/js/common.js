@@ -121,9 +121,11 @@
 
 
 	function buildArticleHtml(articles){
+		
 		var html = '';
 		articles.forEach(function(article){
-			html = `
+			var createAt = moment(article.createAt).format('YYYY年MM月DD日 H:mm:ss')
+			html += `
 				<div class="panel panel-default main-panel">
 				  <div class="panel-heading">
 				    <h3 class="panel-title"><a href="${ article._id.toString() }" target="_blank" class="link">${ article.title }</a></h3>
@@ -142,7 +144,7 @@
 				  	<span class="text-muted"><em>${ article.click }</em>人点击</span>	
 				  	<span class=" glyphicon glyphicon glyphicon-time">
 				  	</span>
-				  	<span class="text-muted">${ article.createAt }</span>					  					  	
+				  	<span class="text-muted">${ createAt }</span>					  					  	
 				  </div>
 				</div>
 			`			
@@ -152,11 +154,45 @@
 		return html;
 	}
 
+	function buildArticlePagesHtml(page,list){
+		var html = '';
+		html += `
+		    <li>
+		      <a href="javascript:;" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>`
+		list.forEach(function(i){
+			if(page == i){
+				html += `<li class="active"><a href="javascript:;">${ i }</a></li>`
+			}else{
+				html += `<li><a href="javascript:;">${ i }</a></li>`
+			}
+		})    
+
+		html += `
+			<li>
+		      <a href="javascript:;" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>`
+
+		return html;
+	}
+
+
 	$articlePagination.on('get-data',function(ev,data){
 		//1.构建博文布局
 		$('#article-wrap').html(buildArticleHtml(data.docs));
 
 		//2.构建分页器
+		var $pagination = $articlePagination.find('.pagination');
+		//总页码大于1 才显示分页
+		if(data.pages > 1){
+			$pagination.html(buildArticlePagesHtml(data.page,data.list))
+		}else{
+			$pagination.html('')
+		}
 	})
 
 	//4.2处理分页ajax

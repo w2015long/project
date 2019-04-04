@@ -6,33 +6,38 @@ const categoryModel = require('../model/category.js')
 
 
 //获取各种数据
-async function getCommonData(req){
+async function getCommonData(){
 	let categoriesPromise = categoryModel.find({}).sort({order:-1});
-	let pageArticlesPromise = articleModel.getPaginationArticles(req);
+	//拿到博文排行数据
+	let topArticlesPromise = articleModel.find({},'_id click title').sort({click:-1}).limit(10);
 
 	const categories = await categoriesPromise;
-	const pageArticles = await pageArticlesPromise;
+	const topArticles = await topArticlesPromise;
 
 	return {
 		categories,
-		pageArticles
+		topArticles
 	}
 }
 router.get('/', (req, res)=> {
 	//查询后台数据显示前台首页
-	getCommonData(req)
+	getCommonData()
 	.then(data=>{
-		const {categories,pageArticles} = data
-		res.render('main/index',{
-			userInfo:req.userInfo,
-			categories,
-			articles:pageArticles.docs,
-			page:pageArticles.page,
-			list:pageArticles.list,
-			pages:pageArticles.pages,
-			url:'/article'			
-
-		})		
+		const {categories,topArticles} = data;
+		articleModel.getPaginationArticles(req)
+		.then(data=>{
+			res.render('main/index',{
+				userInfo:req.userInfo,
+				categories,
+				topArticles,
+				articles:data.docs,
+				page:data.page,
+				list:data.list,
+				pages:data.pages,
+				url:'/article'			
+			})	
+		})
+	
 	})
 })
 
@@ -48,4 +53,26 @@ router.get('/articles',(req,res)=>{
 	})
 })
 
+//详情页
+router.get('/view/:id',(req,res)=>{
+	const {id} = req.params;
+	getCommonData()
+	.then(data=>{
+		const {categories,topArticles} = data;
+		//更新点击量
+		articleModel.findOneAndUpdate({_id:id},{$inc:{click:1}},{new:true})
+		.populate('user','username')
+		.populate('category','name')
+		.then(article=>{
+			// console.log(article)//关联的user作者 与category回传
+			res.render('main/detail',{
+				userInfo:req.userInfo,
+				categories,
+				topArticles,
+				article
+			})			
+		})
+
+	})
+})
 module.exports = router

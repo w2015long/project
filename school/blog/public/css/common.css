@@ -63,6 +63,9 @@
 		background: transparent;
 		border: none;
 	}
+	#article-wrap{
+		min-height: 700px;
+	}
 	/*
 	.user-panel{
 		background: #fefefe;

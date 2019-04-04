@@ -117,12 +117,12 @@
 
 					<div class="ad">
 					    <a href="#" class="thumbnail">
-					      <img src="imgs/bg4.jpg" alt="ad-one">
+					      <img src="/imgs/bg4.jpg" alt="ad-one">
 					    </a>
 					</div>	
 					<div class="ad">
 					    <a href="#" class="thumbnail">
-					      <img src="imgs/bg5.jpg" alt="ad-two">
+					      <img src="/imgs/bg5.jpg" alt="ad-two">
 					    </a>
 					</div>
 					<div class="panel panel-default aside-panel">
@@ -134,7 +134,7 @@
 						<div class="media">
 						  <div class="media-left">
 						    <a href="#">
-						      <img src="imgs/blog.jpg" alt="" class="img-circle img-me">
+						      <img src="/imgs/blog.jpg" alt="" class="img-circle img-me">
 						    </a>
 						  </div>
 						  <div class="media-body">
@@ -150,17 +150,17 @@
 					  </div>
 					  <div class="panel-body hot-body">
 					    
-						<ul class="list-group hot-list">
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">Dapibus ac facilisis in Morbi leo risus</a></li>
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">Dapibus ac facilisis in Vestibulum at eros Porta ac consectetur ac</a></li>
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">Dapibus ac facilisis in Vestibulum at eros Porta ac consectetur ac</a></li>
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">Morbi leo risus Vestibulum at eros</a></li>
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">risus Vestibulum Porta risus Vestibulum ac consectetur ac</a></li>
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">						  
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">Morbi leo risus Vestibulum at eros</a></li>
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">risus Vestibulum Porta risus Vestibulum ac consectetur ac</a></li>
-						  <li class="list-group-item text-ellipsis"><a href="detail.html" class="link" target="_blank">Vestibulum at eros Morbi leo risus</a></li>
-						</ul>
+			<ul class="list-group hot-list">
+			{% for topArticle in topArticles %}	
+			  <li class="list-group-item text-ellipsis">
+			  	<a href="/view/{{ topArticle._id.toString() }}" class="link" target="_blank">
+			  		<em>{{ topArticle.click }}</em>人阅&nbsp;{{ topArticle.title }}
+			  	</a>
+			  </li>
+			{% endfor %} 
+			</ul>
+
+
 					  </div>
 					</div>
 
@@ -191,6 +191,7 @@
 </body>
 <script src="/lib/jQuery/jquery-1.12.4.min.js"></script>
 <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="/lib/moment.js"></script>
 <script src="/js/pagination.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/logout.js"></script>

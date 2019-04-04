@@ -12,9 +12,9 @@
 				var currentPage = $elem.find('.active a').html();
 				var lable = $this.attr('aria-label');
 				if(lable == 'Next'){
-					page = currentPage * 1 -1 ;
-				}else if(lable == 'Previous'){
 					page = currentPage * 1 + 1 ;
+				}else if(lable == 'Previous'){
+					page = currentPage * 1 - 1 ;
 				}else{//点击的页码数
 					page = $this.html();
 				}
