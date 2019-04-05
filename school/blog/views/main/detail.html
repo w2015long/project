@@ -34,6 +34,18 @@
 			{{ article.content | safe }}
 		</p>		    
 	  </div>
-	</div>	
+	</div>
 
+<!-- 评论区 -->
+    <div class="input-group">
+    	<textarea id="comment" class="form-control" rows="5" style="width:750px;"></textarea>
+        <button class="btn btn-primary btn-comment" type="button" data-id="{{article._id.toString()}}">快速回复</button>
+        <p class=" text-danger err"></p>
+    </div><!-- /input-group -->
+
+
+{% endblock %}
+
+{% block footer %}
+<script src="/js/comment.js"></script>
 {% endblock %}

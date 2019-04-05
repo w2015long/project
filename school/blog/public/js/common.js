@@ -128,11 +128,13 @@
 			html += `
 				<div class="panel panel-default main-panel">
 				  <div class="panel-heading">
-				    <h3 class="panel-title"><a href="${ article._id.toString() }" target="_blank" class="link">${ article.title }</a></h3>
+				    <h3 class="panel-title"><a href="/view/${ article._id.toString() }" target="_blank" class="link">${ article.title }</a></h3>
 				  </div>
+
 				  <div class="panel-body">
-						${ article.content }
+						${ article.intro }
 				  </div>
+				  
 				  <div class="panel-footer">
 				  	<span class=" glyphicon glyphicon-user"></span>
 				  	<span class="text-muted">${ article.user.username }</span>

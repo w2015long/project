@@ -45,7 +45,7 @@ router.get('/add', (req, res)=> {
 //处理新增分类
 router.post('/add', (req, res)=> {
 	//新增前查询是否数据库分类已存在
-	const {name,order} = req.body;
+	const {name,order} = req.body;//body(一般为post请求发送的数据)
 	categoryModel.findOne({name})
 	.then(category=>{
 		if(category){//分类已存在
@@ -83,7 +83,7 @@ router.post('/add', (req, res)=> {
 
 //显示编辑页面
 router.get('/edit/:id',(req,res)=>{
-	const {id} = req.params;
+	const {id} = req.params;//params:后边带id的请求(example /list/123)
 	categoryModel.findById(id)
 	.then(category=>{
 		res.render('admin/category_add_edit',{
@@ -95,6 +95,7 @@ router.get('/edit/:id',(req,res)=>{
 
 //处理编辑
 router.post('/edit',(req,res)=>{
+	////body(一般为post请求发送的数据)
 	const {id,name,order} = req.body;
 
 	categoryModel.findById(id)

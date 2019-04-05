@@ -44,7 +44,9 @@ router.get('/', (req, res)=> {
 
 //收到ajax请求 处理博文文章分页数据
 router.get('/articles',(req,res)=>{
+	//query:字符串带问号形式的请求(例如：/?page=1$id=123)
 	const { id } = req.query;
+
 	let query = null;
 	if(id){
 		query = {category:id}
@@ -61,7 +63,8 @@ router.get('/articles',(req,res)=>{
 
 //detail详情页
 router.get('/view/:id',(req,res)=>{
-	const {id} = req.params;
+	// 具体文章的id (article._id.toString())
+	const {id} = req.params;//(params:后边带id的请求)
 	getCommonData()
 	.then(data=>{
 		const {categories,topArticles} = data;
@@ -75,7 +78,10 @@ router.get('/view/:id',(req,res)=>{
 				userInfo:req.userInfo,
 				categories,
 				topArticles,
-				article
+				article,
+				//回传id 详情页博文具体属于哪一分类
+				category:article.category._id
+
 			})			
 		})
 
@@ -84,7 +90,9 @@ router.get('/view/:id',(req,res)=>{
 
 //list详情页
 router.get('/list/:id',(req,res)=>{
-	const {id} = req.params;
+
+	//具体分类的id (category._id.toString())
+	const {id} = req.params;//params:后边带id的请求(example /list/123) 
 	getCommonData()
 	.then(data=>{
 		const {categories,topArticles} = data;

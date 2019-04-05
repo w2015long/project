@@ -7,8 +7,15 @@
 		    <h3 class="panel-title"><a href="/view/{{ article._id.toString() }}" target="_blank" class="link">{{ article.title }}</a></h3>
 		  </div>
 		  <div class="panel-body">
-				{{ article.content | safe }}
+				{{ article.intro }}
+		  </div>		  
+		  {% if category %}
+		  <div class="panel-body">
+		  		{{ article.content | safe }}
+				
 		  </div>
+		  {% endif %}
+
 		  <div class="panel-footer">
 		  	<span class=" glyphicon glyphicon-user"></span>
 		  	<span class="text-muted">{{ article.user.username }}</span>
