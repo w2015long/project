@@ -29,6 +29,7 @@ router.get('/', (req, res)=> {
 
 	articleModel.getPaginationArticles(req)
 	.then(data=>{
+		// console.log('data',data)
 		res.render('admin/article_list',{
 			userInfo:req.userInfo,
 			articles:data.docs,
@@ -49,6 +50,7 @@ router.get('/add', (req, res)=> {
 	categoryModel.find({},'name')
 	.sort({order:-1})
 	.then(categories=>{
+		// console.log('categories',categories)
 		res.render('admin/article_add_edit',{
 			userInfo:req.userInfo,
 			categories
@@ -60,8 +62,9 @@ router.get('/add', (req, res)=> {
 
 //处理新增博文分类
 router.post('/add', (req, res)=> {
-	//新增前查询是否数据库分类已存在
+	
 	const {category,title,intro,content} = req.body;
+
 	articleModel.insertMany({
 		category,
 		title,

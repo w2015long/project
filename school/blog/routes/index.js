@@ -30,6 +30,7 @@ router.get('/', (req, res)=> {
 				userInfo:req.userInfo,
 				categories,
 				topArticles,
+				//首页博文分页
 				articles:data.docs,
 				page:data.page,
 				list:data.list,
@@ -41,10 +42,15 @@ router.get('/', (req, res)=> {
 	})
 })
 
-//处理博文文章分页数据
+//收到ajax请求 处理博文文章分页数据
 router.get('/articles',(req,res)=>{
+	const { id } = req.query;
+	let query = null;
+	if(id){
+		query = {category:id}
+	}
 	//点击页码发送请求获取博文数据
-	articleModel.getPaginationArticles(req)
+	articleModel.getPaginationArticles(req,query)
 	.then(data=>{
 		res.json({
 			status:0,
@@ -53,7 +59,7 @@ router.get('/articles',(req,res)=>{
 	})
 })
 
-//详情页
+//detail详情页
 router.get('/view/:id',(req,res)=>{
 	const {id} = req.params;
 	getCommonData()
@@ -71,6 +77,31 @@ router.get('/view/:id',(req,res)=>{
 				topArticles,
 				article
 			})			
+		})
+
+	})
+})
+
+//list详情页
+router.get('/list/:id',(req,res)=>{
+	const {id} = req.params;
+	getCommonData()
+	.then(data=>{
+		const {categories,topArticles} = data;
+		articleModel.getPaginationArticles(req,{category:id})
+		.then(data=>{
+			res.render('main/list',{
+				userInfo:req.userInfo,
+				categories,
+				topArticles,
+				//list页面分页
+				articles:data.docs,
+				page:data.page,
+				list:data.list,
+				pages:data.pages,
+				//回传id 知道属于哪一个分类
+				category:id
+			})	
 		})
 
 	})

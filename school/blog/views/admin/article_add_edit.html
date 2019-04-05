@@ -15,9 +15,8 @@
 {% else %}
   <form class="form-horizontal" action="/article/add" method="post">
 {% endif %}
-<!--          -->
     <div class="form-group">
-      <label for="name" class="col-sm-2 control-label">编辑名称</label>
+      <label for="name" class="col-sm-2 control-label">分类名称</label>
       <div class="col-sm-6">
         <select class="form-control" name="category">
           {% for category in categories %}

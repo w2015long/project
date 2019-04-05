@@ -23,9 +23,15 @@
 					return false
 				}
 
-				//发送ajax请求
+				//点击页码 发送ajax请求
+				var url = options.url + '?page=' + page;
+				var id = $elem.data('id');
+				if(id){
+					url += "&id=" + id
+				}
+
 				$.ajax({
-					url:options.url + '?page=' + page,
+					url:url,
 					dataType:'json'
 				})
 				.done(function(result){

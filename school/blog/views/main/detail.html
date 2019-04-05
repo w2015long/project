@@ -13,9 +13,16 @@
 	  <div class="panel-heading">
 	    <h3 class="panel-title">{{ article.title }}</h3>
 	    <p class="sub-title">
+	    	<span class=" glyphicon glyphicon-th-list">
+		  	</span>
 	    	<span class="text-muted">{{ article.category.name }}</span>
+	    	<span class=" glyphicon glyphicon-user"></span>
 	    	<span class="text-muted">{{ article.user.username }}</span>
+	    	<span class=" glyphicon glyphicon glyphicon-time">
+		  	</span>
 	    	<span class="text-muted">发表于{{ article.createAt | date('Y年m月d日 H:m:i',-8*60) }}</span>
+	    	<span class=" glyphicon glyphicon-eye-open">
+		  	</span>
 	    	<span class="text-muted"><em>{{ article.click }}</em>人已读</span>
 	    </p>
 	  </div>
