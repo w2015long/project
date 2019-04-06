@@ -4,6 +4,7 @@ const router = express.Router()
 const multer  = require('multer')
 const upload = multer({ dest: 'public/uploads/' })
 const userModel = require('../model/user.js')
+const commentModel = require('../model/comment.js')
 const pagination = require('../util/pagination.js')
 
 router.use((req,res,next)=>{
@@ -55,5 +56,41 @@ router.post('/uploadImage',upload.single('upload'),(req,res)=>{
 	})
 })
 
+
+//处理评论
+router.get('/comments',(req,res)=>{
+	//显示评论列表
+	commentModel.getPaginationComments(req)
+	.then(data=>{
+		res.render('admin/comments_list',{
+			userInfo:req.userInfo,
+			comments:data.docs,
+			page:data.page,
+			list:data.list,
+			pages:data.pages,
+			url:'/admin/comments'
+		})		
+	})	
+})
+
+
+//处理删除评论
+router.get('/comment/delete/:id',(req,res)=>{
+	const {id} = req.params;
+	commentModel.deleteOne({_id:id})
+	.then(result=>{
+		res.render('admin/success',{
+			userInfo:req.userInfo,
+			message:'删除评论成功',
+			url:'/admin/comments'
+		})		
+	})
+	.catch(err=>{
+		res.render('admin/error',{
+			userInfo:req.userInfo,
+			message:'删除评论失败,请稍后重试'
+		})		
+	})	
+})
 
 module.exports = router
