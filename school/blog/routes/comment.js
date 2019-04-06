@@ -4,7 +4,7 @@ const commentModel = require('../model/comment.js')
 const router = express.Router()
 
 router.use((req,res,next)=>{
-	if(req.userInfo._id){
+	if(req.userInfo){
 		next()
 	}else{
 		res.json({
@@ -14,6 +14,8 @@ router.use((req,res,next)=>{
 	}
 })
 
+
+//添加评论
 router.post('/add',(req,res)=>{
 	const {content , article} = req.body;
 	commentModel.insertMany({
@@ -22,11 +24,34 @@ router.post('/add',(req,res)=>{
 		article
 	})
 	.then(comments=>{
+		//获取评论分页数据返回到前台渲染页面
+		commentModel.getPaginationComments(req,{article})
+		.then(data=>{
+			res.json({
+				status:0,
+				data
+			})		
+		})			
+	})
+
+})
+
+//评论分页
+router.get('/list',(req,res)=>{
+	const {id} = req.query;
+	let query = null;
+
+	if(id){
+		query = {article:id}
+	}
+	//获取评论分页数据返回到前台渲染页面
+	commentModel.getPaginationComments(req,query)
+	.then(data=>{
 		res.json({
 			status:0,
-			data:comments
+			data
 		})		
-	})
+	})	
 
 })
 

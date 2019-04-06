@@ -116,14 +116,14 @@
 		}
 	})
 
-	//4.1监听pagination
+	//4.文章分页
 	var $articlePagination = $('#page-article');
 
 
 	function buildArticleHtml(articles){
-		
 		var html = '';
 		articles.forEach(function(article){
+
 			var createAt = moment(article.createAt).format('YYYY年MM月DD日 H:mm:ss')
 			html += `
 				<div class="panel panel-default main-panel">
@@ -156,7 +156,7 @@
 		return html;
 	}
 
-	function buildArticlePagesHtml(page,list){
+	function buildPagesHtml(page,list){
 		var html = '';
 		html += `
 		    <li>
@@ -191,7 +191,7 @@
 		var $pagination = $articlePagination.find('.pagination');
 		//总页码大于1 才显示分页
 		if(data.pages > 1){
-			$pagination.html(buildArticlePagesHtml(data.page,data.list))
+			$pagination.html(buildPagesHtml(data.page,data.list))
 		}else{
 			$pagination.html('')
 		}
@@ -202,6 +202,49 @@
 	$articlePagination.pagination({
 		url:'/articles'
 	})
+
+
+	//5评论ajax分页
+	var $commentPage = $('#page-comment');
+
+	function buildCommentHtml(comments){
+		var html = '';
+		comments.forEach(function(comment){
+			var createAt = moment(comment.createAt).format('YYYY年MM月DD日 H:mm:ss')
+			html += `
+			<div class="panel panel-default">
+			  <div class="panel-body">
+				${ comment.content }
+			  </div>
+			  <div class="panel-footer">${ comment.user.username } 发表于 ${ createAt }</div>
+			</div>
+			`
+		})
+
+		return html;
+
+	}
+
+	$commentPage.on('get-data',function(ev,data){
+		//1.构建评论布局
+		$('.comment-panel').html(buildCommentHtml(data.docs));
+
+		//2.构建分页器
+		var $pagination = $commentPage.find('.pagination');
+
+		if(data.pages > 1){
+			$pagination.html(buildPagesHtml(data.page,data.list))
+		}else{
+			$pagination.html('')
+		}		
+	})
+
+
+	//5.2处理评论分页ajax请求
+	$commentPage.pagination({
+		url:'/comment/list'
+	})
+
 
  
 

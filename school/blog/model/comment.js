@@ -27,7 +27,7 @@ commentSchema.statics.getPaginationComments = function(req,query={}){
 		query:query,
 		projection:"-__v",
 		sort:{_id:-1},
-		populates:[{path:'user',select:'username'},{path:'category',select:'name'}]
+		populates:[{path:'user',select:'username'},{path:'article',select:'title'}]
 	})	
 }
 

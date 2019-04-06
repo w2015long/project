@@ -36,7 +36,7 @@
 				})
 				.done(function(result){
 					if(result.status == 0){
-						$elem.trigger('get-data',result.data);
+						$elem.trigger('get-data',[result.data]);
 					}
 				})
 				.fail(function(err){

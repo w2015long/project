@@ -8,3 +8,7 @@
 .detail-panel .sub-title span{
 	margin-right: 14px;
 }
+
+.comment-panel{
+	min-height: 320px;
+}

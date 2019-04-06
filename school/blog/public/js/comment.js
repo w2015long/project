@@ -23,7 +23,12 @@
 			}
 		})
 		.done(function(result){
-			console.log(result)
+			//评论后 评论框致空
+			$('#comment').val('')
+
+			//刷新一下评论页面
+			$('#page-comment').trigger('get-data',[result.data])
+
 		})
 		.fail(function(err){
 			console.log(err)
