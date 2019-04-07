@@ -47,7 +47,6 @@ router.get('/', (req, res)=> {
 router.get('/articles',(req,res)=>{
 	//query:字符串带问号形式的请求(例如：/?page=1$id=123)
 	const { id } = req.query;
-
 	let query = null;
 	if(id){
 		query = {category:id}

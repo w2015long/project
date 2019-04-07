@@ -115,9 +115,10 @@
 		}
 	})
 
+/*-------------------------------------------------------------------*/
+
 	//4.文章分页
 	var $articlePagination = $('#page-article');
-
 
 	function buildArticleHtml(articles){
 		var html = '';

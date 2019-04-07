@@ -29,7 +29,6 @@
 				if(id){
 					url += "&id=" + id
 				}
-
 				$.ajax({
 					url:url,
 					dataType:'json'
