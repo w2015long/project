@@ -65,7 +65,6 @@
 		}
 	})
 
-
 	//3.用户登陆
 	$('#sub-login').on('click',function(){
 		var username = $login.find('[name="username"]').val();

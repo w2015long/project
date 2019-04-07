@@ -50,7 +50,7 @@ router.post('/login', (req, res)=> {
 
 	let result = {
 		status:0,//success
-		messige:''
+		message:''
 	}
 
 	//检测数据库是否已有用户
@@ -65,9 +65,9 @@ router.post('/login', (req, res)=> {
 			//session设置cookies
 			req.session.userInfo = user
 			res.json(result)
-		}else{//把新用户插入数据库
+		}else{//登录失败
 			result.status = 10;
-			result.messige = '用户不存在';
+			result.message = '用户不存在,或者密码错误';
 			//并把数据返回到前台
 			res.json(result)
 
@@ -75,7 +75,7 @@ router.post('/login', (req, res)=> {
 	})
 	.catch(err=>{//数据库查询时出错
 			result.status = 10;
-			result.messige = '服务器出错，请稍后重试';
+			result.message = '服务器出错，请稍后重试';
 			res.json(result)
 	})
 })
@@ -84,7 +84,7 @@ router.post('/login', (req, res)=> {
 router.get('/logout', (req, res)=> {
 	let result = {
 		status:0,//success
-		messige:''
+		message:''
 	}
 	/*
 	//cookies方法

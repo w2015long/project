@@ -6,6 +6,7 @@ const upload = multer({ dest: 'public/uploads/' })
 const userModel = require('../model/user.js')
 const commentModel = require('../model/comment.js')
 const pagination = require('../util/pagination.js')
+const hmac = require('../util/hmac.js')
 
 router.use((req,res,next)=>{
 	if(req.userInfo.isAdmin){
@@ -91,6 +92,29 @@ router.get('/comment/delete/:id',(req,res)=>{
 			message:'删除评论失败,请稍后重试'
 		})		
 	})	
+})
+
+
+//密码管理
+router.get('/password',(req,res)=>{
+	res.render('admin/repassword',{
+		userInfo:req.userInfo,
+	})
+})
+
+//修改密码
+router.post('/repassword',(req,res)=>{
+	const {password} = req.body;
+	userModel.updateOne({_id:req.userInfo._id},{password:hmac(password)})
+	.then(result=>{
+		//退出登录(清除cookie)
+		req.session.destroy();
+		res.render('admin/success',{
+			userInfo:req.userInfo,
+			message:'修改成功',
+			url:'/'//回首页
+		})		
+	})
 })
 
 module.exports = router
