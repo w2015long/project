@@ -1,6 +1,6 @@
 # project
 for reference
 
-课程项目，仅供学习交流
+blog site base on Express framework
 
-课程地址：https://www.kuazhu.com/
+address of the course：https://www.kuazhu.com/
