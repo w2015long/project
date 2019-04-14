@@ -30,7 +30,7 @@ module.exports = {
 		
 		publicPath:publicPath,
 		//出口文件路径
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, './dist')
 	},
 
 	module: {
@@ -38,8 +38,12 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				use: [
-				  'style-loader',
-				  'css-loader'
+				  ////css单独打包处理
+		          {
+		            loader: MiniCssExtractPlugin.loader,
+		            options: {}
+		          },
+		          'css-loader'
 				]
 			},
 
@@ -90,8 +94,6 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		//css单独打包处理
 	    new MiniCssExtractPlugin({
-	      // Options similar to the same options in webpackOptions.output
-	      // both options are optional
 	      filename: '[name].css',
 	      chunkFilename: '[id].css',
 	    })		
