@@ -1,0 +1,39 @@
+<!--pages/article/article.wxml-->
+<import src="./article-template/article-template.wxml" />
+
+<swiper
+  indicator-dots="true"
+  autoplay="true"
+>
+  <swiper-item>
+    <image src="https://s2.ax1x.com/2019/05/08/Eck0MT.jpg" class="slide-image" />
+  </swiper-item>
+  <swiper-item>
+    <image src="https://s2.ax1x.com/2019/05/08/EckgiR.jpg" class="slide-image" />
+  </swiper-item>
+  <swiper-item>
+    <image src="https://s2.ax1x.com/2019/05/08/EckRRx.jpg" class="slide-image" />
+  </swiper-item>    
+</swiper>
+<view class='article-wrap'>
+  <block wx:for="{{articles}}" wx:for-index="idx" wx:for-item="article" wx:key="idx"> 
+    <!-- <view class='article-item'>
+        <view class='article-head'>
+          <image class='article-head-avatar' src='{{article.avatar}}'></image>
+          <text class='article-head-date'>{{article.date}}</text>
+        </view>
+        <text class='article-title'>{{article.title}}</text>
+        <image class='article-img' src='{{article.photo}}'></image>
+        <text class='article-desc'>{{article.desc}}</text>   
+        <view class='article-footer'>
+          <image class='article-footer-icon' src='../../images/bg5.jpg'></image>
+          <text class='article-footer-text'>{{article.star}}</text>
+          <image class='article-footer-icon' src='../../images/bg5.jpg'></image>
+          <text class='article-footer-text'>{{article.view}}</text>       
+        </view>
+      </view>    -->
+      <view bindtap='tapArticleItem' data-article-id="{{article.articleId}}">
+        <template is="articleItem" data="{{...article}}" />
+      </view>
+  </block>
+</view>

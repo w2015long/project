@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="https://i.loli.net/2019/05/09/5cd3ddd617b7d.jpg" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto" bindtap="skipToArticle">
+    <!-- <text class="user-motto" bindtap='tapText'>开启之旅</text> -->
+    <!-- <text class="user-motto" catchtap='tapText'>开启之旅</text> -->  
+    <text class="user-motto">开启之旅</text>
+  </view>
+</view>

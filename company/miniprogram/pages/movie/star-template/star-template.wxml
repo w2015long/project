@@ -1,0 +1,8 @@
+<template name="starTemplate">
+  <view class='star-wrap'>
+    <block wx:for="{{stars}}" wx:for-item="star" wx:key='index'>
+      <image src="{{star ? '/images/collected.png' : '/images/no-star.png' }}"></image>
+    </block>
+    <text class='score'>{{score}}</text>
+  </view>
+</template>

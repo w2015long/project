@@ -1,0 +1,13 @@
+@import '../movie-item-template/movie-item-template.wxss';
+
+.movie-more-wrap .list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  padding:10rpx; 
+}
+.movie-more-wrap .movie-item-wrap{
+  margin-bottom: 20rpx;
+}
+
