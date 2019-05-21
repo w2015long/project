@@ -15,6 +15,6 @@ export default new VueRouter({
 		{path:'/home',component:Home},
 		{path:'/cart',component:Cart},
 		{path:'/me',component:Me},
-		{path:'',redirect:'/home'}
+		{path:'/',redirect:'/home'}
 	]
 })

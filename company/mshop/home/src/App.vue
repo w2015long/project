@@ -1,6 +1,7 @@
 <!--1.页面-->
 <template>
   <div class="App" id='app'>
+    <router-view></router-view>
     <TabBar />
   </div>
 </template>
