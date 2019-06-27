@@ -1,0 +1,58 @@
+<view class="big">
+  <view class='header'>
+    <view class="info">
+      <view class="mt-hd">
+        <image src="{{orderInformation.iconFileIdUrl}}" mode="scaleToFill" class="customer-image fill-icon" />
+      </view>
+      <view class="mt-bd">
+        <view class="info-name">
+          <text>{{orderInformation.name}}</text>
+          <image src="{{orderInformation.sex === 'MALE'?'../../../media/images/manicon.png':orderInformation.sex === 'FEMALE'?'../../../media/images/icon-woman.png':''}}" class="gender-icon" />
+        </view>
+        <view class='member'>
+          <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon" />
+          <text class="member-label">{{orderInformation.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='phone'>
+    <view class='telephone-book'>
+      <image src="../../../media/images/phonoicon.png" />
+    </view>
+    <view class='phono-nunber'>{{orderInformation.mobile}}</view>
+    <view class='dial' bindtap='contactClient'>拨号</view>
+  </view>
+
+
+
+  <swiper-item>
+    <scroll-view scroll-y="true" style="height:100%;">
+      <view class='list'>
+        <block wx:for="{{orderInformation.orderItemList}}" wx:for-item="orderItemList" wx:key="index">
+          <view class='list-item'>
+            <view class='list-item-title'>{{orderItemList.productNm}}</view>
+            <view class='list-item-text'>厂家：{{orderItemList.manufacturer}}</view>
+            <view class='list-item-text'>规格：{{orderItemList.spec}}</view>
+          </view>
+        </block>
+      </view>
+
+      <view class='return-box'>
+        <view class='return-title'>回访内容</view>
+        <view class='return-content'>
+          <textarea class='content-item-text' value='' maxlength="125" bindblur="inputContent" />
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <view class='ft-box ft-box-green' hidden='{{!isShowModal}}'>
+    <text> 保存 </text>
+  </view>
+  <view class='ft-box' hidden='{{isShowModal}}'>
+    <button type="primary" catchtap='saveButtom'> 保存 </button>
+  </view>
+
+</view>

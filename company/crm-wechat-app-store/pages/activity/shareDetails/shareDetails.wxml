@@ -1,0 +1,57 @@
+<view class="details_main">
+    <view class='details_top'>
+        <view class='top_title'>{{promoteActivity.activityNm}}</view>
+        <view class='top_data'>
+            <text class='activity_time'>活动时间:</text>
+            <text class='activity_data'>{{promoteActivity.activityStartTimeStr}}-{{promoteActivity.activityEndTimeStr}}</text>
+            <text class="{{'进行中' === promoteActivity.activityState ? 'activity_now' : 'activity_off'}}">{{promoteActivity.activityState}}</text>
+        </view>
+    </view>
+
+    <view class='ad'>
+        <view class='ad_title'>
+            <view class='ad_title_l'>朋友圈广告</view>
+            <view class='ad_title_r' bindtap='copyPromoteContent'>复制内容</view>
+        </view>
+        <view class='ad_content'>
+             {{promoteActivity.promoteContent}}
+        </view>
+    </view>
+    <view class='activity_list'>
+        <view class='activity_list_title'>活动商品</view>
+        <button type='primary' class='daySign_bottom_text_pass' open-type="openSetting" bindopensetting='handleSetting' hidden='{{openSettingBtnHidden}}'>去授权</button>
+        <view class='commodity_list'>
+            <view class='commodity_items'  wx:for="{{promoteActivity.productProtocolList}}" wx:key="index">
+                <view class='commodity_pic'>
+                     <image  bindtap="imgYu" id="{{index}}" src="{{item.posterPic}}" mode="scaleToFill" class="nav-image"/>
+                </view>
+                <view class='commodity_r'>
+                    <view class='commodity_r_title'>{{item.productNm}}</view>
+                    <view class='specification'>规格：{{item.spec}}/{{item.unit}}</view>
+                    <view class='factory'>厂家：{{item.manufacturer}}</view>
+                    <view class='money'>赚：<text>￥{{item.bountyAmount == null ? 0 : item.bountyAmount}}</text></view>
+                    <view class='download_poster' bindtap="downloadValidate" id="{{index}}">下载海报</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='sharing_revenue'>
+        <view class='sharing_title'>分享收益</view>
+        <view class='prompt'>
+            已有<text>{{promoteActivity.memberAllTotalCount}}</text>名用户打开，成交<text>{{promoteActivity.orderAllTotalCount}}</text>笔，累计提成<text>{{promoteActivity.commissionAllTotalAmountDouble}}</text>元
+        </view>
+        <view class='sharing_list' >
+            <view class='sharing_item' wx:for="{{promoteActivity.xcxclerkWechatCommissionRecordProtocolList}}" wx:key="index" >
+                <view class='sharing_item_pic'>
+                     <image src="{{item.wechatPic != null ? item.wechatPic : '../../../media/images/kequnicon@2x.png'}}" mode="scaleToFill" class="nav-image"/>
+                </view>
+                <view class='sharing_item_r'>
+                    <text class='mingzi'>{{item.name}}</text>
+                    <text class='shijian'>{{item.createTimeStr}}</text>
+                    <view class='income'>赚：￥<text>{{item.commissionTotalAmountDouble}}</text></view>
+                     <view class='quantity-order'>{{item.orderCount}}笔</view>
+                </view>
+            </view>
+      </view>
+    </view>
+</view>

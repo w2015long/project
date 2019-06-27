@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "使用禁忌",
+  "usingComponents": {
+    "notData":"../../common/notDataList/notDataList"
+  }
+}

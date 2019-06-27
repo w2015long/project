@@ -1,0 +1,183 @@
+.containers {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+} 
+.center {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+    justify-content:center;
+}
+.line {
+	width:96%;
+	margin-left:4%;
+	height:1rpx;
+	background:#D9D9D9;
+}
+.hline {
+	width:1rpx;
+	background:#D9D9D9;
+	height:90rpx;
+}
+.topv {
+	width:100%;
+	height:88rpx;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	padding-left:32rpx;
+	background:#fff;
+	margin-top:20rpx;
+}
+.topv text {
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #1A1A1A;
+}
+.topcv {
+	width:100%;
+	height:168rpx;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	background:#fff;
+}
+.topcv view {
+	display:flex;
+	flex:1;
+	flex-direction:column;
+	justify-items:center;
+	align-items:center;
+}
+.hash-topcv {
+	display:flex;
+	flex:1;
+	flex-direction:column;
+	justify-items:center;
+	align-items:center;
+	border-left:1rpx solid #D9D9D9;
+	border-right:1rpx solid #D9D9D9;
+}
+.topcv-com-text1 {
+	font-family:
+	PingFangSC-Medium;
+	font-size: 36rpx;
+	color: #1A1A1A;
+	text-align: center;
+}
+.topcv-com-text2 {
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #999999;
+	text-align: center;
+	margin-top:13rpx;
+}
+.circlev {
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	background:#FFF;
+	padding-bottom:32rpx;
+}
+.circlevt {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+    justify-content:center;
+	width:100%;
+	flex:1;
+}
+.circlevl {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.canvas {
+	width:75vw;
+	height:80vw;
+}
+.circlevr {
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	width:100vw;
+	padding-left:32rpx;
+	padding-right:32rpx;
+	flex-wrap:wrap;
+}
+.circlevrview {
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	width:183rpx;
+	height:38rpx;
+}
+.circlevrtext {
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #000000;
+}
+.circlevr-item-v {
+	width:26rpx;
+	height:26rpx;
+	margin-right:20rpx;
+	border-radius: 1px;
+}
+.generalv {
+	width:100%;
+	height:200rpx;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	background:#FFF;
+}
+.generalv view {
+	display:flex;
+	flex:1;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.generalv image {
+	width:90rpx;
+	height:90rpx;
+	border-radius:45rpx;
+}
+.generalv text {
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #000000;
+	margin-top:16rpx;
+}
+.bottomcommv {
+	width:100%;
+	height:200rpx;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	background:#FFF;
+}
+.bottomcommwrapv {
+    width:188rpx;
+    height:200rpx;
+    display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.bottomcommi {
+	width:90rpx;
+	height:90rpx;
+	border-radius:45rpx;
+}
+.bottomcommt {
+	font-family: PingFangSC-Regular;
+	font-size: 24rpx;
+	color: #000000;
+	margin-top:16rpx;
+}
+
+

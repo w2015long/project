@@ -1,0 +1,26 @@
+<view class="dp-records">
+  <form bindsubmit="formSubmit">
+    <view class='item'>
+      <text class='item-hd font-size-30'>顾客是否交易</text>
+      <view class='item-bd'>
+        <switch name="isDeal" color="#28c785" bindchange="switchChange" checked/>
+      </view>
+    </view>
+    <view class='item item-reason down-arrow' wx:if='{{isDeal==="N"}}'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{reasonsArray}}">
+        <view class="item-hd">
+          失败原因: {{reasonsArray[index]}}
+        </view>
+      </picker>
+    </view>
+    <view class='item item-goal'>
+      <text class='item-hd'>购药目的:</text>
+      <view class='item-bd'>
+        <textarea name="buyReason" auto-height placeholder='请输入顾客购药原因'></textarea>
+      </view>
+    </view>
+    <view class='ft-box'>
+      <button type="primary" class='confirm-btn' formType="submit">确认</button>
+    </view>
+  </form>
+</view>

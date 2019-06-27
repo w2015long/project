@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "核销优惠券",
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "blueTooth": "../../common/blueTooth/blueTooth"
+  }
+}

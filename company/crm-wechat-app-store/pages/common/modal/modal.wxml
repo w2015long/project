@@ -1,0 +1,13 @@
+<view hidden='{{modalHidden}}'>
+  <view class='mask_layer' bindtap='modal_click_Hidden' />
+  <view class='modal_box'>
+    <view class="title">{{modalTitle}}</view>
+    <!-- <view class='content'>
+      <text class='modalMsg'>{{modalMsg}}</text>
+    </view> -->
+    <view class='btn'>
+      <view bindtap='modal_click_hidden' class='cancel'>取消</view>
+      <view bindtap='sure' class='sure'>确定</view>
+    </view>
+  </view>
+</view>

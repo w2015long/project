@@ -1,0 +1,92 @@
+
+<scroll-view class="containers" style="height:100%;">
+      <view class="orderstate">
+	  		<view class="orderstatev">
+			      <text class="statetext">订单状态：</text>
+				  <text class="statetexv">{{jdOrderDetails.orderStatus}}</text>
+			</view>
+			<view class="orderstatev">
+			     <text class="statetext">订单编号：</text>
+				  <text class="statetexv">{{jdOrderDetails.orderNo}}</text>
+			</view>
+			<view class="orderstatev">
+			     <text class="statetext">下单时间：</text>
+				  <text class="statetexv">{{jdOrderDetails.orderStartTimeStr}}</text>
+			</view>
+	  </view>
+     
+
+	  <view class="orderstate" style="height:226rpx;">
+	  		<view class="orderstatev" style="margin-top:32rpx;">
+			      <text class="statetext" style="margin-right:28rpx;">收货人：</text>
+				  <text class="statetexv">{{jdOrderDetails.buyerFullName}}</text>
+			</view>
+			<view class="orderstatev">
+			     <text class="statetext">联系电话：</text>
+				  <text class="statetexv">{{jdOrderDetails.buyerMobile}}</text>
+			</view>
+			<view class="adddresv">
+			     <text class="addresstextl">地址：</text>
+				 <view class="infoaddress">
+				     <text class="addresstext">{{jdOrderDetails.buyerFullAddress}}</text>
+				 </view>
+			</view>
+	  </view>
+
+	 
+     
+	  <view class="countv">
+	         <text class="statetext">数量：</text>
+			 <text class="statetexv">{{jdOrderDetails.productCount}}件</text>
+	  </view>
+
+
+	   <block wx:for="{{jdOrderDetails.jdO2oOrderItemList}}" wx:for-item="productList" wx:key="index"  >
+                    <view class="goodsitem">
+                    	 <view class="goodsleft">
+                    	    <view class="goodstext">
+                    		     <text class="commtext">{{productList.skuName}}</text>
+                    		</view>
+                    		 <view class="goodsgui">
+                    		     <view class="goodsguitextl">
+
+                    			 </view>
+                    			 <text class="goodsguitextr">x{{productList.skuCount}}</text>
+                    		 </view>
+                    	   </view>
+                        </view>
+
+                       <view class="lines"/>
+        </block>
+
+
+  
+
+    
+	<view class="bottomv">
+	     <view class="bottomitemv">
+		    <text class="bitemtextl">商品金额：</text>
+		    <text class="bitemtextr">￥{{productPrice}}</text>
+		 </view>
+		  <view class="bottomitemv">
+		    <text class="bitemtextl">运费：</text>
+		    <text class="bitemtextr">￥{{orderReceivableFreightDouble}}</text>
+		 </view>
+
+		  <view class="bottomitemv" wx:if="{{platformPointsDeductionMoneyDouble >0}}">
+         		    <text class="bitemtextl">积分抵扣金额：</text>
+         		    <text class="bitemtextr">-￥{{platformPointsDeductionMoneyDouble}}</text>
+         		 </view>
+
+         <view class="bottomitemv" wx:if="{{orderDiscountMoneyDouble >0}}">
+		    <text class="bitemtextl">优惠金额：</text>
+		    <text class="bitemtextr">-￥{{orderDiscountMoneyDouble}}</text>
+		 </view>
+         
+		 <view class="bottomtotalv">
+		     <text class="bottomtotaltextl">实收：</text>
+		    <text class="bottomtotaltextr">￥{{orderBuyerPayableMoneyDouble}}</text>
+		 </view>
+
+	</view>
+</scroll-view>

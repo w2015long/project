@@ -1,0 +1,27 @@
+<view class= "cont">
+<view class= "mc">
+      <view   class='  item {{thatDayPromoteNum>index?"active":""}}' wx:for="{{maximumNumberOfPromoters-1}}" wx:key="{{index}}" >
+            <view class='act-icon'><image mode="widthFix" src="../../../media/images/act-icon.png"></image></view>
+            <view wx:if="{{(index+1) % 5 == 0}}"class="red-envelope">
+              <view wx:if="{{thatDayPromoteNum>index &&recordList[((index+1) / 5)-1].isLottery==='Y'}}">
+                 <image mode="widthFix" src="../../../media/images/red-envelope-already.png"></image>
+                 <view class='already'><text>￥</text>{{recordList[((index+1) / 5)-1].amountDouble}}</view>
+               </view>
+               <view wx:if="{{thatDayPromoteNum>index &&recordList[((index+1) / 5)-1].isLottery==='N'}}">
+                  <image mode="widthFix" src="../../../media/images/red-envelope.gif" data-userPromoteBonusRecordId="{{recordList[((index+1) / 5)-1].userPromoteBonusRecordId}}" bindtap="childFn"></image>
+                </view>
+                <view wx:if="{{thatDayPromoteNum<=index}}">
+                  <image mode="widthFix" src="../../../media/images/red-envelope-inactivated.png"></image>
+                </view>
+            </view>
+            <view class="cell-hd">
+            <image mode="widthFix" src="../../../media/images/{{thatDayPromoteNum>index?'jinbi-m2':'jinbi-m1'}}.png"></image>
+            </view>
+            <view class="cell-bd">第{{index+1}}位</view>
+        </view>
+     <view class='redd-packet'>
+      <image   bindtap="{{thatDayPromoteNum >= 50 && recordList[9].isLottery==='N'?'childFn':''}}"  data-userPromoteBonusRecordId="{{recordList[9].userPromoteBonusRecordId}}" mode="widthFix" src="../../../media/images/redd-packet.png"></image>
+  </view>  
+</view>
+</view>
+

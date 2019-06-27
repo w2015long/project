@@ -1,0 +1,191 @@
+<!--pages/test/orders/pat-orders/pat-orderDetail.wxml-->
+<view class='detail-container'>
+  <scroll-view class='detail-scroll' scroll-y='true'>
+      <view class='detail-top'>
+          <view class='detail-state'>
+              <view class='detail-item'>
+                  <text class='item-title'>订单状态：</text>
+                  <text class='item-value'>{{prescriptionOrder.orderStat}}</text>
+              </view>
+              <view class='detail-item'>
+                  <text class='item-title'>订单编号：</text>
+                  <text class='item-value'>{{prescriptionOrder.orderNum}}</text>
+              </view>
+              <view class='detail-item'>
+                  <text class='item-title'>下单时间：</text>
+                  <text class='item-value'>{{prescriptionOrder.createTimeString}}</text>
+              </view>
+          </view>
+          <view class='cell-line'/>
+
+          <view class='multiple-line'>
+              <view class='mutiple-item'>
+                  <text class='item-title'>顾客备注：</text>
+                  <text class='item-value'>{{prescriptionOrder.userRemark}}</text>
+              </view>
+          </view>
+          <view class='cell-line'/>
+
+          <block wx:if="{{prescriptionOrder.dispensingRemark != null}}">
+              <view class='multiple-line'>
+                  <view class='mutiple-item'>
+                      <text class='item-title'>调配备注：</text>
+                      <text class='item-value'>{{prescriptionOrder.dispensingRemark}}</text>
+                  </view>
+              </view>
+              <view class='cell-line'/>
+         </block>
+          <block wx:if="{{prescriptionOrder.packRemark != null}}">
+              <view class='multiple-line'>
+                  <view class='mutiple-item'>
+                      <text class='item-title'>包装备注：</text>
+                      <text class='item-value'>{{prescriptionOrder.packRemark}}</text>
+                  </view>
+              </view>
+              <view class='cell-line'/>
+         </block>
+
+
+          <navigator class='record-item' url='./operation-pat?state=5'>
+              <view>
+                 <text class='item-title'>日志记录：</text>
+                 <text class='item-value'>{{orderLog.content}}</text>
+              </view>
+              
+              <image style='height:26rpx;width:16rpx;' src='../../../../media/images/Chevron1.png'></image>
+          </navigator>
+          <!-- <view class='cell-line'/> -->
+      </view>
+    
+      <view class='detail-top'>
+          <view class='user-info'>
+              <!-- <view class='user-detail'>
+                  <image style='height:100rpx;width:100rpx;background-color:#444;border-radius:50rpx;'></image>
+                  <view class='right-info'>
+                      <text class='user-name'>柳林东</text>
+                      <text class='user-phone'>高级会员</text>
+                  </view>
+              </view> -->
+
+              <view class='user-detail'>
+                  <image style='height:100rpx;width:100rpx;background-color:#444;border-radius:50rpx;'></image>
+                  <view class='right-info'>
+                      <view class='user-name'>
+                          <text>{{member.name}}</text>
+                          <image src='../../../../media/images/gliricon.png' style='width:26rpx;height:26rpx;'/>
+                      </view>
+                      <view class='user-phone'>
+                          <image src='../../../../media/images/icon30x30.png' style='width:30rpx;height:30rpx;'/>
+                          <text class='vip-type'>{{member.levelName}}</text>
+                          <text class='vip-phone'>   {{member.mobile}}</text>
+                      </view>
+                  </view>
+              </view>
+
+              <view class='cell-line'/>
+              <view class='user-address'>
+                  <view class='mutiple-item'>
+                      <text class='item-title'>地址：</text>
+                      <text class='item-value'>{{prescriptionOrder.receiverAddr===null?"":prescriptionOrder.receiverAddr}}</text>
+                  </view>
+              </view>
+          </view>
+          
+      </view>
+      <view class='contact-user'>
+          <button bindtap="copyAddress" wx:if="{{prescriptionOrder.receiverAddr ==null}}"><text>复制地址</text></button>
+          <view class='space'></view>
+          <button bindtap="makeCall"><text>联系客户</text></button>
+      </view>
+      <view class='detail-top'>
+          <view class='single-line'>
+              <text class='item-title'>数量：</text>
+              <text class='item-value'>{{prescriptionOrder.buyNum}}剂</text>
+          </view>
+          <view class='cell-line'/>
+
+          <scroll-view class='image-scroll' scroll-x='true'>
+              <view class='cellImg-warp' style='width:{{imgUrls.length*238}}'>
+                  <block  wx:if="{{prescriptionOrder.prescriptionPic1}}" >
+                      <image class='imgItem' src='{{prescriptionOrder.prescriptionPic1}}'></image>
+                  </block>
+                  <block  wx:if="{{prescriptionOrder.prescriptionPic2}}" >
+                        <image class='imgItem' src='{{prescriptionOrder.prescriptionPic2}}'></image>
+                  </block>
+                   <block  wx:if="{{prescriptionOrder.prescriptionPic3}}" >
+                        <image class='imgItem' src='{{prescriptionOrder.prescriptionPic3}}'></image>
+                   </block>
+              </view>
+          </scroll-view> 
+          <view class='tips-view'>
+               <block  wx:if="{{prescriptionOrder.isGravida === 'Y'}}" >
+                          <view class="tip-view "><text>孕妇</text></view>
+                 </block>
+                  <block  wx:if="{{prescriptionOrder.isDecoction  === 'Y'}}" >
+                          <view class="tip-view wait"><text>煎煮</text></view>
+                  </block>
+                <block  wx:if="{{prescriptionOrder.isExternalUse  === 'Y'}}" >
+                          <view class="tip-view out"><text>外用</text></view>
+                </block>
+          </view>
+
+          <view class='cell-line'/>
+          <view class='single-line'>
+              <text class='item-title'>性别：</text>
+              <text class='item-value'>{{prescriptionOrder.userSex}} 
+              <block wx:if="{{prescriptionOrder.userAge !=null}}"> {{prescriptionOrder.userAge}}岁</block>
+             </text>
+          </view>
+      </view>
+
+  <block  wx:if="{{prescriptionOrder.isNeedInvoice  === 'Y'}}" >
+      <view class='detail-top' >
+          <view class='detail-state'>
+
+              <text class='item-value'>发票信息</text>
+
+              <view class='detail-item'>
+                  <text class='item-title'>抬头：</text>
+                  <text class='item-value'>{{prescriptionOrder.nvoiceTitle}}</text>
+              </view>
+              <view class='detail-item'>
+                  <text class='item-title'>税号：</text>
+                  <text class='item-value'>{{prescriptionOrder.nvoiceTfn}}</text>
+              </view>
+          </view>
+      </view>
+   </block>
+      <view class="table-top">
+          <view><text>序号</text></view>
+          <view><text>药品名称</text></view>
+          <view><text>剂量</text></view>
+      </view>
+      <block wx:for="{{items}}" wx:key="tr+{{index}}">
+          <view class="table {{index%2==0?'gray':''}}">
+              <view><text>{{index+1}}</text></view>
+              <view><text>{{item.productNm}}</text></view>
+              <view><text>{{item.num}}</text></view>
+          </view>
+      </block>
+
+      <navigator class='done-btn'>
+         <block  wx:if="{{prescriptionOrder.orderStat === '待调配'}}" >
+               <text>调配药品</text>
+          </block>
+          <block  wx:if="{{prescriptionOrder.orderStat === '待煎煮'}}" >
+               <text>煎煮药品</text>
+          </block>
+          <block  wx:if="{{prescriptionOrder.orderStat === '待包装'}}" >
+                 <text>包装药品</text>
+          </block>
+           <block  wx:if="{{prescriptionOrder.orderStat === '待发货'}}" >
+               <text>立即发货</text>
+          </block>
+          <block  wx:if="{{prescriptionOrder.orderStat === '已发货'}}" >
+               <text>查看物流</text>
+        </block>
+      </navigator>
+      
+  </scroll-view>
+    
+</view>

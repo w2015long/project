@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "发卷中心",
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "blueTooth": "../../common/blueTooth/blueTooth"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "京东到家订单",
+  "usingComponents": {
+    "cell": "../jdO2oOrderListItem/jdO2oOrderListCell",
+    "notData":"../../../common/notDataList/notDataList"
+  }
+}

@@ -1,0 +1,58 @@
+<view class="containers">
+    <swiper-item>
+    <scroll-view scroll-y="true" scroll-x="true" style="height:100%;" bindscrolltolower="pullUpLoad" >
+  <view class='cont'   wx:for="{{pageWeChatPromoteActivity.data}}" wx:key="index"  >
+    <navigator class='item' url="{{'../shareDetails/shareDetails?wechatPromoteActivityId='+item.wechatPromoteActivityId }}">
+        <view class='mt'>
+            <view class='cell-hd'>
+                <view class='title'><view class='elli'>{{item.activityNm}}</view></view>
+                <view class='time'>活动时间：{{item.activityStartTimeStr}}-{{item.activityEndTimeStr}}</view>
+            </view>
+            <view class='cell-bd'>
+                <text class="{{'进行中' === item.activityState ? 'green' : 'red'}}">{{item.activityState}}</text>
+             </view>
+        </view>
+        <view class='mc'>
+            <view class='mc-top'>
+               {{item.promoteContent}}
+            </view>
+            <view class='mc-bot'>
+                <swiper next-margin="130rpx" display-multiple-items="3">
+                   <swiper-item>
+                        <image src="{{item.posterPic1}}" mode="scaleToFill" class="customer-image"/>
+                    </swiper-item>
+                    <swiper-item >
+                        <image src="{{item.posterPic2}}" mode="scaleToFill" class="customer-image"/>
+                    </swiper-item>
+                    <swiper-item >
+                        <image src="{{item.posterPic3}}" mode="scaleToFill" class="customer-image"/>
+                    </swiper-item>
+                    <swiper-item >
+                       <image src="{{item.posterPic4}}" mode="scaleToFill" class="customer-image"/>
+                   </swiper-item>
+                    <swiper-item >
+                       <image src="{{item.posterPic5}}" mode="scaleToFill" class="customer-image"/>
+                   </swiper-item>
+                     <swiper-item wx:if="{{item.posterPic6 != null}}">
+                        <image src="{{item.posterPic6}}" mode="scaleToFill" class="customer-image"/>
+                    </swiper-item>
+                     <swiper-item wx:if="{{item.posterPic7 != null}}">
+                        <image src="{{item.posterPic7}}" mode="scaleToFill" class="customer-image"/>
+                    </swiper-item>
+                     <swiper-item wx:if="{{item.posterPic8 != null}}">
+                        <image src="{{item.posterPic8}}" mode="scaleToFill" class="customer-image"/>
+                     </swiper-item>
+                    <swiper-item wx:if="{{item.posterPic9 != null}}">
+                       <image src="{{item.posterPic9}}" mode="scaleToFill" class="customer-image"/>
+                   </swiper-item>
+                </swiper>
+            </view>
+        </view>
+    </navigator>
+  </view>
+   </scroll-view>
+   </swiper-item>
+</view>
+
+
+

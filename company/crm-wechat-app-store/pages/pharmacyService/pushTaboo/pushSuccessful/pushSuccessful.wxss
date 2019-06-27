@@ -1,0 +1,19 @@
+.containers {padding-top: 70rpx; text-align: center;}
+.containers  image{width: 260rpx; height: 210rpx;}
+.containers .back-btn{width: 360rpx; font-size: 34rpx; margin: 130rpx auto 0;}
+.containers .cont-text{color: #1A1A1A; font-size: 36rpx; font-weight: bold; margin-top:78rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+<view class="member-list">
+  <!-- mt处可以加 show 控制 -->
+  <view class="mt {{isShowUserCountBox ? 'show' : ''}}">
+    <view class='mt-cell'>
+      <view class='mt-lt' bindtap="showUserCountBox"><text>{{currentUserName}}</text></view>
+      <view class='mt-rt' bindtap='searchMember'><image src="../../../media/images/icon-search.png" mode="scaleToFill"/>高级查询</view>
+    </view>
+    <view class='member-modal-parent'>
+     <view class='member-modal'>
+      <view class='member-box'>
+           <block wx:for="{{userCountData}}" wx:for-item="user" wx:key="index">
+              <text class="item {{user.sysUserName == currentUserName ? 'cur' : ''}}" bin wx:if="{{user.sysUserName != '未分配'}}" bindtap="loadMemberTag" data-user-id="{{user.sysUserId}}" data-user-name="{{user.sysUserName}}">{{user.sysUserName}}({{user.memberCount}})</text>
+           </block>
+      </view>
+     </view>
+    </view>
+   </view>
+
+  <view class='mc'>
+    <view class='mc-box'>
+      <text class='box-text'>生命周期({{memberTagList.LIFE_CYCLE.length || 0}})</text>
+        <block wx:for="{{memberTagList.LIFE_CYCLE}}" wx:for-item="tag" wx:key="index">
+          <view class="dl {{currentActiveTag == (tag.tagType + '_' + tag.tagObjectId) ? 'active' : ''}}" bindtap='loadMember' data-tag-type="{{tag.tagType}}" data-tag-object-id="{{tag.tagObjectId}}" data-current-index="{{index}}" data-member-count="{{tag.memberCount}}">
+            <view class='dt'>
+              <view class='dt-hd'>{{tag.tagTitle}}</view>
+              <view class='dt-bd'>{{tag.memberCount}}</view>
+            </view>
+
+            <view class='dd'>
+            <block wx:for="{{memberDataList}}" wx:for-item="member" wx:key="index">
+             <view wx:if="{{index==20}}" bindtap="goToMemberQuery">查看更多</view>
+              <navigator class='item' wx:else>
+                <view class='item-hd'><image src="{{member.iconFileUrl}}" mode="scaleToFill" /></view>
+                <view class='item-bd'>
+                  <text class='bd-name'>{{member.name}}</text>
+                  <text class='bd-text'>消费：{{member.tradesSum}}次</text>
+                  <text class='bd-text'>交易：{{member.lastTransaction == null ? '暂未交易' : member.lastTransaction+'天前'}}</text>
+                  <view class='label-box'>
+                    <text class='label green-bg' wx:if="{{member.lifeCycleTitle}}">{{member.lifeCycleTitle}}</text>
+                    <text class='label'>{{member.levelName}}</text>
+                    <text class='label' wx:if="{{member.isSubscriptionWechat && member.isSubscriptionWechat == 'Y'}}">微信</text>
+                  </view>
+                </view>
+                <view class='item-ft'>￥{{member.orderAmountAvgDouble}}</view>
+              </navigator>
+              </block>
+            </view>
+          </view>
+        </block>      
+    </view>
+    
+    <view class='mc-box'>
+      <text class='box-text'>会员分组({{memberTagList.GROUP.length || 0}})</text>
+        <block wx:for="{{memberTagList.GROUP}}" wx:for-item="tag" wx:key="index">
+          <view class="dl {{currentActiveTag == (tag.tagType + '_' + tag.tagObjectId) ? 'active' : ''}}" bindtap='loadMember' data-tag-type="{{tag.tagType}}" data-tag-title="{{tag.tagTitle}}" data-current-index="{{index}}" data-tag-object-id="{{tag.tagObjectId}}" data-member-count="{{tag.memberCount}}">
+            <view class='dt'>
+              <view class='dt-hd'>{{tag.tagTitle}}</view>
+              <view class='dt-bd'>{{tag.memberCount}}</view>
+            </view>
+
+            <view class='dd'>
+            <block wx:for="{{memberDataList}}" wx:for-item="member" wx:key="index" >
+             <view wx:if="{{index==20}}" bindtap="goToMemberQuery">查看更多</view>
+              <navigator class='item' wx:else>
+                  <view class='item-hd'><image src="{{member.iconFileUrl}}" mode="scaleToFill" /></view>
+                  <view class='item-bd'>
+                    <text class='bd-name'>{{member.name}}</text>
+                    <text class='bd-text'>消费：{{member.tradesSum}}次</text>
+                    <text class='bd-text'>交易：{{member.lastTransaction}}天前</text>
+                    <view class='label-box'>
+                      <text class='label green-bg' wx:if="{{member.lifeCycleTitle}}">{{member.lifeCycleTitle}}</text>
+                      <text class='label'>{{member.levelName}}</text>
+                      <text class='label' wx:if="{{member.isSubscriptionWechat && member.isSubscriptionWechat == 'Y'}}">微信</text>
+                    </view>
+                  </view>
+                  <view class='item-ft'>￥{{member.orderAmountAvgDouble}}</view>
+                 
+                </navigator>
+            </block>
+              
+            </view>
+          </view>
+        </block>
+    </view>
+
+  </view>
+  
+</view>

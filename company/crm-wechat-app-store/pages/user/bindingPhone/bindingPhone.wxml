@@ -1,0 +1,17 @@
+<view class="binding-phone">
+  <view class='icon-phone'>
+    <image src="../../../media/images/icon-phone.png" mode="scaleToFill" />
+  </view>
+  <block wx:if="{{mobile}}">
+    <text class='phone-number'>已绑定手机号：{{mobileLessFormat}}</text>
+    <navigator url="../phoneVerification/phoneVerification?mobile={{mobile}}" redirect="true">
+    <button type="primary" class='login-btn'>更换手机号</button>
+    </navigator>
+  </block>
+  <block wx:else>
+    <navigator url="../bindingNewPhone/bindingNewPhone" redirect="true">
+       <text class='item-bd'>未绑定手机号</text>
+       <button type="primary" class='login-btn'>绑定手机号</button>
+     </navigator>
+  </block>
+</view>

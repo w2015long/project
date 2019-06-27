@@ -1,0 +1,39 @@
+<!--pages/test/orders/wshop-orders/wshop-list.wxml-->
+<view class='wshoplist-container'>
+  <!-- 列表的标签 -->
+   <scroll-view class='scroll-container' scroll-y="false" scroll-x='true'>
+    <view class='scroll-tab'>
+      <button wx:for="{{tabs}}" bindtap='onchangeTab' wx:key="index" id="{{'tab'+index}}" class="{{tabIndex==index?'on':''}}">
+        <text>{{item}}</text>
+      </button>
+    </view>
+  </scroll-view> 
+<!--  自定义订单列表  -->
+  <view class="main-content">
+
+      
+        <scroll-view scroll-y="true" scroll-x="false"  style="height:{{height}}px;" bindscrolltolower="pullUpLoad" >
+          <view class="list-view">
+            <notData wx:if="{{pageO2oOrder.data.length == 0 }}"/>
+            <cell bind:action="selectItemDetail" bind:mark="setTenantMark" wx:for="{{pageO2oOrder.data}}" wx:key="{{index}}+cell" class="list-cell" cellData="{{item}}" state="{{tabIndex}}" bind:print="printReceipt" bind:sender="senderProduct" bind:check="checkLogistics"/>
+          </view>
+        </scroll-view>
+     
+
+  </view>
+  
+<!--自定义弹层  -->
+  <view class='input-model' hidden='{{showRemarkModel==false}}'>
+      <view class='orderCenter-warp'>
+          <view class='single-line'>
+            <text class='item-title'>商家备注：</text>
+            <input focus='{{showRemarkModel}}' cursor-spacing='50' bindinput="updateRemarkValue" bindblur='endInput' value="{{remark}}"></input>
+          </view> 
+          <view class='mode-line'/>
+          <view class='single-line submit-mark'>
+            <text class='item-title'>  </text>
+            <view class='bottom-btn item-right' bindtap='updateRemark'><text>确认</text></view>
+          </view> 
+      </view>
+  </view>
+</view>

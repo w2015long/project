@@ -1,0 +1,86 @@
+<view class="home-container">
+
+  <view class='m_pic'>
+     <view class='m_pic_l'>
+      <view class='m_title'>{{assistantInfo.realName}}</view>
+      <view class='information'>
+        <image src="../../media/images/dizhi-icon.png" mode="scaleToFill" class="icon-address"/>
+        <text class='lt-label'>{{assistantInfo.shopName}}</text>
+        <image src="../../media/images/gh.png"  mode="scaleToFill" class="job-number"/>
+        <text class='lt-label'>{{assistantInfo.employeeCode}}</text>
+      </view>
+    </view>
+    <navigator class='item phone-set'  url='../../../../user/setting/setting?avatarUrl={{(!hasUserInfo && canIUse)?"":userInfo.avatarUrl}}'>
+         <view class='m_pic_avatar'>
+        <image src="{{assistantInfo.iconFileId ? assistantInfo.iconFileId:userFild}}" mode="cover" class="head-image"/>
+      </view>
+     </navigator>
+  </view>
+    <view class='bg_green'>
+     <image src="../../media/images/amount-bak.png" />
+            <view class='bonus-pools'>
+                <navigator url='../../pages/shopBonusPool/shopBonusPool'>
+                  <text class='label'>门店奖金池</text>
+                  <view class='bonus-data'>￥<text>{{shopBalanceDouble}}</text></view>
+                  </navigator>
+           </view>
+            <view class='bonus-pools3'>
+                <navigator url='../../pages/user/myBonus/myBonus'>
+                <text class='label'>可提现金额</text>
+                <view class='bonus-data'>￥<text>{{balanceDouble}}</text></view>
+                </navigator>
+           </view>
+      </view>
+  <view class='ft-nav'>
+    <navigator class='nav-item' url="../member/memberManager/memberManager">
+      <image src="../../media/images/icon-nav-1.png" mode="scaleToFill" class="nav-image"/>
+      <text>会员管理</text>
+    </navigator>
+    
+    <navigator class='nav-item' url='../order/orderCenter/orderCenter'>
+      <image src="../../media/images/icon-nav-4.png" mode="scaleToFill" class="nav-image"/>
+      <text>订单管理</text>
+      <text class='num-tex' wx:if="{{weChatOrderNotShippedNumber > 0}}">{{weChatOrderNotShippedNumber}}</text>
+    </navigator>
+    
+<!--    <navigator class='nav-item' url='../course/trainingIndex/trainingIndex'>-->
+<!--      <image src="../../media/images/icon-nav-7.png" mode="scaleToFill" class="nav-image"/>-->
+<!--      <text>在线培训</text>-->
+<!--    </navigator>-->
+    <navigator class='nav-item' url='../intelligentAnalysis/analyticsHome/analyticsHome'>
+      <image src="../../media/images/icon-nav-8.png" mode="scaleToFill" class="nav-image"/>
+      <text>智能分析</text>
+    </navigator>
+     <navigator class='nav-item' url='../coupon/couponSendStamps/couponSendStamps'>
+      <image src="../../media/images/yhqlb.svg" mode="scaleToFill" class="nav-image"/>
+      <text>优惠券礼包</text>
+    </navigator>
+    <navigator class='nav-item' url='../pharmacyService/index/index'>
+      <image src="../../media/images/icon-nav-11.png" mode="scaleToFill" class="nav-image"/>
+      <text>药学服务</text>
+    </navigator> 
+    <navigator class='nav-item' url='../shopPromote/index/index'>
+      <image src="../../media/images/icon-nav-12.png" mode="scaleToFill" class="nav-image"/>
+      <text>推广码</text>
+    </navigator>
+    <navigator class='nav-item' bindtap='scanBarCode'>
+      <image src="../../media/images/icon-nav-2.png" mode="scaleToFill" class="nav-image"/>
+      <text>扫码发货</text>
+    </navigator>
+    <navigator class='nav-item' url='../activity/shareReward/shareReward'>
+      <image src="../../media/images/fxyj.png" mode="scaleToFill" class="nav-image"/>
+      <text>分享有奖</text>
+    </navigator>
+    <navigator class='nav-item' url='../coupon/couponVerificationRecord/couponVerificationRecord'>
+      <image src="../../media/images/hexiaojilu.svg" mode="scaleToFill" class="nav-image"/>
+      <text>核销记录</text>
+    </navigator>
+     <navigator class='nav-item' url='../coupon/openBlueTooths/openBlueTooths'>
+      <image src="../../media/images/dayinji.svg" mode="scaleToFill" class="nav-image"/>
+      <text>打印机</text>
+    </navigator>
+  </view>
+  <view class='ft-nav'>
+ 
+  </view>
+</view>

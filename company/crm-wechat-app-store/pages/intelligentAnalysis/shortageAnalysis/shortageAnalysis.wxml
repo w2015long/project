@@ -1,0 +1,36 @@
+<view class='containers'>
+  <view class='warp'>
+        <!-- 列表的标签 -->
+        <view class="top ">
+              <view class="tabv" wx:for="{{tabs}}" wx:for-item="item" wx:key="index" id="{{'tab'+index}}"  bindtap="onchangeTab">
+                  <text class="{{tabIndex==index?'on':''}}">{{item}}</text>
+                  <view class="{{tabIndex==index?'tabbbo':''}}"/>
+              </view>
+        </view>
+
+        <!-- 数据列表  -->
+       <swiper scroll-y="false" style="height:{{winHeight}}" current="{{tabIndex}}" class="main-content">
+           <block wx:for="{{tabs}}" wx:key="{{index}}">
+               <swiper-item>
+                   <scroll-view scroll-y="true" scroll-x="true" style="height:100%" bindscrolltolower="pullUpLoad" >
+                        <view class="list-view">
+                            <notData  wx:if="{{pageShortageData.data  == 0}}"/>
+                           <view bind:action="selectItemDetail" wx:for="{{pageShortageData.data}}" wx:for-item="item" wx:key="{{index}}+cell" class="list-item">
+                              <view class="listcontent">
+                                   <view class="list-lv">
+                                        <text class="goodstext">{{item.productNm}}</text>
+                                        <text class="list-lvtext">销量：{{item.dailySales}}件 I 天  规格：{{item.spec}}</text>
+                                    </view>
+                                    <view class="list-rv">
+                                        <text>{{item.stock}}件</text>
+                                   </view>
+                              </view>
+                              <view class="lines" wx:if="{{index<pageShortageData.data.length - 1}}"/>
+                            </view>
+                        </view>
+                   </scroll-view>
+               </swiper-item>
+           </block>
+        </swiper>
+  </view>
+</view>

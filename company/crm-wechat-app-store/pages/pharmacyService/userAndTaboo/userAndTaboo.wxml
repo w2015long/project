@@ -1,0 +1,39 @@
+<view class="taboo-container">
+  <view class='nav-tab'>
+ 
+    <view bindtap="changeTab" data-id='TODAY' class='{{dateDays === "TODAY" ? "active":""}}'>今天</view>
+    <view bindtap="changeTab" data-id='THREE_DAYS_WITHIN' class='{{dateDays === "THREE_DAYS_WITHIN" ? "active":""}}'>三天内</view>
+    <view bindtap="changeTab" data-id='HALF_MONTH_WITHIN' class='{{dateDays === "HALF_MONTH_WITHIN" ? "active":""}}'>半月内</view>
+  </view>
+  <view class='nav-box'>
+ <swiper-item>
+      <scroll-view scroll-y="true" scroll-x="true" style="height:100%;" bindscrolltolower="pullUpLoad" >
+    <notData  wx:if="{{pageUserAndTaboo.data.length  == 0}}"/>
+    <view class='box-item' wx:for="{{pageUserAndTaboo.data}}" wx:for-item="items" wx:key="{{index}}+cell" >
+      <view class="info" >
+        <view class="mt-hd">
+          <image src="{{items.iconFileId}}" mode="scaleToFill" class="customer-image fill-icon"/>
+        </view>
+        <view class="mt-bd"> 
+          <view class="info-name"><text>{{items.memberName}}</text>
+          <image src="{{items.memberSex==='MALE'?'../../../../media/images/manicon.png':(items.memberSex==='FEMALE'?'../../../../media/images/icon-woman.png':'')}}"  mode="scaleToFill" class="gender-icon"/></view>
+          <view class='member'>
+            <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon"/>
+            <text class="member-label">{{items.level}}</text>
+            <text class='member-phone'>{{items.mobile}}</text>
+          </view> 
+        </view>
+        <view class='mt-ft'>{{items.createTimeStr}}</view>
+      </view>
+      <view class='gd-box' wx:for="{{items.productList}}" wx:for-item="item" >
+        <view class='gd-item'>
+          <view class='item-hd'>{{item.productNm}}</view>
+          <view class='item-bd'>x{{item.soldNumber}}</view>
+        </view>
+      </view>
+      <navigator class='btn-box' data-item-id="{{items.orderId}}" bindtap="pushTaboo" url='../push-taboo/push-taboo'><button type="primary">推送使用禁忌</button></navigator>
+    </view>
+        </scroll-view>
+ </swiper-item>
+  </view>  
+</view>

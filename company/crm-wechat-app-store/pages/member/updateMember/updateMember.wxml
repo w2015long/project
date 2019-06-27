@@ -1,0 +1,82 @@
+<view class="membership">
+
+  <navigator class='item head-set line-none' url="/pages/member/changeMemberIcon/changeMemberIcon?memberId={{memberId}}">
+    <text class=' item-hd'>会员头像</text>
+    <view class='item-bd head-image'>
+      <image src="../../../media/case/head220x220.jpg" mode="scaleToFill" />
+    </view>
+  </navigator>
+
+  <form bindsubmit="formSubmit">
+
+    <view class='item'>
+      <text class='item-hd'>姓名</text>
+      <input class='item-bd' name="name" value='{{memberInfo.name?memberInfo.name:""}}'></input>
+    </view>
+
+    <view class='item'>
+      <text class='item-hd'>手机号码</text>
+      <input class='item-bd' type="number" name="mobile" value='{{memberInfo.mobile?memberInfo.mobile:""}}'></input>
+    </view>
+
+    <view class='item'>
+      <text class='item-hd'>性别</text>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{showSexArray}}">
+        <view class="item-bd">
+          {{showSexArray[index]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class='item'>
+      <text class='item-hd'>生日</text>
+      <picker mode="date" value="{{memberInfo.birthdayString}}" start="1970-01-01" bindchange="bindDateChange">
+        <view class="item-bd">
+          {{memberInfo.birthdayString?memberInfo.birthdayString:date}}
+        </view>
+      </picker>
+    </view>
+
+    <view class='item margin-bottom-20'>
+      <text class='item-hd'>居住地址</text>
+      <input class='item-bd' name="address" value='{{memberInfo.address?memberInfo.address:""}}'></input>
+    </view>
+
+    <view class='item'>
+      <text class='item-hd'>身高</text>
+      <input class='item-bd' type="number" name="stature" value='{{memberInfo.stature?memberInfo.stature:""}}'></input>
+    </view>
+
+    <view class='item'>
+      <text class='item-hd'>体重</text>
+      <input class='item-bd' type="number" name="weight" value='{{memberInfo.weight?memberInfo.weight:""}}'></input>
+    </view>
+
+    <view class='item margin-bottom-20'>
+      <text class='item-hd'>职业</text>
+      <input class='item-bd' name="job" value='{{memberInfo.job?memberInfo.job:""}}'></input>
+    </view>
+
+    <view class='item'>
+      <text class='item-hd'>病史</text>
+      <input class='item-bd' name="medicalHistory" value='{{memberInfo.medicalHistory?memberInfo.medicalHistory:""}}'></input>
+    </view>
+
+    <view class='item'>
+      <text class='item-hd'>常用药物</text>
+      <input class='item-bd' name="commonlyUsedDrugs" value='{{memberInfo.commonlyUsedDrugs?memberInfo.commonlyUsedDrugs:""}}'></input>
+    </view>
+
+    <view class='item'>
+      <text class='item-hd'>过敏史</text>
+      <input class='item-bd' name="allergies" value='{{memberInfo.allergies?memberInfo.allergies:""}}'></input>
+    </view>
+
+    <view class='item margin-bottom-20'>
+      <text class='item-hd'>备注</text>
+      <input class='item-bd' name="remark" value='{{memberInfo.remark?memberInfo.remark:""}}'></input>
+    </view>
+
+    <button class='confirm-btn' formType="submit">确认修改</button>
+  </form>
+</view>

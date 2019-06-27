@@ -1,0 +1,95 @@
+<view class='coupon-details'>
+  <view id='header' style='height:440rpx;'>
+    <view class='coupon-title'>{{coupon.couponName}}</view>
+    <view class='rule-of-activity'>
+      <view class='rule-title'>活动规则</view>
+      <view class='rule-content'>
+        <text>1.优惠券仅限在有效期内使用，过期则无法使用；</text>
+        <text>2.少量特殊商品不能使用优惠券（有些优惠券标注全场通用则可以使用）；</text>
+        <text>3.一张订单只能使用一张优惠券，优惠券不可合并；</text>
+        <text>4.每张优惠券只能使用一次，抵价金额未用完下次也不能继续使用；</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="list_item {{curClass}}">
+    <view class='title'>优惠商品</view>
+    <view class='discounted-tab'>
+      <view class="item {{currentTab=='support'?'cur':''}}" data-idx="support" bindtap='clicktab'>{{supportProduct}}</view>
+      <view class="item {{currentTab=='nonsupport'?'cur':''}}" data-idx="nonsupport" bindtap='clicktab'>{{nonsupportProduct}}</view>
+    </view>
+  </view>
+
+
+  <view class='discounted-goods'>
+
+    <view class="commodity-table {{currentTab == 'support' ? 'show':'hidden'}}">
+     
+
+        <block wx:if="{{supportProductNum === 0}}">
+          <view class='blank-page-box'>
+            <view class='blank-page'>
+              <image src="../../../media/images/zanwulibao.png" />
+            </view>
+            <view class='blank-text'>暂无内容信息</view>
+          </view>
+        </block>
+
+        <block wx:if="{{supportProductNum !== 0}}" wx:for="{{coupon.protocolList}}">
+          <view class='item'>
+            <view class='pic'>
+              <image src="{{item.pictureUrl}}" />
+            </view>
+            <view class='content'>
+              <view class='c-title'>{{item.productNm}}</view>
+              <view class='tips'>{{approvalNumber}}</view>
+              <view class='factory'>{{item.manufacturer}}</view>
+              <view class='details-box'>
+                <view class='quantity'>{{item.spec}}</view>
+                <view class='price'>￥{{item.priceDouble}}
+                  <text>/盒</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+
+     
+    </view>
+
+    <view class="commodity-table {{currentTab == 'nonsupport' ? 'show':'hidden'}}">
+
+        <block wx:if="{{nonsupportProductNum === 0}}">
+          <view class='blank-page-box'>
+            <view class='blank-page'>
+              <image src="../../../media/images/zanwulibao.png" />
+            </view>
+            <view class='blank-text'>暂无内容信息</view>
+          </view>
+        </block>
+
+
+        <block wx:if="{{nonsupportProductNum !== 0}}" wx:for="{{coupon.protocolList}}">
+          <view class='item'>
+            <view class='pic'>
+              <image src="{{item.pictureUrl}}" />
+            </view>
+            <view class='content'>
+              <view class='c-title'>{{item.productNm}}</view>
+              <view class='tips'>{{approvalNumber}}</view>
+              <view class='factory'>{{item.manufacturer}}</view>
+              <view class='details-box'>
+                <view class='quantity'>{{item.spec}}</view>
+                <view class='price'>￥{{item.priceDouble}}
+                  <text>/盒</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+
+    </view>
+  </view>
+
+</view>

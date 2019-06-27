@@ -1,0 +1,52 @@
+<view class="bonus-pools">
+    
+    <view class='mt'>
+        <view class='cont'>
+            <view class='cont-tex'>门店奖金池(元)</view>
+            <view class='cont-data'>{{balanceDouble}}</view>
+        </view>
+    </view>
+
+
+    <view class='mc'>
+        <view class='dt'>
+            <text>日期</text>
+            <text>结余(元)</text>
+        </view>
+        <view class='list_title'>
+                    <view class='month'>{{currentMonth}}月</view>
+                    <view class='shuru'><text>收入 ￥{{monthIncomeDouble}}</text><text>支出 ￥{{monthOutlayDouble}}</text></view>
+                    <view class='title_pic'>
+
+                        <picker mode="date" value="{{date}}" fields="month" start="2015-01" end="{{toDate}}" bindchange="bindDateChange">
+                        <image src="../../media/images/rili.svg" />
+                        </picker>
+                    </view>
+        </view>
+        <scroll-view  scroll-y="true" scroll-x="false" style="height: {{height}}px;" bindscrolltolower="pullUpLoad">
+
+               <view class='dd'>
+                  <notData wx:if="{{pageList.data.length  == 0}}"/>
+                  <block wx:for="{{pageList.data}}" wx:key="index" wx:for-item="list">
+                  <navigator url='../user/bonusDetails/bonusDetails?shopAccountTransLogId={{list.shopAccountTransLogId}}&bounsDetails=shopBonusPool'>
+                    <view class='item'>
+                         <view class='cell-hd'>{{list.transTime}}</view>
+                             <view class='cell-bd'>
+                             <view class='money'wx:if="{{list.amountDouble > 0}}" style="color:red;">+{{list.amountDouble}}</view>
+                             <view class='money'wx:if="{{list.amountDouble < 0}}"  style="color:#27C886;">{{list.amountDouble}}</view>
+                             <view class='tex'>{{list.description}}</view>
+                         </view>
+                        <view class='cell-ft'>{{list.afterAmountDouble}}</view>
+                         </view>
+                            </navigator>
+                  </block>
+               </view>
+
+         </scroll-view>
+
+
+
+        
+    </view>
+  
+</view>

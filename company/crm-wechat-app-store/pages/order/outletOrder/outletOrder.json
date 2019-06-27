@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "门店订单",
+  "usingComponents": {
+    "cell": "./components/listcell",
+    "notData": "../../common/notDataList/notDataList"
+  }
+}

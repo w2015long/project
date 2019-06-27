@@ -1,0 +1,212 @@
+.containers {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #F5F5F5;
+} 
+.line {
+	width:96%;
+	margin-left:4%;
+	height:1rpx;
+	background:#D9D9D9;
+}
+.topv {
+   width:100%;
+   height:88rpx;
+   display:flex;
+   flex-direction:row;
+   align-items:center;
+   margin-top:20rpx;
+   background:#fff;
+}
+.topl {
+	flex:1;
+	display: flex;
+    flex-direction: row;
+	align-items:center;
+	padding-left:32rpx;
+}
+.topl text {
+   font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #1A1A1A;
+}
+.topr {
+  height:44rpx;
+  display: flex;
+  flex-direction: row;
+  justify-centent:center;
+  align-items:center;
+  border-radius:22rpx;
+  background: #F5F5F5;
+  margin-right:32rpx;
+  font-size: 24rpx;
+  color: #666666;
+  padding-left:30rpx;
+  padding-right:30rpx;
+}
+.topiconv {
+	width:88rpx;
+	height:88rpx;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-centent:center;
+}
+.topiconvimage {
+	width:30rpx;
+	height:16rpx;
+	margin-left:28rpx;
+}
+.dian {
+	width:8rpx;
+	height:8rpx;
+	border-radius:4rpx;
+	margin-right:9rpx;
+	background: #CACACA;
+}
+.modal {
+	display: flex;
+	position: fixed;
+	top: 108rpx;
+	left:0rpx;
+	width:100vw;
+	height:100vh;
+	flex-direction: column;
+	background-color: rgba(0,0,0,0.1);
+}
+.tohover-class { 
+    width:100vw;
+	height:42rpx;
+	background:#fff;
+	font-size: 30rpx;
+	color: #1A1A1A;
+	text-align: center;
+	padding-top:23rpx;
+	padding-bottom:21rpx;
+	border-bottom:1rpx solid #E6E6E6;
+}
+.tablev {
+	width:100vw;
+	height:426rpx;
+	display:flex;
+	flex-direction:column;
+	background:#fff;
+}
+.tabletv {
+	display:flex;
+	flex:1;
+}
+.tablebv {
+	width:100vw;
+	height:92rpx;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}
+.tablebv view {
+	width:26rpx;
+	height:26rpx;
+	background: #90ED7D;
+	border-radius:2rpx;
+	margin-left:33rpx;
+	margin-right:20rpx;
+}
+.tablebv text {
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #000000;
+}
+.canvas {
+	width:100vw;
+	height:320rpx;
+}
+.tablebtab {
+   margin-top:20rpx;
+   width:100vw;
+   height:88rpx;
+   display:flex;
+   flex-direction:row;
+   align-items:center;
+   background:#fff;
+   justify-content:space-around;
+}
+.tablebtab text {
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #999999;
+	letter-spacing: 0;
+	text-align: center;
+} 
+.contents {
+	display:flex;
+	flex-direction:column;
+	flex:1;
+}
+.losev {
+	width:100vw;
+	height:387rpx;
+	background:#fff;
+	margin-top:20rpx;
+}
+.losbv {
+  width:100vw;
+  height:88rpx;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  padding-left:32rpx;
+  background:#fff;
+}
+.losecanvas {
+	width:100vw;
+    height:350rpx;
+}
+.losbv view {
+	width:26rpx;
+	height:26rpx;
+	background: #90ED7D;
+	border-radius:2rpx;
+	margin-right:23rpx;
+}
+.losbv text {
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #1B1B1B;
+}
+
+.transactionmodal {
+	display: flex;
+	position: absolute;
+	top: 554rpx;
+	left:0rpx;
+	width:100vw;
+	height:100vh;
+	align-items:flex-end;
+	flex-direction: column;
+	background-color: rgba(0,0,0,0.1);
+}
+.transactionmodalview {
+	width:250rpx;
+	height:88rpx;
+	background:#fff;
+	font-size: 30rpx;
+	color: #1A1A1A;
+	display: flex;
+	text-align: center;
+	flex-direction: row;
+    align-items:center;
+	justify-content:centent;
+}
+.modalviewlinesmin{
+	width:250rpx;
+	height:1rpx;
+	background:#E6E6E6;
+}
+.transactionmodal view text {
+	font-family: PingFangSC-Regular;
+	font-size: 30rpx;
+	color: #1A1A1A;
+}
+

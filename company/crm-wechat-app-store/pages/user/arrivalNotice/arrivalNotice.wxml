@@ -1,0 +1,26 @@
+<view class="arrival-notice">
+
+  <picker mode="time" value="{{time}}" start="08:01" end="22:01" bindchange="bindBeginTimeChange">
+      <view class='picker item'>
+        <text class='item-hd'>开始时间</text>
+        <text class='item-bd'> {{beginTime}}</text>
+      </view>
+  </picker>
+  <picker mode="time" value="{{time}}" start="08:01" end="22:01" bindchange="bindEndTimeChange">
+      <view class='picker item'>
+        <text class='item-hd'>结束时间</text>
+        <text class='item-bd'>{{endTime}}</text>
+      </view>
+  </picker>
+  <view class='item margin-top-20'>
+    <text class='item-hd'>通知</text>
+    <view class='item-bd'>
+    <switch wx:if="{{isNotice == 'N'}}" color="#28c785" bindchange="bindIsNoticeChange" />
+    <switch wx:if="{{isNotice == 'Y'}}" checked color="#28c785" bindchange="bindIsNoticeChange" />
+    </view>
+  </view>
+  <view class='ft-box'>
+    <button type="primary" bindtap="updateNotice" class='login-btn'>确认</button>
+  </view>
+
+</view>

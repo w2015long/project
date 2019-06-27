@@ -1,0 +1,32 @@
+<view class="passport-container">
+  <form bindsubmit='searchBox'>
+    <view class='item'>
+      <text class='label'>手机号：</text>
+      <input type='number' class='phone-number' maxlength='11' placeholder="填写手机号" bindfocus='hideWrongPhoneTip'  bindinput='updateMoibleValue'></input>
+    </view>
+
+    <view class='item code-item'>
+      <text class='label'>验证码：</text>
+      <input type='number' class='sms-code' maxlength='8' bindinput='updateVerificationCodeValue' size="mini" placeholder="短信验证码"></input>
+      <button class='{{isSendVerificationCode?"btn-code":"btn-code btn-primary"}}'  bindtap='sendVerificationCode' plain="false">{{tempButtonTitle}}</button>
+    </view>
+  </form>
+  <view class='input-tip'>
+    <view class=' tip-success ' wx:if='{{isSendVerificationCode}}'>
+      <image src="../../../media/images/icon-success.png" mode="scaleToFill" class="success-image" />
+      <text class='tip-text '>已发送</text>
+    </view>
+
+    <view class='tip-error' wx:if="{{isShowPhoneWrongTip}}">
+      <image src="../../../media/images/icon-error.png" mode="scaleToFill" class="success-image" />
+      <text class='tip-text '>请填写正确的手机号</text>
+    </view>
+
+    <view class='tip-error' wx:if="{{isShowVerificationCodeWrongTip}}">
+      <image src="../../../media/images/icon-error.png" mode="scaleToFill" class="success-image" />
+      <text class='tip-text '>请输入验证码</text>
+    </view>
+  </view>
+
+  <button type="primary" class='login-btn' bindtap='login'>登录</button>
+</view>

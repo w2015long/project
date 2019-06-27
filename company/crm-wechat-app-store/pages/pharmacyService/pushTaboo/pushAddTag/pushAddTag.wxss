@@ -1,0 +1,20 @@
+page{background-color: #f5f5f5;}
+.hd-box{padding: 16rpx 32rpx; background-color: #fff; position: relative;}
+.hd-box .search-icon{width: 65rpx; height: 56rpx; opacity: 0.7; line-height: 56rpx; position: absolute; left: 32rpx; top:16rpx; text-align: center;}
+.hd-box .search-icon image{width: 25rpx; height: 25rpx;}
+.hd-box input{height: 56rpx; line-height: 56rpx; border-radius: 4rpx; background-color:#F5F5F5; padding-left: 65rpx; font-size: 26rpx;}
+
+.cont{margin-top:20rpx;}
+.cont .item{padding: 34rpx 37rpx 24rpx 32rpx; box-sizing: border-box; border: 2rpx solid #fff; margin-bottom: 20rpx; background-color: #fff; }
+.cont .item-tag{color: #1A1A1A; font-size: 26rpx; font-weight: bold;}
+.cont .item-tag text{font-size: 36rpx; padding-right: 23rpx;}
+.cont .item-suggest{color: #999999; font-size: 26rpx; line-height: 37rpx; margin-top: 10rpx;}
+.cont .item-hover{background-color: #E6E6E6; border-color: #E6E6E6;}
+.cont .item-selected{background-color: #fff; border-color: #27C886;}
+.cont .item-selected .item-tag{color: #27C886;}
+
+.ft-box{height: 100rpx;}
+.ft-box button{position: fixed; left: 0; right: 0; bottom: 0; background-color: #27C886; color: #FFFFFF; font-size: 30rpx; border-radius: 0; height: 100rpx; line-height: 100rpx;}
+.ft-box button::after{border-color: #27C886;}
+
+.ft-box .button-hover{background-color: #27C886;}

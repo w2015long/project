@@ -1,0 +1,368 @@
+/*pages/order/prescriptionOrder/deployDrug/deployDrug.wxss */
+.operation-operate {
+  display: flex;
+  flex:1;
+  width: 100%;
+  height:100vh;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  position: fixed;
+}
+
+.operate-warp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  background-color: #fff;
+}
+
+.operate-tab view {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.operate-tab text {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1A1A1A;
+  text-align: center;
+}
+
+.operate-tab {
+   display: flex;
+   flex-direction: row;
+   height: 88rpx;
+   width: 100%;
+   background-color: #fff;
+   margin-bottom: 37rpx;
+}
+
+.sender-info {
+  margin-bottom: 20rpx;
+}
+
+.image-scroll {
+  display: flex;
+  flex:1;
+  width: 92%;
+}
+
+.cellImg-warp {
+  display: flex;
+  flex-direction: row;
+  height: 210rpx;
+  width: 1000rpx;
+  padding-top: 32rpx;
+}
+
+.imgItem {
+  width: 210rpx;
+  height: 210rpx;
+  margin-right: 28rpx;
+}
+
+.tips-view{
+  display:flex;
+  flex-direction:row;
+  flex: 1;
+  margin-top: 19rpx;
+  margin-bottom: 32rpx;
+}
+
+.tip-view{
+  height:32rpx;
+  width:84rpx;
+  background-color:#F0332F;
+  margin-right:20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip-view text{
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #FFFCFC;
+  letter-spacing: 0;
+}
+
+.wait{
+  background-color:#546472;
+}
+
+.out {
+  background-color:#27C886;
+}
+
+.cell-line {
+  height:1rpx;
+  width:100vw;
+  background-color: #E5E5E5
+}
+
+.item-title {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #9A9A9A;
+}
+
+.left-value {
+  text-align: right;
+  margin-left: 60%;
+}
+
+.item-value {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1A1A1A;
+  line-height: 40rpx;
+  letter-spacing: 0;
+}
+
+.item-unit {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1A1A1A;
+  letter-spacing: 0;
+}
+
+.single-line {
+  height: 88rpx;
+  display: flex;
+  flex:1;
+  width: 100%;
+  align-items: center;
+}
+
+.left-value {
+  margin-left: 53%;
+  margin-right: 20rpx;
+}
+
+.other-style {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #999999;
+  margin-left: 38%;
+}
+
+.single-line image {
+  width: 16rpx;
+  height: 26rpx;
+}
+
+.copy-btn {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #27C886;
+}
+
+.single-line input {
+  display: flex;
+  margin-left: 140rpx;
+  text-align: right;
+  max-width: 70%;
+}
+
+.multiple-line {
+  flex:1;
+  padding-bottom: 26rpx;
+  padding-top: 26rpx;
+}
+
+.multiple-line .item-value {
+  width: 76%;
+  word-break:break-all;
+}
+
+.mutiple-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-top {
+  display: flex;
+  flex-direction: row;
+  height: 88rpx;
+  margin-top: 20rpx;
+  width: 100%;
+  background-color: #fff;
+}
+
+.table-top view{
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-top text {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #999999;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.table {
+  display: flex;
+  flex-direction: row;
+  height: 88rpx;
+  width: 100%;
+  background-color: #fff;
+}
+
+.table view {
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+}
+
+.table image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.table text {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1A1A1A;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.gray {
+  background-color: #F5F5F5;
+}
+
+.done-btn {
+  display: flex;
+  margin-top: 20rpx;
+  background-color: #27C886;
+  height: 100rpx;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0rpx;
+}
+
+.done-btn text {
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #FFFFFF;
+}
+
+.finished {
+  background-color: #27C886;
+  width: 138rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.unfinished {
+  background-color: #fff;
+  width: 138rpx;
+  height: 56rpx;
+  border: 1rpx solid #E5E5E5;
+  border-radius: 28rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.finished text {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.bottom {
+  margin-top: 20rpx;
+}
+/*  已发货UI  */
+.sender-ui {
+  margin-top: 20rpx;
+  flex:1;
+  background-color: #fff;
+}
+
+.sender-container {
+  flex:1;
+}
+
+.time-line {
+  margin-top: 32rpx;
+  position: fixed;
+  margin-left: 30%;
+  width: 1rpx;
+  background-color: #E5E5E5;
+  height: 100%;
+}
+
+.top-sender {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-top: 23rpx;
+}
+
+.record-sender {
+  margin-top: 57rpx;
+}
+
+.address-right {
+  width: 460rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-right text {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1A1A1A;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+}
+
+.dot-green {
+  background-color: #27C786;
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 13rpx; 
+  margin-top: 9rpx;
+}
+
+.done {
+  background-color: #E6E6E6;
+}
+
+.address {
+  margin-left: 28.4%;
+}
+
+.sender-date {
+  width: 25.7%;
+  margin-right: 21rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.sender-date text {
+  text-align: right;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1A1A1A;
+}
+
+.done-record text{
+  color: #999999;
+}

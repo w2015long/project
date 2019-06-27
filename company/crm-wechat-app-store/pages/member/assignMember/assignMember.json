@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "会员分配",
+  "usingComponents": {
+    "loadingTip": "../../common/loadingTip/loadingTip"
+  }
+}

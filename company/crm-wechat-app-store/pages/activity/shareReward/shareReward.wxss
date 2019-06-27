@@ -1,0 +1,24 @@
+.containers {
+  height: 100vh;
+  background-color:#F5F5F5;
+}
+.cont{padding: 20rpx 32rpx;}
+.cont .item{background-color: #fff; margin-bottom:20rpx; border-radius: 8rpx; overflow: hidden;}
+.cont .item .mt{display: -webkit-box;display: -webkit-flex;display: flex; -webkit-box-align: center;
+-webkit-align-items: center;align-items: center; height: 110rpx; padding: 18rpx 32rpx 0; background-color: #FAFAFA;}
+.cont .item .mt .cell-hd{-webkit-box-flex:1;-webkit-flex:1;flex:1;}
+.cont .item .mt .title{color:#1A1A1A; font-size: 32rpx; font-weight: bold; margin-bottom:13rpx;}
+.cont .item .mt .title .elli{width: 510rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.cont .item .mt .time{color:#999; font-size: 26rpx;}
+.cont .item .mt .cell-bd{font-size: 26rpx;}
+.cont .item .mt .cell-bd .green{color:#28C785;}
+.cont .item .mt .cell-bd .red{color:#F0332F;}
+
+.cont .item .mc{padding: 21rpx 0 0 32rpx;}
+.cont .item .mc .mc-top{max-height: 120rpx; padding-right:32rpx; line-height: 40rpx; color: #4D4D4D; font-size: 28rpx; overflow: hidden;}
+.cont .item .mc .mc-bot{width: 100%; margin-top: 16rpx; height: 190rpx; overflow: hidden;}
+.cont .item .mc .mc-bot swiper-item image{width: 160rpx; height:160rpx;}
+
+
+
+

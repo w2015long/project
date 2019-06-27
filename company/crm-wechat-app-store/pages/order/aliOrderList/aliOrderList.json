@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "阿里健康订单",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "cell": "./aliOrderItem/aliOrderItem",
+    "notData":"../../common/notDataList/notDataList"
+  }
+
+  
+ 
+}

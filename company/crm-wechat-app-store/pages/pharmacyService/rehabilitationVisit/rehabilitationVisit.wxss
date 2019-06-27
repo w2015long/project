@@ -1,0 +1,32 @@
+
+page{background-color: #f5f5f5;}
+.nav-tab{height: 88rpx; line-height: 88rpx; background-color: #fff; }
+.nav-tab view{width: 25%; float: left; text-align: center; color: #999999; font-size: 28rpx;}
+.nav-tab .active{color: #28C785;font-weight: bold; position: relative; z-index: 2;}
+.nav-tab .active::before{content: ''; width: 44%; height: 4rpx; background-color: #28C785; position: absolute; left: 28%; bottom: 0;}
+
+.nav-tab .return-already{display: flex; width: 25%; float: left; justify-content:center; font-size: 28rpx; align-items:center;color: #1A1A1A;}
+.nav-tab .navigator-hover{background-color: inherit;}
+.nav-tab .return-already image{
+  width: 26rpx;
+  height: 26rpx;
+  display: inline-block;
+  margin-right: 8rpx;
+}
+
+.tab-box{overflow: hidden;}
+.tab-box .info{display: flex; position: relative;padding:23rpx 32rpx; background-color: #fff;}
+.tab-box .info .mt-hd{margin-right: 20rpx; width: 100rpx; height: 100rpx;}
+.tab-box .info .mt-hd image{width: 100rpx; height: 100rpx;}
+.tab-box .info .mt-bd{flex:1; color: #1A1A1A;}
+.tab-box .info .info-name{display: flex;align-items:center; line-height: 50rpx;padding-top: 6rpx; font-size: 30rpx;}
+.tab-box .info .info-name text{padding-right: 15rpx;}
+.tab-box .info .gender-icon{width: 26rpx; height: 26rpx;}
+.tab-box .info .member{font-size: 24rpx; line-height: 33rpx;}
+.tab-box .info .member-label{vertical-align: middle; padding-left: 8rpx; padding-right: 20rpx; color: #FFB602; }
+.tab-box .info .member-icon{width: 26rpx; height: 26rpx; vertical-align: middle;}
+.tab-box .info .mt-ft{color: #999999; font-size: 28rpx; line-height: 50rpx; padding-top: 6rpx;}
+.tab-box .info::before{border-top: 1px solid #DFE4E6;color: #DFE4E6;content: " ";height: 1px;left:152rpx;position:absolute;right: 0;bottom: -2rpx;transform-origin: 0 0;transform: scaleY(0.5);z-index: 2;}
+
+
+.fill-icon{border-radius:50rpx;}

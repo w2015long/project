@@ -1,0 +1,80 @@
+<view class="assign-member">
+  <!-- mt处可以加 show 控制 -->
+  <view class="mt {{isShowUserCountBox ? 'show' : ''}}">
+    <view class='mt-cell'>
+      <view class='mt-lt' bindtap="showUserCountBox"><text>{{currentUserName}}</text></view>
+    </view>
+
+    <view class='member-modal'>
+      <view class='member-box'>
+           <block wx:for="{{userCountData}}" wx:for-item="user" wx:key="index">
+              <text class="item {{user.sysUserName == currentUserName ? 'cur' : ''}}" bindtap="loadMember" data-user-id="{{user.sysUserId}}" data-user-name="{{user.sysUserName}}">{{user.sysUserName}}({{user.memberCount}})</text>
+           </block>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view scroll-top="{{scrollTop}}" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscroll="scroll" bindscrolltolower="pullUpLoad" class="weui-panel weui-panel_access">
+    <view class='mc'>
+        <view class='item' wx:for="{{pageMember.content}}" wx:for-item="member" wx:key="index">
+          <view class='item-hd'>
+            <view class='icon-box' bindtap='selectMember' data-index="{{index}}">
+              <image src="../../../media/images/checkbox.png" mode="scaleToFill" wx:if="{{!member.selected}}" />
+              <image src="../../../media/images/icon-success48x48.png" mode="scaleToFill" wx:if="{{member.selected}}" />
+            </view>
+          </view>
+          <view class='item-bd'><image src="{{member.iconFileUrl}}" /></view>
+          <view class='item-ft'>
+            <view class='ft-cell'>
+              <text class='ft-name'>{{member.name}}</text>
+              <text class='ft-sum'>￥{{member.orderAmountAvgDouble}}</text>
+            </view>
+            <text class='ft-text'>消费：{{member.tradesSum}}次</text>
+            <text class='ft-text'>交易：{{member.lastTransaction}}天前</text>
+            <view class='label-box'>
+              <text class='label green-bg' wx:if="{{member.lifeCycleTitle}}">{{member.lifeCycleTitle}}</text>
+              <text class='label'>{{member.levelName}}</text>
+              <text class='label' wx:if="{{member.isSubscriptionWechat && member.isSubscriptionWechat == 'Y'}}">微信</text>
+            </view>
+          </view>
+        </view>
+      </view>
+  </scroll-view>
+  <loadingTip is-show="{{hidden}}"/>
+  
+  <view class='md'>
+    <view class='md-box'>
+      <view class='md-hd' bindtap='selectedAll'>
+          <view class='icon-box' wx:if="{{!checkedAll}}"><image src="../../../media/images/checkbox.png" mode="scaleToFill"/></view>
+          <view class='icon-box' wx:if="{{checkedAll}}"><image src="../../../media/images/icon-success48x48.png" mode="scaleToFill"/></view>
+          <label>全选 </label>
+      </view>
+      <view class='md-bd'>已选择{{selectedMemberNum}}人</view>
+      <view class='md-ft'><button type="primary" class='assign-btn' bindtap="assignMember">分配</button></view>
+    </view>
+  </view>
+</view>
+
+<!-- show 控制显示和隐藏 -->
+<view class="assign-modal {{showMemberListBox ? 'show' : ''}}">
+  <view class='assign-box'>
+    <view class='mt'><text>选择店员</text></view>
+    <view class='mc'>
+      <block wx:for="{{userList}}" wx:for-item="user" wx:key="index">
+        <view class='item' wx:if="{{user.isShopOwner == 'N'}}">
+          <view class='item-hd'><image src="{{iconFileUrl}}" mode="scaleToFill" /></view>
+          <view class='item-bd'>
+             <text class='bd-name'>{{user.realName}}</text>
+            <text class='bd-text'>工号: {{user.employeeCode}}</text>
+          </view>
+           <view class='item-ft' bindtap='selectUser' data-user-id="{{user.sysUserId}}">
+            <view class='icon-box' wx:if="{{user.sysUserId != selectedUserId}}"><image src="../../../media/images/checkbox.png" mode="scaleToFill" /></view>
+            <view class='icon-box' wx:if="{{user.sysUserId == selectedUserId}}"><image src="../../../media/images/icon-success48x48.png" mode="scaleToFill" /></view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class='md'><button type="primary" class='confirm-btn' bindtap="submit">确认</button></view>
+  </view>
+  <view class='shadow-box' bindtap="assignMember"></view>
+</view>

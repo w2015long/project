@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "用药提醒",
+  "usingComponents": {
+    "notData":"../../common/notDataList/notDataList"
+  }
+}

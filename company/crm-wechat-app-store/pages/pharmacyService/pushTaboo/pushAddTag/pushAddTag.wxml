@@ -1,0 +1,35 @@
+<view class="tag-container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+   <view class='hd-box'>
+        <view class='search-icon'><image src="../../../media/images/icon-search.png" mode="scaleToFill" /></view>
+        <input  bindconfirm='tagSearch' placeholder="请输入标签名称  科室" />
+   </view>  
+ <swiper-item>
+      <scroll-view scroll-y="true" scroll-x="true" style="height:100%;" bindscrolltolower="pullUpLoad" >
+   <view class='cont'>
+     <view wx:for="{{pageDiseaseTag.data}}" wx:for-item="items" wx:key="{{index}}" > 
+        <view class='item {{items.itemSelected}}' data-index="{{index}}" data-item="{{items}}" data-disease-tag-id ='{{items.diseaseTagId}}'  bindtap="bindtapTag" >
+              <view class='item-tag'><text>{{items.title}}</text>{{items.departmentName}}</view>
+              <view class='item-suggest'>建议关怀：{{items.adviceDesc}}</view>
+        </view>
+      </view>
+   </view>
+        </scroll-view>
+ </swiper-item>
+        <!-- item-selected是选中状态 -->
+        <!-- <view class='item item-selected'>
+            <view class='item-tag'><text>胃炎</text>内科/消化内科</view>
+            <view class='item-suggest'>建议关怀：少吃过酸过甜食物，对豆腐米粉之类也是尽量少吃。也不能过度饮酒</view>
+        </view> -->
+        <!-- item-hover是点击状态 -->
+        <!-- <view class='item item-hover'>
+            <view class='item-tag'><text>胃炎</text>内科/消化内科</view>
+            <view class='item-suggest'>建议关怀：少吃过酸过甜食物，对豆腐米粉之类也是尽量少吃。也不能过度饮酒</view>
+        </view>
+        <view class='item'>
+            <view class='item-tag'><text>胃炎</text>内科/消化内科</view>
+            <view class='item-suggest'>建议关怀：少吃过酸过甜食物，对豆腐米粉之类也是尽量少吃。也不能过度饮酒</view>
+        </view> -->
+   <view class='ft-box'><button type="primary" formType="submit"> 确认 </button></view>
+   </form>
+</view>

@@ -1,0 +1,123 @@
+
+<view class='health-container'>
+    <scroll-view class='scroll-container' scroll-y="true" scroll-x="true" style="height:100%;" bindscrolltolower="pullUpLoad">
+        <view class='recent-infos'>
+            <view class='title-view'>
+                <text>近{{dayNumber}}天检测预警</text>
+            </view>
+            <view class='cell-line'/>
+            <view class='infos-view'>
+            <!-- todo : ly  全部的navigator标签的链接全部没有，这里先放一个临时测试链接验证能够正常跳转-->
+                <navigator class='seg'  url="../../order/jdO2oOrder/jdO2oOrder?state=1">
+                    <text class='value-title'>{{recordWarningProtocol.isHypertensionNum}}人</text>
+                    <text class='ill-title'>疑似高血压</text>
+                </navigator>
+                <view class='space-line'/>
+                <navigator class='seg' url="../../order/jdO2oOrder/jdO2oOrder?state=2">
+                    <text class='value-title'>{{recordWarningProtocol.isHyperglycemiaNum}}人</text>
+                    <text class='ill-title'>疑似高血糖</text>
+                </navigator>
+                <view class='space-line'/>
+                <navigator class='seg' url="../../order/jdO2oOrder/jdO2oOrder?state=3">
+                    <text class='value-title'>{{recordWarningProtocol.isHypercholesterolemiaNum}}人</text>
+                    <text class='ill-title'>疑似高胆固醇</text>
+                </navigator>
+            </view>
+        </view>
+        <view class='recent-infos center-section'>
+            <navigator class='single-line' url="../../order/jdO2oOrder/jdO2oOrder">
+                <view class='center-item'>
+                    <image class='tip-img' src='../../../media/images/archive.png'/>
+                    <text class='left-txt'>健康档案</text>
+                </view>
+                <view class='center-item'>
+                    <text class='right-txt'>{{recordNumber}}人</text>
+                    <image class='arrow' src='../../../media/images/Chevron1.png'/>
+                </view>
+            </navigator>
+            <view class='cell-line'/>
+            <navigator class='single-line' url="../../order/jdO2oOrder/jdO2oOrder">
+                <view class='center-item'>
+                    <image class='tip-img' src='../../../media/images/alert.png'/>
+                    <text class='left-txt'>健康预警</text>
+                </view>
+                <view class='center-item'>
+                    <image class='arrow' src='../../../media/images/Chevron1.png'/>
+                </view>
+            </navigator>
+        </view>
+        <view class='recent-infos center-section'>
+            <view class='bottom-view'>
+                <text class='bottom-leftTxt'>快速检测</text>
+                <navigator class='bottom-rightTxt'  url="../../order/jdO2oOrder/jdO2oOrder" catchtap='addReport'>+添加报告</navigator>
+            </view>
+            <view class='cell-line'/>
+            <block wx:for="{{patients}}" wx:key="*this">
+                <block  wx:if="{{item.memberId != null}}">
+                    <navigator class='patient-warp' url="../../order/jdO2oOrder/jdO2oOrder" >
+                        <image class='photo' src='{{item.faceFileUrl}}'/>
+                        <view class='patient-view'>
+                            <view class='patient-top'>
+                                <view class='top-content'>
+                                    <text>{{item.name}}</text>
+                                    <image class='gender-tip' src="{{item.sex =='保密' ?'保密' : (item.sex=='女'?'../../../media/images/gliricon.png':'../../../media/images/icon-man.png')}}"/>
+                                </view>
+                                <text class='pay-date'>{{item.time}}</text>
+                            </view>
+
+                            <text class='pay-history' wx:if='{{item.consumeNum != 0}}'>消费：{{item.consumeNum}}次    客单价：￥{{item.amountAvgDouble}}</text>
+                            <text class='pay-history' wx:else>暂无顾客消费记录</text>
+                            <view class='tips-view'>
+                              <block wx:if="{{item.memberActivity == '活跃期' }}">
+                                <view class='light'>
+                                    <text decode="{{true}}">活跃期</text>               
+                                  </view>
+                              </block >
+                              <block wx:elif="{{item.memberActivity == '睡眠期'}}">
+                                <view class='light'>
+                                    <text decode="{{true}}">睡眠期</text>
+                                  </view>
+                              </block >
+                              <block wx:elif="{{item.memberActivity == '沉睡期'}}">
+                                <view class='light' >
+                                    <text decode="{{true}}" >沉睡期</text>
+                                  </view>
+                              </block >
+                              <block wx:else>
+                                <view class='light'>
+                                    <text decode="{{true}}" >流失期</text>
+                                  </view>
+                              </block >
+                          
+                              <view class='gray'><text decode="{{true}}">{{item.level}}</text></view>
+                          
+                            </view>
+                        </view>
+                    </navigator>
+                  </block >
+                  
+
+                  <view class='cell-line'/>
+
+                  <block  wx:if="{{item.memberId == null}}">
+                    <navigator class='patient-warp' url="../../order/jdO2oOrder/jdO2oOrder" >
+                        <image class='photo' src='{{item.faceFileUrl}}'/>
+                        <view class='patient-view'>
+                            <view class='patient-top'>
+                                <view class='top-content'>
+                                    <text>{{item.name}}</text>
+                                    <image class='gender-tip' src="{{item.sex =='保密' ?'保密' : (item.sex=='女'?'../../../media/images/gliricon.png':'../../../media/images/icon-man.png')}}"/>
+                                </view>
+                                <text class='pay-date'>{{item.time}}</text>
+                            </view>
+
+                            <text class='pay-history' wx:if='{{item.consumeNum != 0}}'>消费：{{item.consumeNum}}次</text>
+                            <text class='pay-history' wx:else>暂无顾客消费记录</text>             
+                        </view>
+                    </navigator>
+                  </block >
+                <view class='cell-line patient-line' hidden='{{patients.length<=index+1}}'/>
+            </block>
+        </view>
+    </scroll-view>    
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "拉新奖励",
+  "usingComponents": {
+    "awardItem": "../../common/awardItem/awardItem"
+  }
+}

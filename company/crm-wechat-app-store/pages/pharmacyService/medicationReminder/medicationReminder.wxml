@@ -1,0 +1,40 @@
+<view class="taboo-container">
+  <view class='nav-tab'>
+     <view wx:for="{{tabs}}" bindtap='onchangeTab' wx:key="index" id="{{'tab'+index}}" class="{{tabIndex==index?'active':''}}">{{item}}</view>
+     <navigator url='../subscribe/subscribe'><image src="../../../media/images/sub-icon.png" mode="scaleToFill" />已订阅</navigator>
+  </view>
+  <view class='nav-box'>
+   <swiper-item>
+    <scroll-view scroll-y="true" scroll-x="true" style="height:100%;" bindscrolltolower="pullUpLoad" >
+    <notData  wx:if="{{pageMedicationReminder.data.length  == 0}}"/>
+    <view class='box-item'  wx:for="{{pageMedicationReminder.data}}" wx:key="index"  >
+      <view class="info">
+        <view class="mt-hd">
+          <image src="{{item.iconFileId}}" mode="scaleToFill" class="customer-image fill-icon"/>
+        </view>
+        <view class="mt-bd">
+          <view class="info-name">
+            <text>{{item.memberName}}</text>
+             <image src="{{item.memberSex==='MALE'?'../../../media/images/manicon.png':(item.memberSex==='FEMALE'?'../../../media/images/gliricon.png':'')}}"  mode="scaleToFill" class="gender-icon"/>
+          </view>
+          <view class='member'>
+            <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon"/>
+            <text class="member-label">{{item.level}}</text>
+            <text class='member-phone'>{{item.mobile}}</text>
+          </view> 
+        </view>
+        <view class='mt-ft'>{{item.createTimeStr}}</view>
+      </view>
+      <view class='gd-box'>
+        <view class='gd-item' wx:for="{{item.productList}}" wx:key="index" wx:for-item="product">
+          <view class='item-hd'>{{product.productNm}}</view>
+          <view class='item-bd'>x{{product.soldNumber}}</view>
+        </view>
+      </view>
+      <navigator class='btn-box' url="{{'../pushReminding/pushReminding?orderId='+item.orderId+'&memberId='+item.memberId}}"><button type="primary">推送提醒</button></navigator>
+    </view>
+     </scroll-view>
+     </swiper-item>
+  </view>  
+
+</view>

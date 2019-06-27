@@ -1,0 +1,67 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="query-member">
+  <view class='mt'>
+    <view class='mt-cell'>
+      <view class='cell-hd'>姓名：</view>
+      <view class='cell-bd'><input type='text' class='phone-number' name="memberName" placeholder="请输入会员姓名" maxlength='18'/></view>
+    </view>
+    <view class='mt-cell'>
+      <view class='cell-hd'>手机号码：</view>
+      <view class='cell-bd'><input type='number' class='phone-number' name="mobile" placeholder="请输入手机号码" maxlength='11'></input></view>
+    </view>
+  </view>
+
+  <view class='mc'>
+    <view class='choose-label'>
+      <view class='label-mt'>
+        <text>生命周期</text>
+      </view>
+      <view class='label-mc'>
+        <block wx:for="{{lifeCycleData}}" wx:for-item="tag" wx:key="index" >
+          <text class="tag-item {{tag.select ? 'active' : ''}}" data-tag-id="{{tag.tagId}}" data-tag-type="LIFE_CYCLE" data-index="{{index}}" bindtap="selectTag">{{tag.tagTitle}}</text>
+        </block>
+      </view>
+    </view>
+
+    <view class='choose-label'>
+      <view class='label-mt'>
+        <text>会员等级</text>
+      </view>
+        <view class='label-mc'>
+          <block wx:for="{{levelData}}" wx:for-item="tag" wx:key="index" >
+            <text class="tag-item {{tag.select ? 'active' : ''}}" data-tag-id="{{tag.tagId}}" bindtap="selectTag" data-tag-type="LEVEL" data-index="{{index}}">{{tag.tagTitle}}</text>
+          </block>
+        </view>
+    </view>
+
+    <view class='choose-label'>
+      <view class='label-mt'>
+        <text>会员分组</text>
+      </view>
+        <view class='label-mc'>
+          <block wx:for="{{groupData}}" wx:for-item="tag" wx:key="index" >
+            <text class="tag-item {{tag.select ? 'active' : ''}}" data-tag-id="{{tag.tagId}}" data-tag-type="GROUP" data-index="{{index}}" bindtap="selectTag">{{tag.tagTitle}}</text>
+          </block>
+        </view>
+    </view>
+
+    <view class='choose-label'>
+      <view class='label-mt'>
+        <text>自定义标签</text>
+      </view>
+        <view class='label-mc'>
+          <block wx:for="{{userDefinedData}}" wx:for-item="tag" wx:key="index" >
+            <text class="tag-item {{tag.select ? 'active' : ''}}" data-tag-id="{{tag.tagId}}" data-tag-type="USER_DEFINED" data-index="{{index}}" bindtap="selectTag">{{tag.tagTitle}}</text>
+          </block>
+        </view>
+    </view>
+  </view>
+  <view class='ft-box'>
+    <view class='ft-cont'>
+      <button type="default" class='btn1' formType="reset">重置</button>
+      <button type="primary" class='btn2' formType="submit">确认</button>
+      <!-- <button type="primary" class='btn2' disabled="disabled">确认</button> -->
+    </view>
+  </view>
+</view>
+</form>

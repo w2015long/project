@@ -1,0 +1,44 @@
+page{background-color: #f5f5f5;}
+.mt-cell{display: flex; background-color: #fff; justify-content:space-between; font-size: 30rpx; padding: 0 32rpx; height: 88rpx; line-height: 88rpx; position: relative;}
+.mt-cell::before{
+  border-top: 1px solid #e5e5e5;color: #e5e5e5; width: 100%; content: " ";height: 1;left: 0; right: 0; position: absolute;
+  bottom: 0;-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY  (0.5);transform: scaleY(0.5);z-index: 2;}
+.mt-cell .cell-item{color: #999999;}
+.mt-cell .cell-item.active{color: #1B1B1B;}
+.icon-box{ width: 32rpx; height: 32rpx; line-height: 32rpx; float: right; margin:30rpx 0 0 20rpx;}
+.icon-box image{width: 32rpx; height: 32rpx;}
+
+.mc-box{background-color: #fff;}
+.mc-box .item{display: flex; position: relative; padding: 32rpx 32rpx 40rpx 32rpx;}
+.mc-box .item-hd{width: 100rpx; height: 100rpx;}
+.mc-box .item-hd image{width: 100rpx; height: 100rpx;}
+.mc-box .item-bd{flex: 1; padding-left: 20rpx;}
+.mc-box .item-bd .bd-name{display: block; color: #000000; font-size: 34rpx;}
+.mc-box .item-bd .bd-text{color: #999999; font-size: 26rpx; padding-right: 20rpx;}
+.mc-box .item-bd .label-box{display: block; margin-top:5rpx;}
+.mc-box .item-bd .label-box .label{line-height: 30rpx; border: 1px solid #999; color: #999; font-size: 24rpx; margin-right: 20rpx; padding: 0 8rpx; border-radius: 4rpx;}
+.mc-box .item-bd .label-box .green-bg{background-color: #48D199; color: #fff; border: 1px solid #48D199;}
+.mc-box .item-bd .label-box .gray-bg{background-color: #53636F; color: #fff; border: 1px solid #53636F;}
+.mc-box .item-bd .label-box .red-bg{background-color: #F35743; color: #fff; border: 1px solid #F35743;}
+.mc-box .item-bd .label-box .blue-bg{background-color: #0F86F3; color: #fff; border: 1px solid #0F86F3;}
+.mc-box .item-ft{color: #1A1A1A; font-size: 26rpx;}
+.mc-box .item::before{
+  border-top: 1px solid #e5e5e5;color: #e5e5e5; width:100%; content: " ";height: 1;left:153rpx; right: 0; position: absolute;
+  bottom: 0;-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY  (0.5);transform: scaleY(0.5);z-index: 2;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,131 @@
+<scorll-view class='containers' scorll-y="true">
+     <view class="topv">
+        <text>近七日经营分析</text>
+     </view>
+	 <view class="line"/>
+	 <view class="topcv">
+	    <view>
+		     <text class="topcv-com-text1">{{analytiscIndexData.customerQuantityOfDay}}人</text>
+			 <text class="topcv-com-text2">日均客流量</text>
+		</view>
+		<view>
+		     <text class="topcv-com-text1">{{analytiscIndexData.orderQuantityOfDay}}笔</text>
+			 <text class="topcv-com-text2">日均订单数</text>
+		</view>
+		<view>
+		     <text class="topcv-com-text1">{{analytiscIndexData.sellAmountOfDayDouble}}元</text>
+			 <text class="topcv-com-text2">日均销售额</text>
+		</view>
+	 </view>
+	  <view class="topcv">
+	    <view>
+		     <text class="topcv-com-text1">{{analytiscIndexData.dealRatio}}人</text>
+			 <text class="topcv-com-text2">成交率</text>
+		</view>
+		<view>
+		     <text class="topcv-com-text1">{{analytiscIndexData.repurchaseRatio}}人</text>
+			 <text class="topcv-com-text2">复购率</text>
+		</view>
+		<view>
+		     <text class="topcv-com-text1">{{analytiscIndexData.grossMarginRatio}}人</text>
+			 <text class="topcv-com-text2">毛利率</text>
+		</view>
+	 </view>
+
+       <view class="topv"><text>缺货品种</text></view>
+	   <view class="line"/>
+		<view class="topcv" bindtap="toDetail" id="goods">
+			<view>
+				<text class="topcv-com-text1" style="color: #F0332F;">{{analytiscIndexData.sellOutNum}}</text>
+				<text class="topcv-com-text2">已缺货</text>
+			</view>
+			<view class="hash-topcv">
+				<text class="topcv-com-text1">{{analytiscIndexData.sellOutNumAfterThreeDay}}</text>
+				<text class="topcv-com-text2">三天后缺货</text>
+			</view>
+			<view>
+				<text class="topcv-com-text1">{{analytiscIndexData.sellOutNumAfterFiveDay}}</text>
+				<text class="topcv-com-text2">五天后缺货</text>
+			</view>
+		</view>
+
+     <view class="topv"><text>生命周期</text></view>
+	 <view class="line"/>
+     <view class="circlev">
+	      <view class="circlevt">
+		          <canvas canvas-id="pieCanvas" class="canvas"  style="height:440rpx"></canvas>
+		  </view>
+		  <view class="circlevr">
+			 <view class="circlevrview">
+					<view class="circlevr-item-v" style="background: #27C886;"/>
+					<text class="circlevrtext">活跃会员</text>
+			 </view>
+			 <view class="circlevrview">
+					<view class="circlevr-item-v" style="background: #F0332F;"/>
+					<text class="circlevrtext">睡眠会员</text>
+			 </view>
+			  <view class="circlevrview">
+					<view class="circlevr-item-v" style="background: #FFB602;"/>
+					<text class="circlevrtext">沉睡会员</text>
+			  </view>
+		  </view>
+		  <view class="circlevrview" style="margin-left:32rpx;">
+			<view class="circlevr-item-v" style="background: #546472;"/>
+			<text class="circlevrtext">流失会员</text>
+		  </view>
+	 </view>
+    
+	 <view class="topv"><text>综合分析</text></view>
+	 <view class="line"/>
+     <view class="generalv">
+	      <view bindtap="gotoComprehensiveAnalysis" id="transaction">
+			<image src="../../../media/images/jiaoyiicon@2x.png" mode="scaleToFill"/>
+			<text>交易分析</text>
+		  </view>
+		  <view bindtap="gotoComprehensiveAnalysis" id="percustomer">
+			<image src="../../../media/images/danjiaicon@2x.png" mode="scaleToFill"/>
+			<text>客单价分析</text>
+		  </view>
+		  <view bindtap="gotoComprehensiveAnalysis" id="passengerflow">
+			<image src="../../../media/images/liuliangicon@2x.png" mode="scaleToFill"/>
+			<text>客流量分析</text>
+		  </view>
+		  <view bindtap="gotoComprehensiveAnalysis" id="guestgroup">
+			<image src="../../../media/images/kequnicon@2x.png" mode="scaleToFill"/>
+			<text>客群分析</text>
+		  </view>
+	 </view>
+	 <view class="bottomcommv">
+	     <view class="bottomcommwrapv" id="all" bindtap="gotoComprehensiveAnalysis">
+		     <image src="../../../media/images/zongheicon@2x.png" mode="scaleToFill" class="bottomcommi"/>
+		     <text class="bottomcommt">综合分析</text>
+		  </view>
+	 </view>
+
+     <view class="topv"><text>会员分析</text></view>
+	 <view class="line"/>
+     <view class="bottomcommv">
+	     <view class="bottomcommwrapv"  bindtap="gotoMembershipAnalysis" id="life">
+		     <image src="../../../media/images/shengmingcon@2x.png" mode="scaleToFill" class="bottomcommi"/>
+		     <text class="bottomcommt">生命周期</text>
+		 </view>
+		 <view class="bottomcommwrapv" bindtap="gotoMembershipAnalysis" id="consumption">
+		     <image src="../../../media/images/xiaofeiicon@2x.png" mode="scaleToFill" class="bottomcommi"/>
+		     <text class="bottomcommt">消费排行</text>
+		 </view>
+	 </view>
+
+     <view class="topv"><text>品类分析</text></view>
+	 <view class="line"/>
+     <view class="bottomcommv">
+	     <view class="bottomcommwrapv"  bindtap="gotoCategoryAnalysis" id="sales">
+		     <image src="../../../media/images/xiaoshouicon@3x.png" mode="scaleToFill" class="bottomcommi"/>
+		     <text class="bottomcommt">销售排行</text>
+		 </view>
+		 <view class="bottomcommwrapv" bindtap="gotoCategoryAnalysis" id="shortage">
+		     <image src="../../../media/images/quehouicon@3x.png" mode="scaleToFill" class="bottomcommi"/>
+		     <text class="bottomcommt">缺货分析</text>
+		 </view>
+	 </view>
+
+</scorll-view>

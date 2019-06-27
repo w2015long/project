@@ -1,0 +1,263 @@
+/* pages/test/healthService/healthService.wxss */
+.health-container {
+  display: flex;
+  flex:1;
+  width: 100%;
+  height:100vh;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  position: fixed;
+}
+
+.scroll-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+.cell-line {
+  height:1rpx;
+  width:100vw;
+  background-color: #E6E6E6;
+  margin-left: 32rpx;
+}
+
+.space-line {
+  width: 1rpx;
+  height: 80rpx;
+  background-color: #E6E6E6;
+}
+
+.infos-view {
+  height: 160rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.value-title {
+  line-height: 50rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 36rpx;
+  color: #1A1A1A;
+  text-align: center;
+}
+
+.ill-title {
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #999999;
+  line-height: 37rpx;
+  text-align: center;
+  margin-top: 3rpx;
+}
+
+.seg {
+  display: flex;
+  height: 160rpx;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.recent-infos {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-view {
+  height: 88rpx;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-left: 32rpx;
+}
+
+.recent-infos .title-view text {
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #1A1A1A;
+}
+
+.single-line {
+  display: flex;
+  width: 100%;
+  height: 132rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.center-section {
+  margin-top: 20rpx;
+}
+
+.center-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.center-item .tip-img {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 32rpx;
+  margin-right: 20rpx;
+}
+
+.arrow {
+  width: 16rpx;
+  height: 26rpx;
+  margin-right: 32rpx;
+}
+
+.left-txt {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #000000;
+  letter-spacing: 0;
+}
+
+.right-txt {
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #9A9A9A;
+  letter-spacing: 0;
+  margin-right: 19rpx;
+}
+
+.bottom-view {
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 88rpx;
+  display: flex;
+  width: 100%;
+  margin-left: 32rpx;
+}
+
+.bottom-leftTxt {
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #1A1A1A;
+}
+
+.bottom-rightTxt {
+  margin-right: 64rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #27C886;
+  letter-spacing: 0;
+}
+
+.patient-warp {
+  display: flex;
+  flex-direction: row;
+  height: 218rpx;
+  width: 100%;
+}
+
+.patient-view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 41rpx;
+  padding-bottom: 40rpx;
+  margin-left: 20rpx;
+}
+
+.patient-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.top-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-content text {
+  font-family: PingFangSC-Regular;
+  font-size: 30rpx;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 42rpx;
+}
+
+.tips-view {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rpx;
+}
+
+.gray text {
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 36rpx;
+  padding: 0 6rpx;
+  border: 1rpx solid #999;
+  border-radius: 4rpx;
+}
+
+.tips-view view {
+  margin-right: 20rpx;
+}
+
+/* .light{
+  border: 1rpx solid #27C886;
+} */
+
+.light text {
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color: #fff;
+  letter-spacing: 0;
+  padding: 0 6rpx;
+  line-height: 34rpx;
+  border-radius: 4rpx;
+  background-color: #27C886;
+  border-top: 1rpx solid #27C886;
+  border-bottom: 1rpx solid #27C886;
+}
+
+.pay-date {
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #1A1A1A;
+  margin-right: 32rpx;
+}
+
+.pay-history {
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #999999;
+  line-height: 37rpx;
+  margin-top: 7rpx;
+}
+
+.patient-line {
+  margin-left: 152rpx;
+}
+
+.photo {
+  width:100rpx;
+  height:100rpx;
+  margin-top:32rpx;
+  margin-left:32rpx;
+  background-color:#444;
+  border-radius:50rpx;
+}
+
+.gender-tip {
+  width:26rpx;
+  height:26rpx;
+  margin-left:20rpx;
+}

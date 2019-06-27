@@ -1,0 +1,76 @@
+<!--pages/test/orders/pat-orders/prescriptionOrderDecoction.wxml-->
+<view class='operation-operate'>
+  <view class='operate-warp'>
+    <scroll-view class='image-scroll' scroll-x='true'>
+      <view class='cellImg-warp' style='width:{{imgUrls.length*238}}' >
+          <image class='imgItem' src='{{prescriptionOrder.prescriptionPic1}}' hidden='{{!prescriptionOrder.prescriptionPic1}}'></image>
+           <image class='imgItem' src='{{prescriptionOrder.prescriptionPic2}}' hidden='{{!prescriptionOrder.prescriptionPic2}}'></image>
+            <image class='imgItem' src='{{prescriptionOrder.prescriptionPic3}}' hidden='{{!prescriptionOrder.prescriptionPic1}}'></image>
+      </view> 
+    </scroll-view>
+
+    <view class='tips-view'>
+        <view class="tip-view"  hidden="{{prescriptionOrder.isGravida === 'N' ? true: false}}">
+          <text>孕妇</text>
+        </view>
+        <view class=" tip-view wait"  hidden="{{prescriptionOrder.isDecoction === 'N' ? true: false}}">
+          <text>代煎</text>
+        </view>
+        <view class="tip-view out"  hidden="{{prescriptionOrder.isExternalUse === 'N' ? true: false}}">
+          <text>外用</text>
+        </view>
+      
+    </view>
+
+    <view class='cell-line' />
+
+    <view class='single-line' hidden='{{currentState==3}}'>
+      <text class='item-title'>数量：</text>
+      <text class='item-value'>{{prescriptionOrder.buyNum}}剂</text>
+    </view>
+  </view>
+
+  <!-- 煎煮药品UI  -->
+  <view class='operate-warp bottom'>
+    <view class='single-line'>
+      <text class='item-value'>煎药记录</text>
+    </view>
+    <view class='cell-line' />
+
+    <view class='single-line'>
+      <text class='item-title'>煎煮水量</text>
+      <input type='number' maxlength='5' bindblur='listenerInputEvent' data-input-value="decoctionNumWaterQuantity" ></input>
+      <text class='item-unit'>ml</text>
+    </view>
+    <view class='cell-line' />
+
+    <view class='single-line'>
+      <text class='item-title'>药泡时间</text>
+      <input type='number' maxlength='5' bindblur='listenerInputEvent' data-input-value="immersingTime" ></input>
+      <text class='item-unit'>分</text>
+    </view>
+    <view class='cell-line' />
+
+    <view class='single-line'>
+      <text class='item-title'>煎药时间</text>
+      <input type='number' maxlength='5' bindblur='listenerInputEvent' data-input-value="dispensingTime"></input>
+      <text class='item-unit'>分</text>
+    </view>
+    <view class='cell-line' />
+
+    <view class='single-line'>
+      <text class='item-title'>煎药温度</text>
+      <input type='number' maxlength='6' bindblur='listenerInputEvent' data-input-value="immersingTemperature"></input>
+      <text class='item-unit'>℃</text>
+    </view>
+  </view>
+
+  
+  <view class='done-btn-green'  hidden='{{!hideButton}}'>
+    <text>完成调配</text>
+  </view>
+
+  <view class='done-btn' bindtap='submitAction' hidden='{{hideButton}}' >
+      <text>完成调配</text>
+    </view>
+</view>

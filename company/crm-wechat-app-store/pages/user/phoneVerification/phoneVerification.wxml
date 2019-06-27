@@ -1,0 +1,14 @@
+<view class="phone-verification">
+  <text class='ver-text'>验证{{mobileLessFormat}}手机号码</text>
+   
+  <view class='item code-item' >
+    <text class='label'>验证码：</text>
+    <input type='number' class='sms-code' size="mini" placeholder="短信验证码"  value="{{validateCode}}" type="number" maxlength="6"  bindinput="addCode" auto-focus ></input>
+    <button wx:if="{{sendState === 'notSend'}}"   class='btn-code btn-primary' bindtap="sendMsg" plain="false">获取验证码</button>
+    <button wx:if="{{sendState === 'sending'}}"   class='btn-code btn-re'    plain="false">重新获取({{second}})</button>
+    <button wx:if="{{sendState === 'hadSended'}}"  class='btn-code btn-primary' bindtap="sendMsg"  plain="false">重新获取</button>
+  </view>
+  <button type="primary" class='login-btn' wx:if="{{isAloudSubmit}}" bindtap="submitMobileCode" >验证</button>
+  <button type="primary" class='login-btn'  wx:if="{{!isAloudSubmit}}" disabled="disabled">验证</button>
+
+</view>

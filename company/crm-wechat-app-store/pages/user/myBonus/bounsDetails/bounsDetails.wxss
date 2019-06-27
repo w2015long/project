@@ -1,0 +1,25 @@
+page{background-color:#f5f5f5;}
+
+.billing_title{display: flex;align-items: center;  height: 88rpx;background: #fff; overflow: hidden;}
+.billing_title .title_l{width: 50%;text-align: left;line-height: 88rpx;font-size: 30rpx;color: #1A1A1A;padding-left: 64rpx;}
+.billing_title .title_r{width: 50%;text-align: right;line-height: 88rpx;font-size: 30rpx;color: #1A1A1A;padding-right: 64rpx;}
+
+.list{margin: 20rpx 32rpx 0;}
+
+.list .list_title{background: #FAFAFA;padding-top: 20rpx;padding-bottom: 20rpx;border-radius: 8rpx 8rpx 0 0;position: relative;}
+.list .list_title .month{font-size: 30rpx;color: #1A1A1A;display: block;padding-left: 32rpx;}
+.list .list_title .shuru{font-size: 26rpx;color: #999999;display: block;padding-left: 32rpx;padding-top: 10rpx;}
+.list .list_title .shuru text{padding-right:20rpx;}
+.list .list_title  .title_pic{position: absolute;width: 36rpx;height: 36rpx;right: 32rpx;top: 36rpx;}
+.list .list_title  .title_pic image{width: 36rpx;height: 36rpx;}
+
+.list .list_items{height: 132rpx;background: #fff;display: flex;position: relative;padding-top:28rpx;border-bottom: 1rpx solid #EDEDED;}
+.list .list_items .quantity{position: absolute; background: rgba(39,200,134,.1);width: 46rpx;height: 46rpx;left: 32rpx;font-size: 24rpx;color: #27C886;text-align: center;line-height: 46rpx;border-radius: 50%;top: 50%;transform: translateY(-50%);}
+
+
+.list .list_items .list_items_c{padding-left: 113rpx;}
+.list .list_items .list_items_c text:first-child{font-size: 36rpx; font-weight: bold; color: #1A1A1A;display: block;}
+.list .list_items .list_items_c text:last-child{font-size: 26rpx;color: #999999;display: block;margin-top: 14rpx;}
+.list .list_items .money{position: absolute;right: 32rpx;font-size: 32rpx;color: rgba(26, 26, 26, 0.473);top: 49rpx;font-weight: bold;}
+
+.list .list_items:first-child .quantity{background: #27C886;color: #fff;}

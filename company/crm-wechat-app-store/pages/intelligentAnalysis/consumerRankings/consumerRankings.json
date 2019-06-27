@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "消费排行",
+  "usingComponents": {
+    "notData": "../../common/notDataList/notDataList"
+  }
+}

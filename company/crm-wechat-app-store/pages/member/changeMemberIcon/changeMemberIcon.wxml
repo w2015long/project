@@ -1,0 +1,12 @@
+<view class="head-portrait">
+  <block wx:for="{{faceList}}" wx:for-item="face" wx:key="index">
+    <view class='cont' bindtap="changeIcon" data-faceFileId='{{face.faceFileId}}'>
+      <view class='item'>
+        <image src="../../../media/case/head220x220.jpg" mode="scaleToFill" class="head-img" />
+        <view class='date'>
+          <view>{{face.visitTimeString}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

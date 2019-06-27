@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "销售排行",
+  "usingComponents": {
+    "notData": "../../common/notDataList/notDataList"
+  }
+}

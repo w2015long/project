@@ -1,0 +1,51 @@
+page{background-color:#f5f5f5;}
+
+.bg_green{
+    padding: 30rpx 0 100rpx;
+    text-align: center;
+    background-color: #8CEA96;
+    background: -moz-linear-gradient(top, #27C886 0%, #8CEA96 100%);
+    background: -webkit-linear-gradient(top, #27C886 0%,#8CEA96 100%);
+    background: linear-gradient(to bottom, #27C886 0%,#8CEA96 100%);
+}
+.bg_green .amount{font-size: 30rpx;color: #FFFFFF;text-align: center;display: block;}
+.bg_green .amount_number{display: block;text-align: center;font-size: 80rpx;color: #FFFFFF;margin-top: 32rpx;line-height: 1;}
+.bg_green .withdraw_btn{width: 210rpx;height: 60rpx;line-height: 60rpx;
+background-image: linear-gradient(-179deg, #FFFFFF 0%, rgba(255,255,255,0.80) 100%);
+box-shadow: 0 10rpx 20rpx 0 rgba(39,200,134,0.60);border-radius: 30rpx;font-size: 28rpx;color: #27C886;
+display: inline-block;margin-top: 48rpx; }
+
+.billing_box{height: 55rpx; position: relative;}
+.billing_details{display: flex;align-items: center;background: #FFFFFF;border-radius: 8rpx;width: 686rpx;height: 110rpx;position: absolute;top: -55rpx;left: 30rpx;right: 30rpx;}
+.billing_details .bill{font-size: 32rpx;color: #1A1A1A;line-height: 110rpx;padding-left: 30rpx;}
+.billing_details .examination{flex: 1;text-align: right;font-size: 26rpx;color: #999999;padding-right: 60rpx;}
+.billing_details .examination .arrows-right{position: relative;display: inline-block;
+    width: 12rpx;
+    height: 12rpx;
+    border-right: 4rpx solid #CACACA;
+    border-top: 4rpx solid #CACACA;
+    transform: rotate(45deg);
+    left: 5rpx;
+    top: -1rpx;
+}
+
+
+.information_list{height: 300rpx;margin-top: 20rpx;background: #fff;margin-left: 30rpx;margin-right: 30rpx;}
+.information_list .information_title{display: flex;align-items: center;height: 88rpx;background: #FAFAFA;border-radius: 8rpx 8rpx 0rpx 0rpx;position: relative;}
+.information_list .information_title .title_text{font-size: 32rpx;color: #1A1A1A;line-height: 88rpx;padding-left: 30rpx;}
+.information_list .information_title .title_tab{border: 2rpx solid #27C886;border-radius: 30rpx;font-size: 28rpx;
+color: #27C886;line-height: 56rpx;text-align: center;display: flex;width: 400rpx;overflow: hidden;position: absolute;top: 16rpx;right: 33rpx;}
+.information_list .information_title .title_tab .tab_items{width: 100rpx;line-height: 56rpx;}
+.information_list .information_title .title_tab .cur{background: #27C886;color: #fff;font-weight: bold;}
+
+.information_list .information_main{height: 216rpx;padding-left: 30rpx;}
+.information_list .information_main text:first-child{font-size: 28rpx;color: #999999;padding-top: 30rpx;display: block;}
+.information_list .information_main text:last-child{display: block;font-size: 60rpx;color: #1A1A1A;padding-top: 48rpx;line-height: 60rpx; font-weight: bold;}
+
+.bonus{display: flex;height: 160rpx;margin-left: 30rpx;margin-right: 30rpx;margin-top: 20rpx;}
+.bonus .bonus_items{width: 33.3%;height: 100%;text-align: center;background: #fff;}
+.bonus .bonus_items text:first-child{font-size: 36rpx;color: #1A1A1A;line-height: 50rpx;display: block;padding-top: 34rpx;font-weight: bold;}
+.bonus .bonus_items text:last-child{font-size: 26rpx;color: #999999;line-height: 37rpx;margin-top: 5rpx;}
+
+
+

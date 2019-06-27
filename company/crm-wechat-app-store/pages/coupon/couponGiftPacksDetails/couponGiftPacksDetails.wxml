@@ -1,0 +1,98 @@
+<view class='hongmao-medicinal-liquor-main'>
+  <view class='top-bg'>
+    <image src='../../../media/images/top-bg.png'></image>
+    <view class='title'>{{packsData.giftPacksName}}</view>
+  </view>
+  <view class='coupon-list'>
+    <block wx:for="{{packsData.protocolList}}" wx:key="{{index}}">
+      <view class='item'>
+        <image src='../../../media/images/yhj-bg.png'></image>
+        <view class='item-l'>
+
+          <block wx:if="{{item.couponType == 'FULL_REDUCE'}}">
+            <view class='money'>{{item.couponAmountDouble}}
+              <text>元</text>
+            </view>
+          </block>
+          <block wx:if="{{item.couponType == 'DISCOUNT'}}">
+            <view class='money'>{{item.couponDiscount}}
+              <text>折</text>
+            </view>
+          </block>
+
+          <block wx:if="{{item.isLimitedUse == 'N'}}">
+            <view class='tips'>无门槛</view>
+          </block>
+          <block wx:elif="{{item.isLimitedUse == 'Y'}}">
+            <view class='tips'>满{{item.orderFullAmountDouble}}元使用</view>
+          </block>
+        </view>
+
+        <view class='item-r'>
+          <view class='item-r-top'>
+            <view class='title'>{{item.couponName}}</view>
+            <block wx:if="{{item.isOnline == 'Y' && item.isOffline === 'N'}}">
+              <view class='tips'>仅线上使用</view>
+            </block>
+            <block wx:if="{{item.isOnline == 'Y' && item.isOffline === 'Y'}}">
+              <view class='tips'>线上线下通用</view>
+            </block>
+            <block wx:if="{{item.isOnline == 'N' && item.isOffline === 'Y'}}">
+              <view class='tips'>仅线下使用</view>
+            </block>
+          </view>
+
+          <block wx:if="{{item.applyProductType == 'ALL_PRODUCTS'}}">
+            <view class='item-r-bottom'>全场通用</view>
+          </block>
+
+          <block wx:if="{{item.applyProductType == 'EXCLUDE_PRODUCTS'}}">
+            <view class='item-r-bottom'>全场通用（排除{{item.productNum}}个商品）</view>
+            <view class='details' bindtap="findCouponProduct" data-coupon-id="{{item.couponId}}" data-apply-product-type="{{item.applyProductType}}">详情</view>
+          </block>
+          <block wx:if="{{item.applyProductType == 'SPECIFIED_PRODUCTS'}}">
+            <view class='item-r-bottom'>部分商品（{{item.productNum}}个商品）</view>
+            <view class='details' bindtap="findCouponProduct" data-coupon-id="{{item.couponId}}" data-apply-product-type="{{item.applyProductType}}">详情</view>
+
+          </block>
+
+        </view>
+
+      </view>
+    </block>
+  </view>
+
+  <view class='distribute-btn' bindtap='showPoppus'>立即派发</view>
+</view>
+
+
+<view class='pop-ups' wx-if="{{isShow}}" bindtap='hiddenPopus'>
+  <view class='item' catchtap='stop'>
+    <view class='item-top'>
+      <view class='item-top-left' bindtap='generateCode'>
+        <view class='item-top-left-toppic'>
+          <image src="../../../media/images/002icon_sousuoxuanhuo.png" />
+        </view>
+        <view class='tem-top-left-bottom-text'>二维码</view>
+
+      </view>
+      <view class='item-top-right' bindtap='copylink'>
+        <view class='item-top-right-toppic'>
+          <image src="../../../media/images/002icon_saomatianjia.png" />
+        </view>
+        <view class='item-top-right-bottom-text'>发送好友</view>
+      </view>
+    </view>
+    <view class='item-bottom' bindtap='hiddenPopus'>取消</view>
+  </view>
+</view>
+
+<view class='qr-box' wx-if="{{showBtn}}">
+  <view class='qr-code'>
+    <view class='qr-title'>微信扫一扫，领取优惠</view>
+    <view class='qr-pic'>
+      <image src="../../../media/images/qc-code.png" />
+    </view>
+    <view class='close-btn' bindtap='closeBtn'>关闭</view>
+  </view>
+</view>

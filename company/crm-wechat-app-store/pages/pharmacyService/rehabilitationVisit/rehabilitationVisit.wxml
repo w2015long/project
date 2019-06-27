@@ -1,0 +1,87 @@
+<view class="customer-container">
+  <view class='nav-tab'>
+    <view bindtap="changeTab" data-id='TODAY' class='{{tabType === "TODAY" ? "active":""}}'>今天</view>
+    <view bindtap="changeTab" data-id='THREE_DAYS_WITHIN' class='{{tabType === "THREE_DAYS_WITHIN" ? "active":""}}'>三天内</view>
+    <view bindtap="changeTab" data-id='HALF_MONTH_WITHIN' class='{{tabType === "HALF_MONTH_WITHIN" ? "active":""}}'>半月内</view>
+    <!-- 已回访页面跳转链接  -->
+    <navigator class='return-already' url='../alreadyRehabilitationVisit/alreadyRehabilitationVisit' >
+      <image src="../../../media/images/return-icon.png" mode="scaleToFill" />
+      <text>已回访</text>
+    </navigator>
+  </view>
+<view class='tab-box'>
+ <swiper-item>
+  <scroll-view scroll-y="true" style="height:100%;"  bindscrolltolower="onPullDownRefresh">
+      <notData  wx:if="{{rehabilitationVisitPageList.data.length  == 0}}"/>
+      <block wx:for="{{rehabilitationVisitPageList.data}}" wx:for-item="pageList" wx:key="index">
+        <view class="info" catchtap='jumpRecordVisitDetails'  id="{{pageList.orderId}}">
+          <view class="mt-hd">
+            <image src="{{pageList.iconFileIdUrl}}" mode="scaleToFill" class="customer-image fill-icon" />
+          </view>
+          <view class="mt-bd">
+            <view class="info-name">
+              <text>{{pageList.name}}</text>
+              <image src="{{pageList.sex === 'MALE'?'../../../media/images/manicon.png':pageList.sex === 'FEMALE'?'../../../media/images/icon-woman.png':''}}" mode="scaleToFill" class="gender-icon" />
+            </view>
+            <view class='member'>
+              <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon" />
+              <text class="member-label">{{pageList.title}}</text>
+            </view>
+          </view>
+          <view class='mt-ft'>{{pageList.createTimeStr}}</view>
+        </view>
+      </block>
+
+  </scroll-view>
+ </swiper-item>
+ </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

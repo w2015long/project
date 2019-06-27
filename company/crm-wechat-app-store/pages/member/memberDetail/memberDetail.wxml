@@ -1,0 +1,306 @@
+<view class="customer-container">
+  <view class='nav-tab'>
+    <view bindtap="changeTab" data-id='memberPortrait' class='{{tabType === "memberPortrait" ? "active":""}}'>会员画像</view>
+    <view bindtap="changeTab" data-id='visitingRecords' class='{{tabType === "visitingRecords" ? "active":""}}'>到访记录</view>
+    <view bindtap="changeTab" data-id='purchaseRecord' class='{{tabType === "purchaseRecord" ? "active":""}}'>消费记录</view>
+    <view bindtap="changeTab" data-id='aboutCustomer' class='{{tabType === "aboutCustomer" ? "active":""}}'>对TA了解</view>
+  </view>
+  <view class='nav-box'>
+    <!-- 会员画像 -->
+    <view class='box-item' hidden='{{tabType !== "memberPortrait"}}'>
+      <block wx:if="{{memberId}}">
+        <view class="info">
+          <view class="mt-hd">
+            <image src="{{customerVisitRecords && customerVisitRecords[0].faceFileUrl}}" bindtap="goToUpdateMember" mode="scaleToFill" class="customer-image" />
+          </view>
+          <view class="mt-bd">
+            <view class="info-name">
+              <text>{{memberInfo.name}}</text>
+              <image src="{{memberInfo.sex==='MALE'?'../../../media/images/icon-man.png':'../../../media/images/icon-woman.png'}}" mode="scaleToFill" class="gender-icon" />
+            </view>
+            <view class='member'>
+              <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon" />
+              <text class="member-label">{{memberInfo.level}}</text>
+              <text class='member-age'>{{memberInfo.age}}岁</text>
+            </view>
+          </view>
+        </view>
+        <view class='consumption'>
+          <view class='mt'>
+            <text>近一年消费分析</text>
+          </view>
+          <view class='md'>
+            <navigator class='md-item'>
+              <view class='md-date'>
+                <text>{{memberInfo.amountAvgDouble}}</text>
+                <text class='font-size-26'>元</text>
+              </view>
+              <text class='explain'>客单价</text>
+            </navigator>
+            <navigator class='md-item'>
+              <view class='md-date'>
+                <text>{{memberInfo.lastOrderDateString == null?"无":memberInfo.lastOrderDateString}}</text>
+                <text class='font-size-26'></text>
+              </view>
+              <text class='explain'>最近交易时间</text>
+            </navigator>
+            <navigator class='md-item'>
+              <view class='md-date'>
+                <text>{{memberInfo.outletConsumeNum}}</text>
+                <text class='font-size-26 md-line'>次</text>
+                <text>{{memberInfo.outletConsumeAmount}}</text>
+                <text class='font-size-26'>元</text>
+              </view>
+              <text class='explain'>到店消费</text>
+            </navigator>
+            <navigator class='md-item'>
+              <view class='md-date'>
+                <text>{{memberInfo.weChatConsumeNum}}</text>
+                <text class='font-size-26 md-line'>次</text>
+                <text>{{memberInfo.weChatConsumeAmount}}</text>
+                <text class='font-size-26'>元</text>
+              </view>
+              <text class='explain'>线上消费</text>
+            </navigator>
+          </view>
+        </view>
+        <view class='arrival'>
+          <view class='mt'>
+            <text>近一年到店分析</text>
+          </view>
+          <view class='md'>
+            <view class='md-left'>
+              <view class='left-item green-bg1'>
+                <text>来访{{memberInfo.visitNum}}次</text>
+              </view>
+              <view class='left-item green-bg2'>
+                <text>交易{{memberInfo.outletConsumeNum}}次</text>
+              </view>
+              <view class='left-item green-bg3'>
+                <text>复购{{memberInfo.repurchaseOrderNum}}次</text>
+              </view>
+            </view>
+            <view class='md-right'>
+              <view class='right-item green-border1'>
+                最近：
+                <text>{{memberInfo.lastTransaction}}</text>天前
+              </view>
+              <view class='right-item green-border2'>
+                成交率：
+                <text>{{memberInfo.transactionRate}}%</text>
+              </view>
+              <view class='right-item green-border3'>
+                复购率：
+                <text>{{memberInfo.repurchaseRate}}%</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='choose-label'>
+          <view class='mt'>
+            <text>分组</text>
+            <view>
+              <text class='btn-select' bindtap='editGroup'>{{isEditGroup?"完成":"编辑"}}</text>
+            </view>
+          </view>
+          <view class='mc'>
+            <block wx:for="{{group}}" wx:for-item="tag" wx:key="index">
+              <text data-index="{{index}}" class='{{tag.select?"tag-item  active":"tag-item"}}' bindtap="selectOrCancel">{{tag.tagTitle}}</text>
+            </block>
+          </view>
+        </view>
+        <view class='choose-label' wx:if="{{level.length > 0}}">
+          <view class='mt'>
+            <text>等级</text>
+          </view>
+          <view class='mc'>
+            <block wx:for="{{level}}" wx:for-item="tag" wx:key="index">
+              <text class='tag-item'>{{tag.tagTitle}}</text>
+            </block>
+          </view>
+        </view>
+        <view class='choose-label' wx:if="{{disease.length > 0}}">
+          <view class='mt'>
+            <text>疾病</text>
+          </view>
+          <view class='mc'>
+            <block wx:for="{{disease}}" wx:for-item="tag" wx:key="index">
+              <text class='tag-item'>{{tag.tagTitle}}</text>
+            </block>
+          </view>
+        </view>
+
+        <view class='choose-label' wx:if="{{lifecycle.length > 0}}">
+          <view class='mt'>
+            <text>生命周期</text>
+          </view>
+          <view class='mc'>
+            <block wx:for="{{lifecycle}}" wx:for-item="tag" wx:key="index">
+              <text class='tag-item'>{{tag.tagTitle}}</text>
+            </block>
+          </view>
+        </view>
+        <view class='choose-label' wx:if="{{userDefined.length > 0}}">
+          <view class='mt'>
+            <text>自定义标签</text>
+          </view>
+          <view class='mc'>
+            <block wx:for="{{userDefined}}" wx:for-item="tag" wx:key="index">
+              <text class='tag-item'>{{tag.tagTitle}}</text>
+            </block>
+          </view>
+        </view>
+      </block>
+      <!-- 非会员 -->
+      <view class='passport' wx:if="{{!memberId}}">
+        <view class="info">
+          <view class="mt-hd">
+            <image src="{{customerVisitRecords && customerVisitRecords[0].faceFileUrl}}" mode="scaleToFill" class="customer-image" />
+          </view>
+          <view class="mt-bd">
+            <view class="info-name">
+              <text>未知身份</text>
+            </view>
+            <view class='member'>
+              <text class='member-age' wx:if="{{memberInfo.age}}">{{memberInfo.age}}岁</text>
+            </view>
+          </view>
+        </view>
+        <view class='consumption'>
+          <view class='mt'>
+            <text>近一年消费分析</text>
+          </view>
+          <view class='md column-3'>
+            <navigator class='md-item'>
+              <view class='md-date'>
+                <text>{{memberInfo.visitNum}}</text>
+                <text class='font-size-26'>次</text>
+              </view>
+              <text class='explain'>来访次数</text>
+            </navigator>
+            <navigator class='md-item'>
+              <view class='md-date'>
+                <text>{{memberInfo.consumeNum}}</text>
+                <text class='font-size-26'>次</text>
+              </view>
+              <text class='explain'>交易次数</text>
+            </navigator>
+            <navigator class='md-item'>
+              <view class='md-date'>
+                <text>{{memberInfo.lastOrderDateString?memberInfo.lastOrderDateString:0}}</text>
+                <text class='font-size-26'>天</text>
+              </view>
+              <text class='explain'>最近交易时间</text>
+            </navigator>
+          </view>
+        </view>
+        <view class='mt'>注册/绑定</view>
+        <view class='mc'>
+          <view class='item'>
+            <text class='label'>姓名：</text>
+            <input type='text' class='phone-number' placeholder="请输入顾客姓名" bindinput='getCustomerName'></input>
+          </view>
+          <view class='item'>
+            <text class='label'>手机号码：</text>
+            <input type='number' class='phone-number' placeholder="请输入手机号码" bindinput='getCustomerMobile'></input>
+          </view>
+          <button type="primary" class='login-btn' bindtap="register">确认</button>
+        </view>
+      </view>
+      <view class='ft-box'>
+        <view class='ft-cont'>
+          <button class='btn1' bindtap="makeCall">拨打电话</button>
+          <button class='btn2' bindtap="goToLeaveRecord">离店记录</button>
+        </view>
+      </view>
+    </view>
+
+    <!-- 到访记录 -->
+    <view class='visit-record' hidden='{{tabType !== "visitingRecords"}}'>
+      <block wx:for="{{customerVisitRecords}}" wx:for-item="customer" wx:key="index">
+        <view class='item'>
+          <view class='item-hd'>
+            <image src="{{customer.faceFileUrl}}" mode="scaleToFill" />
+          </view>
+          <view class='item-bd'>
+            <view class='frequency'>第{{customer.visitNum}}次</view>
+            <view class='time'>{{customer.visitTimeString}}</view>
+            <view class='info'>
+              <text>购药目的：{{customer.visitCause?customer.visitCause:"无"}}</text>
+              <text wx:if="{{customer.isDeal==='N' }}"> ；失败原因：{{customer.loseCause?customer.loseCause:"无"}}</text>
+            </view>
+            <view class='success-image' wx:if="{{customer.isDeal==='Y' }}">
+              <image src="../../../media/images/successful.png" mode="scaleToFill" />
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 消费记录 -->
+    <view class='expenses-record' hidden='{{tabType !== "purchaseRecord"}}'>
+
+      <block wx:for="{{memberOrders}}" wx:for-item="order" wx:key="index">
+        <view class='record-item'>
+          <view class='record-mt'>
+            <view class='record-mt-hd'>订单编号:{{order.orderNum}} [{{order.buyChannel==="WECHAT"?"微信":"门店"}}]</view>
+            <view class='{{order.orderState === "FINISH" ?"record-mt-bd color-green":"record-mt-bd"}}'>{{order.orderState === "FINISH" ?"已完成":"已取消"}}</view>
+          </view>
+          <view class='record-mc'>
+            <block wx:for="{{order.orderItemProtocols}}" wx:for-item="orderItem" wx:key="index">
+              <view class='gd-item'>
+                <view class='gd-item-hd'>
+                  <image src="../../../media/case/pic165x165.png" mode="scaleToFill" class="customer-image" />
+                </view>
+                <view class='gd-item-bd'>
+                  <view class='gd-title'>{{orderItem.productName}}</view>
+                  <view class='gd-price'>
+                    <view class='gd-price-hd'>单价：{{orderItem.buyUnitPrice}}</view>
+                    <view class='gd-price-bd'>x{{orderItem.quantity}}</view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class='record-md'>
+            <view class='record-md-hd'>{{order.createTimeStr}}</view>
+            <view class='record-md-bd'>实付款: ￥{{order.orderTotalAmount}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 对TA了解 -->
+    <view class='evaluation' hidden='{{tabType !== "aboutCustomer"}}'>
+      <view class='mc'>
+        <block wx:for="{{aboutCustomers}}" wx:for-item="about" wx:key="index">
+          <view class='item'>
+            <view class='eva-dt'>{{about.content}}</view>
+            <view class='info-cell'>
+              <view class='cell-hd'>
+                <image src="../../../media/case/pic165x165.png" mode="scaleToFill" />
+              </view>
+              <view class='cell-bd'>
+                <text>{{about.operatorName || ''}}</text>
+                <text>{{about.shopName}}</text>
+              </view>
+              <view class='cell-ft'>{{about.createTimeStr}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='md-box'>
+        <form bindsubmit="formSubmit">
+          <view class='box-cell'>
+            <view class='cell-hd'>
+              <input type='text' placeholder="输入你对他的了解" name="content" value="{{content}}"></input>
+            </view>
+            <view class='cell-bd'>
+              <button type="default" class='submit-btn' formType="submit">发表</button>
+            </view>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+</view>

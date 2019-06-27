@@ -1,0 +1,192 @@
+/* pages/activeManager/activeManager.wxss */
+.containers {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+} 
+
+.warp {
+  width: 100%;
+  height:100vh;
+  background-color: #F5F5F5;
+}
+.top {
+	width:100%;
+	height:88rpx;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	background:#FFF;
+}
+.tabv {
+	height:88rpx;
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.tabv text {
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #B3B3B3;
+	letter-spacing: 0;
+	text-align: center;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	height:88rpx;
+}
+.tabv .on{
+  font-family: PingFangSC-Semibold;
+  color: #27C886;
+}
+.tabv .tabbbo {
+    background:#27C886;
+	width:80rpx;
+	height:4rpx;
+}
+.moreicon {
+	width:26rpx;
+	height:16rpx;
+	margin-bottom:4rpx;
+}
+.scroll-tab {
+  display: flex;
+  height: 88rpx;
+  background-color: #FFF;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+}
+.scroll-tab button{
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  color: #B3B3B3;
+  width:250rpx;
+  height:88rpx;
+  display: inline-block;
+  background:#fff;
+  border-width:0rpx;
+  top:5rpx;
+  text-align: center;
+}
+
+.scroll-tab .on{
+  font-family: PingFangSC-Semibold;
+  color: #27C886;
+  
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+}
+
+.list-view {
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  align-items: center;
+  overflow:hidden;
+}
+.list-item {
+  width: 100%;
+  height:164rpx;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  background: #FFFFFF;
+}
+.listline {
+	width:66vw;
+	height:1rpx;
+	background:#E6E6E6;
+	margin-top:37rpx;
+}
+.list-lv {
+	display:flex;
+	flex-direction:row;
+	justify-center:flex-start;
+	align-items:center;
+	flex:1;
+	height:164rpx;
+	padding-right:32rpx;
+	padding-left:34rpx;
+}
+.list-lv image {
+	width:100rpx;
+	height:100rpx;
+	border-radius: 50rpx;
+	margin-right:20rpx;
+}
+.list-lv-ite {
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	justify-center:center;
+}
+.list-lv-ite-tt{
+    font-family: PingFangSC-Regular;
+	font-size: 34rpx;
+	color: #000000;
+	letter-spacing: 0;
+}
+.list-lv-ite-tb{
+    font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #999999;
+}
+.gooodsbv {
+	margin-top:16rpx;
+	display:flex;
+	flex-direction:row;
+}
+.list-lvtext {
+	font-family: PingFangSC-Regular;
+	font-size: 26rpx;
+	color: #999999;
+	margin-top:16rpx;
+}
+.goodstext {
+	margin-top:32rpx;
+	width:507rpx;
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #000000;
+}
+.list-rv {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	width:120rpx;
+	height:236rpx;
+	margin-left:32rpx;
+}
+.center {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.center image {
+	width:28rpx;
+	height:42rpx;
+	margin-bottom:22rpx;
+}
+.list-rv text {
+	font-family: PingFangSC-Semibold;
+	font-size: 30rpx;
+	color: #1B1B1B;
+}
+.lines {
+	width:96%;
+	height:1rpx;
+	margin-left:4%;
+	background: #E6E6E6;
+}
+
+

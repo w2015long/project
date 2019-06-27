@@ -1,0 +1,106 @@
+<!--pages/test/orders/wshop-orders/option-wshop.wxml-->
+<view class='wshop-optionsContainer'>
+    <!-- <view class='operate-tab' >
+        <view><text>上一页</text></view>
+        <view><text>3/8</text></view>
+        <view><text>下一单</text></view>
+    </view> -->
+    
+    <!--确认发货UI  --> 
+    <scroll-view class='sender-scroll'  scroll-y='true' scroll-x='false'>
+        <view class='sender-info'> 
+            <view class='single-line sender-single border-bottom'>
+                <text class='item-title'>单号：</text>
+                <text class='item-value'>{{orderNum}}</text>
+            </view>
+            <view class='addr-box'  wx:if="{{isSelfExtract == 'N'}}">
+                <text class='addr-hd'>地址：</text>
+                <text class='addr-bd' wx:if="{{receiverAddr != null}}">{{receiverAddr}}</text>
+                <text class='addr-bd' wx:if="{{receiverAddr == null}}">订单缺少收货地址</text>
+            </view>
+             <view class='addr-box'  wx:if="{{isSelfExtract == 'Y'}}">
+                <text class='addr-hd'>自提码：</text>
+                <text class='addr-bd'>{{selfExtractNum}}</text>
+            </view>
+        </view>
+
+        <view class='sender-info' wx:if="{{isSelfExtract == 'N'}}">
+            <view class='single-line sender-single border-bottom' bindtap="switchModel">
+                <text class='item-title'>配送方式：</text>
+                <text class='item-value_p'>{{logisticsCompanyName}}</text>
+                <view class='item-value-icon'>
+                     <image src='../../../../media/images/Chevron1.png'/>
+                </view>
+            </view>
+            <view class='single-line sender-single border-bottom'>
+                 <text class='item-title'>包裹重量(克)：</text>
+                 <view class='quantity_input'>
+                   <input placeholder='请输入商品重量' value="{{weight}}" bindblur="changeWeight"></input>
+                 </view>
+             </view>
+        </view>
+
+        <block wx:for="{{batchList}}" wx:for-index="index"  wx:key="{{index}}">
+            <view class='sender-product' wx:key='*this'> 
+                <view class='single-addBtn'>
+                    <view/>
+                    <text class='add'  data-product-batch-numbers='{{batchList[index].productBatchNumbers}}' data-batchListIndex='{{index}}'  bindtap='addLotNum'>添加批号</text>
+                </view>
+                
+            </view>
+
+            <view class='product-item'>
+              <image class='imgItem' src='{{item.fileId}}'></image>
+              <view class='medicine-view'>
+                  <text class='describe'>[{{item.productCode}}] {{item.productName}}</text>
+                  <view class='spec'>
+                      <text>规格：{{item.spec}}/{{item.unit}}</text>
+                      <text>x{{item.quantity}}</text>
+                  </view>
+              </view>
+            </view>
+
+
+            <block wx:for="{{batchList[index].sendBatchList}}" wx:for-item="sendBatch" wx:for-index="sendBatchIndex"  wx:key="{{sendBatchIndex}}">
+                 <view class='shuliang border-top'>
+                       <input class='sj_bg' placeholder='请输入批号' bindblur='batchNumberInput' data-batchListIndex='{{index}}' data-sendBatchIndex='{{sendBatchIndex}}' placeholder-class="placeholder" data-index="{{index}}"  data-name="{{cell.orderItemId}}+{{index}}" value='{{sendBatch.batchNumber}}' placeholder-style='text-align:center'/>
+                       <view>
+                           <picker bindchange="bindProductBatchNumber" data-batchListIndex='{{index}}' data-sendBatchIndex='{{sendBatchIndex}}'  class='sj_icon' value="{{num}}" range="{{batchList[index].productBatchNumbers}}" >
+                                <view class='sj_icon'>
+                                   <image data-batchListIndex='{{index}}' data-sendBatchIndex='{{sendBatchIndex}}'  src='../../../../media/images/select.png' class='moreicon'/>
+                                </view>
+                           </picker>
+                      </view>
+                       <view class='control'>
+                           <view class='control_less' data-batchListIndex='{{index}}' data-sendBatchIndex='{{sendBatchIndex}}'   bindtap="reduce"  >
+                               <image src='../../../../media/images/minus.png'/>
+                          </view>
+                           <input type="number" bindblur='quantityInput' data-batchListIndex='{{index}}' data-sendBatchIndex='{{sendBatchIndex}}' value='{{sendBatch.quantity}}' auto-focus />
+                           <view class='control_plus'  data-batchListIndex='{{index}}' data-sendBatchIndex='{{sendBatchIndex}}'   bindtap="plus">
+                               <image src='../../../../media/images/plus.png'/>
+                           </view>
+                       </view>
+                  </view>
+             </block>
+
+
+            <view style='height:20rpx;'/>
+        </block>
+    </scroll-view>
+    <view class='bottom-btn {{btnBack}}'  bindtap='formSubmit'>
+        <text >确认发货</text>
+    </view>
+    <block wx:if="{{isSelfExtract == 'N'}}">
+        <view class='elastic_layer' wx:if="{{showCustomModel}}" >
+              <view class='layer'>
+                  <view class='l_title'>配送方式</view>
+                  <view class='delivery_method' >
+                    <block  wx:for="{{wechatLogistics}}" wx:for-item="logistic" wx:for-index='name' wx:key="{{name}}">
+                      <view bindtap="selectLogistic" data-logistics-company-name="{{name}}" data-logistics-company-code="{{logistic}}" class="{{logistic ==  logisticsCompanyCode ?  'method_items cur' : 'method_items'}}">{{name}}</view>
+                     </block>
+                  </view>
+                  <view class='confirm_btn' bindtap="switchModel">确认</view>
+              </view>
+        </view>
+    </block>
+</view>

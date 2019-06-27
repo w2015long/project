@@ -1,0 +1,61 @@
+<view class="push-container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='control-box wechat-control'>
+        <view class='cr-hd'><image src="../../../../media/images/wechat-icon.png" mode="scaleToFill"/></view>
+        <view class='cr-bd'>
+            <text>微信通知</text>
+        </view>
+        <view class='cr-ft'><switch color="#28c785" bindtap="wechatNotice" disabled='{{initData.isSubscriptionWechat==="N"?"disabled":""}}' checked='{{initData.isSubscriptionWechat==="N"?"":"checked"}}'/></view>
+    </view>
+     <view class='sms-box {{wechatNotice==="N"?"hidden":""}}'>
+        <view class='sms-top'>关怀短信</view>
+        <view class='sms-cont'>
+            <view class='cont-hd'>禁忌说明</view>
+            <view class='cont-bd'>
+                 <textarea name="wechatNoticeContent" value='{{wechatNoticeContent}}' />
+            </view>
+        </view>
+    </view>
+    <view class='control-box sms-control'>
+        <view class='cr-hd'><image src="../../../../media/images/sms-icon.png" mode="scaleToFill"/></view>
+        <view class='cr-bd'>
+            <text>短信通知</text>
+        </view>
+        <view class='cr-ft'><switch color="#28c785" bindtap="messageNotice" checked='checked' /></view>
+    </view>
+    <view class='sms-box {{messageNotice==="N"?"hidden":""}}' >
+        <view class='sms-top'>关怀短信</view>
+        <view class='sms-tag'>
+            <view class='tab-hd'>
+                <text>推荐标签</text>
+                <navigator  bindtap='tagUrl' >添加标签</navigator>
+            </view>
+            <view class='tab-bd'  >
+                <view wx:for="{{tagList}}" wx:for-item="item" >
+                <text class='{{selectTagId===item.diseaseTagId?"selected":""}}' bindtap='selectTag' wx:key="{{index}}" data-advice-desc="{{item.adviceDesc}}" data-disease-tag-id='{{item.diseaseTagId}}'>{{item.title}}</text>
+                </view>
+            </view>
+        </view>
+        <view class='sms-cont'>
+            <view class='cont-hd'>禁忌说明</view>
+            <view class='cont-bd'>
+                 <textarea name="messageNoticeContent" value='{{messageNoticeContent}}' />
+            </view>
+        </view>
+    </view>
+    <view class='taboo-box'>
+        <view class='box-top'>商品使用与禁忌</view>
+        <view class='box-cont'>
+             <view wx:for="{{initData.productProtocolList}}" wx:for-item="item">
+           
+            <view class='box-item {{(item.notes===""||item.usageAndDosage==="")?"":"disabled"}}' data-items='{{item}}' bindtap="perfect" data-index="{{index}}" >
+                <text class='item-hd'>{{item.productNm}}</text>
+                <text class='item-bd'>{{(item.notes==""||item.usageAndDosage=="")?"待完善":"已完善"}}</text>
+            </view>
+            
+             </view>
+        </view>
+    </view>
+    <view class='ft-box'><button type="primary"  formType="submit" class='ft-box-button'> 发送 </button></view>
+      </form>
+</view>

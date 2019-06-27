@@ -1,0 +1,39 @@
+page{background-color: #f5f5f5;}
+.nav-tab{height: 88rpx; line-height: 88rpx; background-color: #fff; }
+.nav-tab view{width: 25%; float: left; text-align: center; color: #999999; font-size: 28rpx;}
+.nav-tab .active{color: #28C785;font-weight: bold; position: relative; z-index: 2;}
+.nav-tab .active::before{content: ''; width: 44%; height: 4rpx; background-color: #28C785; position: absolute; left: 28%; bottom: 0;}
+.nav-tab navigator{display: flex; align-items:center; justify-content:center; float: left; width: 25%; text-align: center; color: #1A1A1A; font-size: 28rpx;}
+.nav-tab navigator image{width: 20rpx; height: 26rpx; display: inline-block; margin-right: 8rpx;}
+.nav-tab .navigator-hover{background-color: inherit;}
+ 
+.nav-box{padding-top: 20rpx;}
+.box-item{background-color: #fff; margin-bottom: 20rpx; padding: 0 32rpx;}
+.box-item .info{display: flex; position: relative;padding:23rpx 0;}
+.box-item .info .mt-hd{margin-right: 20rpx; width: 100rpx; height: 100rpx;}
+.box-item .info .mt-hd image{width: 100rpx; height: 100rpx;}
+.box-item .info .mt-bd{flex:1; color: #1A1A1A;}
+.box-item .info .info-name{display: flex;align-items:center; line-height: 50rpx;padding-top: 6rpx; font-size: 30rpx;}
+.box-item .info .info-name text{padding-right: 15rpx;}
+.box-item .info .gender-icon{width: 26rpx; height: 26rpx;}
+.box-item .info .member{font-size: 24rpx; line-height: 33rpx;}
+.box-item .info .member-label{vertical-align: middle; padding-left: 8rpx; padding-right: 20rpx; color: #FFB602; }
+.box-item .info .member-phone{vertical-align: middle; }
+.box-item .info .member-icon{width: 30rpx; height: 30rpx; vertical-align: middle;}
+.box-item .info .mt-ft{color: #999999; font-size: 28rpx; line-height: 50rpx; padding-top: 6rpx;}
+
+.box-item .gd-box{padding: 25rpx 20rpx 20rpx 20rpx; background-color: #F5F5F5;}
+.box-item .gd-item{display: flex;justify-content:space-between; align-items:flex-end; margin-bottom: 6rpx;}
+.box-item .item-hd{width: 74%; max-height: 80rpx; line-height: 40rpx; color: #546472; font-size: 28rpx; overflow: hidden;}
+.box-item .item-bd{color: #A7A7A7; font-size: 26rpx;}
+
+.box-item .btn-box{padding: 23rpx 0; overflow: hidden;}
+
+.box-item .btn-box button{float: right; width: 200rpx; color: #fff; font-size: 28rpx; background-color: #27C886; height: 56rpx; line-height: 56rpx; border-radius: 28rpx;}
+
+.box-item .btn-box button::after{display: none;}
+.box-item .navigator-hover{background-color: inherit;}
+
+.fill-icon{border-radius:50rpx;}
+
+

@@ -1,0 +1,20 @@
+.passport-container{padding: 100rpx 32rpx 0 32rpx;}
+button.login-btn{background-color: #28C785; margin-top:40rpx; font-size: 34rpx;}
+.button-hover.login-btn{background-color: #26b97c;}
+button.login-btn[disabled][type=primary] {background-color:#7eddb6;}
+.item{display: flex; align-items:center; height: 85rpx; margin-bottom: 40rpx; color: #3F3F3F; font-size: 30rpx; line-height: 85rpx; position: relative;}
+.item::before{
+  border-top: 1px solid #e5e5e5;color: #e5e5e5; width:100%; content: " ";height: 1;left:0; right: 0; position: absolute;
+  bottom: 0;-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY  (0.5);transform: scaleY(0.5);z-index: 2;}
+.code-item.item::before{width: 65%;}
+.item .phone-number{display: block; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; height: 85rpx; line-height: 85rpx;}
+.item .sms-code{height: 85rpx; line-height: 85rpx;}
+.item .btn-code{width: 200rpx; height: 70rpx; line-height: 68rpx; padding: 0; box-sizing: border-box; border:2rpx solid #999999; color: #999999; font-size: 28rpx;}
+.item .btn-primary{color: #28C785; border:2rpx solid #28C785;}
+.item .label{display: inline-block; width: 130rpx;}
+.input-tip{min-height: 32rpx;}
+.tip-success{display: flex; margin-bottom:40rpx; color:#28C785; font-size: 24rpx; line-height: 32rpx;}
+.tip-error{display: flex; margin-bottom:40rpx; color:#F43530; font-size: 24rpx; line-height: 32rpx;}
+.success-image{width: 32rpx; height: 32rpx;}
+.tip-text{padding-left: 20rpx;}
+

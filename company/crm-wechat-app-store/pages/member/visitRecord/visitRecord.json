@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "来访顾客",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#E6E6E6",
+  "usingComponents": {
+    "notData": "../../common/notDataList/notDataList"
+  }
+}

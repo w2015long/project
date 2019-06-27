@@ -1,0 +1,49 @@
+<!--pages/components/cell/jdO2oOrderListCell.wxml -->
+<view class="container">
+  <view class="commitem">
+     <view class="commleftview">
+        <text class="commtext">单号：</text>
+		<text class="comminput">{{cellData.orderNo}}</text>
+	 </view>
+	 <view class="commrightview">
+	    <text class="commtext">{{cellData.orderStatus}}</text>
+	 </view>
+  </view>
+
+  <block wx:for="{{cellData.jdO2oOrderItemList}}" wx:for-item="productList" wx:key="index"  wx:if="{{index<2}}">
+               <view class="goodsitem">
+               	 <view class="goodsleft">
+               	    <view class="goodstext">
+               		     <text class="commtext">{{productList.skuName}}</text>
+               		</view>
+               		 <view class="goodsgui">
+               		     <view class="goodsguitextl">
+               			    <text class="bottomtext"></text>
+               			
+               			 </view>
+               			 <text class="goodsguitextr">x{{productList.skuCount}}</text>
+               		 </view>
+               	 </view>
+                </view>
+                <view class="lines"/>
+  </block>
+   <view class="lines"/>
+  <view class="lookmoreview" >
+       <text class="lookmoretext"  bindtap='selectItem'>查看更多</text>
+  </view>
+
+ <view class="commitem">
+     <view class="commleftview">
+        <text class="commtext">实收: </text>
+		<text class="comminput">￥{{cellData.orderBuyerPayableMoneyDouble}}  含运费：{{cellData.orderReceivableFreightDouble}}</text>
+	 </view>
+	 <view class="commrightview">
+	    <text class="comminput">共{{cellData.productCount}}件</text>
+	 </view>
+  </view>
+  <view class="lines"/>
+  <view class="address">
+       <text class="commtext">地址：</text>
+	    <text class="addresstext">{{cellData.buyerFullAddress}}</text>
+  </view>
+</view>

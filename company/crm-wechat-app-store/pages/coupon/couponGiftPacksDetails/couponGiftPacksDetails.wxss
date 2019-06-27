@@ -1,0 +1,357 @@
+page{background-color:#f5f5f5;}
+
+
+.hongmao-medicinal-liquor-main{
+
+}
+.hongmao-medicinal-liquor-main .top-bg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 230rpx;
+}
+.hongmao-medicinal-liquor-main .top-bg image{
+  width: 750rpx;
+  height: 230rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.hongmao-medicinal-liquor-main .top-bg .title{
+    font-weight:600;
+    color:rgba(255,255,255,1);
+    font-size:40rpx;
+    padding-left: 54rpx;
+    position: relative;
+    padding-top: 40rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+
+.hongmao-medicinal-liquor-main .top-bg .title:after{
+    position: absolute;
+    content: '';
+    width:12rpx;
+    height:38rpx;
+    background:rgba(255,255,255,1);
+    left: 32rpx;
+    top: 52rpx;
+}
+
+.hongmao-medicinal-liquor-main .coupon-list{
+    padding: 0 32rpx 150rpx; 
+    margin-top: 120rpx;
+}
+
+.hongmao-medicinal-liquor-main .coupon-list .item{
+    height: 220rpx;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    margin-top: 20rpx;
+}
+.hongmao-medicinal-liquor-main .coupon-list .item image{
+  height: 220rpx;
+  position: absolute;
+  left: 0;
+  width: 686rpx;
+  top: 0;
+  bottom: 0;
+}
+
+
+.hongmao-medicinal-liquor-main .coupon-list .item .item-l{
+    width: 224rpx;
+    height: 220rpx;
+    z-index: 13;
+    position: relative;
+}
+.hongmao-medicinal-liquor-main .coupon-list .item .item-l .money{
+    font-weight:600;
+    color:rgba(243,87,68,1);
+    font-size: 60rpx;
+    text-align: center;
+    white-space: nowrap;
+    height: 106rpx;
+    padding-top: 40rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  
+}
+.hongmao-medicinal-liquor-main .coupon-list .item .item-l .money text{
+    font-size: 28rpx;
+}
+.hongmao-medicinal-liquor-main .coupon-list .item .item-l .tips{
+   position: absolute;
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    font-size: 28rpx;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    bottom: 40rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hongmao-medicinal-liquor-main .coupon-list .item .item-r{
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    padding: 24rpx 40rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 13;
+}
+.hongmao-medicinal-liquor-main .coupon-list .item .item-r .item-r-top{
+    height: 126rpx;
+    position: relative;
+}
+.hongmao-medicinal-liquor-main .coupon-list .item .item-r .item-r-top:after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  background:rgba(229,229,229,1);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.hongmao-medicinal-liquor-main .coupon-list .item .item-r .item-r-top .title{
+  font-weight:500;
+  color:rgba(34,34,34,1);
+  font-size: 32rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.hongmao-medicinal-liquor-main .coupon-list .item .item-r .item-r-top .tips{
+  height:32rpx;
+  background:rgba(255,102,0,.1);
+  border-radius:4rpx;
+  font-weight:500;
+  color:rgba(255,102,0,1);
+  font-size: 24rpx;
+  line-height: 32rpx;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 48rpx;
+  padding: 0 4rpx;
+}
+
+
+.hongmao-medicinal-liquor-main .coupon-list .item .item-r .item-r-bottom{
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  font-size: 24rpx;
+  line-height: 68rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 330rpx;
+}
+.hongmao-medicinal-liquor-main .coupon-list .item .item-r .details{
+  position: absolute;
+  width: 90rpx;
+  height: 50rpx;
+  line-height: 44rpx;
+  text-align: center;
+  font-weight:500;
+  color:rgba(255,102,0,1);
+  font-size: 24rpx;
+  bottom: 10rpx;
+  right: 28rpx;
+}
+
+
+
+.hongmao-medicinal-liquor-main .distribute-btn{
+  height:100rpx;
+  background:rgba(72,209,153,1);
+  line-height: 100rpx;
+  text-align: center;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  font-size: 32rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 14;
+}
+
+
+.pop-ups{
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background:rgba(0,0,0,0.4);
+  height: 100%;
+  z-index: 15;
+}
+.pop-ups .item{
+  position: absolute;
+  bottom: 0;
+  height: 395rpx;
+  background: #fff;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+
+.pop-ups .item .item-top{
+  height: 295rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack:justify;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.pop-ups .item .item-top:after{
+    content: '';
+    position: absolute;
+    width:1rpx;
+    height:130rpx;
+    background:rgba(228,228,228,1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.pop-ups .item .item-top .item-top-left{
+  text-align: center;
+  width: 220rpx;
+  height: 156rpx;
+  padding-top: 64rpx;
+}
+
+.pop-ups .item .item-top .item-top-left .item-top-left-toppic{
+  width: 88rpx;
+  height: 88rpx;
+  margin: 0 auto;
+}
+
+.pop-ups .item .item-top .item-top-left .item-top-left-toppic image{
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.pop-ups .item .item-top .item-top-left .tem-top-left-bottom-text{
+  text-align: center;
+  font-weight:400;
+  color:rgba(34,34,34,1);
+  font-size: 24rpx;
+  padding-top: 18rpx;
+}
+
+.pop-ups .item .item-top .item-top-right{
+  width: 220rpx;
+  height: 156rpx;
+  padding-top: 64rpx;
+}
+.pop-ups .item .item-top .item-top-right .item-top-right-toppic{
+  width: 88rpx;
+  height: 88rpx;
+  margin: 0 auto;
+}
+.pop-ups .item .item-top .item-top-right .item-top-right-toppic image{
+  width: 88rpx;
+  height: 88rpx;
+}
+
+.pop-ups .item .item-top .item-top-right .item-top-right-bottom-text{
+  text-align: center;
+  font-weight:400;
+  color:rgba(34,34,34,1);
+  font-size: 24rpx;
+  padding-top: 10rpx;
+}
+
+
+.pop-ups .item .item-bottom{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  font-size: 32rpx;
+}
+
+
+
+
+.qr-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .4);
+  bottom: 0;
+  z-index: 99;
+}
+.qr-code{
+  position: fixed;
+  top: 135rpx;
+  left: 32rpx;
+  bottom: 265rpx;
+  right: 32rpx;
+  background: #fff;
+  width: 686rpx;
+
+}
+.qr-code .qr-title{
+    text-align: center;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    font-size: 32rpx;
+    padding-top: 60rpx;
+}
+
+
+
+.qr-code .qr-pic{
+  width: 420rpx;
+  height: 420rpx;
+  margin: 50rpx auto 0;
+}
+
+.qr-code .qr-pic image{
+  width: 420rpx;
+  height: 420rpx;
+}
+
+.qr-code .close-btn{
+  width:180rpx;
+  height:72rpx;
+  background:rgba(255,255,255,1);
+  border-radius:4rpx;
+  border:2rpx solid rgba(228,228,228,1);
+  line-height: 72rpx;
+  text-align: center;
+  margin: 50rpx auto 0;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  font-size: 28rpx;
+}

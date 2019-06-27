@@ -1,0 +1,53 @@
+<view class="bonus-details">
+    <view class='mt'>
+        <view class='recharge'wx:if="{{userAccountTransLog.amountDouble > 0 }}"><image src='../../../media/images/Recharge.svg'></image></view>
+        <view class='recharge'wx:if="{{userAccountTransLog.amountDouble < 0 }}"><image src='../../../media/images/Deduction.png'></image></view>
+        <view class='tex'>{{userAccountTransLog.amountType}}</view>
+        <view class='data'wx:if="{{userAccountTransLog.amountDouble > 0 }}">+{{userAccountTransLog.amountDouble}}</view>
+        <view class='data'wx:if="{{userAccountTransLog.amountDouble < 0 }}">{{userAccountTransLog.amountDouble}}</view>
+    </view>
+    <view class='mc'>
+        <view class='item'>
+            <text class='label'>结余</text>
+            <view class='tex'>{{userAccountTransLog.afterAmountDouble}}</view>
+        </view>
+        <view class='item'>
+            <text class='label'>账单时间</text>
+            <view class='tex'>{{userAccountTransLog.transTimeStr}}</view>
+        </view>
+        <view class='item'>
+            <text class='label'>账单说明</text>
+            <view class='tex'>{{userAccountTransLog.description}}</view>
+        </view>
+    </view>
+    <view class='md'>
+        <navigator class='nav-item' url='/pages/order/o2oOrder/o2oOrderDetail/o2oOrderDetail?orderId={{userAccountTransLog.orderId}}'  wx:if="{{userAccountTransLog.amountType == '销售提成' && userAccountTransLog.orderNum != null && userAccountTransLog.buyChannel == 'WECHAT'}}">
+            <view class="mendian">
+                <text class="mendiantext">订单号</text>
+                <view class="baimingv">
+                    <text>{{userAccountTransLog.orderNum}}</text>
+                    <image src="../../../../media/images/Chevron1.png"/>
+                </view>
+            </view>
+        </navigator>
+         <navigator  class='nav-item' url='/pages/order/outletOrderDetails/outletOrderDetails?orderId={{userAccountTransLog.orderId}}' wx:if="{{userAccountTransLog.amountType == '销售提成' && userAccountTransLog.orderNum != null && userAccountTransLog.buyChannel == 'OUTLET'}}">
+                    <view class="mendian">
+                        <text class="mendiantext">订单号</text>
+                        <view class="baimingv">
+                            <text>{{userAccountTransLog.orderNum}}</text>
+                            <image src="../../../../media/images/Chevron1.png"/>
+                        </view>
+                    </view>
+                </navigator>
+        <navigator class='nav-item'  url='/pages/member/memberDetail/memberDetail?memberId={{userAccountTransLog.memberId}}'  wx:if="{{userAccountTransLog.memberId != null && userAccountTransLog.memberName != null && userAccountTransLog.mobile != null}}">
+            <view class="mendian">
+                <text class="mendiantext">注册会员</text>
+                <view class="baimingv">
+                    <text>{{userAccountTransLog.memberName}}</text>
+                    <text>{{userAccountTransLog.mobile}}</text>
+                    <image src="../../../../media/images/Chevron1.png"/>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

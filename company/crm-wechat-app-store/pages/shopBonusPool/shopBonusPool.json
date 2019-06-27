@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "门店基金",
+  "navigationBarBackgroundColor": "#FF9A28",
+  "navigationBarTextStyle": "white",
+  "disableScroll": true,
+  "usingComponents": {
+    "notData":"../common/notDataList/notDataList"
+  }
+}

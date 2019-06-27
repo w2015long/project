@@ -1,0 +1,76 @@
+<!--pages/test/orders/pat-orders/prescriptionOrderSend.wxml-->
+<view class='operation-operate'>
+ 
+
+  <view class='operate-warp sender-info' > 
+      <view class='single-line'>
+          <text class='item-title'>单号：</text>
+          <text class='item-value'>{{prescriptionOrder.orderNum}}</text>
+      </view>
+      <view class='cell-line'/>
+      <view class='multiple-line'>
+          <view class='mutiple-item'>
+              <text class='item-title'>地址：</text>
+              <text class='item-value'>{{prescriptionOrder.receiverAddr}}</text>
+          </view>
+          
+      </view>
+  </view>
+
+  <view class='operate-warp' > 
+  <!--订单发货  -->
+    <view class='single-line' >
+        <text class='item-title'>数量：</text>
+        <text class='item-value'>{{prescriptionOrder.buyNum}}剂</text>
+    </view>
+    <view class='cell-line' />
+
+
+    <scroll-view class='image-scroll' scroll-x='true'>
+        <view class='cellImg-warp' style='width:{{imgUrls.length*238}}' >
+            <image class='imgItem' src='{{prescriptionOrder.prescriptionPic1}}' hidden='{{!prescriptionOrder.prescriptionPic1}}'></image>
+            <image class='imgItem' src='{{prescriptionOrder.prescriptionPic2}}' hidden='{{!prescriptionOrder.prescriptionPic2}}'></image>
+             <image class='imgItem' src='{{prescriptionOrder.prescriptionPic3}}' hidden='{{!prescriptionOrder.prescriptionPic1}}'></image>
+        </view>
+    </scroll-view> 
+
+    <view class='tips-view'>
+       <view class="tip-view"  hidden="{{prescriptionOrder.isGravida === 'N' ? true: false}}">
+                 <text>孕妇</text>
+               </view>
+               <view class=" tip-view wait"  hidden="{{prescriptionOrder.isDecoction === 'N' ? true: false}}">
+                 <text>代煎</text>
+               </view>
+               <view class="tip-view out"  hidden="{{prescriptionOrder.isExternalUse === 'N' ? true: false}}">
+                 <text>外用</text>
+       </view>
+    </view>
+    <view class='cell-line'/>
+
+   <!-- 待发货UI  -->
+      <view class='single-line' >
+          <text class='item-title'>物流公司：</text>
+          <picker  class='item-value left-value'  mode="selector" range="{{logistics}}" value="{{index}}"  bindchange="listenerPickerSelected">
+              <text>{{logistics[index]}}</text>
+          </picker>
+          <image  src="../../../../media/images/Chevron1.png"/>
+      </view>
+      <view class='single-line'>
+          <text class='item-title'>物流单号：</text>
+          <input class='item-value left-value other-style' bindblur='listenerInputEvent' maxlength="110"></input>
+          <text class='copy-btn'  bindtap="copyValue">复制</text>
+      </view>
+    </view>
+ 
+
+ <view class='done-btn-green'  hidden='{{!hideButton}}'>
+     <text>确认发货</text>
+   </view>
+
+   <view class='done-btn' bindtap='deliveryButton' hidden='{{hideButton}}' >
+       <text>确认发货</text>
+     </view>
+
+
+      
+</view>

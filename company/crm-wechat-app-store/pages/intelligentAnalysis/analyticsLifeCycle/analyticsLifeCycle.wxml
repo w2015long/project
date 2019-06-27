@@ -1,0 +1,134 @@
+<scorll-view class='containers' scorll-y="true">
+    <view class="topv">
+	    <view class="topl">
+		   <text>{{modalText}}</text>
+		   <view class="topiconv" bindtap="showSelect">
+		        <image src='{{!isShowModal ? "../../../media/images/Chevron2.png":"../../../media/images/Chevron3.png"}}' mode="scaleToFill" class="topiconvimage"/>
+		   </view>
+		</view>
+		<view class="topr" bindtap="showMouthModal">
+		       <view class="dian"/>
+		       {{isShowMouthModalText}}
+		</view>
+	</view>
+	<view class="line"/>
+	<scorll-view>
+	   <!--活跃期-->
+		<view class="contents" hidden="{{!isShowChart1}}">
+				<view class="tablev">
+				<view style="width:100vw;height:64rpx;background:#fff"/>
+				<canvas canvas-id="columnCanvas1" class="canvas"></canvas>
+				<view class="tablebv">
+						<view/>
+						<text>新会员</text>
+						<view style="background: #434348;"/>
+						<text>老会员</text>
+				</view>
+				</view>
+				<view class="tablebtab">
+					<text>时间</text>
+					<text>活跃会员总数</text>
+					<text>新会员数</text>
+					<text>老会员数</text>
+				</view>
+				<view wx:for="{{lifeCycleTableDataArray}}" wx:for-item="item" wx:key="index" class="tablebtab" style='margin-top:0;{{index%2==0 ? "background:#F5F5F5":"background:#FFFFFF"}};'>
+					<text>{{item.reportMonth}}</text>
+					<text>{{item.activePeriodMemberQuantity}}</text>
+					<text>{{item.newMemberQuantity}}</text>
+					<text>{{item.oldMemberQuantity}}</text>
+				</view>
+		</view>
+         <!--睡眠期-->
+		<view class="contents" hidden="{{!isShowChart2}}">
+			<view class="tablev">
+			<view style="width:100vw;height:64rpx;background:#fff"/>
+			<canvas canvas-id="columnCanvas2" class="canvas"></canvas>
+			<view class="tablebv">
+					<view style="background: #F45844;"/>
+					<text>睡眠会员</text>
+			</view>
+			</view>
+			<view class="tablebtab">
+				<text>时间</text>
+				<text>睡眠会员数</text>
+			</view>
+			<view wx:for="{{lifeCycleTableDataArray}}" wx:for-item="item" wx:key="index" class="tablebtab" style='margin-top:0;{{index%2==0 ? "background:#F5F5F5":"background:#FFFFFF"}};'>
+				<text>{{item.reportMonth}}</text>
+				<text>{{item.sleepPeriodMemberQuantity}}</text>
+			</view>
+		</view>
+		
+		 <!--沉睡期-->
+		<view class="contents" hidden="{{!isShowChart3}}">
+			<view class="tablev">
+			<view style="width:100vw;height:64rpx;background:#fff"/>
+			<canvas canvas-id="columnCanvas3" class="canvas"></canvas>
+			<view class="tablebv">
+					<view style="background: #FFB602;"/>
+					<text>沉睡会员</text>
+			</view>
+			</view>
+			<view class="tablebtab">
+				<text>时间</text>
+				<text>沉睡会员数</text>
+				<text>流失率</text>
+			</view>
+			<view wx:for="{{lifeCycleTableDataArray}}" wx:for-item="item" wx:key="index" class="tablebtab" style='margin-top:0;{{index%2==0 ? "background:#F5F5F5":"background:#FFFFFF"}};'>
+				<text>{{item.reportMonth}}</text>
+				<text>{{item.dormantPeriodMemberQuantity}}</text>
+				<text>{{item.count2}}</text>
+			</view>
+		</view>
+        
+		 <!--流失期-->
+		<view class="contents" hidden="{{!isShowChart4}}">
+			<view class="tablev">
+			<view style="width:100vw;height:64rpx;background:#fff"/>
+			<canvas canvas-id="columnCanvas4" class="canvas"></canvas>
+			<view class="tablebv">
+					<view style="background: #546471;"/>
+					<text>流失会员</text>
+			</view>
+			</view>
+			<view class="losev">
+			     <view style="width:100vw;height:32rpx;background:#fff"/>
+			     <canvas canvas-id="lineCanvas" class="losecanvas"></canvas>
+			</view>
+
+		    <view class="losbv">
+			    <view/>
+				<text>流失率</text>
+			</view>	
+
+			<view class="tablebtab">
+				<text>时间</text>
+				<text>流失会员数</text>
+				<text>流失率</text>
+			</view>
+			<view wx:for="{{lifeCycleTableDataArray}}" wx:for-item="item" wx:key="index" class="tablebtab" style='margin-top:0;{{index%2==0 ? "background:#F5F5F5":"background:#FFFFFF"}};'>
+				<text>{{item.reportMonth}}</text>
+				<text>{{item.lossPeriodMemberQuantity}}</text>
+				<text>{{item.lossRatio}}</text>
+			</view>
+		</view>
+
+    </scorll-view>
+	<!--周期状态选择弹层-->
+	<cover-view class="modal" hidden="{{isShowModal}}">
+        <block wx:for="{{lifeCycleArray}}" wx:key="{{index}}+lifeCycle">
+                <cover-view  bindtap="selectedLifeCycleModal" id="{{lifeCycleArray[index]}}" class="tohover-class">
+        		       <cover-view style="display:flex;flex:1;flex-direction: row;align-items:center;justify-content:center;">{{lifeCycleTextArray[index]}}</cover-view>
+        		</cover-view>
+        </block>
+	</cover-view>
+
+	<!--近几天弹层-->
+    	<cover-view class="transactionmodal" hidden="{{isShowMouthModal}}" style="top: 110rpx;">
+    	    <block wx:for="{{monthArray}}" wx:key="{{index}}+monthNumber">
+    	            <cover-view  bindtap="selectedMonthNumberModal" id="Mouth{{monthArray[index]}}" class="transactionmodalview">
+            		    <cover-view style="display:flex;flex:1;flex-direction: row;align-items:center;justify-content:center;">近{{monthArray[index]}}个月</cover-view>
+            		</cover-view>
+            		<cover-view class="modalviewlinesmin"/>
+    	    </block>
+    	</cover-view>
+</scorll-view>

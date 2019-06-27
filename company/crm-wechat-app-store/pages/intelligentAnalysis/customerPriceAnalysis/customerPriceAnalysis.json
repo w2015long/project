@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "综合分析",
+  "usingComponents": {
+    "notData":"../../common/notDataList/notDataList"
+  }
+}

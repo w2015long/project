@@ -1,0 +1,6 @@
+<!--pages/shopPromote/index/index.wxml-->
+
+<view class='imagesize'>
+  <image src="{{shopPromoteUrl}}"  class="shopPromoteImage"/>
+    <text class='download_poster'  bindtap="downloadPic" >下载</text>
+</view>

@@ -1,0 +1,245 @@
+/* pages/test/orders/wshop-orders/components/wshop-cell.wxss */
+.cell-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.cell-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 88rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+}
+.cell-charge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 88rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  position: relative;
+}
+.cell-charge::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+  z-index: 2;
+}
+
+.cell-topmark{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex:1;
+  padding-bottom: 26rpx;
+  padding-top: 26rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  position: relative;
+}
+.cell-topmark::before {
+  content: " ";
+  position: absolute;
+  left: 32rpx;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+          transform: scaleY(0.5);
+  z-index: 2;
+}
+
+.cell-bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-end;
+  flex:1;
+  height: 100rpx;
+  margin-right: 32rpx;
+}
+
+.top-left{
+  display: flex;
+  flex-direction: row;
+}
+
+.orderNum {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #9A9A9A;
+  white-space: nowrap;
+}
+
+.num {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1a1a1a;
+  letter-spacing: 0;
+}
+
+.num-address{
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1a1a1a;
+  letter-spacing: 0;
+  /* height: 40rpx; */
+  width: 87%;
+  word-break:break-all;
+}
+
+.num-mark {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1a1a1a;
+  line-height: 40rpx;
+  letter-spacing: 0;
+  width: 79%;
+  word-break:break-all;
+}
+
+.date {
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #9A9A9A;
+}
+
+.image-scroll {
+  display: flex;
+  width: 100%;
+  flex:1;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.cellImg-warp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.cell-line {
+  height:1rpx;
+  width:100vw;
+  background-color: #E5E5E5;
+  margin-left: 32rpx;
+}
+
+.imgItem {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.wait{
+  background-color:#546472;
+}
+
+.out {
+  background-color:#27C886;
+}
+
+.bottom-btn{
+  width: 180rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-left {
+  border:  1rpx solid #27C786;
+  background-color: #fff;
+  margin-right: 20rpx;
+}
+
+.item-right { 
+  color: #fff;
+  border:  2rpx solid #27C786;
+  background-color: #27C786;
+}
+
+.item-left text {
+  color: #27C786;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+}
+
+.item-right text {
+  color: #fff;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+}
+/*  微店订单css  */
+.product-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  height: 173rpx;
+  width: 100%;
+}
+
+.medicine-view {
+  display: flex;
+  flex-direction: column;
+  height: 132rpx;
+  justify-content: space-between;
+  margin-left: 22rpx;
+  width: 450rpx;
+}
+
+.describe {
+  width: 100%;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  /* line-height: 40rpx; */
+  color: #1A1A1A;
+  
+}
+
+.spec {
+  display: flex;
+  flex-direction: row;
+  /* line-height: 37rpx; */
+  width: 110%;
+  justify-content: space-between
+}
+
+.spec text {
+  font-family: PingFangSC-Regular;
+  font-size: 26rpx;
+  color: #9A9A9A;
+}
+
+.showMoreBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 91%;
+  height: 88rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}

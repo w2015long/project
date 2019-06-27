@@ -1,0 +1,27 @@
+<!--pages/activeManager/activeManager.wxml-->
+<view class='containers' >
+  <view class='warp'>
+    <view class="head">
+	    <view  class="headl">
+		    <text class="headt">{{date}}</text>
+			<text  style="color: #999;margin-left:23rpx;font-size: 28rpx;">({{pageOrder.recordsFiltered}}笔订单)</text>
+		</view>
+		<view class="headr" bindtap="actonModal">
+		     <picker mode="date"  start="2015-09-01" end="2020-09-01" 
+			 bindchange="bindDateChange" class="pickers">
+               <image class='moreicon' src="../../../media/images/Chevron3.png"></image>
+             </picker>
+		</view>
+	</view>
+
+
+  <!-- 数据列表  -->  
+          <scroll-view scroll-y="true" style="height: {{windowHeight}}px;" bindscroll="scroll" bindscrolltolower="pullUpLoad">
+            <view class="list-view">
+            <notData wx:if="{{pageOrder.content.length == 0 }}"/>
+               <cell  wx:for="{{pageOrder.content}}" wx:key="{{index}}+cell" class="list-cell" cellData="{{item}}" />
+            </view>
+          </scroll-view>
+
+  </view>
+</view>

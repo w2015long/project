@@ -1,0 +1,135 @@
+<!--pages/order/prescriptionOrder/deployDrug/deployDrug.wxml-->
+<view class='operation-operate'>
+  <!--订单发货  -->
+  <view class='operate-tab' hidden='{{currentState!=3}}'>
+      <view><text>上一页</text></view>
+      <view><text>3/8</text></view>
+      <view><text>已关闭</text></view>
+  </view>
+
+  <view class='operate-warp sender-info' hidden='{{currentState!=3}}'> 
+      <view class='single-line'>
+          <text class='item-title'>单号：</text>
+          <text class='item-value'>20185648428</text>
+      </view>
+      <view class='cell-line'/>
+      <view class='multiple-line'>
+          <view class='mutiple-item'>
+              <text class='item-title'>地址：</text>
+              <text class='item-value'>广东省广州黄埔区大沙地街道黄埔东路633号黄埔雅苑11号XXX房</text>
+          </view>
+          
+      </view>
+  </view>
+
+  <view class='operate-warp' hidden='{{currentState==4||currentState==5}}'> 
+  <!--订单发货  -->
+    <view class='single-line' hidden='{{currentState!=3}}'>
+        <text class='item-title'>数量：</text>
+        <text class='item-value'>3剂</text>
+    </view>
+    <view class='cell-line' hidden='{{currentState!=3}}'/>
+
+
+    <scroll-view class='image-scroll' scroll-x='true'>
+        <view class='cellImg-warp' style='width:{{imgUrls.length*238}}'>
+            <block  wx:if="{{cellData.prescriptionPic1}}" >
+                <image class='imgItem' src='{{deployItems.prescriptionPic1}}'></image>
+            </block>
+            <block  wx:if="{{cellData.prescriptionPic2}}" >
+                  <image class='imgItem' src='{{deployItems.prescriptionPic2}}'></image>
+            </block>
+             <block  wx:if="{{cellData.prescriptionPic3}}" >
+                  <image class='imgItem' src='{{deployItems.prescriptionPic3}}'></image>
+             </block>
+        </view>
+    </scroll-view> 
+
+    <view class='tips-view'>
+        <block  wx:if="{{deployItems.isGravida === 'Y'}}" >
+                 <view class="tip-view "><text>孕妇</text></view>
+        </block>
+         <block  wx:if="{{deployItems.isDecoction  === 'Y'}}" >
+                 <view class="tip-view wait"><text>煎煮</text></view>
+         </block>
+       <block  wx:if="{{deployItems.isExternalUse  === 'Y'}}" >
+                 <view class="tip-view out"><text>外用</text></view>
+       </block>
+    </view>
+    <view class='cell-line'/>
+
+    <view class='single-line' hidden='{{currentState==3}}'>
+        <text class='item-title'>数量：</text>
+        <text class='item-value'>{{deployItems.buyNum}}剂</text>
+    </view>
+  <!-- 待发货UI  -->
+    <view class='single-line' hidden='{{currentState!=3}}'>
+        <text class='item-title'>物流公司：</text>
+        <text class='item-value left-value'>顺丰物流</text>
+        <image src='./res/前进箭头@2x.png'/>
+    </view>
+    <view class='single-line' hidden='{{currentState!=3}}'>
+        <text class='item-title'>物流单号：</text>
+        <text class='item-value left-value other-style'>581487265715</text>
+        <text class='copy-btn' bindtap=''>复制</text>
+    </view>
+  </view>
+  <!-- 调配药品UI  -->
+  <view >
+      <view class="table-top">
+          <view><text>记录</text></view>
+          <view><text>序号</text></view>
+          <view><text>药品名称</text></view>
+          <view><text>剂量</text></view>
+      </view>
+      <block wx:for="{{items}}" wx:key="tr+{{index}}" >
+          <view class="table {{index%2==0?'gray':''}}">
+              <view >
+              <image bindtap="touchToChange" data-record='{{item.record}}' data-index='{{index}}'  src="{{item.record=='未完成'?'../../../../media/images/checkbox.png':'../../../../media/images/duide.png'}}"></image>
+              </view>
+              <view><text>{{index+1}}</text></view>
+              <view><text>{{item.productNm}}</text></view>
+              <view><text>{{item.num}}</text></view>
+          </view>
+      </block>
+  </view>
+  
+
+
+
+
+  <view class='done-btn'  style="background-color:{{isAllSelected?'#27C886':'#989A9C'}}" bindtap='submitAction' hidden='{{currentState==4||currentState==5}}'>
+      <text>{{submitBtnTitle}}</text>
+  </view>
+
+  <!--  已发货UI  -->
+  <view class='sender-ui' hidden='{{currentState!=4&&currentState!=5}}'>
+
+    <view class='time-line'/>
+    <scroll-view class='sender-container' scroll-y='true'>
+        <view class='top-sender'>
+            <view class='dot-green address'/>
+            <view class='address-right'><text>[收货地址]  广州市黄埔区 联合街道广州经济开发区</text></view>
+        </view>
+
+        <block wx:for='{{logisticsRecords}}' wx:key='record+{{index}}'>
+            <view class='top-sender record-sender'>
+                <view class="sender-date  {{index>0?'done-record':''}}">
+                    <text>{{item.dateItem.date}}</text>
+                    <text>{{item.dateItem.time}}</text>
+                </view>
+                <view class="dot-green {{index>0?'done':''}}"/>
+                <view class="address-right {{index>0?'done-record':''}}">
+                    <text>[{{item.state}}]</text>
+                    <text>{{item.record}}</text>
+                    
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+  
+  </view>
+  
+      
+      
+</view>

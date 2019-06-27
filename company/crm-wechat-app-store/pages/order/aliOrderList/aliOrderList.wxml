@@ -1,0 +1,42 @@
+<!--pages/activeManager/aliOrderList.wxml-->
+<view class='containers'>
+  <view class='warp'>
+    <!-- 列表的标签 -->
+	 <scroll-view class='scroll-container' scroll-x='true' scroll-left="{{scrollTop}}">
+     <view class='scroll-tab'>
+      <button wx:for="{{buttons}}" wx:key="*this" id="{{'btn'+index}}" bindtap='onchangeTab' class="{{tabIndex==index?'on':''}}">
+        <text>{{item}}</text>
+      </button>
+     </view>
+  </scroll-view> 
+  <view class='down-btn' bindtap='actonModal'>
+       <image class='moreicon' src='{{isShowModal ? "../../../media/images/Chevron2.png" : "../../../media/images/Chevron3.png"}}'></image>
+  </view> 
+
+    <!-- 数据列表  -->
+    <swiper bindchange="swiperScreen" scroll-y="false" style="height:{{winHeight}}" current="{{tabIndex}}" class="main-content">
+      <block wx:for="{{buttons}}" wx:key="{{tabIndex}}+image">
+        <swiper-item> 
+          <scroll-view scroll-y="true" scroll-x="true" style="height:100%" bindscrolltolower="pullUpLoad">
+            <view class="list-view">
+            <notData wx:if="{{pageAliOrder.listDatas.size === 0 }}"/>
+              <cell bind:action="jumpAliO2oOrderDetails" wx:for="{{pageAliOrder.listDatas}}" wx:key="{{index}}+cell" class="list-cell" cellData="{{item}}"/>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 自定义弹层  -->
+  <view class="model" hidden='{{!isShowModal}}' >
+      <view class="model-container">
+          <block wx:for="{{modalData}}" wx:key="{{index}}+section">
+              <view id="{{'modal'+index}}" class="{{modalIndex==index?'selected':''}}" bindtap='onModelItemsSelsect'>
+                  <text>{{item.title}}</text>
+              </view>
+          </block>
+      </view>
+      <view class='bottom-tap' bindtap='actonModal'/>
+  </view>
+
+</view>

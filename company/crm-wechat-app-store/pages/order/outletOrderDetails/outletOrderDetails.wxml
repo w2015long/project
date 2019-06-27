@@ -1,0 +1,69 @@
+<scroll-view class="containers" scroll-y="true">
+  <view class="orderstate">
+    <view class="orderstatev">
+      <text class="statetext">订单编号：</text>
+      <text class="statetexv">{{content.orderNum}}</text>
+    </view>
+    <view class="orderstatev">
+      <text class="statetext">下单时间：</text>
+      <text class="statetexv">{{content.createTimeStr}}</text>
+    </view>
+  </view>
+
+  <view class="userv" style="{{content.name===null?'display:none':''}}">
+    <image mode="scaleToFill" src="{{content.iconFileId}}"></image>
+    <view class="userinfo">
+      <view class="userinfoview">
+        <text class="usertext">{{content.name}}</text>
+        <image src="{{content.sex==='MALE'?'../../../../media/images/manicon.png':'../../../../media/images/icon-woman.png'}}" class="userinfoviewimage"></image>
+      </view>
+      <view style="display:flex;flex-direction:row;align-items:center;margin-top:7rpx;">
+        <image src="../../../media/images/icon30x30.png" class="userinfoviewimage"></image>
+        <text class="uservtext">{{content.title}}</text>
+        <text class="userntext">{{content.mobile}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="countv">
+    <text class="statetext">数量：</text>
+    <text class="statetexv">{{content.quantity}}件</text>
+  </view>
+
+  <view class="goodsitem" wx:for="{{content.orderItemProtocols}}" wx:for-item="order"   >
+    <image class='goodsicon' src="{{order.fileId}}"></image>
+    <view class="goodsleft">
+      <view class="goodstext">
+        <text class="commtext">{{order.productName}}</text>
+      </view>
+      <view class="goodsgui">
+        <view class="goodsguitextl">
+          <text class="bottomtext">规格：{{order.spec}}</text>
+          <text class="bottomtext">单位：{{order.unit}}</text>
+        </view>
+        <text class="goodsguitextr">x{{order.quantity}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="lines" /> -->
+
+
+  <view class="bottomv">
+    <view class="bottomitemv">
+      <text class="bitemtextl">商品金额：</text>
+      <text class="bitemtextr">￥{{content.productTotalAmountDouble}}</text>
+    </view>
+
+    <view class="bottomitemv">
+      <text class="bitemtextl">优惠：</text>
+      <text class="bitemtextr">-￥{{content.discountAmountDouble}}</text>
+    </view>
+
+    <view class="bottomtotalv">
+      <text class="bottomtotaltextl">实收：</text>
+      <text class="bottomtotaltextr">￥{{content.orderTotalAmountDouble}}</text>
+    </view>
+
+  </view>
+</scroll-view>

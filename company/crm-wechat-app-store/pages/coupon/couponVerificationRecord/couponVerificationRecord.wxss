@@ -1,0 +1,211 @@
+page{background-color:#f5f5f5;}
+
+
+.record-main .information-list{
+    padding: 94rpx 32rpx 20rpx 32rpx;
+}
+.record-main .information-list .date-time{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    justify-content: space-between;
+    position: absolute;
+    top: 40rpx;
+    left: 32rpx;
+    right: 90rpx;
+}
+
+
+
+
+
+
+.record-main .information-list .zanwu-content{
+    width: 260rpx;
+    height: 260rpx;
+    margin:  300rpx auto 0;
+}
+
+.record-main .information-list .zanwu-content .zanwu-content-pic{
+    width: 260rpx;
+    height: 260rpx;
+}
+
+.record-main .information-list .zanwu-content .zanwu-content-pic image{
+    width: 260rpx;
+    height: 260rpx;
+}
+
+
+.record-main .information-list .zanwu-content .zanwu-text{
+    text-align: center;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+    font-size: 32rpx;
+    margin-top: 17srpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.record-main .information-list .the-specific-time{
+    font-weight:600;
+    color:rgba(102,102,102,1);
+    font-size: 32rpx;
+    position: relative;
+}
+.record-main .information-list .the-specific-time:after{
+    content:" ";
+    display: inline-block;
+    border-top: 4rpx solid;
+    border-right: 4rpx solid;
+    width: 14rpx;
+    height: 14rpx;
+    border-color:rgba(102,102,102,1);
+    transform: rotate(-223deg);
+    position:absolute;
+    left: 300rpx;
+    top: 12rpx;
+
+}
+
+
+.record-main .information-list .date-time-r{
+    font-weight:600;
+    color:rgba(34,34,34,1);
+    font-size: 28rpx;
+    padding-top: 5rpx;
+    position: relative;
+}
+
+
+.record-main .information-list .information-item{
+  margin-top: 20rpx;
+  height: 288rpx;
+  background: #fff;
+  width:92%;
+}
+
+.record-main .information-list .information-item .item-top{
+    height: 88rpx;
+    padding: 0 28rpx 0 16rpx;
+    line-height: 88rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    justify-content: space-between;
+    position: relative;
+}
+.record-main .information-list .information-item .item-top:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    right: 0;
+    background: #e4e4e4;
+}
+.record-main .information-list .information-item .item-top .item-top-l{
+    font-weight:600;
+    color:rgba(243,87,68,1);
+    font-size: 48rpx;
+}
+.record-main .information-list .information-item .item-top .item-top-defult{
+    font-weight:500;
+    color:rgba(243,87,68,1);
+    font-size: 32rpx;
+}
+
+.record-main .information-list .information-item .item-top .item-top-doing{
+    font-weight:500;
+    color:rgba(34,34,34,1);
+    font-size: 26rpx;
+}
+.record-main .information-list .information-item .item-top .item-top-doing text{
+    color:rgba(153,153,153,1);
+    padding-right: 10rpx;
+}
+
+.record-main .information-list .information-item .item-bottom{
+    height: 176rpx;
+    position: relative;
+    padding: 24rpx 28rpx 0 28rpx;
+}
+.record-main .information-list .information-item .item-bottom .b-title{
+    font-weight:500;
+    color:rgba(34,34,34,1);
+    font-size: 32rpx;
+    margin-bottom: 27rpx;
+    max-width: 510rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.record-main .information-list .information-item .item-bottom .volume-number{
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    font-size: 28rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 28rpx;
+    line-height: 28rpx;
+    margin-bottom: 16rpx;
+}
+.record-main .information-list .information-item .item-bottom .volume-number .volume-number-name{
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    width: 140rpx;
+}
+
+.record-main .information-list .information-item .item-bottom .volume-number .volume-number-content{
+    font-weight:500;
+    color:#222;
+}
+
+.record-main .information-list .information-item .item-bottom .print-btn{
+    position: absolute;
+    width:120rpx;
+    height:60rpx;
+    border-radius:10rpx;
+    border:2rpx solid rgba(40,199,133,1);
+    text-align: center;
+    line-height: 60rpx;
+    font-weight:400;
+    color:rgba(72,209,153,1);
+    font-size: 28rpx;
+    top: 28rpx;
+    right: 29rpx;
+}
+
+.record-main .information-list .information-item .item-bottom .upload-btn{
+    position: absolute;
+    width:120rpx;
+    height:60rpx;
+    border-radius:10rpx;
+    border:2rpx solid rgba(40,199,133,1);
+    text-align: center;
+    line-height: 60rpx;
+    bottom: 24rpx;
+    right: 29rpx;
+    font-weight:400;
+    color:rgba(72,209,153,1);
+    font-size: 28rpx;
+}
+
+
+

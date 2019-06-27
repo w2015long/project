@@ -1,0 +1,4 @@
+<view class='title'>
+    <text class='text' >{{textParam}}</text>
+</view>
+

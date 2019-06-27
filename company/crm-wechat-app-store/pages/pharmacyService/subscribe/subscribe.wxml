@@ -1,0 +1,62 @@
+<view class="main">
+  <view class='search'>
+      <view class='search-box'>
+          <view class='search-icon'>
+              <image src="../../../media/images/icon-search.png"/>
+          </view>
+          <input class='search-input' placeholder='会员名称  会员手机号  操作人' bindinput="searchFun"></input>
+      </view>
+  </view>
+    <view class='nav-box'>
+     <swiper-item>
+<scroll-view scroll-y="true" scroll-x="true" style="height:100%;" bindscrolltolower="pullUpLoad" >
+<notData  wx:if="{{sucscribe.data.length  == 0}}"/>
+<view class='main-box' wx:for="{{sucscribe.data}}"  wx:key="{{index}}" id="{{'item'+index}}">
+    <view class='item'>
+        <view class="info" >
+            <view class="mt-hd">
+            <image src="{{item.iconFileId}}" mode="scaleToFill" class="customer-image"/>
+            </view>
+            <view class="mt-bd">
+            <view class="info-name"><text>{{item.memberName}}</text><image src="{{item.memberSex==='MALE'?'../../../media/images/manicon.png':(item.memberSex==='FEMALE'?'../../../media/images/gliricon.png':'')}}"  mode="scaleToFill" class="gender-icon"/></view>
+            <view class='member'>
+                <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon"/>
+                <text class="member-label">{{item.levelName}}</text>
+                <text class='member-phone'>{{item.memberMobile}}</text>
+            </view> 
+            </view>
+            <view class='mt-ft'>
+                 <switch color="#28c785"  wx:if="{{item.isOn === 'Y'}}"  checked id="{{index}}"  bindchange="switch1Change"/>
+                 <switch color="#28c785"  wx:else="{{item.isOn === 'N'}}"  id="{{index}}"  bindchange="switch1Change"/>
+             </view>
+        </view>
+        <view class='item-list'>
+          <view class='item-list-box'>
+              <view class='list-box-hd'>服药时间：</view>
+              <view class='list-box-bd'>{{item.timeFrame}}</view>
+          </view>
+
+           <view class='item-list-box'>
+              <view class='list-box-hd'>服药疗程：</view>
+              <view class='list-box-bd'>{{item.beginDateString}}至{{item.endDateString}}</view>
+          </view>
+
+           <view class='item-list-box'>
+              <view class='list-box-hd'>服药备注：</view>
+              <view class='list-box-bd'>{{item.remark}}</view>
+          </view>
+
+           <view class='item-list-box'>
+              <view class='list-box-hd'>操作人：</view>
+              <view class='list-box-bd'>{{item.optUserName}}  {{item.createTimeString}}</view>
+          </view>
+        </view>
+    </view>
+
+</view>
+
+
+</scroll-view>
+     </swiper-item>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<view class="edit-container">
+<form bindsubmit="formSubmit" bindreset="formReset">
+   <view class='gd-box'>
+        <view class='box-hd'><image src="../../../media/case/test1.png" mode="scaleToFill" /></view> 
+        <view class='box-bd'>
+            <view>{{commodity.productNm}}</view>
+            <text>{{commodity.spec}}</text>
+        </view> 
+   </view>  
+   <view class='cont'>
+        <view class='explain-box'>
+            <view class='exp-hd'>使用说明</view>
+            <view class='exp-bd'>
+                <textarea name="usageAndDosage" value='{{commodity.usageAndDosage}}' />
+            </view>
+        </view>
+        <view class='explain-box'>
+            <view class='exp-hd'>禁忌说明</view>
+            <view class='exp-bd'>
+                 <textarea name="notes" value='{{commodity.notes}}' />
+            </view>
+            <view class='exp-ft'><image src="../../../../media/images/remind-icon.png" mode="scaleToFill" />请仔细核对药品信息后填写</view>
+        </view>
+   </view>
+   <view class='ft-box'><button type="primary" formType="submit"> 保存 </button></view>
+     </form>
+</view>

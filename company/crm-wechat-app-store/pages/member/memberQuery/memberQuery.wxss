@@ -1,0 +1,42 @@
+page{background-color: #f5f5f5;}
+.query-member .mt{padding: 32rpx; background-color: #fff;}
+.query-member .mt-cell{display: flex; color: #1A1A1A; font-size: 30rpx; height: 88rpx; line-height: 88rpx; position: relative;}
+.query-member .mt-cell::before{
+  border-top: 1px solid #e5e5e5;color: #e5e5e5; width: 100%; content: " ";height: 1;left: 0; right: 0; position: absolute;
+  bottom: 0;-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY  (0.5);transform: scaleY(0.5);z-index: 2;}
+.query-member .cell-hd{width: 168rpx;}
+.query-member .cell-bd .phone-number{display: block; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; height: 85rpx; line-height: 85rpx;}
+
+
+.choose-label{background-color: #fff; margin-top:20rpx;}
+.choose-label .label-mt{display: flex;justify-content:space-between; height: 88rpx; color: #1A1A1A; font-size: 30rpx; padding: 0 32rpx; line-height: 88rpx; position: relative;}
+.choose-label .label-mt::before{
+  border-top: 1px solid #e5e5e5;color: #e5e5e5; width: 92%; content: " ";height: 1;left: 4%; right: 4%; position: absolute;
+  bottom: 0;-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY  (0.5);transform: scaleY(0.5);z-index: 2;}
+.choose-label .label-mc{padding: 32rpx 0 1rpx 32rpx; overflow: hidden;}
+.choose-label .tag-item{float: left; margin: 0 20rpx 32rpx 0; padding: 10rpx 28rpx; border-radius: 30rpx; box-sizing: border-box; border: 1px solid #CCCCCC; color: #1A1A1A; font-size: 28rpx;}
+.choose-label .active{border-color: #28C785; background-color: #28C785; color: #fff;}
+
+
+.ft-box{height: 100rpx;}
+.ft-cont{display: flex; height: 100rpx; position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;}
+.ft-cont button{width: 50%; height: 100rpx; border-radius: 0; line-height: 100rpx; color: #fff; font-size: 28rpx; text-align: center;}
+.ft-cont button::after{display: none;}
+.ft-cont .btn1{background-color:#fff; color: #1A1A1A;}
+.ft-cont .btn2{background-color:#28C785;}
+.button-hover.btn2{background-color: #26b97c;}
+button.btn2[disabled][type=primary] {background-color:#48D199;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

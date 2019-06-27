@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "缺货分析",
+  "usingComponents": {
+    "notData":"../../common/notDataList/notDataList"
+  }
+}

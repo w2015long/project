@@ -1,0 +1,32 @@
+<view class="query-result">
+  <view class='mt-cell' bindtap='searchMyMember'>
+    <view class='cell-item active'>共{{pageMember.recordsFiltered || 0}}人</view>
+    <view class='cell-item'>
+      <label>我的会员{{myMemberCount || 0}}人</label>      
+      <view class='icon-box' wx:if="{{!onlySearchMyUserMember}}"><image src="../../../media/images/checkbox.png" mode="scaleToFill" /></view>
+      <view class='icon-box' wx:if="{{onlySearchMyUserMember}}"><image src="../../../media/images/icon-success48x48.png" mode="scaleToFill" /></view>
+    </view>
+  </view>
+
+  <view class='mc-box'>
+    <scroll-view scroll-top="{{scrollTop}}" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscroll="scroll" bindscrolltolower="pullUpLoad" class="weui-panel weui-panel_access">
+      <block wx:for="{{pageMember.content}}" wx:for-item="member" wx:key="index">
+        <navigator class='item'>
+          <view class='item-hd'><image src="{{member.iconFileUrl}}" mode="scaleToFill" /></view>
+          <view class='item-bd'>
+            <text class='bd-name'>{{member.name}}</text>
+            <text class='bd-text'>消费：{{member.tradesSum}}次</text>
+            <text class='bd-text'>交易：{{member.lastTransaction}}天前</text>
+            <view class='label-box'>
+              <text class='label green-bg' wx:if="{{member.lifeCycleTitle}}">{{member.lifeCycleTitle}}</text>
+              <text class='label'>{{member.levelName}}</text>
+              <text class='label' wx:if="{{member.isSubscriptionWechat && member.isSubscriptionWechat == 'Y'}}">微信</text>
+            </view>
+          </view>
+          <view class='item-ft'>￥{{member.orderAmountAvgDouble}}</view>
+        </navigator>
+      </block>
+    </scroll-view>
+    <loadingTip is-show="{{hidden}}"/>
+  </view> 
+</view>

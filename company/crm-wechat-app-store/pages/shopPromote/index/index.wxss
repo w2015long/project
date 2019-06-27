@@ -1,0 +1,12 @@
+/* pages/shopPromote/index/index.wxss */
+.imagesize{
+  padding-top: 100rpx;
+ display:flex;                    
+ justify-content: center;}
+ 
+.imagesize image { 
+  width:400rpx;
+  height:400rpx;
+}
+
+ .download_poster{background: #FF3B30;border-radius: 36px;padding: 10rpx 25rpx;font-size: 28rpx;color: #FFFFFF;line-height: 40rpx;position: absolute;right: 100rpx;bottom: 550rpx;}

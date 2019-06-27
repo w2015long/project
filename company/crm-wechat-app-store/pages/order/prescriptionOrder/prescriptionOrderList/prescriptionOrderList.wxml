@@ -1,0 +1,54 @@
+<view class='patlist-container'>
+  <!-- 列表的标签 -->
+   <scroll-view class='scroll-container' scroll-y="false" scroll-x='true' scroll-left="{{scrollTop}}">
+    <view class='scroll-tab'>
+      <button wx:for="{{buttons}}" wx:key="*this" id="{{'btn'+index}}" bindtap='onchangeTab' class="{{tabIndex==index?'on':''}}">
+        <text>{{item}}</text>
+      </button>
+    </view>
+  </scroll-view> 
+  <view class='down-btn' bindtap='showTabItems'>
+      <image src='../../../../media/images/Chevron2.png' style='width:26rpx;height:16rpx;' hidden='{{show!=true}}'/>
+      <image src='../../../../media/images/Chevron3.png' style='width:26rpx;height:16rpx;' hidden='{{show==true}}'/>
+  </view> 
+
+  <!-- 数据列表  -->
+  <swiper bindchange="swiperScreen" scroll-y="false" style="height:{{winHeight}}" current="{{tabIndex}}" class="main-content" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{buttons}}" wx:key="{{index}}+image">
+      <swiper-item>
+        <scroll-view scroll-y="true" scroll-x="true" style="height:92%" bindscrolltolower="pullUpLoad"  bindscrolltoupper="PullDownRefresh">
+          <view class="list-view">
+           <notData wx:if="{{contentDatas.length == 0 }}"/>
+            <cell bind:action="selectItemDetail" bind:mark="sellerMark" bind:opreate="prescriptionOrderStateUnifiedEntrance" wx:for="{{contentDatas}}" wx:key="{{index}}+cell" class="list-cell" cellData="{{item}}" state="{{tabIndex}}" id="{{index}}"/>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+<!-- 自定义弹层  -->
+  <view class="model" hidden='{{show!=true}}' >
+      <view class="model-container" hidden='{{showAlertView}}'>
+          <block wx:for="{{buttons}}" wx:key="{{index}}+section">
+              <view id="{{'sec'+index}}" class="{{tabIndex==index?'selected':''}}" bindtap='onchangeSection'>
+                  <text>{{item}}</text>
+              </view>
+          </block>
+      </view>
+      <view class='bottom-tap' bindtap='showTabItems' hidden='{{showAlertView}}'/>
+
+      <view class='orderCenter-warp' hidden='{{!showAlertView}}'>
+          <view class='single-line'>
+            <text class='item-title'>备注内容：</text>
+           <input focus='{{showAlertView}}' cursor-spacing='55' bindblur='endInput' value='{{remarkParam.merchantsRemark}}'></input>
+          </view>
+          <view class='cell-line'/>
+          <view class='single-line submit-mark'>
+            <text class='item-title'></text>
+            <view class='bottom-btn item-right ' bindtap='updateMerchantsRemark'><text>确认</text></view>
+          </view>
+      </view>
+  </view>
+
+  
+</view>

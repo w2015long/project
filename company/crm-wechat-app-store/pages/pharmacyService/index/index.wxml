@@ -1,0 +1,20 @@
+
+<view class="containers">
+  <navigator class='taboo-box' url='../../pharmacyService/userAndTaboo/userAndTaboo'>
+    <view class='taboo-text'><image src="../../../media/images/taboo32x32.png" /><text>使用禁忌</text></view>
+    <view class='taboo-big-icon'><image src="../../../media/images/taboo200x200.png" /></view>
+    <view class='num-people'><text>{{returnVisit}}</text> 人</view>
+  </navigator>
+  <view class='cont-bot'>
+    <navigator class='remind-box' url='../medicationReminder/medicationReminder'>
+      <view class='taboo-text'><image src="../../../media/images/remind-icon32x32.png" /><text>用药提醒</text></view>
+      <view class='taboo-big-icon'><image src="../../../media/images/remind-icon100x100.png" /></view>
+      <view class='num-people'><text>{{remind}}</text> 人</view>
+    </navigator>
+    <navigator class='return-visit' url='../rehabilitationVisit/rehabilitationVisit'>
+      <view class='taboo-text'><image src="../../../media/images/visit-icon32x32.png" /><text>康复回访</text></view>
+      <view class='taboo-big-icon'><image src="../../../media/images/visit-icon100x95.png" /></view>
+      <view class='num-people'><text>{{taboo}}</text> 人</view>
+    </navigator>
+  </view>
+</view>

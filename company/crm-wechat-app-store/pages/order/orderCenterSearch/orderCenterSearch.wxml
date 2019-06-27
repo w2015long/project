@@ -1,0 +1,43 @@
+
+<view class='order-container'>
+
+  <view class='orderCenter-warp search-view'>
+      <view class='search-container'>
+          <input bindconfirm='doSearch' placeholder='请输入单号  姓名  手机号码' value='{{param}}' placeholder-class='input-holder'></input>
+      </view>
+  </view>
+
+
+  <scroll-view scroll-y='true'>
+      <block wx:for="{{searchResult}}" wx:item="item" wx:key="index">
+              <navigator class='orderCenter-warp porder'url="{{item.url}}">
+                  <view class='single-line'>
+                    <text class='item-value' >{{item.orderTypeStr}}</text>
+                  </view>
+                  <view class='cell-line'/>
+                  <view class='group-info'>
+                    <view>
+                        <text class='item-title'>单号：</text>
+                        <text class='item-value'>{{item.orderNum}}</text>
+                    </view>
+                    <view>
+                        <text class='item-title'>时间：</text>
+                        <text class='item-value'>{{item.createTimeStr}}</text>
+                    </view>
+                    <view>
+                        <text class='item-title'>会员：</text>
+                        <text class='item-value'>{{item.memberName}}</text>
+                        <text class='item-value'> {{item.mobile}}</text>
+                    </view>
+
+                    <view>
+                        <text class='item-title'>地址：</text>
+                        <text class='item-value address'> {{item.address}}</text>
+                    </view>
+                    
+                  </view>
+              </navigator>
+          
+      </block>
+  </scroll-view>
+</view>

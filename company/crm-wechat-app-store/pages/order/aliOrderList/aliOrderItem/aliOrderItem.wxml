@@ -1,0 +1,45 @@
+<!--pages/components/cell/aliOrderItem.wxml-->
+<view class="container" bindtap='selectItem'>
+  <view class="commitem">
+     <view class="commleftview">
+        <text class="commtext">单号：</text>
+		<text class="comminput">{{cellData.orderNo}}</text>
+	 </view>
+	 <view class="commrightview">
+	    <text class="commtext">{{cellData.orderStatus}}</text>
+	 </view>
+  </view>
+  <block wx:for="{{cellData.xcxAliOrderItemProtocol}}" wx:for-item="productList" wx:key="index"  wx:if="{{index<2}}">
+  <view class="goodsitem">
+	 <view class="goodsleft">
+	    <view class="goodstext">
+		     <text class="commtext">{{productList.name}}</text>
+		</view>
+		 <view class="goodsgui">
+		     <view class="goodsguitextl">
+			 </view>
+			 <text class="goodsguitextr">{{productList.count}}</text>
+		 </view>
+	 </view>
+  </view>
+  <view class="lines"/>
+  </block>
+  <view class="lookmoreview">
+       <text class="lookmoretext">查看更多</text>
+	    <image class='lookmoreicon' src="../../../../media/images/Chevron3.png" ></image>
+  </view>
+ <view class="commitem">
+     <view class="commleftview">
+        <text class="commtext">实收: </text>
+		<text class="comminput">￥{{cellData.totalPayDouble}}  含运费：{{cellData.deliveryPayDouble}}</text>
+	 </view>
+	 <view class="commrightview">
+	    <text class="comminput">共{{cellData.productAliCount}}件</text>
+	 </view>
+  </view>
+  <view class="lines"/>
+  <view class="address">
+       <text class="commtext">地址：</text>
+	    <text class="addresstext">{{cellData.address}}</text>
+  </view>
+</view>

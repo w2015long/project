@@ -1,0 +1,45 @@
+page{background-color:#f5f5f5;}
+
+.bonus-pools .mt{
+    height: 300rpx;
+    padding: 20rpx 32rpx 0 32rpx;
+    box-sizing: border-box;
+    background-color: #FF9A28;
+    background: -moz-linear-gradient(top, #FF9A28 0%,#F3DA87 70%, #F5F5F5 100%);
+    background: -webkit-linear-gradient(top, #FF9A28 0%,#F3DA87 70%,#F5F5F5 100%);
+    background: linear-gradient(to bottom, #FF9A28 0%,#F3DA87 70%,#F5F5F5 100%);
+}
+.bonus-pools .mt .cont{
+    height: 280rpx;
+    box-sizing: border-box;
+    border-radius: 8rpx;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 70rpx;
+}
+.bonus-pools .mt .cont-tex{line-height: 42rpx; color:#333333; font-size: 30rpx;}
+.bonus-pools .mt .cont-data{line-height: 1; margin-top: 32rpx; font-weight: bold; color:#333333; font-size: 80rpx;}
+
+.bonus-pools .mc{padding:30rpx 32rpx;}
+.bonus-pools .mc .dt{display: -webkit-box;display: -webkit-flex;display: flex;-webkit-box-pack:justify;-webkit-justify-content: space-between;justify-content: space-between;padding:29rpx 32rpx; background-color: #fff; color:#1A1A1A; font-size: 30rpx;border-bottom:1rpx solid #EDEDED; border-radius: 8rpx 8rpx 0 0;}
+.bonus-pools .mc .item{position: relative; display: -webkit-box;display: -webkit-flex;display: flex;padding:28rpx 32rpx 28rpx 32rpx; background-color: #fff;-webkit-box-align: center;-webkit-align-items: center;align-items: center; background-color: #fff;}
+.bonus-pools .mc .cell-hd{width: 46rpx; height: 46rpx; border-radius: 50%; line-height: 46rpx; text-align: center; overflow: hidden; background-color: rgba(255,154,40,0.05); color: #fff; color: #FF9A28; font-size: 24rpx;}
+.bonus-pools .mc .cell-ft{color: #1A1A1A; font-size: 36rpx; font-weight: bold;}
+.bonus-pools .mc .cell-bd{margin-left: 25rpx;-webkit-box-flex:1;-webkit-flex:1;flex:1;}
+.bonus-pools .mc .cell-bd .money{color:#1A1A1A; padding-left: 8rpx; font-weight: bold; font-size:36rpx; margin-bottom:14rpx;}
+.bonus-pools .mc .cell-bd .tex{color: #999; font-size: 26rpx;}
+.bonus-pools .mc .item:first-child .cell-hd{background-color: rgba(255,154,40,1); color: #fff;}
+.bonus-pools .mc .item:before{content:''; position: absolute; bottom: 0; left: 110rpx; right:0; height: 1px; background-color: #EDEDED;}
+.bonus-pools .mc .item:last-child{border-radius:0 0 8rpx 8rpx;}
+.bonus-pools .mc .item:last-child:before{display: none;}
+
+.list_title  .title_pic{position: absolute;width: 36rpx;height: 36rpx;right: 32rpx;top: 36rpx;}
+.list_title  .title_pic image{width: 36rpx;height: 36rpx;}
+.list_title{background: #FAFAFA;padding-top: 20rpx;padding-bottom: 20rpx;border-radius: 8rpx 8rpx 0 0;position: relative;}
+.list_title .month{font-size: 30rpx;color: #1A1A1A;display: block;padding-left: 32rpx;}
+.list_title .shuru{font-size: 26rpx;color: #999999;display: block;padding-left: 32rpx;padding-top: 10rpx;}
+.list_title .shuru text{padding-right:20rpx;}
+
+
+
+

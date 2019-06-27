@@ -1,0 +1,45 @@
+
+<view class="bonus_main">
+    <view class='bg_green'>
+        <text class='amount'>可提现金额(元)</text>
+        <text class='amount_number'>{{myBonus.balance}}</text>
+        <text class='withdraw_btn'>立即提现</text>
+    </view>
+
+    <view class='billing_box'>
+        <view class='billing_details'>
+            <view class='bill'>账单明细</view>
+            <view class='examination' bindtap='checkDetails'>查看明细 <text class='arrows-right'></text> </view>
+        </view>
+    </view>
+    <view class='information_list'>
+          <view class='information_title'>
+              <view class='title_text'>收益报表</view>
+              <view class='title_tab'>
+                  <view data-num="1" class="tab_items {{num ==1?'cur':''}}" bindtap='selectTime'>今天</view>
+                  <view data-num="2"  class="tab_items {{num ==2?'cur':''}}" bindtap='selectTime'>昨天</view>
+                  <view data-num="3"  class="tab_items {{num ==3?'cur':''}}" bindtap='selectTime'>本周</view>
+                  <view data-num="4" class="tab_items {{num ==4?'cur':''}}" bindtap='selectTime'>本月</view> 
+              </view>
+          </view>
+          <view class='information_main'>
+              <text>累计收益(元）</text>
+              <text>{{myBonus.accumulativeEarnings}}</text>
+          </view>
+    </view>
+
+    <view class='bonus'>
+        <view class='bonus_items'>
+            <text>{{myBonus.newMemberBonus}}</text>
+            <text>新会员奖金(元)</text>
+        </view>
+        <view class='bonus_items'>
+            <text>{{myBonus.customersBonus}}</text>
+            <text>回头客奖金(元)</text>
+        </view>
+        <view class='bonus_items'>
+            <text>{{myBonus.salesBonus}}</text>
+            <text>线上销售分成</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,55 @@
+
+<view class='containers'>
+  <view class='warp'>
+    <!-- 列表的标签 -->
+	<view class="top">
+		  <view class="tabv" wx:for="{{buttons}}" wx:for-item="item" wx:key="index" id="{{'btn'+index}}"  bindtap="onchangeTab">
+		      <text class="{{tabIndex==index?'on':''}}">{{item}}</text>
+			  <view class="{{tabIndex==index?'tabbbo':''}}"/>
+		  </view>
+	</view>
+   
+   
+    <!-- 数据列表  -->
+    <swiper bindchange="swiperScreen" scroll-y="false" style="height:90vh" current="{{tabIndex}}" class="main-content">
+      <block wx:for="{{buttons}}" wx:key="{{tabIndex}}+image">
+        <swiper-item>
+          <scroll-view scroll-y="true" scroll-x="true" style="height:100%" bindscrolltolower="pullUpLoad">
+            <view class="list-view">
+              <notData wx:if="{{pageParameters.data.length == 0 }}"/>
+               <view  wx:for="{{pageParameters.data}}" wx:for-item="item" wx:key="{{index}}+cell" class="list-item">
+					 
+					 <view class="list-rv">
+					     <view wx:if="{{index==0}}" class="center">
+						    <image src="../../../media/images/jin.png" mode="scaleToFill"/>
+						</view>
+
+                        <view wx:if="{{index==1}}" class="center">
+						    <image src="../../../media/images/yin.png" mode="scaleToFill"/>
+						</view>
+
+						 <view wx:if="{{index==2}}" class="center">
+						    <image src="../../../media/images/tong.png" mode="scaleToFill"/>
+						</view>
+
+					    <view wx:if="{{index>2}}" class="center">
+						    <text>{{index+1}}</text>
+						</view>
+					</view>
+
+					<view class="list-lv">
+						  <image src="{{item.picUrl}}" mode="scaleToFill"/>
+						  <view class="list-lv-ite">
+						         <text class="list-lv-ite-tt">{{item.memberName}}</text>
+								 <text class="list-lv-ite-tb">消费：{{item.orderQuantity}}次  累计消费：￥{{item.consumeAmountDouble}}</text>
+								 <view class="listline" style="height:{{index<listDatas.length - 1 ? 1:0 }}rpx;"></view>
+						  </view>
+					</view>
+			   </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </block> 
+    </swiper>
+  </view>
+</view>

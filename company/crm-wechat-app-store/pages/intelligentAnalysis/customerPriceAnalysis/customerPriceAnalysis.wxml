@@ -1,0 +1,354 @@
+<scorll-view class='containers' scorll-y="true">
+    <view class="topv">
+	    <view class="topl">
+		   <text>{{modalText}}</text>
+		   <view class="topiconv" bindtap="showSelect">
+		        <image src='{{!isShowModal ? "../../../media/images/Chevron2.png":"../../../media/images/Chevron3.png"}}' mode="scaleToFill" class="topiconvimage"/>
+		   </view>
+		</view>
+		<view class="topr" bindtap="showMouthModal">
+		       <view class="dian"/>
+		       {{isShowMouthModalText}}
+		</view>
+	</view>
+	<view class="line"/>
+	<scorll-view>
+	   <!--综合分析-->
+		<view class="contents" hidden="{{!isShowChart1}}">
+
+        	<view class="topcv">
+				<view>
+					<text class="topcv-com-text1">{{analytiscIndexData.customerQuantityOfDay}}人</text>
+					<text class="topcv-com-text2">日均客流量</text>
+				</view>
+				<view>
+					<text class="topcv-com-text1">{{analytiscIndexData.orderQuantityOfDay}}笔</text>
+					<text class="topcv-com-text2">日均订单数</text>
+				</view>
+				<view>
+					<text class="topcv-com-text1">{{analytiscIndexData.sellAmountOfDayDouble}}元</text>
+					<text class="topcv-com-text2">日均销售额</text>
+				</view>
+			</view>
+			<view class="topcv">
+				<view>
+					<text class="topcv-com-text1">{{analytiscIndexData.dealRatio}}人</text>
+					<text class="topcv-com-text2">成交率</text>
+				</view>
+				<view>
+					<text class="topcv-com-text1">{{analytiscIndexData.repurchaseRatio}}人</text>
+					<text class="topcv-com-text2">复购率</text>
+				</view>
+				<view>
+					<text class="topcv-com-text1">{{analytiscIndexData.grossMarginRatio}}人</text>
+					<text class="topcv-com-text2">毛利率</text>
+				</view>
+	       </view>
+        
+		    <view class="topv">
+			  <view class="topl">
+				<text>交易数据</text>
+			  </view>
+			  <view class="selectdayv" bindtap="showSelectAllDay">
+					<text>{{modalselectTransactionText}}</text>
+					<image src='{{!isShowAllSelectDay ? "../../../media/images/Chevron2.png":"../../../media/images/Chevron3.png"}}' mode="scaleToFill" class="topiconvimage"/>
+			  </view>
+	        </view>
+
+			<view class="line" style="height:2rpx;"/>
+			<view style="width:100vw;height:64rpx;background:#fff"/>
+
+
+			<canvas canvas-id="all" class="allcanvas"></canvas>
+			<view class="tablebv">
+					<view style="background: #7CB5EC;"/>
+					<text style="color: #1A1A1A;">进店人数</text>
+					<view style="background: #434348;"/>
+					<text style="color: #1A1A1A;">成交笔数</text>
+					<view style="background: #90ED7D;"/>
+					<text style="color: #1A1A1A;">复购数</text>
+			</view>
+
+      <view style='position: relative'>
+            <view class="topv">
+			  <view class="topl">
+				<text>成交分析</text>
+			  </view>
+			  <view class="selectdayv" bindtap="showDaySelect">
+					<text>{{modalselectDoneText}}</text>
+					<image src='{{!isShowDay ? "../../../media/images/Chevron2.png":"../../../media/images/Chevron3.png"}}' mode="scaleToFill" class="topiconvimage"/>
+			  </view>
+	        </view>
+			<view class="line" style="height:2rpx;"/>
+			<view style="width:100vw;height:64rpx;background:#fff"/>
+
+			<canvas canvas-id="lineCanvas" class="allcanvas"></canvas>
+			<view class="selectdaytablebv">
+					<view class="selectdaybv" style="background: #434348;"/>
+					<text style="color: #1A1A1A;font-size: 30rpx;">成交率</text>
+					<view class="selectdaybv" style="background: #9BC7F1;margin-left:40rpx;"/>
+					<text style="color: #1A1A1A;font-size: 30rpx;">复购率</text>
+			</view>
+
+			<!--选择成交按天弹层-->
+			<cover-view class="transactionmodal" hidden="{{isShowDay}}" style="top:108rpx;">
+			    <block wx:for="{{selectGroupByArray}}" wx:key="{{index}}+dealGroupBy">
+                        <cover-view  bindtap="selectedDealGroupByModal" id="{{selectGroupByArray[index]}}" class="transactionmodalview">
+                            <cover-view style="display:flex;flex:1;flex-direction: row;align-items:center;justify-content:center;">{{selectGroupByTextArray[index]}}</cover-view>
+                        </cover-view>
+                        <cover-view class="modalviewlinesmin"/>
+                </block>
+			</cover-view>
+        </view>
+			
+		<view class="tablebtab">
+			<text>时间</text>
+			<text>进店人数</text>
+			<text>成交笔数</text>
+			<text>复购数</text>
+			<text>销售额(元)</text>
+		</view>
+		<notData  wx:if="{{allList  == 0}}"/>
+		<view wx:for="{{allList}}" wx:for-item="item" wx:key="index" class="tablebtaballv">
+				<view class="tablebtaballtv">
+					<text>{{item.reportDateString}}</text>
+					<text>{{item.customerQuantity}}</text>
+					<text>{{item.orderQuantity}}</text>
+					<text>{{item.repurchaseQuantity}}</text>
+					<text>{{item.sellAmountDouble}}</text>
+				</view>
+				<view class="tablebtaballbv">
+						<text>成交率：{{item.dealRatio}}</text>
+						<text>复购率：{{item.repurchaseRatio}}</text>
+						<text>毛利率：{{item.grossMarginRatio}}</text>
+				</view>
+		   </view>
+		</view>
+
+		  <!--交易分析-->
+        <view class="contents" hidden="{{!isShowChart2}}">
+            <!--<view class="jiaoyitv">成交率：78%</view>-->
+
+            <view class="canvasv2">
+                <text>交易失败原因占比</text>
+                <canvas canvas-id="transaction" class="piecanvas"/>
+            </view>
+            <block wx:for="{{transactionFailColorHintsArray}}" wx:key="{{index}}+testArray">
+                <view class="canvas2view1" style="padding-bottom:8rpx;">
+                    <block wx:for="{{transactionFailColorHintsArray[index]}}" wx:key="{{index}}+noDataPieChartColor">
+                        <view class="canvas2itemv" style="margin-left:50rpx;background: {{item.color}};"/>
+                        <text>{{item.name}}</text>
+                    </block>
+                </view>
+            </block>
+            <view class="canvas2view1" style="padding-bottom:32rpx;" wx:if='{{transactionFailArray.length ==0}}'>
+                <view class="canvas2itemv" style="margin-left:70rpx;background: {{noDataPieChartColor}};"/>
+                <text>暂无查询数据</text>
+            </view>
+
+            <view class="tablebtab" style="margin-top:20rpx;">
+                <text class="tablebtabtext">排序</text>
+                <text class="tablebtabtext">失败原因</text>
+                <text class="tablebtabtext">记录次数</text>
+                <text class="tablebtabtext">占比</text>
+            </view>
+            <notData  wx:if="{{transactionList == 0}}"/>
+            <view wx:for="{{transactionList}}" wx:for-item="item" wx:key="index" class="tablebtab" style='margin-top:0;{{index%2==0 ? "background:#F5F5F5":"background:#FFFFFF"}}'>
+                <text class="tablebtabtextb" style="color: #1A1A1A;">{{index+1}}</text>
+                <text class="tablebtabtextb" style="color: #1A1A1A;">{{item.cause}}</text>
+                <text class="tablebtabtextb" style="color: #1A1A1A;">{{item.quantity}}</text>
+                <text class="tablebtabtextb" style="color: #1A1A1A;">{{item.ratio}}</text>
+            </view>
+        </view>
+
+		 <!--客单价分析-->
+        <view class="contents" hidden="{{!isShowChart3}}">
+            <view class="percustomertv">平均客单价：{{unitPriceIndexData.sellAmountAvg}}元</view>
+            <view class="percustomerttab">
+                <view class="percustomertItemv">
+                    <text class="percustomertItemt1">{{unitPriceIndexData.totalSellAmount}}</text>
+                    <text class="percustomertItemt2">总成交金额</text>
+                </view>
+                <view class="percustomertItemv">
+                    <text class="percustomertItemt1">{{unitPriceIndexData.totalOrderQuantity}}</text>
+                    <text class="percustomertItemt2">订单笔数</text>
+                </view>
+                <view class="percustomertItemv">
+                    <text class="percustomertItemt1">{{unitPriceIndexData.totalBuyerQuantity}}</text>
+                    <text class="percustomertItemt2">购买人数</text>
+                </view>
+            </view>
+            <view class="topv">
+                <view class="topl">
+                    <text>价格分析</text>
+                </view>
+                <view class="dayselectv"  bindtap="showPriceSelect">
+                <text>{{modalselectPrectText}}</text>
+                <image src='{{!isPrice ? "../../../media/images/Chevron2.png":"../../../media/images/Chevron3.png"}}' mode="scaleToFill" class="topiconvimage"/>
+                </view>
+            </view>
+
+            <view class="line" style="height:2rpx;"/>
+            <view style="width:100vw;height:10rpx;background:#fff"/>
+
+            <canvas canvas-id="percustomer" class="percustomertCanvas"></canvas>
+            <view class="tablebv" style="background:#fff;">
+                <view style="background: #7CB5EC;"/>
+                <text>订单笔数</text>
+            </view>
+
+            <view class="tablebtabprice">
+                <view class="tablebtabpriceitemv"><text>排序</text></view>
+                <view class="tablebtabpriceitemv"><text>订单金额</text></view>
+                <view class="tablebtabpriceitemv"><text>成交金额</text></view>
+                <view class="tablebtabpriceitemv"><text>订单笔数</text></view>
+                <view class="tablebtabpriceitemv" style="width:40vw;justify-content:flex-start;padding-left:10rpx"><text>占比(数量.金额)</text></view>
+            </view>
+            <notData  wx:if="{{unitPricePieChartList == 0}}"/>
+            <view wx:for="{{unitPricePieChartList}}" wx:for-item="item" wx:key="index" class="tablebtab" style='margin-top:0;{{index%2==0 ? "background:#F5F5F5":"background:#FFFFFF"}};'>
+                <text style="color: #1A1A1A;">{{index+1}}</text>
+                <text style="color: #1A1A1A;">{{item.amountRange}}</text>
+                <text style="color: #1A1A1A;">{{item.sellAmountDouble}}</text>
+                <text style="color: #1A1A1A;">{{item.orderQuantity}}</text>
+                <text style="color: #1A1A1A;">{{item.sellAmountRatio}}%</text>
+                <text style="color: #1A1A1A;">{{item.orderQuantityRatio}}%</text>
+            </view>
+        </view>
+        
+		 <!--客流量分析-->
+        <view class="contents" hidden="{{!isShowChart4}}">
+            <view class="passengerflowtopv">每日客流分布（均值）</view>
+            <canvas canvas-id="passengerflow" class="passengerflowcanvas"></canvas>
+            <view class="tablebv" style="background: #fff;">
+                    <view style="background: #7CB5EC;"/>
+                    <text>进店人数</text>
+                    <view style="background: #434348;"/>
+                    <text>成交笔数</text>
+            </view>
+
+            <view class="tablebtab">
+                <text>时间</text>
+                <text>销售金额(元)</text>
+                <text>进店人数</text>
+                <text>成交笔数</text>
+            </view>
+            <notData  wx:if="{{times.length == 0}}"/>
+            <view wx:for="{{times}}" wx:for-item="i" wx:key="index" class="tablebtabflow" style='{{index%2==0 ? "background:#F5F5F5":"background:#FFFFFF"}};'>
+                <view class="tablebtabflowvitem">
+                       <text>{{i}}</text>
+                </view>
+                <view class="tablebtabflowvitem">
+                       <text>{{passengerFlowVolumeSellAmount[index]}}</text>
+                </view>
+                <view class="tablebtabflowvitem">
+                       <text>{{passengerFlowPieChartData.passengerFlowVolumeCustomer[index]}}</text>
+                </view>
+                <view class="tablebtabflowvitem">
+                       <text>{{passengerFlowPieChartData.passengerFlowVolumeOrder[index]}}</text>
+                </view>
+            </view>
+        </view>
+
+		<!--客群分析-->
+        <view class="contents" hidden="{{!isShowChart5}}">
+            <view class="passengerflowtopv" style="height:88rpx;">性别占比</view>
+            <canvas canvas-id="pieChart1" class="guestgroupCanvas1"></canvas>
+            <view class="canvas2view1" style="padding-bottom:32rpx;" wx:if='{{guestgroup.guestGroupSexDefaultFlag}}'>
+                <view class="canvas2itemv" style="margin-left:70rpx;background: {{noDataPieChartColor}};"/>
+                <text>暂无查询数据</text>
+            </view>
+            <view class="canvas2view1" style="padding-bottom:32rpx;" wx:else>
+                <view class="canvas2itemv" style="margin-left:18rpx;background: #7CB5EC;"/>
+                <text>男性</text>
+                <view class="canvas2itemv" style="margin-left:70rpx;background: #434348;"/>
+                <text>女性</text>
+                <view class="canvas2itemv" style="margin-left:70rpx;background: #90ED7D;"/>
+                <text>未知</text>
+            </view>
+
+            <view class="passengerflowtopv" style="height:88rpx;margin-top:20rpx;">年龄占比</view>
+            <canvas canvas-id="pieChart2" class="guestgroupCanvas2"></canvas>
+            <view class="canvas2view1" style="padding-bottom:32rpx;" wx:if='{{guestgroup.guestGroupAgeDefaultFlag}}'>
+                <view class="canvas2itemv" style="margin-left:70rpx;background: {{noDataPieChartColor}};"/>
+                <text>暂无查询数据</text>
+            </view>
+            <view wx:else>
+                <view class="canvas2view1" style="padding-bottom:18rpx;">
+                    <view class="canvas2itemv" style="margin-left:18rpx;background: #434348;"/>
+                    <text>未知</text>
+                    <view class="canvas2itemv" style="margin-left:54rpx;background: #7CB5EC;"/>
+                    <text>0-19岁</text>
+                    <view class="canvas2itemv" style="margin-left:54rpx;background: #90ED7D;"/>
+                    <text>20-29岁</text>
+                    <view class="canvas2itemv" style="margin-left:54rpx;background: #2B908F;"/>
+                    <text>30-39岁</text>
+                </view>
+                <view class="canvas2view1" style="padding-bottom:32rpx;">
+                    <view class="canvas2itemv" style="margin-left:18rpx;background: #F15C81;"/>
+                    <text>40-49</text>
+                    <view class="canvas2itemv" style="margin-left:26rpx;background: #4141C9;"/>
+                    <text>50-59岁</text>
+                    <view class="canvas2itemv" style="margin-left:30rpx;background: #F7A35C;"/>
+                    <text>60以上</text>
+                </view>
+            </view>
+
+            <view class="passengerflowtopv" style="height:88rpx;margin-top:20rpx;">身份占比</view>
+            <canvas canvas-id="pieChart3" class="guestgroupCanvas3"></canvas>
+            <view class="canvas2view1" style="padding-bottom:32rpx;" wx:if='{{guestgroup.guestGroupIdentityDefaultFlag}}'>
+                <view class="canvas2itemv" style="margin-left:70rpx;background: {{noDataPieChartColor}};"/>
+                <text>暂无查询数据</text>
+            </view>
+            <view class="canvas2view1" style="padding-bottom:32rpx;" wx:else>
+                <view class="canvas2itemv" style="margin-left:18rpx;background: #434348;"/>
+                <text>非会员</text>
+                <view class="canvas2itemv" style="margin-left:70rpx;background: #7CB5EC;"/>
+                <text>会员</text>
+            </view>
+        </view>
+
+
+    </scorll-view>
+	<!--选择弹层-->
+	<cover-view class="modal" hidden="{{isShowModal}}">
+	    <block wx:for="{{analysisArray}}" wx:key="{{index}}+analysis">
+	        <cover-view bindtap="selectedAnalysisModal" id="{{analysisArray[index]}}" class="modalview">
+        		  <cover-view style="display:flex;flex:1;"/>
+        			 <cover-view style="display:flex;flex:1;flex-direction: row;align-items:center;">{{analysisTextArray[index]}}</cover-view>
+        		<cover-view style="display:flex;flex:1;"/>
+        	</cover-view>
+        	<cover-view class="modallineview"/>
+	    </block>
+	</cover-view>
+   <!--近几天弹层-->
+	<cover-view class="transactionmodal" hidden="{{isShowMouthModal}}" style="top: 110rpx;">
+	    <block wx:for="{{dayArray}}" wx:key="{{index}}+dayNumber">
+	            <cover-view  bindtap="selectedDayNumberModal" id="Mouth{{dayArray[index]}}" class="transactionmodalview">
+        		    <cover-view style="display:flex;flex:1;flex-direction: row;align-items:center;justify-content:center;">近{{dayArray[index]}}天</cover-view>
+        		</cover-view>
+        		<cover-view class="modalviewlinesmin"/>
+	    </block>
+	</cover-view>
+
+	<!--选择交易数据按天弹层-->
+	<cover-view class="transactionmodal" hidden="{{isShowAllSelectDay}}">
+	    <block wx:for="{{selectGroupByArray}}" wx:key="{{index}}+groupBy">
+            <cover-view  bindtap="selectedGroupByModal" id="{{selectGroupByArray[index]}}" class="transactionmodalview">
+                <cover-view style="display:flex;flex:1;flex-direction: row;align-items:center;justify-content:center;">{{selectGroupByTextArray[index]}}</cover-view>
+            </cover-view>
+            <cover-view class="modalviewlinesmin"/>
+        </block>
+	</cover-view>
+
+	
+    <!--价格分析弹层-->
+	<cover-view class="transactionmodal" hidden="{{isPrice}}" style="top:463rpx;">
+	    <block wx:for="{{priceArray}}" wx:key="{{index}}+price">
+	        <cover-view bindtap="selectedPriceModal" id="price{{priceArray[index]}}" class="transactionmodalview">
+        		  <cover-view style="display:flex;flex:1;flex-direction: row;align-items:center;justify-content:center;">{{priceArray[index]}}</cover-view>
+        	</cover-view>
+        	<cover-view class="modalviewlinesmin"/>
+	    </block>
+	</cover-view>
+
+</scorll-view>

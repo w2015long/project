@@ -1,0 +1,376 @@
+page{background-color:#fff;}
+
+
+.coupon-details{
+ 
+}
+ .coupon-details .coupon-title{
+    font-weight:600;
+    color:rgba(0,0,0,1);
+    font-size: 36rpx;
+    padding: 28rpx 0 28rpx 55rpx; 
+    position: relative;
+ }
+
+ .coupon-details .coupon-title:after{
+   content: '';
+   position: absolute;
+   width:12rpx;
+   height:38rpx;
+   background:rgba(72,209,153,1);
+   left: 32rpx;
+   top: 35rpx;
+ }
+
+
+.coupon-details .rule-of-activity{
+  padding: 0rpx 32rpx 20rpx;
+}
+
+.coupon-details .rule-of-activity .rule-title{
+    font-weight:600;
+    color:rgba(34,34,34,1);
+    font-size: 32rpx;
+    padding: 20rpx 0rpx;
+}
+.coupon-details .rule-of-activity .rule-content{
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    font-size: 28rpx;
+    padding-top: 14rpx;
+}
+.coupon-details .rule-of-activity .rule-content text{
+    line-height: 36rpx;
+    display: block;
+}
+
+
+.coupon-details .discounted-goods{
+    margin-top: 20rpx;
+}
+.coupon-details .discounted-goods .title{
+    height:72rpx;
+    background:rgba(255,255,255,1);
+    line-height: 72rpx;
+    padding-left: 32rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+.coupon-details .discounted-goods .discounted-tab{
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 32rpx;
+  position: relative;
+}
+.coupon-details .discounted-goods .discounted-tab:after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 32rpx;
+  right: 32rpx;
+  bottom: 0rpx;
+  background: #e4e4e4;
+}
+.coupon-details .discounted-goods .discounted-tab .item{
+  float: left;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  font-size: 28rpx;
+  margin-right: 40rpx;
+   position: relative;
+}
+.coupon-details .discounted-goods .discounted-tab .item:first-child{
+  margin-left: 10rpx;
+}
+
+.coupon-details .discounted-goods .discounted-tab .cur{
+    color:rgba(69,208,151,1);
+     font-weight:600;
+    
+   
+}
+.coupon-details .discounted-goods .discounted-tab .cur:after{
+  content: '';
+  position: absolute;
+  width: 80rpx;
+  height: 4rpx;
+  background:rgba(69,208,151,1);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+/* 空白页 s*/
+
+.coupon-details .discounted-goods .nothing{
+    height: 600rpx;
+    position: relative;
+}
+
+.coupon-details .discounted-goods .nothing .item{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+   
+}
+
+.coupon-details .discounted-goods .nothing .item .item-top{
+    width: 150rpx;
+    height: 150rpx;
+}
+.coupon-details .discounted-goods .nothing .item .item-top image{
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.coupon-details .discounted-goods .nothing .item .item-bottom{
+    margin-top: 20rpx;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    font-size: 28rpx;
+    text-align: center;
+}
+
+/* 空白页 end*/
+
+
+.coupon-details .discounted-goods .commodity-table{
+
+}
+
+.coupon-details .discounted-goods .hidden{
+  display: none;
+}
+.coupon-details .discounted-goods .show{
+  display: block;
+}
+
+.coupon-details .discounted-goods .commodity-table .item{
+    height: 220rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 32rpx 30rpx;
+    position: relative;
+}
+
+.coupon-details .discounted-goods .commodity-table .item:after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e4e4e4;
+}
+
+
+.coupon-details .discounted-goods .commodity-table .item .pic{
+    width: 220rpx;
+    height: 220rpx;
+}
+.coupon-details .discounted-goods .commodity-table .item .pic image{
+    width: 220rpx;
+    height: 220rpx;
+}
+.coupon-details .discounted-goods .commodity-table .item .content{
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    padding-left: 20rpx;
+}
+
+.coupon-details .discounted-goods .commodity-table .item .content .c-title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 28rpx;
+    line-height: 32rpx;
+
+}
+
+.coupon-details .discounted-goods .commodity-table .item .content .tips{
+    height:28rpx;
+    background:rgba(255,102,0,.08);
+    border-radius:4rpx;
+    line-height: 28rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    font-weight:500;
+    color:rgba(255,102,0,1);
+    font-size: 24rpx;
+    margin-top: 14rpx;
+}
+.coupon-details .discounted-goods .commodity-table .item .content .factory{
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    font-size: 24rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.coupon-details .discounted-goods .commodity-table .item .content .details-box{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack:justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 30rpx;
+}
+
+.coupon-details .discounted-goods .commodity-table .item .content .details-box .quantity{
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    font-size: 24rpx;
+   
+}
+.coupon-details .discounted-goods .commodity-table .item .content .details-box .price{
+  font-weight:600;
+  color:rgba(255,102,0,1);
+  font-size: 36rpx;
+}
+.coupon-details .discounted-goods .commodity-table .item .content .details-box .price text{
+    font-weight:500;
+    color:rgba(102,102,102,1);
+    font-size: 24rpx;
+}
+
+
+
+
+.commodity-table .blank-page{
+  width: 150rpx;
+  height: 150rpx;
+  margin:  155rpx auto 0;
+}
+
+.commodity-table .blank-page image{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.commodity-table  .blank-text{
+  text-align: center;
+  margin-top: 20rpx;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  font-size: 28rpx;
+}
+
+
+
+
+
+
+
+
+.list_item .title{
+    height:72rpx;
+    background:rgba(255,255,255,1);
+    line-height: 72rpx;
+    padding-left: 32rpx;
+    font-size: 32rpx;
+    font-weight:600;
+}
+
+.list_item  .discounted-tab{
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 32rpx;
+  position: relative;
+}
+.list_item  .discounted-tab:after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 32rpx;
+  right: 32rpx;
+  bottom: 0rpx;
+  background: #e4e4e4;
+}
+.list_item  .discounted-tab .item{
+  float: left;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  font-size: 28rpx;
+  margin-right: 40rpx;
+   position: relative;
+}
+.list_item  .discounted-tab .item:first-child{
+  margin-left: 10rpx;
+}
+
+.list_item  .discounted-tab .cur{
+    color:rgba(69,208,151,1);
+    font-weight:600;
+   
+}
+.list_item  .discounted-tab .cur:after{
+  content: '';
+  position: absolute;
+  width: 80rpx;
+  height: 4rpx;
+  background:rgba(69,208,151,1);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.coupon-details .discounted-goods .nothing{
+    height: 600rpx;
+    position: relative;
+}
+
+.coupon-details .discounted-goods .nothing .item{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+   
+}
+.coupon-details .discounted-goods .nothing .item .item-top{
+    width: 150rpx;
+    height: 150rpx;
+}
+.coupon-details .discounted-goods .nothing .item .item-top image{
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.coupon-details .discounted-goods .nothing .item .item-bottom{
+    margin-top: 20rpx;
+    font-weight:400;
+    color:rgba(102,102,102,1);
+    font-size: 28rpx;
+    text-align: center;
+}
+
+.list_item {
+  width: 100%;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  position: relative;
+  background-color: #fff;
+  padding-bottom: 10rpx;
+}
+
+.list_item.item_fix {
+  position: fixed;
+  background: #fff;
+}
+
+
+

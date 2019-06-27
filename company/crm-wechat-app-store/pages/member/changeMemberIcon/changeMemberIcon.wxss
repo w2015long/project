@@ -1,0 +1,8 @@
+page{background-color: #f5f5f5;}
+.head-portrait{padding: 27rpx 32rpx;}
+.head-portrait .cont{display: flex; flex-wrap:wrap; justify-content:space-between;}
+.head-portrait .item{width: 220rpx; height: 220rpx; margin-bottom:15rpx; overflow: hidden; position: relative;}
+.head-portrait .head-img{width: 220rpx; height: 220rpx;}
+.head-portrait .date{padding: 9rpx 20rpx; position: absolute; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.4); line-height: 1.1em; color: #fff; font-size: 24rpx;}
+
+

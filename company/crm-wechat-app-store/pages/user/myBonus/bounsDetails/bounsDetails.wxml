@@ -1,0 +1,53 @@
+<view class="billing_main">
+
+
+    <view class='billing_title' >
+        <picker mode="date" bindchange="bindDateChange" class='title_l' fields="month">
+          <view class="picker ">
+            日期 {{date}}
+          </view>
+        </picker>
+        <view class='title_r'>结余(元)</view>
+    </view>
+
+    <view class='list'>
+        <view class='list_title'>
+            <view class='month'>本月</view>
+            <view class='shuru'><text>收入 ￥{{income}}</text><text>支出 ￥{{spending}}</text></view>
+            <view class='title_pic'>
+                
+                <picker mode="date" value="{{date}}" fields="month" start="2015-09" end="2020-09" bindchange="bindDateChange">
+                <image src="../../../../media/images/rili.svg" />
+                </picker>
+            </view> 
+        </view>
+    
+    <view class='list_mc'> 
+      <scroll-view class='image-scroll' scroll-y='true' bindscrolltolower="pullUpLoad"  style='height: {{height}}px'>
+        <block wx:for="{{pageBounsTrans.data}}" wx:key="{{index}}">
+         <navigator url='../../bonusDetails/bonusDetails?transLogId={{item.transLogId}}&bounsDetails=bounsDetails'>
+               <view class='list_items'>
+                    <view class='quantity'>{{item.transTimeStr}}</view>
+                    <view class='list_items_c'>
+                    <block wx:if="{{item.amountDouble>0}}">
+                        <text style='color:red'>+{{item.amountDouble}}</text>
+                    </block>
+                   <block wx:else>
+                        <text style='color: #27C886'>{{item.amountDouble}}</text>
+                    </block>
+                        <text>{{item.description}}</text>
+                      </view>
+                    <view class='money'>{{item.afterAmountDouble}}</view>
+                </view>
+                </navigator>
+        </block>
+      </scroll-view>  
+    </view>
+
+        
+
+
+      
+
+    </view>
+</view>

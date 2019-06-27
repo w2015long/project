@@ -1,0 +1,97 @@
+<view class="main">
+    <view class='list'>
+
+      <view class='nav'>
+        <view class='nav-l'>用药提醒</view>
+        <view class='nav-r' catchtap='resetTime'>重置</view>
+      </view>
+
+
+        <view class='btn-item'> 
+            <view catchtap='selectDate' data-tag='{{0}}'>
+                <picker mode='time' value="{{time}}" start="06:00" end="10:59" data-pid='{{0}}' bindchange="bindTimeChange">
+                <view class="btn-item-one {{showTime&&selectTimeIndex==0||morning!='早上'?'on':''}}">
+                    {{morning}}</view> 
+                </picker>
+            </view>
+            <view catchtap='selectDate' data-tag='{{1}}'>
+                <picker mode='time' value="{{time}}" start="11:00" end="13:59" data-pid='{{1}}' bindchange="bindTimeChange">
+                <view class="btn-item-one {{showTime&&selectTimeIndex==1||afternoon!='中午'?'on':''}}">
+                    {{afternoon}}</view> 
+                </picker>
+            </view>
+            <view catchtap='selectDate' data-tag='{{2}}'>
+                <picker mode='time' value="{{time}}" start="18:00" end="23:00" data-pid='{{2}}' bindchange="bindTimeChange">
+                <view class="btn-item-one {{showTime&&selectTimeIndex==2||night!='晚上'?'on':''}}">
+                    {{night}}</view> 
+                </picker>
+            </view>
+
+        </view> 
+
+
+      <view class='take-medicine'> 
+          <view>服药疗程</view>
+      </view>
+
+      <view class='date-view'>
+          <view class="section left-date">
+              <picker mode="date" data-pickid='{{0}}' value="{{beginDate}}" start="2018-07-01" end="2028-12-31" bindchange="bindDateChange">
+                  <view class="picker">
+                      {{beginDate}}
+                  </view>
+              </picker>
+              <view class='g-text'>{{beginDateDay}}</view>
+          </view>
+          <view class='get-time-center'>至</view>
+          <view class="section">
+              <picker mode="date" data-pickid='{{1}}' value="{{endDate}}" start="2018-07-01" end="2028-12-31" bindchange="bindDateChange">
+                  <view class="picker">
+                      {{endDate}}
+                  </view>
+              </picker>
+              <view class='g-text right-day'>{{endDateDay}}</view>
+          </view>
+      </view>
+
+
+      <view class='remarks'>
+          <text>服药备注</text>
+      </view>
+
+          <view class='text-item'>
+              <textarea  class='text-item-remarks' value="{{'亲爱的'+medicationReminder.memberName+'，以下是您购买药品的使用与禁忌说明，请注意合理的健康饮补充睡眠，祝您身体健康。'}}"  bindinput="remarkFun"/>
+          </view>
+
+          <view class="info" >
+            <view class="mt-hd">
+            <image src="{{medicationReminder.iconFileId}}" mode="scaleToFill" class="customer-image"/>
+            </view>
+            <view class="mt-bd">
+            <view class="info-name"><text>{{medicationReminder.memberName}}</text><image src="{{medicationReminder.memberSex==='MALE'?'../../../../media/images/manicon.png':(item.memberSex==='FEMALE'?'../../../../media/images/gliricon.png':'')}}"  mode="scaleToFill" class="gender-icon"/></view>
+            <view class='member'>
+                <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon"/>
+                <text class="member-label">{{medicationReminder.level}}</text>
+                <text class='member-phone'>{{medicationReminder.mobile}}</text>
+            </view> 
+            </view>
+            <view class='mt-ft'>{{medicationReminder.createTimeStr}}</view>
+        </view>
+
+        <view class='drug-information-item' wx:for="{{medicationReminder.productList}}" wx:key="index"  id="{{'tab'+index}}">
+            <view class='drug-information-item-title' style=''>{{item.productNm}}</view>
+            <view class='drug-information-item-text'>厂家：{{item.manufacturer}}</view>
+            <view class='drug-information-item-text'>规格：{{item.spec}}</view>
+        </view>
+
+    </view>
+    <view class='ft-box'><button type="primary" catchtap='senderPush'> 发送 </button></view>
+
+</view>
+
+
+
+
+
+
+

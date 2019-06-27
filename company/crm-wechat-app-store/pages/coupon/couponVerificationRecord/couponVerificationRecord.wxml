@@ -1,0 +1,54 @@
+
+
+<view class='record-main'>
+    <view class='information-list'>
+        <view class='date-time'>
+            <view class='the-specific-time'>
+                 <picker mode="date" value="{{searchParam.useTime}}" start="1970-09-01" end="2222-09-01" bindchange="bindDateChange">
+                      <view class="picker">
+                         {{searchParam.useTime == today ? '(今天)'+ today : searchParam.useTime}}
+                      </view>
+                  </picker>
+             </view>
+        </view>
+        
+        <view class='zanwu-content' wx:if="{{pageRecord.data && pageRecord.data.length === 0}}">
+            <view class='zanwu-content-pic'>
+                <image src="../../../media/images/zanwucontent.png" />
+            </view>
+        
+            <view class='zanwu-text'>暂无核销记录</view>
+    
+        </view>
+        
+        <block wx:if="{{pageRecord.data}}" >
+        <swiper-item>
+            <scroll-view scroll-y="true" scroll-x="false" style="height:100%;" bindscrolltolower="pullUpLoad"  >
+            <view class='information-item' wx:for="{{pageRecord.data}}" wx:for-item="record" wx:key="index">
+                  <view class='item-top'>
+                    <view class='item-top-l'>{{record.couponType === 'FULL_REDUCE' ? '￥'+ record.couponAmountDouble : record.couponDiscount + '折'}}</view>
+                    <view class='item-top-defult item-top-doing'><text>打印次数</text>{{record.printCount ? record.printCount : '0'}}次</view>
+                </view>
+
+                <view class='item-bottom'>
+                    <navigator url="{{'../couponVerification/couponVerification?couponCode='+ record.couponCode}}" class='print-btn' >打印</navigator>
+                    <view class='upload-btn' bindtap='uploading' id="{{record.couponPermissionId}}">上传</view>
+                    <view class='b-title'>{{record.couponName}}</view>
+                    <view class='volume-number'>
+                        <view class='volume-number-name'>打印卷号：</view>
+                        <view class='volume-number-content'>{{record.couponCode}}</view>
+                    </view>
+
+                    <view class='volume-number'>
+                        <view class='volume-number-name'>打印时间：</view>
+                        <view class='volume-number-content'>{{record.useTimeStr}}</view>
+                    </view>
+
+                </view>
+            </view>
+            </scroll-view>
+        </swiper-item>
+        </block>
+    </view>
+
+</view>

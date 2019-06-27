@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "微店订单",
+  "usingComponents": {
+    "cell": "./o2oOrderItem/o2oOrderItem",
+    "loadMore":"../../../common/loadingTip/loadingTip",
+    "notData": "../../../common/notDataList/notDataList"
+  }
+}

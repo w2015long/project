@@ -1,0 +1,63 @@
+<!--pages/components/cell/listcell.wxml-->
+<view class="container" >
+
+  <view class="userv" style="{{cellData.name===null?'display:none':''}}">
+    <image mode="scaleToFill" src="{{cellData.iconFileIdUrl}}"></image>
+    <view class="userinfo">
+      <view class="userinfoview">
+        <text class="usertext">{{cellData.name}}</text>
+        <image src="{{cellData.sex==='MALE'?'../../../../media/images/manicon.png':'../../../../media/images/icon-woman.png'}}"></image>
+      </view>
+      <view style="display:flex;flex-direction:row;align-items:center;margin-top:7rpx;">
+        <image src="../../../../media/images/icon30x30.png"></image>
+        <text class="uservtext">{{cellData.title}}</text>
+        <text class="userntext">{{cellData.mobile}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="line" style="{{cellData.name===null?'display:none':''}}" />
+
+<view bindtap='selectItem' id="{{cellData.orderId}}">
+    <view class="commitem">
+      <view class="commleftview">
+        <text class="commtext">单号：</text>
+        <text class="comminput">{{cellData.orderNum}}</text>
+      </view>
+      <view class="commrightview">
+        <text class="commtext">{{cellData.createTimeStr}}</text>
+      </view>
+    </view>
+    <view class="goodsitem" wx:for="{{cellData.orderItemProtocols}}" wx:for-item="order"   wx:key="index" wx:if="{{index<2}}">
+      <image class='goodsicon' bindtap="addActiveAction" src="{{order.picture}}"></image>
+      <view class="goodsleft">
+        <view class="goodstext">
+          <text class="commtext">{{order.productName}}</text>
+        </view>
+        <view class="goodsgui">
+          <view class="goodsguitextl">
+            <text class="bottomtext">规格：{{order.spec}}</text>
+            <text class="bottomtext">单位：{{order.unit}}</text>
+          </view>
+          <text class="goodsguitextr">x{{order.quantity}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--多于两条则显示-->
+    <view class="lookmoreview">
+        <text class="lookmoretext">查看更多</text>
+        <image class='lookmoreicon' src="../../../../media/images/Chevron1.png" ></image>
+    </view>
+    <view class="commitem">
+      <view class="commleftview">
+        <text class="commtext">实收: </text>
+        <text class="comminput">￥{{cellData.orderTotalAmountDouble}}  含运费：{{cellData.freightAmountDouble}}</text>
+      </view>
+      <view class="commrightview">
+        <text class="comminput">共{{cellData.quantity}}件</text>
+      </view>
+    </view>
+</view>
+
+    
+</view>

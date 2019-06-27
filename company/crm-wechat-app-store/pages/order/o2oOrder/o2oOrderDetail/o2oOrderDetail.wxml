@@ -1,0 +1,207 @@
+<!--pages/test/orders/wshop-orders/wshop-orderDetail.wxml-->
+<view class='detail-container'>
+  <scroll-view class='detail-scroll' scroll-y='true'>
+      <view class='detail-top'>
+          <view class='detail-state border-bottom'>
+              <view class='detail-item'>
+                  <text class='item-title'>订单状态：</text>
+                  <text class='item-value'>{{orderState}}</text>
+              </view>
+              <view class='detail-item'>
+                  <text class='item-title'>订单编号：</text>
+                  <text class='item-value'>{{orderNum}}</text>
+              </view>
+              <view class='detail-item'>
+                  <text class='item-title'>下单时间：</text>
+                  <text class='item-value'>{{createTimeStr}}</text>
+              </view>
+          </view>
+
+          <view class='multiple-line border-bottom'>
+              <view class='mutiple-item'>
+                  <text class='item-title'>顾客备注：</text>
+                  <text class='item-value'>{{memberRemark}}</text>
+              </view>
+              
+          </view>
+         
+          <view class='multiple-line'>
+              <view class='mutiple-item'>
+                  <text class='item-title'>商家备注：</text>
+                  <text class='item-value'>{{adminRemark}}</text>
+              </view>
+              
+          </view>
+
+          <!-- <navigator class='single-line'>
+              <text class='item-title'>日志记录：</text>
+              <text class='item-value'>连锁：订单已分配到金康黄岐店</text>
+              <image style='height:26rpx;width:16rpx;'></image>
+          </navigator>
+          <view class='cell-line'/> -->
+      </view>
+    
+      <view class='detail-top'>
+          <view class='user-info'>
+              <view class='user-detail border-bottom'>
+                  <!-- <image style='height:100rpx;width:100rpx;background-color:#444;border-radius:50rpx;'></image> -->
+                  <view class='right-info'>
+                      <view class='user-name'>
+                          <text>{{name}}</text>
+                      
+                          <block>
+                          <view wx:if="{{sex=='MALE'}}">
+                          <image src='../../../../media/images/gliricon.png' style='width:26rpx;height:26rpx;'/>
+                          </view>
+                          <view wx:elif="{{sex=='FEMALE'}}">
+                          <image src='../../../../media/images/manicon.png' style='width:26rpx;height:26rpx;'/>
+                          </view>
+                          <view wx:else></view>
+                          </block>
+
+                      </view>
+                      <view class='user-phone'>
+                          <image src='../../../../media/images/icon30x30.png' style='width:30rpx;height:30rpx;'/>
+                          <text class='vip-type'>{{memberLevelName}}</text>
+                          <text class='vip-phone'>{{mobile}}</text>
+                      </view>
+                  </view>
+              </view>
+             
+                <block wx:if="{{orderDetail.isSelfExtract === 'Y'}}">
+                 <view class='user-address'>
+                    <view class='mutiple-item'>
+                        <text class='item-title'>提货方式: </text>
+                        <text class='item-value'>{{orderDetail.deliveryWay}}</text>
+                    </view>
+                 </view>
+                 <view class='user-address'wx:if="{{orderDetail.selfExtractNum!='' && null != orderDetail.selfExtractNum}}">
+                    <view class='mutiple-item' >
+                        <text class='item-title '>核验码：</text>
+                        <text class='item-value green_color'>{{orderDetail.selfExtractNum}}</text>
+                    </view>
+                 </view>
+                </block>
+                <block wx:else>
+                  <view class='user-address'>
+                    <view class='mutiple-item'>
+                          <text class='item-title'>提货方式: </text>
+                          <text class='item-value'>{{orderDetail.deliveryWay}} {{orderDetail.expectArriveTime===null?"":orderDetail.expectArriveTime}}</text>
+                    </view>
+                  </view>
+
+                   <view class='multiple-line border-bottom ' wx:if="{{orderDetail.logisticsCompanyCode && orderDetail.logisticsCompany}}">
+                                         <view class='mutiple-item'>
+                                             <text class='item-title'>{{orderDetail.logisticsCompany === "店员派送" ? "门店配送" : "物流名称"}}：</text>
+                                              <text class='item-value'>{{orderDetail.logisticsCompany}}</text>
+                                         </view>
+                                     </view>
+
+                  <view class='multiple-line border-bottom 'wx:if="{{orderDetail.logisticsOrderNum}}">
+                                          <view class='mutiple-item'>
+                                              <text class='item-title'>物流信息：</text>
+                                              <text class='item-value'>{{orderDetail.logisticsOrderNum}}</text>
+                                           </view>
+                                    </view>
+                  <view class='user-address border-bottom '>
+                      <view class='mutiple-item'>
+                          <text class='item-title'>地址：</text>
+                          <text class='item-value'>{{receiverAddr=== null?" ":receiverAddr}}</text>
+                      </view>
+                  </view>
+
+
+                </block>
+             
+              
+          </view>
+          
+      </view>
+      <block wx:if="{{orderDetail.isSelfExtract == 'Y'}}">
+         <view class='contact-user border-top'>
+            <view bindtap='contactClient' class='w100'>
+               <image src='../../../../media/images/phone.png' style='width:29rpx;height:29rpx;'/>
+               <text>联系客户</text>
+             </view>
+          </view>
+      </block>
+      <block wx:else>
+          <view class='contact-user border-top'>
+              <view bindtap='copyAddress'>
+                  <image src='../../../../media/images/copy.png' style='width:29rpx;height:29rpx;'/>
+                  <text>复制地址</text>
+              </view>
+              <view bindtap='contactClient'>
+                  <image src='../../../../media/images/phone.png' style='width:29rpx;height:29rpx;'/>
+                  <text>联系客户</text>
+              </view>
+          </view>
+      </block>
+      <view class='medicines'>
+          <view class='single-line'>
+              <text class='item-title'>数量：</text>
+              <text class='item-value'>{{productCount}}剂</text>
+          </view>
+          
+          <view class='cellImg-warp'>
+              <block wx:for="{{items}}" wx:key="{{tabIndex}}+image">
+                  <view class='product-item' hidden='{{index>1&&hiddenMore}}'>
+                    <image class='imgItem' src='{{item.img}}'></image>
+                    <view class='medicine-view'>
+                        <text class='describe'>{{item.productName}}</text>
+                        <view class='spec'>
+                            <text>规格：{{item.spec}} 单位：{{item.unit}}</text>
+                            <text>x{{item.quantity}}</text>
+                        </view>
+                    </view>
+                  </view>
+              </block>
+              <view class='showMoreBtn spec' bindtap='showMoreProducts' hidden='{{imgUrls.length<3}}'>
+                  <text>{{hiddenMore?'查看更多':'收起'}}</text>
+                  <image style='width:26rpx;height:16rpx;' src="{{hiddenMore?'../../../../media/images/Chevron3.png':'../../../../media/images/Chevron2.png'}}"></image>
+              </view>
+          </view>
+
+      </view>
+
+      <view class='amount-infos'>
+        <view class='amount-item'>
+            <text class='left-text'>商品金额：</text>
+            <text class='right-text'>￥{{productTotalAmount}}</text>
+        </view>
+        <view class='amount-item'>
+            <text class='left-text'>运费：</text>
+            <text class='right-text'>￥{{freightAmount}}</text>
+        </view>
+        <view class='amount-item'>
+            <text class='left-text'>优惠：</text>
+            <text class='right-text'>-￥{{discountAmount}}</text>
+        </view>
+        <view class='amount-total'>
+            <text class='total-left'>实收：</text>
+            <text class='total-right'>￥{{orderActualAmount}}</text>
+        </view>
+      </view>
+      <block>
+      <view  wx:if="{{orderState=='待付款'}}">
+          <navigator class='done-btn' bindtap='cancelTheList'>
+              <text>取消订单</text>
+          </navigator>
+      </view>
+      <view wx:elif="{{orderState=='待发货'}}">
+          <navigator class='.done-btn2' bindtap='confirmTheDelivery'>
+              <text>确认发货</text>
+          </navigator>
+        </view>
+      <view wx:elif="{{orderState=='已发货'||'已完成'}}">
+        <navigator class='.done-btn2' bindtap='checkTheLogistics'>
+              <text>查看物流</text>
+          </navigator>
+      </view>
+      <view wx:eise></view>
+      </block>
+  </scroll-view>
+
+      
+    
+</view>

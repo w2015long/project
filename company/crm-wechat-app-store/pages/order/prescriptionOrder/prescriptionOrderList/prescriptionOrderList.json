@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "拍单订单",
+  "usingComponents": {
+    "cell": "./prescriptionOrderCell/prescriptionOrderCell",
+    "notData": "../../../common/notDataList/notDataList"
+  }
+}

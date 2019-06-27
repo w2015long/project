@@ -1,0 +1,79 @@
+
+/*  已发货UI  */
+.sender-ui {
+  margin-top: 20rpx;
+  flex:1;
+  background-color: #fff;
+}
+
+.sender-container {
+  flex:1;
+}
+
+.time-line {
+  margin-top: 32rpx;
+  position: fixed;
+  margin-left: 30%;
+  width: 2rpx;
+  background-color: #E5E5E5;
+  height: 100%;
+}
+
+.top-sender {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-top: 23rpx;
+}
+
+.record-sender {
+  margin-top: 57rpx;
+}
+
+.address-right {
+  width: 460rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-right text {
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1A1A1A;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+}
+
+.dot-green {
+  background-color: #27C786;
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 13rpx; 
+  margin-top: 9rpx;
+}
+
+.done {
+  background-color: #E6E6E6;
+}
+
+.address {
+  margin-left: 28.4%;
+}
+
+.sender-date {
+  width: 25.7%;
+  margin-right: 21rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.sender-date text {
+  text-align: right;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #1A1A1A;
+}
+
+.done-record text{
+  color: #999999;
+}

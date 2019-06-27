@@ -1,0 +1,90 @@
+<view class='cell-container' bindtap='selectItem'>
+    <view class='cell-top'>
+        <view class='top-left'>
+          <text class='orderNum'>单号：</text>
+          <text class='num'>{{cellData.orderNum}}</text>
+        </view>
+        <text class='date'>{{cellData.createTimeString}}</text>
+    </view>
+
+    <view class='cell-line'></view> 
+
+    <scroll-view class='image-scroll' scroll-x='true'>
+        <view class='cellImg-warp'>
+            <block  wx:if="{{cellData.prescriptionPic1}}" >
+                <image class='imgItem' src='{{cellData.prescriptionPic1}}'></image>
+            </block>
+            <block  wx:if="{{cellData.prescriptionPic2}}" >
+                  <image class='imgItem' src='{{cellData.prescriptionPic2}}'></image>
+            </block>
+             <block  wx:if="{{cellData.prescriptionPic3}}" >
+                  <image class='imgItem' src='{{cellData.prescriptionPic3}}'></image>
+             </block>
+        </view>
+    </scroll-view> 
+    <view class='tips-view'>
+        <block  wx:if="{{cellData.isGravida === 'Y'}}" >
+                 <view class="tip-view "><text>孕妇</text></view>
+        </block>
+         <block  wx:if="{{cellData.isDecoction  === 'Y'}}" >
+                 <view class="tip-view wait"><text>煎煮</text></view>
+         </block>
+       <block  wx:if="{{cellData.isExternalUse  === 'Y'}}" >
+                 <view class="tip-view out"><text>外用</text></view>
+       </block>
+    </view>
+
+    <view class='cell-line'></view> 
+
+    <view class='cell-top'>
+        <view class='top-left'>
+          <text class='orderNum'>实收：</text>
+          <text class='num'>￥{{cellData.orderTotalAmountDouble}} 含运费：{{cellData.freightAmountDouble}}</text>
+        </view>
+        <text class='num'>共{{cellData.buyNum}}剂</text>
+    </view>
+
+    <view class='cell-line'></view> 
+
+    <view class='cell-top'>
+        <view class='top-left'>
+          <text class='orderNum'>性别：</text>
+          <text class='num'>{{cellData.userSex}} {{cellData.userAge===null?"":cellData.userAge}}</text>
+        </view>
+    </view>
+     <view class='cell-top'wx:if="{{cellData.userAge!=null}}">
+        <view class='top-left'>
+          <text class='orderNum'>年龄：</text>
+          <text class='num'>{{cellData.userAge}}岁</text>
+        </view>
+    </view>
+
+    <view class='cell-line'></view>
+
+    <view class='cell-topmark'>
+        <view class='top-left'>
+          <text class='orderNum'>地址：</text>
+          <text class='num-address'>{{cellData.receiverAddr}}</text>
+        </view>
+    </view>
+
+    <view class='cell-line'></view>
+
+    <view class='cell-topmark'>
+        <view class='top-left'>
+          <text class='orderNum'>顾客备注：</text>
+          <text class='num-mark'>{{cellData.userRemark}}</text>
+        </view>
+    </view>
+
+    <view class='cell-line'></view>
+
+    <view class='cell-bottom' hidden='{{state==5}}'>
+         <block wx:if="{{(cellData.orderStat=='待调配' && cellData.dispensingRemark == null)|| (cellData.orderStat=='待包装'  && cellData.packRemark == null)}}">
+          <view class='bottom-btn item-left' catchtap='sellerMark'><text>{{cellData.orderStat=='待调配'?'调配备注':cellData.orderStat=='待包装'?'包装备注':'商家备注'}}</text></view>
+           </block>
+        <view class='bottom-btn item-right' catchtap='opreateMedchine'>
+        <text>{{cellData.orderStat=='待调配'?'调配药品':cellData.orderStat=='待煎煮'?'煎煮药品':cellData.orderStat=='待包装'?'包装药品':cellData.orderStat=='待发货'?'立即发货':cellData.orderStat=='已发货'?'查看物流':''}}</text>
+        </view>
+    </view>
+</view>

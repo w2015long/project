@@ -1,0 +1,3 @@
+
+
+<blueTooth  id="blueToothId" isInitPrint="{{false}}" isShowBlueTooth='{{!connected}}' connected='{{connected}}' bind:action="changeData" bind:print="printTicket"/>

@@ -1,0 +1,37 @@
+<view class="setting-container">
+  <view class='item head-set'>
+    <text class='item-hd'>我的头像</text>
+    <view class='item-bd head-image'>
+      <block wx:if="{{iconFileId}}">
+        <image catchtap="chooseImageTap" bindtap="bindViewTap" class="userinfo-avatar" src="{{iconFileId}}" mode="cover"></image>
+      </block>
+      <block wx:else>
+        <image  wx:if="{{sex =='MALE'}}" catchtap="chooseImageTap" bindtap="bindViewTap" class="userinfo-avatar" src="../../../media/images/default-man-head-pic.png"  mode="cover"></image>
+        <image  wx:if="{{sex =='FEMALE'}}"catchtap="chooseImageTap" bindtap="bindViewTap" class="userinfo-avatar" src="../../../media/images/default-womenhead-pic.png"  mode="cover"></image>
+        <image  wx:if="{{sex != 'MALE' &&sex != 'FEMALE' }}"catchtap="chooseImageTap" bindtap="bindViewTap" class="userinfo-avatar" src="../../../media/images/default-img.png"  mode="cover"></image>
+
+      </block>
+    </view>
+  </view>
+
+  <navigator class='item phone-set'  url='../bindingPhone/bindingPhone?mobile={{mobile}}'>
+    <text class='item-hd'>手机号码</text>
+    <text wx:if="{{mobileLessFormat}}" class='item-bd'>{{mobileLessFormat}}</text>
+
+  </navigator>
+
+  <navigator class='item notice-set' url='../arrivalNotice/arrivalNotice?isNotice={{isNotice}}&noticeStartTimeString={{noticeStartTimeString}}&noticeEndTimeString={{noticeEndTimeString}}'>
+    <text class='item-hd'>顾客到店通知</text>
+    <block wx:if="{{isNotice ==='Y'}}">
+      <text class='item-bd'>{{noticeStartTimeString}} 至 {{noticeEndTimeString}} </text>
+    </block>
+    <block wx:else>
+      <text class='item-bd'>未启用</text>
+    </block>
+  </navigator>
+
+  <view class='ft-box'>
+    <button type="default" class='sign-out'>退出登录 </button>
+  </view>
+
+</view>

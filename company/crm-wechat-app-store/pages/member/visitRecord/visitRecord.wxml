@@ -1,0 +1,33 @@
+<view class="customer-container">
+ <notData wx:if="{{customerVisitList.length == 0 }}"/>
+  <navigator class="item" url="/pages/member/memberDetail/memberDetail?memberId={{visit.memberId}}&faceUid={{visit.faceUid}}&customerVisitRecordId={{visit.customerVisitRecordId}}" wx:for="{{customerVisitList}}" wx:for-item="visit" wx:key="index">
+    <view class="item-hd">
+      <image src="{{visit.faceFileUrl}}" mode="scaleToFill" class="customer-image"/>
+    </view>
+    <view class="item-bd">
+      <view class="item-name"><text>{{visit.name || '未知身份'}}</text></view>
+      <view class='member' wx:if="{{visit.levelTitle}}">
+        <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon"/>
+        <text class="member-label">{{visit.levelTitle}}</text>
+      </view>
+    </view>
+    <view class="item-ft">
+      <view class='margin-bottom-10'><text class="item-title">{{visit.visitTimeStr}}</text></view>
+      <view>
+      <block wx:if="{{visit.totalNum > 0}}">
+          <block wx:if="{{visit.lastVisitDay && visit.lastVisitDay > 0}}">
+            <text class="item-title">第{{visit.totalNum}}次进店 {{visit.lastVisitDay}}天前来过
+           </text>
+          </block>
+          <block wx:else>
+            <text class="item-title">第{{visit.totalNum}}次进店 
+             </text>
+          </block>
+      </block>
+      <block wx:else> 
+        <text class="item-title">第1次进店</text>
+      </block>
+      </view>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,28 @@
+
+  <!--  已发货UI  -->
+  <view class='sender-ui' >
+
+    <view class='time-line'/>
+    <scroll-view class='sender-container' scroll-y='true'>
+        <!-- <view class='top-sender'>
+            <view class='dot-green address'/>
+            <view class='address-right'><text>[收货地址]  {{receiverAddr}}</text></view>
+        </view> -->
+
+        <block wx:for='{{traces}}' wx:key='record+{{index}}'>
+            <view class='top-sender record-sender'>
+                <view class="sender-date  {{index>0?'done-record':''}}">
+                    <text>{{item.AcceptTime}}</text>
+                    <!-- <text>{{item.dateItem.time}}</text> -->
+                </view>
+                <view class="dot-green {{index>0?'done':''}}"/>
+                <view class="address-right {{index>0?'done-record':''}}">
+                    <!-- <text>[{{item.state}}]</text> -->
+                    <text>{{item.AcceptStation}}</text>
+                    
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+  
+  </view>

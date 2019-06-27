@@ -1,0 +1,6 @@
+
+<view class="containers">
+  <image src="../../../../media/images/message260x210.png" />
+  <view class='cont-text'>禁忌信息推送成功</view>
+  <button type="default" bindtap='taboo' class='back-btn'> 返回使用禁忌 </button>
+</view>

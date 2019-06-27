@@ -1,0 +1,74 @@
+
+page{background-color:#f5f5f5;}
+
+
+
+.details_top{height: 220rpx;background: #fff;padding: 0 32rpx;}
+.details_top .top_title{height: 110rpx;line-height: 110rpx;font-size: 32rpx;color: #1A1A1A;font-weight: bold;}
+.details_top .top_data{display: flex;align-items: center;position: relative;line-height: 110rpx;}
+.details_top .top_data .activity_time{font-size: 32rpx;color: #999999;width: 160rpx;}
+.details_top .top_data .activity_data{font-size: 32rpx;color: #1A1A1A;}
+.details_top .top_data .activity_now{font-size: 26rpx;color: #28C785;position: absolute;right: 0rpx;} 
+.details_top .top_data .activity_off{font-size: 26rpx;color: #F0332F;position: absolute;right: 0rpx;}
+
+
+.ad{background: #fff;padding: 0 30rpx 30rpx;margin-top: 20rpx;}
+.ad .ad_title{display: flex;align-items: center;padding-top: 26rpx;}
+.ad .ad_title .ad_title_l{width: 50%;text-align: left;font-size: 30rpx;color: #1A1A1A;}
+.ad .ad_title .ad_title_r{width: 50%;text-align: right;font-size: 26rpx;color: #128DFF;}
+.ad .ad_content{margin-top: 20rpx;background: #F5F5F5;border-radius: 8px;min-height: 120rpx;padding: 25rpx 30rpx;font-size: 30rpx;color: #1A1A1A; }
+
+
+.activity_list{background: #fff;margin-top: 20rpx;padding: 0rpx 30rpx 0 30rpx; }
+.activity_list .activity_list_title{font-size: 30rpx;color: #1A1A1A;height: 88rpx;line-height: 88rpx;}
+
+.activity_list .commodity_list .commodity_items{height: 285rpx;background: #fff;display: flex;}
+
+.commodity_items .commodity_pic{width: 160rpx;height: 160rpx;padding-top: 20rpx;}
+.commodity_items .commodity_pic image{width: 160rpx;height: 160rpx;}
+
+
+
+.commodity_items .commodity_r{flex: 1;padding-left: 30rpx;padding-top: 25rpx;position: relative;}
+.commodity_items .commodity_r .commodity_r_title{font-size: 30rpx;color: #333333;line-height: 42rpx;font-weight: bold;min-height:84rpx;}
+.commodity_items .commodity_r .specification{font-size: 26rpx;color: #999999;padding-top: 13rpx;line-height: 26rpx;}
+.commodity_items .commodity_r .factory{font-size: 26rpx;color: #999999;padding-top: 13rpx;line-height: 26rpx;}
+.commodity_items .commodity_r .money{font-size: 32rpx;color: #FF3B30;line-height: 45rpx;font-weight: bold;padding-top: 26rpx;} 
+.commodity_items .commodity_r .download_poster{background: #FF3B30;border-radius: 36px;padding: 10rpx 25rpx;font-size: 28rpx;
+color: #FFFFFF;line-height: 40rpx;position: absolute;right: 0rpx;bottom: 20rpx;}
+
+
+.sharing_revenue{background: #fff;margin-top: 20rpx;margin-bottom: 20rpx;}
+.sharing_revenue .sharing_title{height: 88rpx;font-size: 30rpx;color: #1A1A1A;line-height: 88rpx;padding: 0 30rpx;}
+
+.sharing_revenue .prompt{background: rgba(255,59,48,.1);height: 88rpx;line-height: 88rpx;font-size: 30rpx;color: #1A1A1A;padding-left: 30rpx;}
+.sharing_revenue .prompt text{color: #fe3b30;}
+
+.sharing_revenue .sharing_list{padding: 0 32rpx;}
+.sharing_revenue .sharing_list .sharing_item{display: flex;height: 100rpx;padding: 27rpx 0; position: relative;}
+.sharing_revenue .sharing_list .sharing_item::before{content: '';position: absolute;height: 2rpx;background: #eee;left: 122rpx; right:0; bottom:0;}
+.sharing_list .sharing_item .sharing_item_pic{width: 100rpx;height: 100rpx;border-radius: 50%;}
+.sharing_item .sharing_item_pic image{width: 100rpx;height: 100rpx;}
+
+.sharing_item .sharing_item_r{flex: 1;margin-left:  20rpx;position: relative;}
+
+.sharing_item .sharing_item_r .mingzi{display: block;font-size: 34rpx;color: #1A1A1A;padding-top: 8rpx;}
+.sharing_item .sharing_item_r .shijian{font-size: 26rpx;color: #999999;line-height: 37rpx;padding-top: 4rpx;}
+
+.sharing_item .sharing_item_r .income{font-size: 32rpx;color: #FF3B30;line-height: 45rpx;position: absolute;right: 32rpx;top: 8rpx;font-weight: bold;}
+
+.sharing_item .sharing_item_r .quantity-order{font-size: 26rpx;color: #999999;line-height: 37rpx;position: absolute;right: 32rpx;bottom: 4rpx;}
+
+.daySign_bottom_text_pass {
+  background-color: #fee407;
+  margin: 0rpx 32%;
+  padding: 10rpx 30rpx;
+  border-radius: 27rpx;
+  text-align: center;
+  font-size: 35rpx;
+  line-height: 57rpx;
+  font-weight: 600;
+  color: #4a4a4a;
+  letter-spacing: 3rpx;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+}

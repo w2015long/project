@@ -1,0 +1,24 @@
+<view class="container"  wx:if='{{isShowBlueTooth && !connected}}'>
+  <view class="page-section">
+    <view class="devices-summary">已发现 {{devices.length}} 个外围设备：</view>
+    <scroll-view class="device-list" scroll-y scroll-with-animation>
+      <view wx:for="{{devices}}" wx:key="index" data-device-id="{{item.deviceId}}" data-name="{{item.name || item.localName}}" bindtap="createBLEConnection" class="device-item" hover-class="device-item-hover">
+        <view style="font-size: 16px; color: #333;">{{item.name}}</view>
+        <view style="font-size: 10px">信号强度: {{item.RSSI}}dBm ({{utils.max(0, item.RSSI + 100)}}%)</view>
+        <view style="font-size: 10px">UUID: {{item.deviceId}}</view>
+        <view style="font-size: 10px">Service数量: {{utils.len(item.advertisServiceUUIDs)}}</view>
+      </view>
+    </scroll-view>
+    <view class="btn-area">
+      <button type="primary" bindtap="startBluetoothScanning">开始扫描</button>
+      <button bindtap="stopBluetoothDevicesDiscovery" style="margin-top: 10px;">停止扫描</button>
+    </view>
+  </view>
+  <view class="page-section connected-area" wx:if="{{lastDevice}}">
+    <text style="font-size: 30rpx">最近连接的设备</text>
+    <view>{{lastDevice}}</view>
+    <view class="btn-area">
+      <button type="primary" bindtap="createBLEConnectionWithDeviceId">直接连接</button>
+    </view>
+  </view>
+</view>

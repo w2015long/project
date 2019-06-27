@@ -1,0 +1,33 @@
+.containers {padding: 32rpx;}
+.containers .taboo-box{height: 265rpx; position: relative; background-color: #FF684F; border-radius: 4px;}
+.containers .taboo-box .taboo-big-icon{width: 200rpx; height: 200rpx; position: absolute; top:50%; margin-top:-100rpx; right: 20rpx;}
+.containers .taboo-box .taboo-big-icon image{width: 200rpx; height: 200rpx;}
+.containers .num-people{font-size: 26rpx; color: #fff; position: absolute; left: 32rpx; bottom: 32rpx;}
+.containers .num-people text{font-size: 36rpx; font-weight: bold;}
+.containers .taboo-text{position: absolute; display: flex; align-items:center; font-size: 30rpx; color: #fff; left: 32rpx; top:28rpx;}
+.containers .taboo-text text{padding-left: 20rpx;}
+.containers .taboo-text image{width: 32rpx; height: 32rpx;}
+
+.containers .cont-bot{margin-top: 32rpx; overflow: hidden; display: flex; justify-content:space-between;}
+.containers .remind-box{width: 333rpx; height: 246rpx; border-radius: 4rpx; position: relative; background-color: #128DFF;}
+.containers .remind-box .taboo-big-icon{width: 100rpx; height: 100rpx; position: absolute; bottom:20rpx; right: 20rpx;}
+.containers .remind-box .taboo-big-icon image{width: 100rpx; height:100rpx;}
+.containers .return-visit{width: 333rpx; height: 246rpx; border-radius: 4rpx; position: relative; background-color: #27C886;}
+.containers .return-visit .taboo-big-icon{width: 100rpx; height: 95rpx; position: absolute; bottom:20rpx; right: 20rpx;}
+.containers .return-visit .taboo-big-icon image{width: 100rpx; height: 95rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

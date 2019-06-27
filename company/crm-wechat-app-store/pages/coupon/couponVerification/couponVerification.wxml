@@ -1,0 +1,27 @@
+<view>
+    <view class='successfully-main' wx:if='{{verificationState === "successfully" && canWrite}}'>
+        <view class='pic'>
+            <image src="../../../media/images/bigsucc.png" />
+        </view>
+        <view class='succ-text'>核销成功</view>
+        <view class='succ-tips'>自动打印核销凭证</view>
+        <navigator url='../couponVerificationRecord/couponVerificationRecord' class='write-off-record'>核销记录</navigator>
+        <view class='ppload-btn' bindtap='uploading'>上传凭证</view>
+        <view class='close-btn' bindtap='toWorkbench'>关闭</view>
+    </view>
+
+
+    <view class='failure-main' wx:if='{{verificationState === "failure"}}'>
+        <view class='pic'>
+            <image src="../../../media/images/error2.png" />
+        </view>
+        <view class='succ-text'>核销失败</view>
+        <view class='write-off-record'>{{failureCause}}</view>
+        <view class='succ-tips'>{{countDownSeconds}}s后自动关闭</view>
+        <view class='close-btn' bindtap='toWorkbench'>关闭</view>
+    </view>
+     
+
+     <blueTooth  id="blueToothId" isInitPrint="{{true}}" isShowBlueTooth='{{verificationState === "successfully" &&  !canWrite}}' connected='{{connected}}' bind:action="changeData" bind:print="printTicket"/>
+
+</view>

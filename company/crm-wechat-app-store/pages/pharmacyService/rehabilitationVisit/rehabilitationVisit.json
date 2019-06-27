@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "康复回访",
+  "usingComponents": {
+    "notData":"../../common/notDataList/notDataList"
+  }
+}

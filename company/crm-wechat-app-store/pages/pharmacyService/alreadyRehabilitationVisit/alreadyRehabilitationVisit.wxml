@@ -1,0 +1,83 @@
+<view class="main">
+
+
+  <view class='search'>
+    <view class='search-box'>
+      <view class='search-icon'>
+        <image src="../../../media/images/icon-search.png" />
+      </view>
+      <input class='search-input' placeholder='会员名称  会员手机号  回访人'  type="text" confirm-type="search" bindconfirm="searchButton"></input>
+    </view>
+  </view>
+
+  <view class='main-box'>
+
+    <swiper-item>
+      <scroll-view scroll-y="true" style="height:100%;" bindscrolltolower="onPullDownRefresh">
+        <notData  wx:if="{{pageList.data.length  == 0}}"/>
+        <block wx:for="{{pageList.data}}" wx:for-item="pageList" wx:key="index">
+          <view class='item'>
+            <view class="info">
+              <view class="mt-hd">
+                <image src="{{pageList.memberIconFileIdUrl}}" mode="scaleToFill" class="customer-image fill-icon" />
+              </view>
+              <view class="mt-bd">
+                <view class="info-name">
+                  <text>{{pageList.memberName}}</text>
+                  <image src="{{pageList.sex === 'MALE'?'../../../media/images/manicon.png':pageList.sex === 'FEMALE'?'../../../media/images/icon-woman.png':''}}" class="gender-icon" />
+                </view>
+                <view class='member'>
+                  <image src="../../../media/images/icon30x30.png" mode="scaleToFill" class="member-icon" />
+                  <text class="member-label">{{pageList.memberLevelTitle}}</text>
+                  <text class='member-phone'>{{pageList.memberMobile}}</text>
+                </view>
+              </view>
+            </view>
+            <view class='item-list'>
+              <view class='item-list-hd'>
+                <view class='list-box'>
+                  <view class='list-box-hd'>回访人：</view>
+                  <view class='list-box-bd'>{{pageList.userName}}</view>
+                </view>
+                <view class='list-box'>
+                  <view class='list-box-hd'>回访内容：</view>
+                  <view class='list-box-bd'>{{pageList.trackingContent}}</view>
+                </view>
+              </view>
+              <view class='item-list-bd'>{{pageList.trackingDateStr}}</view>
+            </view>
+            <view class='customer-reviews'>
+              <view class='customer-reviews-hd'>客户评价：</view>
+
+              <view class='customer-reviews-bd' wx:if="{{pageList.isEstimate === 'Y'}}">
+                <text>{{pageList.estimateContent}}</text>
+                <view class='stars'>
+                  <image src="{{pageList.estimateScore >= 1 ? '../../../../media/images/stars-2.png' : '../../../../media/images/stars-1.png'}}" />
+                  <image src="{{pageList.estimateScore >= 2 ? '../../../../media/images/stars-2.png' : '../../../../media/images/stars-1.png'}}" />
+                  <image src="{{pageList.estimateScore >= 3 ? '../../../../media/images/stars-2.png' : '../../../../media/images/stars-1.png'}}" />
+                  <image src="{{pageList.estimateScore >= 4 ? '../../../../media/images/stars-2.png' : '../../../../media/images/stars-1.png'}}" />
+                  <image src="{{pageList.estimateScore >= 5 ? '../../../../media/images/stars-2.png' : '../../../../media/images/stars-1.png'}}" />
+                  <text>{{pageList.estimateScore == 5 ? '非常满意' : pageList.estimateScore == 4 ? '满意' :
+                      pageList.estimateScore == 3 ? '一般' : pageList.estimateScore == 2 ? '不满意' : pageList.estimateScore == 1 ? '非常不满意' : ''}}</text>
+                </view>
+                <view class='label-box'>
+                 <block wx:for="{{pageList.estimateTags}}" wx:for-item="tags" wx:key="index">
+                        <text>{{tags}}</text>
+                 </block>
+                </view>
+              </view>
+
+              <view class='customer-reviews-bd' wx:else>
+                <text>顾客暂未评价</text>
+              </view>
+
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </view>
+
+
+
+</view>

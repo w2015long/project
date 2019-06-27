@@ -1,0 +1,96 @@
+<!--pages/test/orders/order-manager.wxml-->
+<view class='order-container'>
+
+  <view class='orderCenter-warp search-view'>
+      <view class='search-container'>
+          <input bindconfirm='startSearch' placeholder='请输入单号  姓名  手机号码' placeholder-class='input-holder'></input>
+      </view>
+  </view>
+  <scroll-view scroll-y='true'>
+      <!--  微店订单  -->
+      <view class='orderCenter-warp'>
+          <view class='single-line'>
+            <image src='../../../media/images/w-shop.png' style='width:28rpx;height:34rpx;'/>
+            <text class='item-value'>微店订单</text>
+          </view> 
+      </view>
+
+      <view class='wshop-section border-top'>
+          <navigator url='../o2oOrder/o2oOrderList/o2oOrderList?state=0' class='section'>
+              <text class='count'>{{orderStateCounts.unpaidCounts}}</text>
+              <text class='section-state'>待付款</text>
+          </navigator>
+          <navigator url='../o2oOrder/o2oOrderList/o2oOrderList?state=1' class='section'>
+              <text class='count'>{{orderStateCounts.waitSendCounts}}</text>
+              <text class='section-state'>待发货</text>
+          </navigator>
+          <navigator url='../o2oOrder/o2oOrderList/o2oOrderList?state=2' class='section'>
+              <text class='count'>{{orderStateCounts.sendCounts}}</text>
+              <text class='section-state'>已发货</text>
+          </navigator>
+      </view>
+      
+    <!--  拍单购药  -->
+      <view class='orderCenter-warp porder'>
+          <view class='single-line'>
+            <image src='../../../media/images/pat-img.png' style='width:34rpx;height:32rpx;'/>
+            <text class='item-value'>拍单购药</text>
+          </view> 
+      </view>
+
+      <view class='wshop-section border-top'>
+          <navigator url="../prescriptionOrder/prescriptionOrderList/prescriptionOrderList?state=0" class='section'>
+              <text class='count'>{{orderStateCounts.allocateCounts}}</text>
+              <text class='section-state'>待调配</text>
+          </navigator>
+          <navigator url="../prescriptionOrder/prescriptionOrderList/prescriptionOrderList?state=1" class='section'>
+              <text class='count'>{{orderStateCounts.decoctionCounts}}</text>
+              <text class='section-state'>待煎煮</text>
+          </navigator>
+          <navigator url="../prescriptionOrder/prescriptionOrderList/prescriptionOrderList?state=2" class='section'>
+              <text class='count'>{{orderStateCounts.packingCounts}}</text>
+              <text class='section-state'>待包装</text>
+          </navigator>
+          <navigator url="../prescriptionOrder/prescriptionOrderList/prescriptionOrderList?state=3" class='section'>
+              <text class='count'>{{orderStateCounts.prescriptWaitSendCounts}}</text>
+              <text class='section-state'>待发货</text>
+          </navigator>
+      </view>
+
+      <!--  第三方平台  -->
+      <view class='orderCenter-warp porder'>
+          <view class='single-line'>
+            <image src='../../../media/images/third-part.png' style='width:32rpx;height:32rpx;'/>
+            <text class='item-value'>第三方平台</text>
+          </view> 
+      </view>
+      <view class='wshop-section border-top'>
+          <navigator class='section' url='../aliOrderList/aliOrderList'>
+              <text class='count'>{{orderStateCounts.aliOrderCounts}}</text>
+              <text class='section-state'>阿里健康</text>
+          </navigator>
+          <navigator class='section' url='../jdO2oOrder/jdO2oOrderList/jdO2oOrder'>
+              <text class='count'>{{orderStateCounts.jdOrderCounts}}</text>
+              <text class='section-state'>京东到家</text>
+          </navigator>
+      </view>
+
+      <!--  门店订单  -->
+      <view class='orderCenter-warp porder'>
+          <view class='single-line'>
+            <image src='../../../media/images/store.png' style='width:32rpx;height:32rpx;'/>
+            <text class='item-value'>门店订单</text>
+          </view> 
+      </view>
+      <view class='wshop-section border-top'>
+          <navigator class='section'  url='../outletOrder/outletOrder?date=today'>
+              <text class='count'>{{orderStateCounts.todayCounts}}</text>
+              <text class='section-state'>今日订单</text>
+          </navigator>
+          <navigator class='section'  url='../outletOrder/outletOrder?date=yesterday'>
+              <text class='count'>{{orderStateCounts.yesterdayCounts}}</text>
+              <text class='section-state'>昨日订单</text>
+          </navigator>
+      </view>
+  </scroll-view>
+</view>

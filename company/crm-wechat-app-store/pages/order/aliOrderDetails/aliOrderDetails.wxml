@@ -1,0 +1,82 @@
+
+<scroll-view class="containers" style="height:100%;">
+      <view class="orderstate">
+	  		<view class="orderstatev">
+			      <text class="statetext">订单状态：</text>
+				  <text class="statetexv">{{aliOrderDetails.orderStatus}}</text>
+			</view>
+			<view class="orderstatev">
+			     <text class="statetext">订单编号：</text>
+				  <text class="statetexv">{{aliOrderDetails.aliO2oOrderId}}</text>
+			</view>
+			<view class="orderstatev">
+			     <text class="statetext">下单时间：</text>
+				  <text class="statetexv">{{aliOrderDetails.createTime}}</text>
+			</view>
+	  </view>
+     
+
+	  <view class="orderstate" style="height:226rpx;">
+	  		<view class="orderstatev" style="margin-top:32rpx;">
+			      <text class="statetext" style="margin-right:28rpx;">收货人：</text>
+				  <text class="statetexv">{{aliOrderDetails.name===null?"":aliOrderDetails.name}}</text>
+			</view>
+			<view class="orderstatev">
+			     <text class="statetext">联系电话：</text>
+				  <text class="statetexv">{{aliOrderDetails.phone===null?"":aliOrderDetails.phone}}</text>
+			</view>
+			<view class="adddresv">
+			     <text class="addresstextl">地址：</text>
+				 <view class="infoaddress">
+				     <text class="addresstext">{{aliOrderDetails.address===null?"":aliOrderDetails.address}}</text>
+				 </view>
+			</view>
+	  </view>
+
+	 
+     
+	  <view class="countv">
+	         <text class="statetext">数量：</text>
+			 <text class="statetexv">{{aliOrderDetails.productAliCount}}件</text>
+	  </view>
+
+
+	   <block wx:for="{{aliOrderDetails.xcxAliOrderItemProtocol}}" wx:for-item="productList" wx:key="index"  >
+                    <view class="goodsitem">
+                    	 <view class="goodsleft">
+                    	    <view class="goodstext">
+                    		     <text class="commtext">{{productList.name}}</text>
+                    		</view>
+                    		 <view class="goodsgui">
+                    		     <view class="goodsguitextl">
+
+                    			 </view>
+                    			 <text class="goodsguitextr">x{{productList.count}}</text>
+                    		 </view>
+                    	   </view>
+                        </view>
+
+                       <view class="lines"/>
+        </block>
+
+
+  
+
+    
+	<view class="bottomv">
+	     <view class="bottomitemv">
+		    <text class="bitemtextl">商品金额：</text>
+		    <text class="bitemtextr">￥{{productAliPrice}}</text>
+		 </view>
+		  <view class="bottomitemv">
+		    <text class="bitemtextl">运费：</text>
+		    <text class="bitemtextr">￥{{deliveryPay}}</text>
+		 </view>
+   
+		 <view class="bottomtotalv">
+		     <text class="bottomtotaltextl">实收：</text>
+		    <text class="bottomtotaltextr">￥{{totalPay}}</text>
+		 </view>
+
+	</view>
+</scroll-view>
