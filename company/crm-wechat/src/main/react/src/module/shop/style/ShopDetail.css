@@ -1,0 +1,41 @@
+.shop-detail { height: 100%; background-color: #f5f5f5; }
+
+.shop-detail { padding-top: 1.625rem; background: url(../../../media/images/bg-store.jpg) no-repeat 0 0/100% 1.875rem; }
+.shop-detail .mc { background-color: #fff; border-radius: 0.25rem; padding-top: 0.5rem; position: relative; }
+.shop-detail .mc .store-info { margin-top: 0.625rem; padding: 0 0.40625rem; }
+.shop-detail .mc .store-info h5 { color: #76838F; font-size: 13px; font-weight: bold; line-height: 0.625rem; }
+[data-dpr="2"] .shop-detail .mc .store-info h5 { font-size: 26px; }
+[data-dpr="3"] .shop-detail .mc .store-info h5 { font-size: 39px; }
+.shop-detail .mc .store-info .info-box { margin-top: 0.078125rem; }
+.shop-detail .mc .store-info .item { padding: 0.15625rem 0; height: 0.828125rem; line-height: 0.515625rem; font-size: 12px; }
+[data-dpr="2"] .shop-detail .mc .store-info .item { font-size: 24px; }
+[data-dpr="3"] .shop-detail .mc .store-info .item { font-size: 36px; }
+.shop-detail .mc .store-info .item a { display: block; padding-right: 1rem; color: #76838F; position: relative; height: 0.515625rem; line-height: 0.515625rem; }
+.shop-detail .mc .store-info .item a:before { content: ''; width: 0.15625rem; height: 0.15625rem; border-right: 0.046875rem solid #526069; border-bottom: 0.046875rem solid #526069; position: absolute; right: 0.078125rem; top: 50%; transform: translateY(-50%) rotate(-45deg); }
+.shop-detail .mc .store-info .item span { display: block; color: #76838F; height: 0.515625rem; line-height: 0.515625rem; }
+.shop-detail .mc .store-pic { width: 1.5625rem; height: 1.5625rem; overflow: hidden; position: absolute; left: 0.4375rem; top: -0.46875rem; background: #FFFFFF; box-shadow: 0 0.03125rem 0.125rem 0 rgba(0, 0, 0, 0.1); border-radius: 0.078125rem; }
+.shop-detail .mc .store-pic img { width: 100%; height: 100%; }
+/*.nearby-shop-main { padding-bottom: 0.1rem; }*/
+.shop-detail .mc .store-pic span { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 0.46875rem; line-height: 0.46875rem; color: #fff; text-align: center; font-size: 10px; background-color: rgba(0, 0, 0, 0.5); filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#7f000000,endColorStr=#7f000000); }
+[data-dpr="2"] .shop-detail .mc .store-pic span { font-size: 20px; }
+[data-dpr="3"] .shop-detail .mc .store-pic span { font-size: 30px; }
+
+
+.shop-detail .mc .name { color: #526069; padding-left: 2.34375rem; padding-right: 0.40625rem; font-size: 16px; }
+[data-dpr="2"] .shop-detail .mc .name { font-size: 32px; }
+[data-dpr="3"] .shop-detail .mc .name { font-size: 48px; }
+.shop-detail .mc .name span { display: block; line-height: 0.703125rem; height: 0.703125rem; }
+.shop-detail .mc .announcement { margin-top: 0.625rem; padding: 0 0.40625rem; }
+.shop-detail .mc .announcement h5 { color: #76838F; font-size: 13px; font-weight: bold; line-height: 0.625rem; }
+[data-dpr="2"] .shop-detail .mc .announcement h5 { font-size: 26px; }
+[data-dpr="3"] .shop-detail .mc .announcement h5 { font-size: 39px; }
+.shop-detail .mc .announcement ol { margin-top: 0.1875rem; padding-left: 0.375rem; color: #76838F; font-size: 12px; line-height: 0.515625rem; }
+[data-dpr="2"] .shop-detail .mc .announcement ol { font-size: 24px; }
+[data-dpr="3"] .shop-detail .mc .announcement ol { font-size: 36px; }
+.shop-detail .mc .announcement ol li { list-style: decimal; margin-bottom: 0.078125rem; }
+.shop-detail .mc .mc-pic { margin-top: 0.625rem; padding: 0 0 1px 0.1875rem; overflow: hidden; }
+.shop-detail .mc .mc-pic .item { width: 4.375rem; height: 4.375rem; overflow: hidden; float: left; margin: 0 0.21875rem 0.4375rem 0.21875rem; }
+.shop-detail .mc .mc-pic .item img { width: 4.375rem; height: 4.375rem; }
+.shop-detail .complain { display: block; margin-top: 0.15625rem; background-color: #fff; height: 1.40625rem; line-height: 1.40625rem; position: relative; text-align: center; color: #76838F; font-size: 15px; }
+[data-dpr="2"] .shop-detail .complain { font-size: 30px; }
+[data-dpr="3"] .shop-detail .complain { font-size: 45px; }

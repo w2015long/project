@@ -1,0 +1,12 @@
+.yearMetaphase .topic-main { width: 10rem; margin: 0 auto; background-color: #be393a; }
+.yearMetaphase .topic-main .box-lg { width: 100%; }
+.yearMetaphase .topic-main .box-lg img { width: 100%; height: auto; }
+.yearMetaphase .topic-main .box { width: 50%; float: left; }
+.yearMetaphase .topic-main .box img { width: 100%; height: auto; }
+.yearMetaphase .topic-main .coupon { position: relative; }
+.yearMetaphase .topic-main .coupon .receive-m1 { width: 4.053rem; height: 3.107rem; position: absolute; left: 0.8rem; top: 3.56rem; }
+.yearMetaphase .topic-main .coupon .receive-m2 { width: 4.053rem; height: 3.107rem; position: absolute; right: 0.8rem; top: 3.56rem; }
+.yearMetaphase .topic-main .coupon .receive-m3 { width: 4.053rem; height: 3.107rem; position: absolute; left: 0.8rem; top: 6.9rem; }
+.yearMetaphase .topic-main .coupon .receive-m4 { width: 4.053rem; height: 3.107rem; position: absolute; right: 0.8rem; top: 6.9rem; }
+.yearMetaphase .topic-main .coupon .receive-m5 { width: 4.053rem; height: 3.107rem; position: absolute; left: 0.8rem; top: 10.26rem; }
+.yearMetaphase .topic-main .coupon .receive-m6 { width: 4.053rem; height: 3.107rem; position: absolute; right: 0.8rem; top: 10.26rem; }

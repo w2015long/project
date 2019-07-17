@@ -1,0 +1,59 @@
+@charset "UTF-8";
+html, body { background-color: #f5f5f5; }
+
+.interrogation_record_details .diagnostic-main .diagnostic-picture { background: #fff; padding-bottom: 16px; height: 280px; }
+.interrogation_record_details .diagnostic-main .diagnostic-picture .title { padding: 20px 16px; background: #62a8ea; min-height: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.interrogation_record_details .diagnostic-main .diagnostic-picture .title span { text-align: center; font-weight: 600; font-size: 20px; line-height: 22px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-height: 22px; color: #fff; }
+.interrogation_record_details .diagnostic-main .diagnostic-picture .item { margin: 0 16px; padding: 10px 10px 0px 10px; position: relative; top: -60px; border-radius: 4px; background: #fff; box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.1); }
+.interrogation_record_details .diagnostic-main .diagnostic-picture .item .pic { max-height: 160px; width: 100%; overflow: hidden; }
+.interrogation_record_details .diagnostic-main .diagnostic-picture .item .pic img { width: 100%; height: auto; }
+.interrogation_record_details .diagnostic-main .diagnostic-picture .item .tips { font-weight: 500; color: #666666; font-size: 14px; text-align: center; height: 33px; line-height: 33px; }
+.interrogation_record_details .diagnostic-main .prescription { margin-top: 10px; background: #fff; }
+.interrogation_record_details .diagnostic-main .prescription .title { background: white; height: 44px; line-height: 44px; font-weight: 600; color: #222222; font-size: 16px; padding-left: 16px; position: relative; }
+.interrogation_record_details .diagnostic-main .prescription .title:after { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-bottom: 1px solid #ddd; color: #ddd; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.interrogation_record_details .diagnostic-main .prescription .product-information .zanwu { height: 100px; line-height: 100px; font-weight: 500; color: #999999; text-align: center; font-size: 16px; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item { padding: 0.427rem; position: relative; background-color: #fff; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item:before { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-bottom: 1px solid #ddd; color: #ddd; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item:last-child:before { display: none; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item a { display: block; position: relative; min-height: 2.133rem; padding-left: 2.467rem; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .pic-box { width: 2.133rem; height: 2.133rem; position: absolute; left: 0; top: 0; overflow: hidden; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .pic-box img { width: 2.133rem; height: 2.133rem; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .product-text { height: 1rem; line-height: 0.5rem; -webkit-box-orient: vertical; -webkit-line-clamp: 2; word-break: break-word; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; padding-right: 1.333rem; font-weight: 500; color: #333333; font-size: 16px; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .spec-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 400; color: #999999; font-size: 12px; margin-top: 0.1rem; margin-bottom: 0.0333rem; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .bot-cell { margin-top: 0.2rem; padding-right: 1.067rem; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; align-items: center; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .number-of-products { position: absolute; font-weight: 500; color: #333333; font-size: 14px; right: 0; top: 0rem; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .price { color: #FF6600; font-size: 15px; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .price span { color: #FF6600; font-size: 18px; }
+.interrogation_record_details .diagnostic-main .prescription .product-information .item .price em { color: #666; font-size: 12px; }
+.interrogation_record_details .diagnostic-main .patient-information { margin-top: 10px; background: #fff; }
+.interrogation_record_details .diagnostic-main .patient-information .title { height: 44px; line-height: 44px; font-weight: 600; color: #222222; font-size: 16px; padding: 0 16px; }
+.interrogation_record_details .diagnostic-main .patient-information .content { height: 66px; line-height: 66px; display: -webkit-box; display: -webkit-flex; display: flex; position: relative; padding: 0 16px; }
+.interrogation_record_details .diagnostic-main .patient-information .content .content-text { padding-right: 0.8rem; }
+.interrogation_record_details .diagnostic-main .patient-information .content .content-text .spa1 { color: #666; font-size: 16px; }
+.interrogation_record_details .diagnostic-main .patient-information .content .content-text .spa2 { color: #222; font-size: 16px; }
+.interrogation_record_details .diagnostic-main .patient-information .content .content-text:last-child { padding-right: 0; }
+.interrogation_record_details .diagnostic-main .patient-information .content:after { content: " "; position: absolute; left: 0; top: 0; right: 0; height: 1px; border-bottom: 1px solid #ddd; color: #ddd; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.interrogation_record_details .diagnostic-main .doctor-information { background: #fff; margin-top: 10px; }
+.interrogation_record_details .diagnostic-main .doctor-information .title { background: white; height: 44px; line-height: 44px; font-weight: 600; color: #222222; font-size: 16px; padding-left: 16px; position: relative; }
+.interrogation_record_details .diagnostic-main .doctor-information .title:after { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-bottom: 1px solid #ddd; color: #ddd; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.interrogation_record_details .diagnostic-main .doctor-information .content { height: 104px; padding: 20px 16px; display: -webkit-box; display: -webkit-flex; display: flex; }
+.interrogation_record_details .diagnostic-main .doctor-information .content .pic { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; }
+.interrogation_record_details .diagnostic-main .doctor-information .content .pic img { width: 40px; height: 40px; }
+.interrogation_record_details .diagnostic-main .doctor-information .content .text-content { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; margin-left: 13px; overflow: hidden; }
+.interrogation_record_details .diagnostic-main .doctor-information .content .text-content .text-name { font-weight: 600; color: #222222; font-size: 16px; }
+.interrogation_record_details .diagnostic-main .doctor-information .content .text-content .text-features { font-weight: 500; color: #666666; font-size: 14px; margin-top: 10px; }
+.interrogation_record_details .diagnostic-main .doctor-information .content .text-content .text-addr { font-weight: 500; color: #666666; font-size: 14px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; margin-top: 10px; }
+.interrogation_record_details .diagnostic-main .footer-box { position: fixed; left: 0; right: 0; bottom: 0; }
+.interrogation_record_details .diagnostic-main .footer-box .switch-shop { background: #fef4eb; line-height: 36px; height: 36px; position: relative; font-weight: 500; color: #f35744; font-size: 14px; padding-left: 16px; }
+.interrogation_record_details .diagnostic-main .footer-box .switch-shop a { position: absolute; right: 24px; top: 0px; font-weight: 500; color: #62a8ea; font-size: 14px; }
+.interrogation_record_details .diagnostic-main .footer-box .switch-shop a:after { position: absolute; content: ''; width: 13px; height: 13px; background: url("../../../media/images/right-icon.png") no-repeat 0 0/5px 11px; right: -17px; top: 13px; }
+.interrogation_record_details .diagnostic-main .footer-box .settlement { display: -webkit-box; display: -webkit-flex; display: flex; background: #fff; height: 54px; }
+.interrogation_record_details .diagnostic-main .footer-box .settlement .settlement-l { -webkit-box-flex: 1; -webkit-flex: 1; padding-left: 16px; flex: 1; height: 54px; font-weight: 600; color: #ff6600; font-size: 16px; line-height: 54px; background: #fff; }
+.interrogation_record_details .diagnostic-main .footer-box .settlement .settlement-l span { font-weight: 500; color: #222222; }
+.interrogation_record_details .diagnostic-main .footer-box .settlement .settlement-r { width: 146px; text-align: center; line-height: 54px; height: 54px; font-weight: 600; color: white; font-size: 18px; background: #c5c5c5; }
+.interrogation_record_details .diagnostic-main .footer-box .settlement .settlement-select { background: #62a8ea; }
+.interrogation_record_details .pop-ups { position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); }
+.interrogation_record_details .pop-ups .item { margin: 50px auto 0; width: 8.667rem; max-height: 460px; background: #fff; }
+.interrogation_record_details .pop-ups .item img { width: 8.667rem; height: auto; }
+
+

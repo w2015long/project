@@ -1,0 +1,93 @@
+.prescription-detail { height: 100%; background-color: #f5f5f5; }
+
+.prescription-detail .order-detail .hold-div-bottom { height: 1.71875rem; }
+.prescription-detail .order-detail .current-status { height: 3.125rem; background: #62A8EA; background: -moz-linear-gradient(left, #62A8EA, #28C8FF); background: -webkit-gradient(linear, 0 0, 100% 0, from(#62A8EA), to(#28C8FF)); background: -o-linear-gradient(left, #62A8EA, #28C8FF); padding: 0.9375rem 0 0 0.78125rem; }
+.prescription-detail .order-detail .current-status p { color: #fff; font-size: 18px; line-height: 0.625rem; margin-bottom: 0.125rem; }
+[data-dpr="2"] .prescription-detail.order-detail .current-status p { font-size: 36px; }
+[data-dpr="3"] .prescription-detail .order-detail .current-status p { font-size: 54px; }
+.order-detail .prescription-detail .current-status span { display: block; width: 5.46875rem; height: 0.9375rem; color: #fff; font-size: 12px; line-height: 0.46875rem; }
+[data-dpr="2"] .prescription-detail .order-detail .current-status span { font-size: 24px; }
+[data-dpr="3"] .prescription-detail .order-detail .current-status span { font-size: 36px; }
+.prescription-detail .order-detail .current-status .logs { position: absolute; right: 0.40625rem; top: 1.15625rem; color: #FFFFFF; padding-right: 0.359375rem; font-size: 12px; }
+[data-dpr="2"] .prescription-detail .order-detail .current-status .logs { font-size: 24px; }
+[data-dpr="3"] .prescription-detail .order-detail .current-status .logs { font-size: 36px; }
+.prescription-detail .order-detail .current-status .logs:before { content: ''; width: 0.15625rem; height: 0.15625rem; border-right: 0.046875rem solid #fff; border-bottom: 0.046875rem solid #fff; position: absolute; right: 0.078125rem; top: 50%; transform: translateY(-50%) rotate(-45deg); }
+.prescription-detail .order-detail .consignee-addr { width: 96.875%; margin: 0 auto; background-color: #fff; padding: 0.46875rem 0.46875rem 0.46875rem 1rem; position: relative; background: #fff url(../../../media/images/diqu2.png) no-repeat 0.25rem center/0.35938rem auto; border-radius: 0.125rem; top: -0.15625rem; }
+.prescription-detail .order-detail .consignee-addr span { color: #526069; font-size: 14px; line-height: 0.625rem; padding-right: 0.5625rem; }
+[data-dpr="2"] .prescription-detail .order-detail .consignee-addr span { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .order-detail .consignee-addr span { font-size: 42px; }
+.prescription-detail .order-detail .consignee-addr p { padding-top: 0.078125rem; min-height: 0.515625rem; line-height: 0.515625rem; color: #76838F; font-size: 12px; }
+[data-dpr="2"] .prescription-detail .order-detail .consignee-addr p { font-size: 24px; }
+[data-dpr="3"] .prescription-detail .order-detail .consignee-addr p { font-size: 36px; }
+.prescription-detail .order-detail .gd-cont { background-color: #fff; margin-bottom: 0.15625rem; padding: 0.46875rem 0 0.15625rem 0.40625rem; overflow: hidden; }
+.prescription-detail .order-detail .gd-cont .item { width: 1.5625rem; height: 1.5625rem; overflow: hidden; background-color: #F2F2F2; float: left; margin: 0 0.3125rem 0.3125rem 0; }
+.prescription-detail .order-detail .gd-cont .item img { width: 100%; height: 100%; }
+.prescription-detail .order-detail .invoice-box { padding: 0.40625rem; margin-bottom: 0.15625rem; position: relative; background-color: #fff; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: flex-start; -webkit-align-items: flex-start; align-items: flex-start; }
+.prescription-detail .order-detail .invoice-box .cell-hd { width: 2.03125rem; height: 0.75rem; line-height: 0.75rem; color: #526069; font-size: 14px; }
+[data-dpr="2"] .prescription-detail .order-detail .invoice-box .cell-hd { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .order-detail .invoice-box .cell-hd { font-size: 42px; }
+.prescription-detail .order-detail .invoice-box .cell-bd { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; text-align: right; }
+.prescription-detail .order-detail .invoice-box .cell-bd input { display: block; height: 0.75rem; color: #526069; font-size: 14px; line-height: 0.75rem; width: 100%; }
+[data-dpr="2"] .prescription-detail .order-detail .invoice-box .cell-bd input { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .order-detail .invoice-box .cell-bd input { font-size: 42px; }
+.prescription-detail .order-detail .invoice-box .cell-bd a { display: block; height: 0.75rem; line-height: 0.75rem; }
+.prescription-detail .order-detail .invoice-box .cell-bd i { color: #A3AFB7; padding-right: 0.43rem; }
+.prescription-detail .order-detail .invoice-box .cell-bd span { color: #76838F; }
+.prescription-detail .order-detail .invoice-box .cell-bd textarea { width: 100%; border: none; color: #526069; padding-top: 0.065rem; line-height: 0.625rem; font-size: 14px; }
+[data-dpr="2"] .prescription-detail .order-detail .invoice-box .cell-bd textarea { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .order-detail .invoice-box .cell-bd textarea { font-size: 42px; }
+.prescription-detail .order-detail .invoice-box .cell-bd .mow label { display: inline-block; line-height: 0.75rem; color: #526069; font-size: 14px; padding-left: 0.75rem; padding-right: 0.618rem; margin-right: 0.5rem; background: url(../../../media/images/icon-check.png) no-repeat 0 center/0.53125rem auto; }
+[data-dpr="2"] .prescription-detail .order-detail .invoice-box .cell-bd .mow label { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .order-detail .invoice-box .cell-bd .mow label { font-size: 42px; }
+.prescription-detail .order-detail .invoice-box .cell-bd .mow label.checked { background: url(../../../media/images/icon-check2.png) no-repeat 0 center/0.53125rem auto; }
+.prescription-detail .order-detail .invoice-box .cell-ft { position: relative; }
+.prescription-detail .order-detail .invoice-box .cell-ft:after { content: " "; display: inline-block; height: 0.1875rem; width: 0.1875rem; border-width: 0.03125rem 0.03125rem 0 0; border-color: #526069; border-style: solid; -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); position: absolute; top: 50%; margin-top: 0.3rem; left: -0.40625rem; }
+.prescription-detail .order-detail .model-box { background-color: #fff; margin-bottom: 0.15625rem; padding: 0 0.40625rem; }
+.prescription-detail .order-detail .model-box .info-item { position: relative; height: 1.40625rem; line-height: 1.40625rem; overflow: hidden; color: #526069; font-size: 13px; }
+[data-dpr="2"] .prescription-detail .order-detail .model-box .info-item { font-size: 26px; }
+[data-dpr="3"] .prescription-detail .order-detail .model-box .info-item { font-size: 39px; }
+.prescription-detail .order-detail .model-box .info-item span { float: left; }
+.prescription-detail .order-detail .model-box .info-item i { float: right; height: 1.40625rem; max-width: 6.25rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.prescription-detail .order-detail .model-box .info-item:before { content: " "; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; border-top: 1px solid #d9d9d9; color: #d9d9d9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.prescription-detail .order-detail .model-box .payment span { float: left; color: #526069; font-size: 15px; }
+[data-dpr="2"] .prescription-detail .order-detail .model-box .payment span { font-size: 30px; }
+[data-dpr="3"] .prescription-detail .order-detail .model-box .payment span { font-size: 45px; }
+.prescription-detail .order-detail .model-box .payment i { float: right; color: #F2A654; font-size: 13px; font-weight: bold; }
+[data-dpr="2"] .prescription-detail .order-detail .model-box .payment i { font-size: 26px; }
+[data-dpr="3"] .prescription-detail .order-detail .model-box .payment i { font-size: 39px; }
+.prescription-detail .order-detail .model-box .payment:before { display: none; }
+.prescription-detail .order-detail .info-box { background-color: #fff; padding: 0.3125rem 0.40625rem; }
+.prescription-detail .order-detail .info-box .info-item { height: 0.84375rem; line-height: 0.84375rem; overflow: hidden; color: #526069; font-size: 13px; }
+[data-dpr="2"] .prescription-detail .order-detail .info-box .info-item { font-size: 26px; }
+[data-dpr="3"] .prescription-detail .order-detail .info-box .info-item { font-size: 39px; }
+.prescription-detail .order-detail .info-box .info-item span { float: left; }
+.prescription-detail .order-detail .info-box .info-item i { float: right; height: 0.84375rem; max-width: 6.25rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.prescription-detail .order-detail .dt-footer { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1; height: 1.5625rem; background-color: #fff; text-align: right; padding: 0.34375rem 0.40625rem 0 0; }
+.prescription-detail .order-detail .dt-footer:before { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 1px; border-top: 1px solid #d9d9d9; color: #d9d9d9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.prescription-detail .order-detail .dt-footer .md-btn1 { display: inline-block; width: 2.34375rem; height: 0.875rem; text-align: center; line-height: 0.84375rem; border: 1px solid #ddd; border-radius: 0.4375rem; color: #76838F; font-size: 13px; }
+[data-dpr="2"] .prescription-detail .order-detail .dt-footer .md-btn1 { font-size: 26px; }
+[data-dpr="3"] .prescription-detail .order-detail .dt-footer .md-btn1 { font-size: 39px; }
+.prescription-detail .order-detail .dt-footer .md-btn2 { display: inline-block; width: 2.34375rem; height: 0.875rem; text-align: center; line-height: 0.875rem; background-color: #62A8EA; border-radius: 0.4375rem; box-shadow: 0 0.03125rem 0.125rem 0 rgba(98, 168, 234, 0.6); color: #fff; font-size: 13px; margin-left: 0.3125rem; }
+[data-dpr="2"] .prescription-detail .order-detail .dt-footer .md-btn2 { font-size: 26px; }
+[data-dpr="3"] .prescription-detail .order-detail .dt-footer .md-btn2 { font-size: 39px; }
+
+.prescription-detail .invoice-layer { background: rgba(0, 0, 0, 0.4); position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 12; }
+.prescription-detail .invoice-layer .invoice-info { background-color: #fff; position: absolute; left: 0; right: 0; bottom: 0; border-radius: 0.25rem 0.25rem 0 0; height: 11.5625rem; }
+.prescription-detail .invoice-layer .invoice-info .mt { height: 1.84375rem; padding-top: 0.125rem; line-height: 1.71875rem; padding-left: 0.40625rem; color: #37474F; position: relative; font-size: 14px; font-weight: bold; background-color: #fff; border-radius: 0.25rem 0.25rem 0 0; }
+[data-dpr="2"] .prescription-detail .invoice-layer .invoice-info .mt { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .invoice-layer .invoice-info .mt { font-size: 42px; }
+.prescription-detail .invoice-layer .invoice-info .mc .item { padding: 0.2rem 0.40625rem; position: relative; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: flex-start; -webkit-align-items: flex-start; align-items: flex-start; }
+.prescription-detail .invoice-layer .invoice-info .mc .cell-hd { width: 2.2rem; height: 0.75rem; line-height: 0.75rem; color: #526069; font-size: 14px; }
+[data-dpr="2"] .prescription-detail .invoice-layer .invoice-info .mc .cell-hd { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .invoice-layer .invoice-info .mc .cell-hd { font-size: 42px; }
+.prescription-detail .invoice-layer .invoice-info .mc .cell-bd { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; position: relative; }
+.prescription-detail .invoice-layer .invoice-info .mc .cell-bd span { text-align: right; display: block; height: 0.75rem; color: #526069; font-size: 14px; line-height: 0.75rem; width: 100%; background: none; }
+[data-dpr="2"] .prescription-detail .invoice-layer .invoice-info .mc .cell-bd span { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .invoice-layer .invoice-info .mc .cell-bd span { font-size: 42px; }
+
+.prescription-detail .submit-btn { display: block; height: 0.9375rem; line-height: 0.9375rem; width: 75%; margin: 0.703125rem auto 0; border-radius: 0.46875rem; background-color: #62A8EA; color: #FFFFFF; text-align: center; font-size: 14px; box-shadow: 0 0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.6); }
+[data-dpr="2"] .prescription-detail .submit-btn { font-size: 28px; }
+[data-dpr="3"] .prescription-detail .submit-btn { font-size: 42px; }
+.prescription-detail .invoice-layer .submit-btn { position: absolute; bottom: 0.78125rem; left: 50%; transform: translateX(-50%); }
+
+/*# sourceMappingURL=pai-order-detail.css.map */

@@ -1,0 +1,13 @@
+.coupon_apply_shop_list{font-size: 20px;}
+.coupon_apply_shop_list .commodity-item { height: 2.467rem; position: relative; padding: 0.573rem 0.427rem 0.64rem 0.427rem; background: #fff; width: 100%; }
+.coupon_apply_shop_list .commodity-item .commodity-name { color: #222222; font-size: 16px; max-width: 7rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.coupon_apply_shop_list .commodity-item .commodity-name .commodity-name-item { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 3.853rem; float: left; }
+.coupon_apply_shop_list .commodity-item .commodity-name .tips { font-weight: 500; color: #ff6600; font-size: 12px; padding: 0.053rem 0.187rem  0.063rem; background: rgba(255, 102, 0, 0.1); border-radius: 0.053rem; float: left; margin-left: 0.267rem; }
+.coupon_apply_shop_list .commodity-item .commodity-content { font-weight: 500; color: #999; font-size: 14px; margin-top: 0.4rem; max-width: 6.667rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.coupon_apply_shop_list .commodity-item .commodity-addressicon { position: absolute; right: 0.56rem; top: 0.537rem; font-size: 14px; font-weight: 500; color: #999999; }
+/*.coupon_apply_shop_list .commodity-item .commodity-addressicon:after { content: ''; position: absolute; width: 0.41rem; height: 0.373rem; background: url("../../../media/images/add28.png") no-repeat -0.02rem 0/0.4rem 0.373rem; left: -0.4rem; top: 0rem; }*/
+.coupon_apply_shop_list .commodity-item .commodity-enter { position: absolute; width: 1.947rem; height: 0.667rem; background: #62a8ea; box-shadow: 0rem 0.04rem 0.107rem 0rem rgba(98, 168, 234, 0.6); border-radius: 0.4rem; right: 0.427rem; bottom: 0.5rem; text-align: center; line-height: 0.667rem; font-weight: 500; color: white; font-size: 13px; }
+.coupon_apply_shop_list .commodity-item:after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: #e4e4e4; bottom: 0; }
+.coupon_apply_shop_list .commodity-itemoff .commodity-name .tips { background: rgba(153, 153, 153, 0.4); color: #666666; }
+.coupon_apply_shop_list .commodity-itemoff .commodity-enter { background: #d4d4d4; color: #fff; box-shadow: none; }
+.coupon_apply_shop_list .commodity-itemoffff .commodity-enter { background: #d4d4d4; color: #fff; box-shadow: none; }

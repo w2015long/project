@@ -1,0 +1,8 @@
+html, body { min-height: 100%; }
+
+.blank-page { padding-top: 9.21875rem; text-align: center; background: url(../../../media/images/000dindan@2x.png) no-repeat center 4rem/4rem auto; }
+.blank-page span { color: #76838F; font-size: 13px; }
+[data-dpr="2"] .blank-page span { font-size: 26px; }
+[data-dpr="3"] .blank-page span { font-size: 39px; }
+
+

@@ -1,0 +1,121 @@
+.double-twelve {
+    width: 10rem;
+    margin: 0 auto;
+    background-color: #c53feb;
+    padding-bottom: 1.3625rem;
+}
+
+.double-twelve .item {
+    position: relative;
+}
+
+.double-twelve .item img {
+    width: 100%;
+    height: auto;
+}
+
+.double-twelve .item .get-btn1 {
+    display: block;
+    width: 2.96875rem;
+    height: 1.15625rem;
+    position: absolute;
+    left: 0.40625rem;
+    top: 0.859375rem;
+}
+
+.double-twelve .item .get-btn2 {
+    display: block;
+    width: 2.96875rem;
+    height: 1.15625rem;
+    position: absolute;
+    left: 3.546875rem;
+    top: 0.859375rem;
+}
+
+.double-twelve .item .get-btn3 {
+    display: block;
+    width: 2.96875rem;
+    height: 1.15625rem;
+    position: absolute;
+    left: 6.671875rem;
+    top: 0.859375rem;
+}
+
+.double-twelve .item .link-btn {
+    display: block;
+    position: absolute;
+}
+
+.double-twelve .item .btn-model1 {
+    width: 4.6875rem;
+    height: 7.109375rem;
+    top: 0.9375rem;
+    left: 0.3125rem;
+}
+
+.double-twelve .item .btn-model2 {
+    width: 4.6875rem;
+    height: 7.109375rem;
+    top: 0.9375rem;
+    right: 0.3125rem;
+}
+
+.double-twelve .item .btn-model3 {
+    width: 9.375rem;
+    height: 5.390625rem;
+    top: 0.9375rem;
+    right: 0.3125rem;
+}
+
+.double-twelve .item .btn-model4 {
+    width: 4.6875rem;
+    height: 5.625rem;
+    top: 0.9375rem;
+    left: 0.3125rem;
+}
+
+.double-twelve .item .btn-model5 {
+    width: 4.6875rem;
+    height: 5.625rem;
+    top: 0.9375rem;
+    right: 0.3125rem;
+}
+
+.double-twelve .item .btn-model6 {
+    width: 4.6875rem;
+    height: 4.921875rem;
+    top: 0;
+    left: 0.3125rem;
+}
+
+.double-twelve .item .btn-model7 {
+    width: 4.6875rem;
+    height: 4.921875rem;
+    top: 0;
+    right: 0.3125rem;
+}
+
+.double-twelve .item .btn-model8 {
+    width: 4.6875rem;
+    height: 6.1rem;
+    top: 0;
+    left: 0.3125rem;
+}
+
+.double-twelve .item .btn-model9 {
+    width: 4.6875rem;
+    height: 6.1rem;
+    top: 0;
+    right: 0.3125rem;
+}
+
+/* 2018-12-06 */
+.double-twelve .item .btn-model1 {
+    width: 9.375rem;
+}
+
+.double-twelve .item .btn-model2 {
+    width: 9.375rem;
+}
+
+/*# sourceMappingURL=double-twelve.css.map */

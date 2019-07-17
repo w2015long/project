@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*1px 像素线*/
+/*继承 @extend .setTopLine;*/
+html, body { background: #fff; }
+
+.recharge_success .payment-successful-main .pay-pic { width: 93px; height: 93px; margin: 50px auto 0; }
+.recharge_success .payment-successful-main .pay-pic img { width: 93px; height: 93px; }
+.recharge_success .payment-successful-main h5 { text-align: center; font-weight: 500; color: black; font-size: 20px; margin-top: 24px; }
+.recharge_success .payment-successful-main p { text-align: center; font-weight: 500; color: #222222; font-size: 16px; margin-top: 10px; }
+.recharge_success .payment-successful-main .insufficient { font-weight: 500; color: #f35744; font-size: 16px; }
+.recharge_success .payment-successful-main .time-back { text-align: center; font-weight: 500; color: #999999; font-size: 14px; margin-top: 20px; margin-bottom: 30px; }
+.recharge_success .payment-successful-main .back-my-value { text-align: center; margin: 20px 16px 0 16px; height: 50px; border-radius: 4px; border: 1px solid #e4e4e4; font-weight: 500; color: #222222; font-size: 18px; box-sizing: border-box; line-height: 48px; }
+.recharge_success .payment-successful-main .recharge { height: 50px; background: #62a8ea; border-radius: 4px; font-weight: 500; color: white; font-size: 18px; text-align: center; line-height: 50px; margin: 0px 16px 0 16px; }
+
+/*# sourceMappingURL=payment-successful.css.map */

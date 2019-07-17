@@ -1,0 +1,222 @@
+html, body {
+    height: 100%;
+    background-color: #fff;
+}
+
+.bargain-address-select .index-main {
+    padding-bottom: 1.71875rem;
+}
+
+.bargain-address-select .index-main .nearby-shop {
+    background-color: #fff;
+}
+
+.bargain-address-select .index-main .nearby-shop .mt {
+    height: 1.25rem;
+    line-height: 1.25rem;
+    padding-left: 1.0625rem;
+    color: #526069;
+    font-size: 15px;
+    background: url(../../../media/images/diqu4.png) no-repeat 0.4375rem center/0.45313rem auto;
+}
+
+[data-dpr="2"] .bargain-address-select .index-main .nearby-shop .mt {
+    font-size: 30px;
+}
+
+[data-dpr="3"] .bargain-address-select .index-main .nearby-shop .mt {
+    font-size: 45px;
+}
+
+.bargain-address-select .index-main .nearby-shop .mt span {
+    font-size: 12px;
+}
+
+[data-dpr="2"] .bargain-address-select .index-main .nearby-shop .mt span {
+    font-size: 24px;
+}
+
+[data-dpr="3"] .bargain-address-select .index-main .nearby-shop .mt span {
+    font-size: 36px;
+}
+
+.bargain-address-select .index-main .nearby-shop .mt span {
+    font-size: 13px;
+}
+
+[data-dpr="2"] .bargain-address-select .index-main .nearby-shop .mt span {
+    font-size: 26px;
+}
+
+[data-dpr="3"] .bargain-address-select .index-main .nearby-shop .mt span {
+    font-size: 39px;
+}
+
+.bargain-address-select .index-main .nearby-shop .mc {
+    padding: 0 0.453125rem 1px 0.40625rem;
+}
+
+.bargain-address-select .index-main .nearby-shop .mc .item {
+    padding-left: 0.506667rem;
+    min-height: 1.71875rem;
+    margin-bottom: 0.46875rem;
+    position: relative;
+}
+
+.bargain-address-select .index-main .nearby-shop .mc .item .pic {
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bargain-address-select .index-main .nearby-shop .mc .item .pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.bargain-address-select .index-main .nearby-shop .mc .item .name {
+    color: #37474F;
+    line-height: 0.515625rem;
+    margin-bottom: 0.078125rem;
+    font-size: 12px;
+}
+
+[data-dpr="2"] .bargain-address-select .index-main .nearby-shop .mc .item .name {
+    font-size: 24px;
+}
+
+[data-dpr="3"] .bargain-address-select .index-main .nearby-shop .mc .item .name {
+    font-size: 36px;
+}
+
+.bargain-address-select .index-main .nearby-shop .mc .item span {
+    line-height: 0.46875rem;
+    color: #76838F;
+    font-size: 11px;
+}
+
+[data-dpr="2"] .bargain-address-select .index-main .nearby-shop .mc .item span {
+    font-size: 22px;
+}
+
+[data-dpr="3"] .bargain-address-select .index-main .nearby-shop .mc .item span {
+    font-size: 33px;
+}
+
+.bargain-address-select .index-main .nearby-shop .mc .item .addr {
+    margin-top: 0.1875rem;
+    line-height: 0.46875rem;
+    color: #76838F;
+    font-size: 11px;
+    max-height: 0.9375rem;
+    padding-left: 1.0625rem;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-dpr="2"] .bargain-address-select .index-main .nearby-shop .mc .item .addr {
+    font-size: 22px;
+}
+
+[data-dpr="3"] .bargain-address-select .index-main .nearby-shop .mc .item .addr {
+    font-size: 33px;
+}
+
+.bargain-address-select .index-main .nearby-shop .mc .item .addr i {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bargain-address-select .loding {
+    padding: 0.46875rem 0;
+    text-align: center;
+}
+
+.bargain-address-select .loding img {
+    width: 0.796875rem;
+    height: auto;
+}
+
+.bargain-address-select .zhiding {
+    position: fixed;
+    right: 0.15625rem;
+    bottom: 1.71875rem;
+    display: block;
+    width: 1.875rem;
+    height: 1.875rem;
+    background: url(../../../media/images/zhiding.png) no-repeat 0 0/1.875rem auto;
+}
+
+.bargain-address-select .consignee-addr2 {
+    background-color: #fff;
+    padding: 0.23875rem 0.40625rem 0.173333rem 0.40625rem;
+    position: relative;
+}
+
+.bargain-address-select .consignee-addr2 a {
+    position: relative;
+    display: block;
+    padding: 0 0.78125rem 0 0.5rem;
+}
+
+.bargain-address-select .consignee-addr2 span {
+    color: #526069;
+    font-size: 14px;
+    line-height: 0.625rem;
+}
+
+.bargain-address-select .consignee-addr2 .zt, .zt2 {
+    font-weight: bold;
+}
+
+.bargain-address-select .consignee-addr2 p {
+    padding-top: 0.078125rem;
+    min-height: 0.515625rem;
+    line-height: 0.515625rem;
+    color: #76838F;
+    font-size: 12px;
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.bargain-address-select .consignee-addr2 h5 {
+    width: 0.333333rem;
+    height: 0.333333rem;
+    position: absolute;
+    left: 0rem;
+    top: 0.15rem;
+}
+
+.bargain-address-select .consignee-addr2 h5 img {
+    width: 0.333333rem;
+    height: 0.373333rem;
+    vertical-align: top;
+}
+
+.bargain-address-select .consignee-addr2:after {
+    content: " ";
+    position: absolute;
+    left: 0.40625rem;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #E4EAEC;
+    color: #ACB3BE;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+/* 2018-12-27 */
+.bargain-address-select .consignee-addr2 a {
+    padding-right: 0;
+}
+
+/*# sourceMappingURL=delivery-address.css.map */

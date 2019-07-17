@@ -1,0 +1,62 @@
+.prescription-list { height: 100%; background-color: #f5f5f5; }
+
+.prescription-list .order-list { margin-bottom: 0.15625rem; }
+.prescription-list .order-list .hold-div-top { height: 1.40625rem; }
+.prescription-list .order-list .tab-tit { height: 1.40625rem; position: fixed; left: 0; top: 0; right: 0; z-index: 2; background-color: #f9f9f9; }
+.prescription-list .order-list .tab-tit .swiper-wrapper { z-index: 4; background-color: #FAFAFA; }
+.prescription-list .order-list .tab-tit .tab-nav li { width: auto; margin: 0 0.2rem 0 0.4375rem; }
+.prescription-list .order-list .tab-tit .tab-nav li a { color: #4B5963; line-height: 1.40625rem; font-size: 14px; position: relative; }
+[data-dpr="2"] .prescription-list .order-list .tab-tit .tab-nav li a { font-size: 28px; }
+[data-dpr="3"] .prescription-list .order-list .tab-tit .tab-nav li a { font-size: 42px; }
+.prescription-list .order-list .tab-tit .tab-nav li a span { display: block; min-width: 0.4375rem; height: 0.4375rem; text-align: center; line-height: 0.4rem; border: 1px solid #fff; color: #fff; font-size: 10px; border-radius: 0.21875rem; padding: 0 0.078125rem; position: absolute; top: -0.2rem; right: -0.21875rem; box-shadow: 0 0.03125rem 0.0625rem 0 rgba(0, 0, 0, 0.1); background-color: #62A8EA; }
+[data-dpr="2"] .prescription-list .order-list .tab-tit .tab-nav li a span { font-size: 20px; }
+[data-dpr="3"] .prescription-list .order-list .tab-tit .tab-nav li a span { font-size: 30px; }
+.prescription-list .order-list .tab-tit .tab-nav .cur { position: relative; }
+.prescription-list .order-list .tab-tit .tab-nav .cur a { color: #7CB6EE; }
+.prescription-list .order-list .tab-tit .tab-nav .cur:before { content: " "; display: inline-block; height: 0.0625rem; width: 0.4rem; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0.21875rem; background-color: #7CB6EE; box-shadow: 0 0.03125rem 0.09375rem 0 rgba(124, 182, 238, 0.6); border-radius: 0.0625rem; }
+.prescription-list .order-list .tab-tit .more { position: absolute; right: 0; top: 0; z-index: 5; }
+.prescription-list .order-list .tab-tit .more i { display: block; width: 1.40625rem; height: 1.40625rem; background-color: #f9f9f9; cursor: pointer; position: relative; }
+.prescription-list .order-list .tab-tit .more i:after { content: " "; display: inline-block; height: 0.15rem; width: 0.15rem; border-width: 0 0.046875rem 0.046875rem 0; border-color: #76838F; border-style: solid; -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); position: absolute; top: 50%; left: 50%; margin: -0.075rem 0 0 -0.075rem; z-index: 5; }
+.prescription-list .order-list .tab-tit .more .more-box { display: none; width: 100%; position: fixed; left: 0; top: 1.38rem; right: 0; z-index: 5; background-color: #F9F9F9; border-radius: 0 0 0.25rem 0.25rem; padding: 0.4375rem 0 0.28125rem 0.46875rem; overflow: hidden; }
+.prescription-list .order-list .tab-tit .more .more-box span { width: 2.8125rem; height: 0.9375rem; line-height: 0.9375rem; border-radius: 0.46875rem; text-align: center; color: #76838F; background-color: #fff; box-shadow: 0 0.03125rem 0.125rem 0 rgba(0, 0, 0, 0.1); font-size: 13px; float: left; margin: 0 0.3125rem 0.3125rem 0; cursor: pointer; }
+[data-dpr="2"] .prescription-list .order-list .tab-tit .more .more-box span { font-size: 26px; }
+[data-dpr="3"] .prescription-list .order-list .tab-tit .more .more-box span { font-size: 39px; }
+.prescription-list .order-list .tab-tit .more .more-box .selected { box-shadow: 0 0.03125rem 0.125rem 0 rgba(98, 168, 234, 0.6); color: #fff; background-color: #62A8EA; cursor: default; }
+.prescription-list .order-list .tab-tit .more .more-box:before { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 1px; border-top: 1px solid #d9d9d9; color: #d9d9d9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.prescription-list .order-list .tab-tit .mask-layer { display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 1; background-color: rgba(0, 5, 18, 0.4); }
+.prescription-list .order-list .tab-tit .more.active i:after { transform-origin: center; transform: rotate(-135deg); transition: transform .3s; }
+.prescription-list .order-list .tab-tit .more.active .more-box { display: block; }
+.prescription-list .order-list .tab-tit .more.active + .mask-layer { display: block; }
+.prescription-list .order-list .gd-cont { position: relative; overflow: hidden; }
+.prescription-list .order-list .gd-cont:before { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 1px; border-top: 1px solid #d9d9d9; color: #d9d9d9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.prescription-list .order-list .gd-box { margin-bottom: 0.15625rem; background-color: #fff; }
+.prescription-list .order-list .gd-box .mt { height: 1.40625rem; line-height: 1.40625rem; font-size: 13px; padding: 0 0.40625rem; position: relative; }
+[data-dpr="2"] .prescription-list .order-list .gd-box .mt { font-size: 26px; }
+[data-dpr="3"] .prescription-list .order-list .gd-box .mt { font-size: 39px; }
+.prescription-list .order-list .gd-box .mt:before { content: " "; position: absolute; left: 0.40625rem; bottom: 0; width: 100%; height: 1px; border-top: 1px solid #D9D9D9; color: #D9D9D9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.prescription-list .order-list .gd-box .mt .order-number { color: #76838F; font-size: 14px; font-weight: bold; }
+[data-dpr="2"] .prescription-list .order-list .gd-box .mt .order-number { font-size: 28px; }
+[data-dpr="3"] .prescription-list .order-list .gd-box .mt .order-number { font-size: 42px; }
+.prescription-list .order-list .gd-box .mt span { position: absolute; right: 0.40625rem; top: 0; color: #37474F; }
+.prescription-list .order-list .gd-box .mt .yello-color { color: #F2A654; }
+.prescription-list .order-list .gd-box .mc { padding: 0.46875rem 0 1px 0.40625rem; overflow: hidden; }
+.prescription-list .order-list .gd-box .mc .item { width: 1.5625rem; height: 1.5625rem; overflow: hidden; background-color: #F2F2F2; float: left; margin: 0 0.3125rem 0.46875rem 0; }
+.prescription-list .order-list .gd-box .mc .item img { width: 100%; height: 100%; }
+.prescription-list .order-list .gd-box .md { padding: 0 0.40625rem 0.46875rem 0; text-align: right; }
+.prescription-list .order-list .gd-box .md p { color: #666; font-size: 13px; }
+[data-dpr="2"] .prescription-list .order-list .gd-box .md p { font-size: 26px; }
+[data-dpr="3"] .prescription-list .order-list .gd-box .md p { font-size: 39px; }
+.prescription-list .order-list .gd-box .md p span { color: #333333; font-size: 13px; }
+[data-dpr="2"] .prescription-list .order-list .gd-box .md p span { font-size: 26px; }
+[data-dpr="3"] .prescription-list .order-list .gd-box .md p span { font-size: 39px; }
+.prescription-list .order-list .gd-box .md p i { color: #333333; font-size: 16px; }
+[data-dpr="2"] .prescription-list .order-list .gd-box .md p i { font-size: 32px; }
+[data-dpr="3"] .prescription-list .order-list .gd-box .md p i { font-size: 48px; }
+.prescription-list .order-list .gd-box .md .md-btn1 { display: inline-block; width: 2.34375rem; height: 0.875rem; text-align: center; line-height: 0.84375rem; border: 1px solid #ddd; border-radius: 0.4375rem; color: #76838F; font-size: 13px; margin-top: 0.3125rem; }
+[data-dpr="2"] .prescription-list .order-list .gd-box .md .md-btn1 { font-size: 26px; }
+[data-dpr="3"] .prescription-list .order-list .gd-box .md .md-btn1 { font-size: 39px; }
+.prescription-list .order-list .gd-box .md .md-btn2 { display: inline-block; width: 2.34375rem; height: 0.875rem; text-align: center; line-height: 0.875rem; background-color: #62A8EA; border-radius: 0.4375rem; color: #fff; font-size: 13px; margin-top: 0.3125rem; margin-left: 0.3125rem; }
+[data-dpr="2"] .prescription-list .order-list .gd-box .md .md-btn2 { font-size: 26px; }
+[data-dpr="3"] .prescription-list .order-list .gd-box .md .md-btn2 { font-size: 39px; }
+
+/*# sourceMappingURL=pai-order-list.css.map */

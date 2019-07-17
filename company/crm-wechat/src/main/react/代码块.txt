@@ -1,0 +1,304 @@
+——目录结构
+
+——build：编译打包产生的输出文件。也是web应用所访问的文件
+——config：配置文件。环境变量、路径、打包等配置
+——public：存放html或者第三方库，不会被webpack处理的文件放在这里
+——scripts：node脚本
+——src：所有页面的源码
+    ——media：多媒体、静态资源
+        ——images：图片
+        ——audio：音频
+        ——video：视频
+    ——module：页面模块
+        ——example：示例模块
+            ——actions：行为方法
+            ——components：页面组件
+            ——constants：常量
+            ——reducers：数据中心。reducer、state
+            ——style：样式
+    ——util：公共脚本、工具脚本
+
+
+
+
+——组件定义
+1、展示组件（仅用于数据展示，无复杂逻辑，参考Example3.js）
+import React from 'react';
+const XXX = (props)=>{
+    return (
+        <div >
+            <h1>这是展示组件</h1>
+        </div>
+    )
+};
+2、容器组件（一般一个页面对应一个容器组件，里面会引入其他的展示组件作为子组件，除了数据展示还有复杂的业务逻辑，参考Example1.js）
+import React, { Component } from 'react';
+class XXX extends Component {
+    //定义业务逻辑
+    xxx(){
+    }
+    render() {
+        return (
+            <div >
+               这是容器组件
+            </div>
+        )
+    }
+}
+
+
+
+——import注意事项
+import XXX from 'abc' 与 import {XXX} from 'abc' 的区别？什么时候要加{}符号？
+1、如果abc.js中使用了：export default XXX，则不需要使用{}，并且引入时可以自定义引入后的名字
+2、如果abc.js中没有：export default XXX，而是：export XXX，则需要添加{}，并且引入的名字必须与export的名字一致
+3、所以我们的页面都需要添加：export default XXX 而不是：export XXX
+
+
+
+
+
+——引入样式
+1、每个页面都可以引入自己的私有的样式，比如：import '../style/Example1.css'
+2、但是因为我们是单页面应用，所以会出现一个问题：样式冲突
+    解决方法：1）每个页面组件都需要在根标签中添加一个以组件的名字命名的class，如Example2.js中根节点是<div className={'example2'}>
+              2）然后在页面组件的私有样式文件中添加对应的class前缀，如Example2.css中，所有样式都含有.example2前缀
+
+
+
+
+
+——引入图片等文件，参考Example2.js
+1、import logo from '../../../media/images/exampleLogo.svg'
+2、<img src={logo}/>
+
+
+
+
+
+——获取某个dom节点
+    尽量使用ref，减少对jQuery的使用（react的思路就是不需要自己去操作dom）
+    比如 <input onChange={this.setName.bind(this)} ref={'nameInput'}/>
+    在运行中可以通过 let nameInput = this.refs.nameInput;获取到该input的dom节点
+
+
+
+
+——使用jQuery，能不用就不要用。获取dom节点用ref属性，服务请求使用fetch不用ajax
+    因为react的本质就是虚拟dom，不提倡自己手动去操作dom。很多操作都可以不依赖jq就可以直接完成了。
+    所以尽量少使用jq去操作dom，但是jq还是有不少我们熟悉的工具方法可以使用
+    这时候可以使用 import $ from 'jquery' 引入到当前页面使用
+
+
+
+
+——使用fetch发起服务请求
+1、不要用jquery的ajax，为了使用ajax就需要引入jQuery，不值得（对移动端来讲，jq有点大）
+2、项目已经配置了一个全局的fetch API，所以我们现在可以直接调用fetch方法，不需要自己手动引入
+3、在common.js下的jsonFetch对fetch进行了一个二次封装，一般情况下我们都直接使用jsonFetch即可，因为它可以减少你的代码并且对请求错误做了统一处理
+4、使用：window.jsonFetch()
+
+
+
+
+——读取 state 的值，参考Example1.js
+    1、首先需要配置mapStateToProps
+    const mapStateToProps = (store, ownProps) => {
+        return {
+            exampleState:store.exampleState
+        }
+    };
+    2、经过mapStateToProps方法的处理，exampleState 已经被添加到this.props中，所以可以直接使用this.props.exampleState读取到整个exampleState
+
+
+
+
+
+——类型检测，参考Example3.js
+引入：import PropTypes from 'prop-types';
+使用：
+Example3.propTypes = {
+       name:PropTypes.string.isRequired,
+       age:PropTypes.number
+};
+
+
+
+
+——获取路由的参数，参考Example2.js
+1、路径参数（适合参数的个数固定不变的情况。比如详情页面带上id）
+    1）路由格式：/product/:id
+    2）获取：let name = this.props.match.params.id
+2、查询参数（适合参数的个数不固定的情况。比如列表页面带上查询参数）
+    1）路由格式：/xxxx?key=value
+    2）获取：this.props.location.search，获取到的值是?key=value格式的字符串
+    3）遗憾的是，我们不能this.props.location.search.age获取到age属性值，只能获取到一个字符串。最后需要自己手动解析成可读参数
+
+
+
+
+
+——页面跳转(禁止使用a标签跳转，也禁止使用window.location.href手动跳转），参考Example2.js
+    1、标签类型的跳转。使用Link，URL会更新，组件会被重新渲染，但是页面不会重新加载。
+        1）引入Link：import { Link } from 'react-router-dom'
+        2）使用：<Link to='/example1'>点我跳转到example1</Link>
+        3）其中to的值就是MenuRouter中配置的路由值
+
+    2、js类型的跳转。
+        1）跳转到新页面：this.props.history.push('/example1')
+        2）返回上一页：this.props.history.goBack();
+
+
+
+
+
+
+——变量修饰符
+1、const：定义常量时用
+const name = "chencheng";//const表示常量，类似java的final
+name = "hello";//编译出错，常量不能被修改，必须在定义时赋值
+2、var：现在一般放在方法外部使用
+var name ;//在方法中定义作为局部变量，在方法外定义作为全局变量
+name = "chencheng";//var定义的变量可以修改，如果不初始化会输出undefined，不会报错。
+3、let：局部变量尽量用let
+let name = "chencheng";//let是块级作用域，函数内部使用let定义后，对函数外部无影响。
+name = "hello"//与var的主要区别就是作用域不同
+
+
+
+
+
+——使用{}赋值，可同时赋值多个变量
+var object = {
+    name:"chencheng",
+    age:18,
+    address:"xxx"
+}
+var {name,age} = object 等价 var name = object.name; var age = object.age;
+
+
+
+
+——使用||给变量添加默认值（如果是数字的话，注意0的影响，在js中0会被当成false）
+var name = state.name || 'chencheng'
+等价于
+var name = state.name;
+if (name === null || typeof name === 'undefined' || name === '' || name.length === 0){
+    name = 'chencheng'
+}
+
+
+
+
+
+
+——方法默认参数
+function (a=1,b){}
+等价于
+function (a,b){
+    if (typeof a === 'undefined'){
+        a=1;
+    }
+}
+
+
+
+
+
+——箭头函数，很多地方都可以使用箭头函数，方便快捷
+1、name => console.log(name) 或 (name)=>{console.log(name)}
+等价于
+function(name){
+    console.log(name)
+}
+2、(a,b) => return a+b
+等价于
+function(a,b){
+    return a+b;
+}
+
+
+
+
+
+——三种没有按钮的消息提示，2秒后自动消失（详情查看common.js)
+        操作成功用success，操作失败用error，验证等提示用warning
+window.successTip('操作成功');
+window.errorTip('操作失败');
+window.warningTip('请填写姓名');
+
+
+
+
+
+—— 三种不会自动消失的消息提示，需要用户手动点击关闭（详情查看common.js)
+        操作成功用success，操作失败用error，提示用warning
+window.successAlert('操作成功','系统提示');//可以自定义标题跟内容
+window.errorAlert('操作失败');//也可以不写标题，只写消息内容
+window.warningAlert('一切后果自负');
+
+
+
+
+
+——显示一个可定制的对话框，有确认、取消按钮（详情查看common.js)
+    当需要用户选择确认或取消时用
+window.showConfirm(
+    '确认删除吗？',//对话内容
+    ()=>{
+        //确认删除
+    },
+    ()=>{
+        //取消删除
+    },
+    '删除',//确认按钮文字
+    '取消'//取消按钮文字
+);
+
+
+
+
+——时间格式化
+    初始化：重新执行install.bat脚本
+    导入：import moment from 'moment'
+    使用：moment(order.createTime).format('YYYY-MM-DD HH:mm:ss')
+    常用方法参考：http://momentjs.cn/
+
+
+
+——对象合并
+let data1 = {
+    name:'chenceng',
+    address:'广东软件园'
+};
+let data2={
+    name:'陈成',
+    age:18
+};
+//对象合并，类似java的 copyProperties(source, target)
+let newObj = Object.assign({},data2, data1);
+console.log(data1);
+console.log(data2);
+console.log(newObj)
+
+
+
+——map与forEach区别
+let arr = [1, 2, 3, 4];
+let mapArr = arr.map(item=>{
+    return item * 2;
+});
+let eachArr = arr.forEach(item=>{
+    return item * 2;
+});
+console.log(arr);// [1, 2, 3, 4]
+console.log(mapArr);// [2, 4, 6, 8]
+console.log(eachArr);// undefined
+
+
+
+——数组追加
+let arr1 = [1,2,3];
+let arr2 = [4,5,6];
+let arr3 = arr1.concat(arr2);
+console.log(arr3);//[1,2,3,4,5,6]

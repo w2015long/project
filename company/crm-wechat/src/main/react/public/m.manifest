@@ -1,0 +1,9 @@
+CACHE MANIFEST
+20181105143912
+# 直接缓存的文件d
+CACHE:
+# 需要在时间在线的文件
+NETWORK:
+*
+# 替代方案
+FALLBACK:

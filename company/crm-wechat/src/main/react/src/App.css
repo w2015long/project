@@ -1,0 +1,39 @@
+/* CSS Document */
+*{margin:0;padding:0;box-sizing: border-box;}
+html,body{background-color: #fff; color: #666;font: 12px/1 PingFangSC-Regular, Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;}
+body, button, input, select, textarea{font: 12px/1 PingFangSC-Regular, Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif; outline:none;}
+em,i{font-style:normal}
+li{list-style: none }
+img{border: 0; vertical-align: middle;  }
+button{cursor: pointer;border-radius: 0;}
+input{font-family:inherit; border-radius: 0; margin: 0; padding: 0; border: none;outline: none;}
+a{color: #666; text-decoration: none; }
+a:hover{color: #333;}
+a:active,a:focus{-moz-outline:none; outline:none; text-decoration:none;}/* 去掉a链接点击过后的虚线边框 */
+h1, h2, h3, h4, h5, h6 {font-size: 100%}
+address, cite, dfn, em, var { font-style: normal}
+code, kbd, pre, samp {font-family: courier new, courier, monospace }
+table {border-collapse: collapse; border-spacing: 0 }
+button, input, select, textarea {font-size: 100% }
+del{text-decoration:line-through;}/* 一致的 del 样式 */
+a,button,input,optgroup,select,textarea,label { -webkit-tap-highlight-color: rgba(0,0,0,0); }/*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+td,pre{white-space: pre-wrap;word-wrap: break-word;}/* pre 可以换行*/
+th {text-align:inherit;}/* ie bug：th 不继承 text-align */
+iframe{display:block;}/* ie6 7 8(q) bug 显示为行内表现 */
+em,i{font-style: normal;}
+html,body{min-height: 100%; background-color: #F5F5F5; -ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color:transparent;}
+input[type="number"]{-moz-appearance:textfield;}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {-webkit-appearance: none;margin: 0;}
+
+.fl{float:left;}/* 设置浮动，减少浮动带来的 bug */
+.fr{float:right;}
+.elli{overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}/* 单行多出省略号.... */
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{zoom:1; /* for ie6 & ie7 */}
+
+
+
+
+
+

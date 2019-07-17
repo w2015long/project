@@ -1,0 +1,218 @@
+html, body {
+    height: 100%;
+}
+
+.new-year-special {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: #6e0301;
+    padding-bottom: 1.3625rem;
+}
+
+.new-year-special .inner {
+    width: 10rem;
+    margin: 0 auto;
+    min-height: 100.1%;
+    min-height: calc(100% + 1px);
+}
+
+.new-year-special .sp-top img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.new-year-special .get-coupon {
+    position: relative;
+}
+
+.new-year-special .get-coupon img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.new-year-special .get-coupon a {
+    display: block;
+    width: 90%;
+    height: 2.8rem;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+}
+
+.new-year-special .subject-item {
+    position: relative;
+}
+
+.new-year-special .subject-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -1px;
+}
+
+.new-year-special .sub-m2 .gd-link1 {
+    position: absolute;
+    display: block;
+    width: 90%;
+    left: 5%;
+    top: 2.5rem;
+    height: 6.9rem;
+}
+
+.new-year-special .sub-m2 .gd-link2 {
+    position: absolute;
+    display: block;
+    width: 92%;
+    left: 4%;
+    top: 9.9rem;
+    height: 6.9rem;
+}
+
+.new-year-special .sub-m2 .gd-link3 {
+    position: absolute;
+    display: block;
+    width: 92%;
+    left: 4%;
+    top: 17.2rem;
+    height: 6.9rem;
+}
+
+.new-year-special .sub-m2 .gd-link4 {
+    position: absolute;
+    display: block;
+    width: 90%;
+    left: 5%;
+    top: 24.6rem;
+    height: 6.9rem;
+}
+
+.new-year-special .sub-m2 .gd-link5 {
+    position: absolute;
+    display: block;
+    width: 92%;
+    left: 4%;
+    top: 32rem;
+    height: 6.9rem;
+}
+
+.new-year-special .sub-m2 .gd-link6 {
+    position: absolute;
+    display: block;
+    width: 92%;
+    left: 4%;
+    top: 39.3rem;
+    height: 6.9rem;
+}
+
+.new-year-special .sub-m3 .gd-link1 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    left: 7.5%;
+    top: 2.5rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link2 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    right: 7.5%;
+    top: 2.5rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link3 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    left: 7.5%;
+    top: 8.6rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link4 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    right: 7.5%;
+    top: 8.6rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link5 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    left: 7.5%;
+    top: 14.7rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link6 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    right: 7.5%;
+    top: 14.7rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link7 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    left: 7.5%;
+    top: 20.9rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link8 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    right: 7.5%;
+    top: 20.9rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link9 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    left: 7.5%;
+    top: 27rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link10 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    right: 7.5%;
+    top: 27rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link11 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    left: 7.5%;
+    top: 33.1rem;
+    height: 5.8rem;
+}
+
+.new-year-special .sub-m3 .gd-link12 {
+    position: absolute;
+    display: block;
+    width: 41%;
+    right: 7.5%;
+    top: 33.1rem;
+    height: 5.8rem;
+}
+
+/*# sourceMappingURL=new-year-special.css.map */

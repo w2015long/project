@@ -1,0 +1,19 @@
+.order-product-comment { height: 100%; background-color: #f5f5f5; }
+
+.order-product-comment .my-comment .item { margin-bottom: 0.15625rem; }
+.order-product-comment .my-comment .item .item-hd { height: 1.25rem; background-color: #fff; }
+.order-product-comment .my-comment .item .item-hd a { display: block; height: 1.25rem; padding-left: 0.40625rem; color: #37474F; line-height: 1.25rem; font-size: 13px; position: relative; }
+[data-dpr="2"] .order-product-comment .my-comment .item .item-hd a { font-size: 26px; }
+[data-dpr="3"] .order-product-comment .my-comment .item .item-hd a { font-size: 39px; }
+.order-product-comment .my-comment .item .item-hd a:before { content: ''; width: 0.09375rem; height: 0.5rem; position: absolute; left: 0; top: 0.375rem; background-color: #62A8EA; }
+.order-product-comment .my-comment .item .item-hd a:after { content: " "; display: inline-block; height: 0.1875rem; width: 0.1875rem; border-width: 0.03125rem 0.03125rem 0 0; border-color: #ACB3BE; border-style: solid; -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); position: absolute; top: 50%; margin-top: -0.094rem; right: 0.40625rem; }
+.order-product-comment .my-comment .item .item-bd { background-color: #fafafa; padding: 0.46875rem 0 0.15625rem 0.625rem; overflow: hidden; }
+.order-product-comment .my-comment .item .item-bd .pic { width: 1.875rem; height: 1.875rem; float: left; margin: 0 0.3125rem 0.3125rem 0; }
+.order-product-comment .my-comment .item .item-bd .pic img { width: 100%; height: 100%; }
+.order-product-comment .my-comment .item .item-ft { height: 1.09375rem; line-height: 1.09375rem; display: flex; background-color: #fff; padding: 0 0.40625rem; justify-content: space-between; font-size: 11px; }
+[data-dpr="2"] .order-product-comment .my-comment .item .item-ft { font-size: 22px; }
+[data-dpr="3"] .order-product-comment .my-comment .item .item-ft { font-size: 33px; }
+.order-product-comment .my-comment .item .item-ft .ft-lt { padding-left: 0.53125rem; color: #76838F; background: url(../../../media/images/icon24x24.png) no-repeat 0 center/0.375rem auto; }
+.order-product-comment .my-comment .item .item-ft .ft-rt { color: #76838F; }
+
+/*# sourceMappingURL=my-comment.css.map */

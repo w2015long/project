@@ -1,0 +1,7 @@
+
+/* 2018-12-04 */
+.activity-layer.layer-box { position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 9999; }
+.activity-layer.layer-box .mask { position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 31; }
+.activity-layer.layer-box .cont { width: 8.4375rem; min-height: 4rem; padding-bottom: 0.546875rem; position: absolute; left: 50%; top: 15%; transform: translateX(-50%); z-index: 32; }
+.activity-layer.layer-box .cont img { width: 100%; height: auto; }
+.activity-layer.layer-box .cont .close-btn { position: absolute; left: 50%; transform: translateX(-50%); bottom: -1.25rem; display: block; width: 0.75rem; height: 0.75rem; background: url(../../../media/images/chachu.png) no-repeat 0 0/100% 100%; }

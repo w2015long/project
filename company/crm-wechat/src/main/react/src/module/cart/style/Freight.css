@@ -1,0 +1,16 @@
+.freight .freight-layer { background: rgba(0, 0, 0, 0.4); position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 12; }
+.freight .freight-layer .freight-box { background-color: #fff; position: absolute; left: 0; right: 0; bottom: 0; border-radius: 0.25rem 0.25rem 0 0; }
+.freight .freight-layer .freight-box .mt { height: 1.40625rem; line-height: 1.40625rem; position: relative; text-align: center; color: #333; font-size: 14px; }
+[data-dpr="2"] .freight .freight-layer .freight-box .mt { font-size: 28px; }
+[data-dpr="3"] .freight .freight-layer .freight-box .mt { font-size: 42px; }
+.freight .freight-layer .freight-box .mt:before { content: " "; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; border-top: 1px solid #D9D9D9; color: #D9D9D9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.freight .freight-layer .freight-box .mt .close { display: block; width: 1rem; height: 1rem; background: url(../../../media/images/icon-del3.png) no-repeat center center/auto 0.29688rem; position: absolute; right: 0; top: 0.1875rem; }
+.freight .freight-layer .freight-box .mc { padding: 0.533333rem 0.266667rem 0.266667rem 0.346667rem; min-height: 4rem; }
+.freight .freight-layer .freight-box .mc p { margin-bottom: 0.266667rem; color: #374750; font-size: 14px; }
+[data-dpr="2"] .freight .freight-layer .freight-box .mc p { font-size: 28px; }
+[data-dpr="3"] .freight .freight-layer .freight-box .mc p { font-size: 42px; }
+.freight .freight-layer .freight-box .md { padding: 0.3125rem 0; position: relative; height: 1.5625rem; }
+.freight .freight-layer .freight-box .md a { display: block; width: 7.5rem; height: 0.9375rem; line-height: 0.9375rem; margin: 0 auto; text-align: center; color: #fff; font-size: 13px; background-color: #62A8EA; border-radius: 0.46875rem; box-shadow: 0 0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.6); }
+[data-dpr="2"] .freight .freight-layer .freight-box .md a { font-size: 26px; }
+[data-dpr="3"] .freight .freight-layer .freight-box .md a { font-size: 39px; }
+.freight .freight-layer .freight-box .md:before { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 1px; border-top: 1px solid #D9D9D9; color: #D9D9D9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }

@@ -1,0 +1,7 @@
+/*这里是Example1的私有样式， 可以覆盖公用样式*/
+.example1{
+    font-size: 36px;
+}
+.example1 .test{
+    font-size: 36px;
+}

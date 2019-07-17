@@ -1,0 +1,38 @@
+html, body { height: 100%; background-color: #fff; }
+
+.product-classify .index-search-main { padding-top: 1.515625rem; overflow: hidden; }
+.product-classify .index-search-main .mt { position: fixed; left: 0; right: 0; top: 0; padding: 0.3125rem 0.40625rem; background-color: #fff; z-index: 3; }
+.product-classify .index-search-main .mt .search-box { position: relative; }
+.product-classify .index-search-main .mt .search-box input { display: block; width: 100%; height: 0.890625rem; border: 1px solid #E4EAEC; color: #333; font-size: 12px; border-radius: 0.4375rem; padding-left: 1.09375rem; background-color: #fff; }
+[data-dpr="2"] .product-classify .index-search-main .mt .search-box input { font-size: 24px; }
+[data-dpr="3"] .product-classify .index-search-main .mt .search-box input { font-size: 36px; }
+.product-classify .index-search-main .mt .search-box .search-btn { display: block; width: 0.890625rem; height: 0.890625rem; position: absolute; left: 0.15625rem; top: 0; background: url(../../../media/images/sousuo.png) no-repeat center center/0.45313rem auto; }
+.product-classify .index-search-main .mt .search-box .del-btn { display: none; width: 0.890625rem; height: 0.890625rem; position: absolute; right: 0; top: 0; background: url(../../../media/images/guanbi.png) no-repeat center center/0.45313rem auto; }
+.product-classify .index-search-main .mt .search-focus input { border: 1px solid #64A9EB; }
+.product-classify .index-search-main .mt .search-focus .del-btn { display: block; }
+.product-classify .index-search-main .mt .search-result { background-color: #F8F8F8; }
+.product-classify .index-search-main .mt .search-result .del-btn { display: block; }
+.product-classify .index-search-main .mc { padding-left: 27%; }
+.product-classify .index-search-main .mc-nav { position: fixed; left: 0; top: 1.5625rem; width: 27%; padding: 0.140625rem 0 0 0.09375rem; bottom: 0; background-color: #F8F8F8; }
+.product-classify .index-search-main .mc-nav ul { height: 100%; overflow-y: auto; }
+.product-classify .index-search-main .mc-nav li { padding: 0.25rem 0 0.25rem 0.28125rem; cursor: pointer; }
+.product-classify .index-search-main .mc-nav li span { display: block; height: 0.59375rem; line-height: 0.59375rem; color: #76838F; font-size: 13px; overflow: hidden; }
+[data-dpr="2"] .product-classify .index-search-main .mc-nav li span { font-size: 26px; }
+[data-dpr="3"] .product-classify .index-search-main .mc-nav li span { font-size: 39px; }
+.product-classify .index-search-main .mc-nav .cur { position: relative; background-color: #fff; }
+.product-classify .index-search-main .mc-nav .cur:before { content: ''; display: block; width: 0.0625rem; height: 0.46875rem; border-radius: 0.03125rem; background-color: #62A8EA; position: absolute; left: 0; top: 50%; margin-top: -0.234375rem; }
+.product-classify .index-search-main .mc-nav .cur a { color: #68ACEB; }
+.product-classify .index-search-main .mc-nav .cur span { color: #68ACEB; }
+.product-classify .index-search-main .mc-cont .item { padding: 0.328125rem 0 0.328125rem 0.375rem; }
+.product-classify .index-search-main .mc-cont .item dl { margin-bottom: 0.15625rem; }
+.product-classify .index-search-main .mc-cont .item dt { height: 0.578125rem; line-height: 0.578125rem; overflow: hidden; }
+.product-classify .index-search-main .mc-cont .item dt a { position: relative; color: #76838F; font-weight: bold; font-size: 13px; }
+[data-dpr="2"] .product-classify .index-search-main .mc-cont .item dt a { font-size: 26px; }
+[data-dpr="3"] .product-classify .index-search-main .mc-cont .item dt a { font-size: 39px; }
+.product-classify .index-search-main .mc-cont .item dt a:before { content: ''; display: block; width: 0.15625rem; height: 0.15625rem; border-right: 0.046875rem solid #ACB3BE; border-bottom: 0.046875rem solid #ACB3BE; position: absolute; right: -0.328125rem; top: 50%; margin-top: -0.115rem; transform: rotate(-45deg); }
+.product-classify .index-search-main .mc-cont .item dd { padding-top: 0.359375rem; overflow: hidden; }
+.product-classify .index-search-main .mc-cont .item dd a { float: left; display: inline-block; min-width: 2.03125rem; line-height: 0.515625rem; padding: 0.125rem 0.15625rem; text-align: center; color: #526069; font-size: 12px; border: 1px solid #DDDDDD; border-radius: 0.078125rem; margin: 0 0.234375rem 0.234375rem 0; }
+[data-dpr="2"] .product-classify .index-search-main .mc-cont .item dd a { font-size: 24px; }
+[data-dpr="3"] .product-classify .index-search-main .mc-cont .item dd a { font-size: 36px; }
+
+/*# sourceMappingURL=classify.css.map */

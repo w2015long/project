@@ -1,0 +1,41 @@
+.points-main { height: 100%; background-color: #fff; }
+.points-main .div-top{    height: 1.375rem;}
+.points-main .mt { height: 1.375rem; padding: 0 0.40625rem; position: fixed;left: 0;right: 0; top:0;
+    background-color: #fff; z-index: 12; }
+.points-main .mt:before { content: " "; position: absolute; left: 0.40625rem; bottom: 0; width: 100%; height: 1px; border-top: 1px solid #EEEEEE; color: #EEEEEE; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.points-main .mt .mt-lt { float: left; color: #37474F; font-size: 14px; line-height: 1.375rem; font-weight: bold; }
+[data-dpr="2"] .points-main .mt .mt-lt { font-size: 28px; }
+[data-dpr="3"] .points-main .mt .mt-lt { font-size: 42px; }
+.points-main .mt .mt-rt { float: right; }
+.points-main .mt .mt-rt dt { height: 1.375rem; position: relative; }
+.points-main .mt .mt-rt dt span { line-height: 1.375rem; color: #76838F; font-size: 13px; cursor: pointer; padding-right: 0.40625rem; position: relative; }
+[data-dpr="2"] .points-main .mt .mt-rt dt span { font-size: 26px; }
+[data-dpr="3"] .points-main .mt .mt-rt dt span { font-size: 39px; }
+.points-main .mt .mt-rt dt span:after { content: " "; display: inline-block; height: 0.125rem; width: 0.125rem; border-width: 0 0.046875rem 0.046875rem 0; border-color: #ACB3BE; border-style: solid; -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); position: absolute; top: 50%; margin-top: -0.09rem; right: 0; }
+.points-main .mt .mt-rt dd { display: none; width: 3.4375rem; position: absolute; top: 1.09375rem; right: 0.25rem; z-index: 3; box-shadow: 0 0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.5); background-color: #62A8EA; border-radius: 0.25rem; }
+.points-main .mt .mt-rt .item { height: 1rem; line-height: 1rem; overflow: hidden; }
+.points-main .mt .mt-rt .item span { display: block; color: #FFFFFF; font-size: 13px; text-align: center; cursor: pointer; }
+[data-dpr="2"] .points-main .mt .mt-rt .item span { font-size: 26px; }
+[data-dpr="3"] .points-main .mt .mt-rt .item span { font-size: 39px; }
+.points-main .mt .active dt span { color: #62A8EA; }
+.points-main .mt .active dt span:after { transform-origin: center; transform: rotate(-135deg); transition: transform .3s; margin-top: 0; border-color: #62A8EA; }
+.points-main .mt .active dd { display: block; }
+.points-main .mc { padding-top: 0.15625rem; }
+.points-main .mc h5 { height: 1.25rem; line-height: 1.25rem; padding-left: 0.625rem; color: #526069; font-size: 14px; position: relative;
+    background-color: #fff;}
+[data-dpr="2"] .points-main .mc h5 { font-size: 28px; }
+[data-dpr="3"] .points-main .mc h5 { font-size: 42px; }
+.points-main .mc h5:before { display: block; width: 0.0625rem; height: 0.40625rem; border-radius: 0.03125rem; background-color: #7CB6EE; content: ''; position: absolute; top: 0.421875rem; left: 0.40625rem; }
+.points-main .mc .item { padding: 0 0.40625rem; position: relative; background-color: #fff; display: -webkit-box; display: -webkit-flex; display: flex; justify-content: space-between; -webkit-box-align: center; -webkit-align-items: center; align-items: center; }
+.points-main .mc .cell-hd { padding: 0.15625rem 0 0.234375rem; }
+.points-main .mc .cell-hd p { color: #526069; font-size: 14px; line-height: 0.625rem; margin-bottom: 0.078125rem; }
+[data-dpr="2"] .points-main .mc .cell-hd p { font-size: 28px; }
+[data-dpr="3"] .points-main .mc .cell-hd p { font-size: 42px; }
+.points-main .mc .cell-hd span { color: #A3AFB7; font-size: 11px; line-height: 0.46875rem; }
+[data-dpr="2"] .points-main .mc .cell-hd span { font-size: 22px; }
+[data-dpr="3"] .points-main .mc .cell-hd span { font-size: 33px; }
+.points-main .mc .cell-bd { text-align: right; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+.points-main .mc .cell-bd span { color: #76838F; line-height: 0.625rem; }
+.points-main .mc .item:before { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-top: 1px solid #e5e5e5; color: #e5e5e5; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); left: 0.40625rem; z-index: 2; }
+
+/*# sourceMappingURL=points-record.css.map */

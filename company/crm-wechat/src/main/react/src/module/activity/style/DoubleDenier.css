@@ -1,0 +1,358 @@
+html, body {
+    height: 100%;
+}
+
+.double_denier {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: #21b192;
+    padding-bottom: 1.3625rem;
+}
+
+.double_denier .inner {
+    width: 10rem;
+    margin: 0 auto;
+    min-height: 1000.1%;
+    min-height: calc(100% + 1px);
+}
+
+.double_denier .get-coupon {
+    position: relative;
+}
+
+.double_denier .get-coupon img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.double_denier .get-coupon a {
+    display: block;
+    width: 92%;
+    height: 5.3rem;
+    position: absolute;
+    left: 4%;
+    bottom: 0.5rem;
+}
+
+.double_denier .subject-item {
+    position: relative;
+    width: 10rem;
+    height: auto;
+}
+
+.double_denier .subject-item img {
+    display: block;
+    width: 10rem;
+    height: auto;
+    margin-top: -1px;
+}
+
+.double_denier .sub-m1 .gd-link1 {
+    position: absolute;
+    display: block;
+    width: 92%;
+    left: 4%;
+    top: 4.5rem;
+    height: 8.7rem;
+}
+
+.double_denier .sub-m1 .gd-link2 {
+    position: absolute;
+    display: block;
+    width: 92%;
+    left: 4%;
+    top: 13.9rem;
+    height: 8.7rem;
+}
+
+.double_denier .sub-m1 .gd-link3 {
+    position: absolute;
+    display: block;
+    width: 92%;
+    left: 4%;
+    bottom: 0.6rem;
+    height: 8.7rem;
+}
+
+.double_denier .sub-m2 .gd-link1 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 1.4rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link2 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 1.4rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link3 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 8.6rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link4 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 8.6rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link5 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 15.7rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link6 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 15.7rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link7 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 22.8rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link8 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 22.8rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link9 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 29.85rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link10 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 29.85rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link11 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 37rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m2 .gd-link12 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 37rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m3 .gd-link1 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 1.5rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m3 .gd-link2 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 1.5rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m3 .gd-link3 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 8.7rem;
+    height: 7.5rem;
+}
+
+.double_denier .sub-m3 .gd-link4 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 8.7rem;
+    height: 7.5rem;
+}
+
+.double_denier .sub-m4 .gd-link1 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 1.3rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m4 .gd-link2 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 1.3rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m4 .gd-link3 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 8.5rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m4 .gd-link4 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 8.5rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m4 .gd-link5 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 15.6rem;
+    height: 7.5rem;
+}
+
+.double_denier .sub-m4 .gd-link6 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 15.6rem;
+    height: 7.5rem;
+}
+
+.double_denier .sub-m5 .gd-link1 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 1.6rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m5 .gd-link2 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 1.6rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m5 .gd-link3 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 8.8rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m5 .gd-link4 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 8.8rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m5 .gd-link5 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 15.9rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m5 .gd-link6 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 15.9rem;
+    height: 7rem;
+}
+
+.double_denier .sub-m5 .gd-link7 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    left: 4%;
+    top: 23.2rem;
+    height: 7.5rem;
+}
+
+.double_denier .sub-m5 .gd-link8 {
+    position: absolute;
+    display: block;
+    width: 46%;
+    right: 4%;
+    top: 23.2rem;
+    height: 7.5rem;
+}
+
+.double_denier .sub-m6 .go-back {
+    position: absolute;
+    display: block;
+    width: 54%;
+    left: 23%;
+    top: 0.8rem;
+    height: 0.9rem;
+}
+
+/*# sourceMappingURL=double_denier.css.map */

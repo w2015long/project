@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*1px 像素线*/
+/*继承 @extend .setTopLine;*/
+.billingDetailsDiv { height: 100%; background: #fff; }
+
+.billingDetailsDiv .stored-value-consumption-main { border-top: 14px solid #f0f0f0; }
+.billingDetailsDiv .stored-value-consumption-main .stroed-top { background: #fff; padding: 30px 16px; position: relative; }
+.billingDetailsDiv .stored-value-consumption-main .stroed-top p { font-weight: 500; color: #666666; font-size: 16px; }
+.billingDetailsDiv .stored-value-consumption-main .stroed-top h5 { font-weight: 600; color: #222222; font-size: 30px; margin-top: 15px; }
+.billingDetailsDiv .stored-value-consumption-main .stroed-top:after { content: ''; position: absolute; height: 1px; background: #e4e4e4; left: 16px; right: 16px; bottom: 0; }
+.billingDetailsDiv .stored-value-consumption-main .tipstext-box { padding: 12px 32px 12px 16px; background: #fff; }
+.billingDetailsDiv .stored-value-consumption-main .tipstext-box .item { padding: 7px 0; display: -webkit-box; display: -webkit-flex; display: flex; }
+.billingDetailsDiv .stored-value-consumption-main .tipstext-box .item .item-l { width: 90px; font-weight: 500; color: #666666; font-size: 14px; line-height: 20px; }
+.billingDetailsDiv .stored-value-consumption-main .tipstext-box .item .item-r { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; font-weight: 500; color: #999; font-size: 14px; line-height: 20px; }
+
+/*# sourceMappingURL=stored-value-consumption.css.map */

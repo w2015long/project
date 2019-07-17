@@ -1,0 +1,6 @@
+.loading-main { background: #fff; height: 100%; }
+.loading-main h5 { color: #222222; font-size: 13px; text-align: center; padding-top: 4.506667rem; line-height: 0.493333rem; }
+[data-dpr="2"] .loading-main h5 { font-size: 26px; }
+[data-dpr="3"] .loading-main h5 { font-size: 39px; }
+.loading-main p { background: #DDDDDD; border-radius: 13px; margin: 0.266667rem 2.866667rem 0; height: 0.24rem; overflow: hidden; }
+.loading-main p span { display: block; background: #34a4ff; border-radius: 13px; width: 65%; height: 0.24rem; }

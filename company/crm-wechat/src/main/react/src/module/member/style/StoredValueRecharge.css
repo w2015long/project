@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*1px 像素线*/
+/*继承 @extend .setTopLine;*/
+.stored_value_recharge .online-recharge-main .bg-top { position: absolute; left: 0; right: 0; top: 0; background: #62a8ea; height: 153px; display: -webkit-box; display: -webkit-flex; display: flex; padding: 15px 16px 0 16px; }
+.stored_value_recharge .online-recharge-main .bg-top .bg-toppic { height: 36px; width: 36px; border-radius: 50%; overflow: hidden; }
+.stored_value_recharge .online-recharge-main .bg-top .bg-toppic img { height: 36px; width: 36px; }
+.stored_value_recharge .online-recharge-main .bg-top .bg-toptext { padding-left: 10px; padding-top: 10px; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; font-weight: 500; color: white; font-size: 16px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.stored_value_recharge .online-recharge-main .stored-value-box { margin: 70px 16px 0 16px; background: #fff; padding: 0.4rem 0.16rem; border-radius: 4px; position: relative; z-index: 55; }
+.stored_value_recharge .online-recharge-main .stored-value > h5 { font-weight: 500; color: black; font-size: 16px; padding-left: 0.3rem; }
+.stored_value_recharge .online-recharge-main .stored-value .amount-list { margin-top: 4px; }
+.stored_value_recharge .online-recharge-main .stored-value .amount-list .item { width: 2.667rem; height: 1.867rem; border-radius: 4px; border: 1px solid #62a8ea; box-sizing: border-box; text-align: center; float: left; margin-left: 0.2rem; margin-top: 0.2rem; position: relative; }
+
+.stored_value_recharge .online-recharge-main .stored-value .amount-list .item h5 { padding-top: 12px; font-weight: 500; color: #62a8ea; font-size: 24px; }
+.stored_value_recharge .online-recharge-main .stored-value .amount-list .item h5 span { font-size: 14px; }
+.stored_value_recharge .online-recharge-main .stored-value .amount-list .item p { font-weight: 500; color: #62a8ea; font-size: 12px; margin-top: 6px; }
+.stored_value_recharge .online-recharge-main .stored-value .amount-list .item .tips { position: absolute; background: #f35744; border-radius: 8px 0px 0px 8px; font-weight: 600; color: white; padding: 3px 8px; right: 0; top: 2px; }
+.stored_value_recharge .online-recharge-main .stored-value .amount-list .cur{background-color: #62a8ea;}
+.stored_value_recharge .online-recharge-main .stored-value .amount-list .cur h5{color: #fff;}
+.stored_value_recharge .online-recharge-main .stored-value .amount-list .cur p{color: #fff;}
+
+.stored_value_recharge .online-recharge-main .custom-amount { padding-top: 20px; }
+.stored_value_recharge .online-recharge-main .custom-amount h5 { font-weight: 500; color: black; font-size: 16px; padding-left: 10px; }
+.stored_value_recharge .online-recharge-main .custom-amount .enter-the-amount { margin-top: 10px; height: 50px; padding: 15px 0px 12px 15px; position: relative; }
+.stored_value_recharge .online-recharge-main .custom-amount .enter-the-amount span { position: absolute; left: 5px; top: 8px; font-weight: 500; color: #222222; font-size: 30px; }
+.stored_value_recharge .online-recharge-main .custom-amount .enter-the-amount input { padding-left: 20px; width: 100%; font-weight: 500; font-size: 14px; font-weight: 500; color: black; }
+.stored_value_recharge .online-recharge-main .preferential-rules { padding-top: 20px; padding-left: 12px; padding-right: 12px; }
+.stored_value_recharge .online-recharge-main .preferential-rules p { font-weight: 500; color: #666666; font-size: 14px; margin-bottom: 5px; }
+.stored_value_recharge .online-recharge-main .preferential-rules .rule-list { padding-top: 8px; font-weight: 500; color: #999999; font-size: 12px;}
+.stored_value_recharge .online-recharge-main .confirm-btn { background: #62a8ea; border-radius: 4px; height: 50px; line-height: 50px; text-align: center; font-weight: 500; color: white; font-size: 18px; margin: 40px 16px 0 16px; }
+
+.stored_value_recharge .online-recharge-main .custom-amount .tip-tex{position: relative; padding-bottom: 0.3rem; padding-left: 0.3rem; color: #62a8ea;}
+.stored_value_recharge .online-recharge-main .custom-amount .tip-tex:after { content: ''; position: absolute; left: 10px; right: 10px; height: 1px; bottom: 0; background: #e4e4e4; }
+
+
+/*# sourceMappingURL=online-recharge.css.map */

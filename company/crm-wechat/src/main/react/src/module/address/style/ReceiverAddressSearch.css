@@ -1,0 +1,22 @@
+.address-search-main { height: 100%; background-color: #fff; }
+.address-search-main .div-top{height: 10rem;}
+.address-search-main .mt { position: fixed;left: 0;top:0;right: 0; z-index: 2; }
+.address-search-main .search-box { position: absolute; left: 0.40625rem; right: 0.40625rem; top: 0.3125rem; background: #FFFFFF; border-radius: 0.25rem; padding: 0.3125rem; }
+.address-search-main .search-box input { display: block; width: 100%; height: 0.875rem; border: 1px solid #E4EAEC; color: #333; font-size: 12px; border-radius: 0.4375rem; padding-left: 1.09375rem; background: #fff url(../../../media/images/sousuo.png) no-repeat 0.3125rem center/0.45313rem auto; }
+[data-dpr="2"] .address-search-main .search-box input { font-size: 24px; }
+[data-dpr="3"] .address-search-main .search-box input { font-size: 36px; }
+.address-search-main .search-box .search-btn { display: block; width: 0.875rem; height: 0.875rem; position: absolute; left: 0.3125rem; top: 0.3125rem; }
+.address-search-main .search-box .del-btn { display: block; width: 1.5rem; height: 1.5rem; position: absolute; right: 0; top: 0; background: url(../../../media/images/guanbi.png) no-repeat center center/0.45313rem auto; }
+.address-search-main .mt-map { width: 100%; min-height: 10rem; }
+.address-search-main .mt-map-max { width: 100%; min-height: 18rem; }
+.address-search-main .mt-map img { width: 100%; }
+.address-search-main .mc { padding: 0.40625rem 0.3125rem 0; width: 100%; overflow-x: hidden; overflow-y: auto;}
+.address-search-main .item { margin-bottom: 0.46875rem; padding-left: 0.6875rem; background: url(../../../media/images/diqu2.png) no-repeat 0 0.07rem/0.35938rem auto; }
+.address-search-main .item p { color: #76838F; font-size: 12px; font-weight: bold; }
+[data-dpr="2"] .address-search-main .item p { font-size: 24px; }
+[data-dpr="3"] .address-search-main .item p { font-size: 36px; }
+.address-search-main .item span { color: #76838F; font-size: 12px; }
+[data-dpr="2"] .address-search-main .item span { font-size: 24px; }
+[data-dpr="3"] .address-search-main .item span { font-size: 36px; }
+
+/*# sourceMappingURL=search-address.css.map */

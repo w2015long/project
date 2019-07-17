@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/*1px 像素线*/
+/*继承 @extend .setTopLine;*/
+.AuthenticationDiv { height: 100%; }
+
+.AuthenticationDiv .authentication-main  .model12 .weui_cell { padding: 15px 16px; height: 54px; line-height: 24px; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; background-color: #fff; position: relative; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell:before { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-bottom: 1px solid #ddd; color: #ddd; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell:last-child:before { display: none; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_hd { margin-right: 12px; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_hd .icon { display: block; width: 22px; height: 22px; background-color: #D8D8D8; font-weight: 500; color: #222222; font-size: 16px; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_hd .label { display: block; width: 80px; overflow: hidden; color: #222; font-size: 17px; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_bd { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; height: 24px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #666; font-size: 16px; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_bd .input-tex { display: block; width: 100%; line-height: 24px; color: #222222; font-size: 16px; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_ft { height: 24px; white-space: nowrap; position: relative; margin-left: 10px; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_ft .icon_addr { display: block; width: 22px; height: 22px; background: url("../../../media/images/icon_addr.png") no-repeat; background-size: 22px 22px; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_ft .send { line-height: 24px; font-size: 17px; font-weight: 500; color: #62a8ea; }
+.AuthenticationDiv .authentication-main  .model12 .weui_cell .cell_ft .disabled { color: #999; cursor: default; }
+.AuthenticationDiv .authentication-main  .treaty-tips { font-weight: 400; color: #9b9b9b; font-size: 13px; padding: 12px 0 16px 33px; position: relative; }
+.AuthenticationDiv .authentication-main  .treaty-tips .spanDiv { color: #62A8EA; }
+.AuthenticationDiv .authentication-main  .treaty-tips:after { position: absolute; content: ''; width: 12px; height: 12px; border-radius: 2px; border: 1px solid #d0d0d0; box-sizing: border-box; left: 16px; top: 13px; }
+.AuthenticationDiv .authentication-main  .treaty-tipsselect:after { position: absolute; content: ''; width: 12px; height: 12px; border-radius: 2px; border: 1px solid #d0d0d0; box-sizing: border-box; left: 16px; top: 13px; background: url("../../../media/images/dagougou.png") no-repeat center center/8px 6px; }
+.AuthenticationDiv .authentication-main  .next-step { height: 50px; background: #62a8ea; border-radius: 4px; margin: 40px 16px 0 16px; text-align: center; line-height: 50px; font-weight: 600; color: white; font-size: 18px; }
+.AuthenticationDiv .authentication-main  .margin-t0 { margin-top: 0; }
+.AuthenticationDiv .authentication-main  .special-note { padding: 20px 16px 0 16px; }
+.AuthenticationDiv .authentication-main  .special-note h5 { color: #222; font-size: 14px; font-weight: normal; }
+.AuthenticationDiv .authentication-main  .special-note .special-contentbox { margin-top: 5px; }
+.AuthenticationDiv .authentication-main  .special-note .special-contentbox p { font-weight: 500; font-size: 14px; line-height: 20px; color: #999; }
+
+.AuthenticationDiv .authentication-h100 { height: 100%; background: #fff; }
+.AuthenticationDiv .authentication-h100 .weui_cell:last-child:after { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-bottom: 1px solid #ddd; color: #ddd; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+
+/*# sourceMappingURL=authentication.css.map */

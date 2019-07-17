@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+}
+
+.LanternFestival {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.LanternFestival .inner {
+    width: 10rem;
+    margin: 0 auto;
+    min-height: 100.1%;
+    min-height: calc(100% + 1px);
+    background-color: #312a54;
+    padding-bottom: 1.3625rem;
+}
+
+.LanternFestival .sp-top img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.LanternFestival .get-coupon {
+    position: relative;
+}
+
+.LanternFestival .get-coupon img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -1px;
+}
+
+.LanternFestival .get-coupon .get-5 {
+    display: block;
+    width: 4.5rem;
+    height: 1.866667rem;
+    position: absolute;
+    left: 0.333333rem;
+    top: 2.96rem;
+}
+
+.LanternFestival .get-coupon .get-10 {
+    display: block;
+    width: 4.5rem;
+    height: 1.866667rem;
+    position: absolute;
+    right: 0.35rem;
+    top: 2.96rem;
+}
+
+.LanternFestival .get-coupon .get-20 {
+    display: block;
+    width: 7.333333rem;
+    height: 1.866667rem;
+    position: absolute;
+    left: 1.333333rem;
+    top: 5.13rem;
+}
+
+.LanternFestival .get-coupon .get-520 {
+    display: block;
+    width: 10rem;
+    height: 5.2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0.21rem;
+}
+
+.LanternFestival .subject-item {
+    position: relative;
+}
+
+.LanternFestival .subject-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -1px;
+}
+
+/*# sourceMappingURL=LanternFestival.css.map */

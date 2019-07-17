@@ -1,0 +1,68 @@
+html, body { min-height: 100%; background-color: #f5f5f5; }
+
+.integral-product-detail { padding-bottom: 1.71875rem; }
+.integral-product-detail .dt-top { position: fixed; top: 0.28125rem; left: 0.40625rem; right: 0.40625rem; z-index: 9; }
+.integral-product-detail .dt-top .back-btn { display: block; width: 0.75rem; height: 0.75rem; background: url(../../../media/images/fanhui.png) no-repeat 0 0/0.75rem auto; position: absolute; left: 0; top: 0; }
+.integral-product-detail .dt-top .share-btn { display: block; width: 0.75rem; height: 0.75rem; background: url(../../../media/images/fenxian.png) no-repeat 0 0/0.75rem auto; position: absolute; right: 0; top: 0; }
+.integral-product-detail .product-tab { width: 10rem; background-color: #fff; margin: 0 auto; }
+/*.integral-product-detail .swiper-slide { width: 7.1875rem; }*/
+.integral-product-detail .swiper-slide img { width: 100%; height: auto; }
+.integral-product-detail .swiper-pagination { background-color: rgba(0, 0, 0, 0.4); display: inline-block; height: 0.59375rem; line-height: 0.59375rem; width: auto; padding: 0 0.25rem; right: 0; left: inherit; border-radius: 0.296875rem; color: #FEFEFE; font-size: 13px; }
+[data-dpr="2"] .integral-product-detail .swiper-pagination { font-size: 26px; }
+[data-dpr="3"] .integral-product-detail .swiper-pagination { font-size: 39px; }
+.integral-product-detail .blocking { position: absolute; left: 0; bottom: 0; z-index: 12; width: 0; height: 0; border-bottom: 0.703125rem solid #fff; border-right: 9.0625rem solid transparent; }
+.integral-product-detail .dt-cont { width: 10rem; margin: 0 auto; }
+.integral-product-detail .dt-cont .cont-top { background-color: #fff; padding: 5px 0.40625rem 0.3125rem 0.40625rem; }
+.integral-product-detail .dt-cont .title { color: #526069; font-size: 17px; font-weight: bold; line-height: 0.75rem; max-height: 1.5rem; overflow: hidden; margin-bottom: 0.078125rem; }
+[data-dpr="2"] .integral-product-detail .dt-cont .title { font-size: 34px; }
+[data-dpr="3"] .integral-product-detail .dt-cont .title { font-size: 51px; }
+.integral-product-detail .dt-cont .price {height: 1rem; line-height: 1rem; position: relative; margin-top: 0.125rem; color: #37474F; font-size: 22px; overflow: hidden}
+[data-dpr="2"] .integral-product-detail .dt-cont .price { font-size: 44px; }
+[data-dpr="3"] .integral-product-detail .dt-cont .price { font-size: 66px; }
+.integral-product-detail .dt-cont .price span{float: left;}
+.integral-product-detail .dt-cont .price i {float: left; font-size: 15px; padding: 0.05rem 0 0 0.1rem; }
+[data-dpr="2"] .integral-product-detail .dt-cont .price i { font-size: 30px; }
+[data-dpr="3"] .integral-product-detail .dt-cont .price i { font-size: 45px; }
+.integral-product-detail .dt-cont .quantity { position: absolute; right: 0; top: 0.15625rem; height: 0.853333rem; width: 0.853333rem; overflow: hidden; transition: width 200ms; }
+.integral-product-detail .dt-cont .quantity .minus { display: block; width: 0.853333rem; height: 0.853333rem; position: absolute; right: 1.70333rem; top: 0; background: url(../../../media/images/jianshao.png) no-repeat 0 0/0.85333rem auto; }
+.integral-product-detail .dt-cont .quantity .plus { display: block; width: 0.853333rem; height: 0.853333rem; position: absolute; right: 0; top: 0; background: url(../../../media/images/tianjia.png) no-repeat 0 0/0.85333rem auto; }
+.integral-product-detail .dt-cont .quantity .input-wrap { display: block; width: 0.85rem; position: absolute; right: 0.853333rem; top: 0; }
+.integral-product-detail .dt-cont .quantity .input-wrap input { display: block; width: 100%; height: 0.853333rem; text-align: center; color: #37474F; line-height: 0.853333rem; border: none; font-size: 13px; background: none; }
+[data-dpr="2"] .integral-product-detail .dt-cont .quantity .input-wrap input { font-size: 26px; }
+[data-dpr="3"] .integral-product-detail .dt-cont .quantity .input-wrap input { font-size: 39px; }
+.integral-product-detail .dt-cont .quantity.open { width: 2.556666rem; }
+.integral-product-detail .dt-cont .instructions { background-color: #fff; margin-top: 0.15625rem; }
+.integral-product-detail .dt-cont .instructions .mt { line-height: 1.40625rem; height: 1.40625rem; color: #333; font-size: 14px; padding-left: 0.40625rem; overflow: hidden; }
+[data-dpr="2"] .integral-product-detail .dt-cont .instructions .mt { font-size: 28px; }
+[data-dpr="3"] .integral-product-detail .dt-cont .instructions .mt { font-size: 42px; }
+.integral-product-detail .dt-cont .instructions .mc { font-size: 12px; }
+[data-dpr="2"] .integral-product-detail .dt-cont .instructions .mc { font-size: 24px; }
+[data-dpr="3"] .integral-product-detail .dt-cont .instructions .mc { font-size: 36px; }
+.integral-product-detail .dt-cont .instructions .mc img { max-width: 100%; }
+.integral-product-detail .dt-cont .instructions .mc div { max-width: 100% !important;}
+.integral-product-detail .dt-footer { height: 1.40625rem; position: fixed; left: 0.3125rem; bottom: 0; right: 0; z-index: 10; padding: 0.234375rem 0.40625rem 0 0.703125rem; background-color: #fff; border-radius: 0.703125rem 0 0 0.703125rem; box-shadow: 0 -0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.2); }
+.integral-product-detail .dt-footer .subtotal {left: 0.703125rem;position: absolute;top: 50%;transform: translateY(-50%); }
+.integral-product-detail .dt-footer .subtotal p { color: #76838F; font-size: 12px; margin-bottom: -0.078125rem;}
+[data-dpr="2"] .integral-product-detail .dt-footer .subtotal p { font-size: 24px; }
+[data-dpr="3"] .integral-product-detail .dt-footer .subtotal p { font-size: 36px; }
+.integral-product-detail .dt-footer .subtotal span { color: #526069; font-size: 16px; }
+[data-dpr="2"] .integral-product-detail .dt-footer .subtotal span { font-size: 32px; }
+[data-dpr="3"] .integral-product-detail .dt-footer .subtotal span { font-size: 48px; }
+.integral-product-detail .dt-footer .exchange { display: block; width: 4.6875rem; height: 0.9375rem; line-height: 0.9375rem; text-align: center; color: #fff; font-size: 13px; background-color: #62A8EA; border-radius: 0.46875rem; float: right; box-shadow: 0 0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.6); }
+
+.integral-product-detail .dt-footer .exchange2 {
+    display: block;
+    width: 4.6875rem;
+    height: 0.9375rem;
+    line-height: 0.9375rem;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    background-color: rgba(9, 15, 1, 0.25);
+    border-radius: 0.46875rem;
+    float: right;
+    box-shadow: 0 0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.6);
+}
+[data-dpr="2"] .integral-product-detail .dt-footer .exchange { font-size: 26px; }
+[data-dpr="3"] .integral-product-detail .dt-footer .exchange { font-size: 39px; }
+

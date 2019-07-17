@@ -1,0 +1,22 @@
+.ant-upload.ant-upload-select-picture-card{
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 0 0.06rem 0 0.06rem;
+}
+
+.ant-upload-select-picture-card i {
+    font-size: 32px;
+    color: #999;
+}
+
+.ant-upload-select-picture-card .ant-upload-text {
+    margin-top: 8px;
+    color: #666;
+}
+
+.ant-upload-list-picture-card .ant-upload-list-item{
+    float: left;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 0 0.06rem 0 0.06rem;
+}

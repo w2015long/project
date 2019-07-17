@@ -1,0 +1,15 @@
+
+.share_guide.pop_ups { position: fixed; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.6); z-index: 99; }
+.share_guide.pop_ups .fengxiang_pic { width: 2.765625rem; height: 2.25rem; position: absolute; top: 1.53125rem; right: 0.58125rem; }
+.share_guide.pop_ups .fengxiang_pic img { width: 2.765625rem; height: 2.25rem; }
+.share_guide.pop_ups .fengxiang_text { color: #fff; position: absolute; top: 3.90625rem; right: 1.4375rem; font-size: 18px; text-align: right; }
+[data-dpr="2"] .share_guide.pop_ups .fengxiang_text { font-size: 36px; }
+[data-dpr="3"] .share_guide.pop_ups .fengxiang_text { font-size: 54px; }
+.share_guide.pop_ups .fengxiang_text h5 { font-size: 18px; }
+[data-dpr="2"] .share_guide.pop_ups .fengxiang_text h5 { font-size: 36px; }
+[data-dpr="3"] .share_guide.pop_ups .fengxiang_text h5 { font-size: 54px; }
+.share_guide.pop_ups .fengxiang_text h5 i { width: 0.125rem; height: 0.125rem; background: #fff; border-radius: 50%; display: inline-block; position: relative; top: -0.046875rem; }
+.share_guide.pop_ups .fengxiang_text h5 span { padding-left: 0.3125rem; }
+.share_guide.pop_ups .fengxiang_text p { font-size: 18px; margin-top: 0.3125rem; letter-spacing: 1px; }
+[data-dpr="2"] .share_guide.pop_ups .fengxiang_text p { font-size: 36px; }
+[data-dpr="3"] .share_guide.pop_ups .fengxiang_text p { font-size: 54px; }

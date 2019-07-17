@@ -1,0 +1,233 @@
+.mutual_bargain.share-bargain-main { height: 100%; background-color: #f5f5f5; }
+
+.mutual_bargain.share-bargain-main { position: relative; padding-top: 1.25rem; }
+.mutual_bargain.share-bargain-main .banner { width: 100%; height: 3.75rem; position: absolute; top: 0rem; }
+.mutual_bargain.share-bargain-main .banner img { width: 100%; height: 3.75rem; }
+.mutual_bargain.share-bargain-main .rule_of_activity { position: absolute; color: #FFFFFF; font-size: 14px; line-height: 0.4375rem; padding: 0.125rem 0.234375rem; background: rgba(0, 0, 0, 0.3); top: 0.3125rem; right: 0.390625rem; border-radius: 0.375rem; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .rule_of_activity { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .rule_of_activity { font-size: 42px; }
+.mutual_bargain.share-bargain-main .information { background: #FFE2A9; padding: 0 0.3125rem; }
+.mutual_bargain.share-bargain-main .information .item { background: #fff; border-radius: 0.15625rem; width: 100%; z-index: 55; padding-top: 0.203125rem; position: relative; }
+.mutual_bargain.share-bargain-main .information .item .avatar { width: 1.328125rem; height: 1.328125rem; border-radius: 50%; position: absolute; left: 50%; top: -0.671875rem; transform: translateX(-50%); overflow: hidden; }
+.mutual_bargain.share-bargain-main .information .item .avatar img { width: 1.328125rem; height: 1.328125rem; }
+.mutual_bargain.share-bargain-main .information .item .i_name { text-align: center; color: #4D4D4D; font-size: 14px; line-height: 0.53125rem; font-weight: bold; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .i_name { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .i_name { font-size: 42px; }
+.mutual_bargain.share-bargain-main .information .item .bargaining_together { text-align: center; font-size: 14px; color: #666666; line-height: 0.46875rem; font-weight: bold; margin-bottom: 0.4rem; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .bargaining_together { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .bargaining_together { font-size: 42px; }
+.mutual_bargain.share-bargain-main .information .item .bargaining_together span { color: #CCCCCC; font-size: 30px; display: inline-block; position: relative; top: 0.350625rem; padding: 0 0.078125rem; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .bargaining_together span { font-size: 60px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .bargaining_together span { font-size: 90px; }
+.mutual_bargain.share-bargain-main .information .item .product_information { margin: 0 0.25rem 0.25rem 0.25rem; height: 2.5rem; background: #F8F4F5; padding: 0.15625rem; display: -webkit-box; display: -webkit-flex; display: flex; }
+.mutual_bargain.share-bargain-main .information .item .product_information .product_pic { width: 2.1875rem; height: 2.1875rem; }
+.mutual_bargain.share-bargain-main .information .item .product_information .product_pic img { width: 2.1875rem; height: 2.1875rem; }
+.mutual_bargain.share-bargain-main .information .item .product_information .product_description { display: inline-block; color: #37474F; margin-left: 0.203125rem; font-weight: bold; position: relative; }
+.mutual_bargain.share-bargain-main .information .item .product_information .product_description h5 { font-size: 16px; height: 1rem; line-height: 0.5rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin-bottom: 0.375rem; padding-top: 0.109375rem; font-weight: bold; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .product_information .product_description h5 { font-size: 32px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .product_information .product_description h5 { font-size: 48px; }
+.mutual_bargain.share-bargain-main .information .item .product_information .product_description p { font-size: 18px; color: #37474F; display: inline-block; padding-right: 0.133333rem; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .product_information .product_description p { font-size: 36px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .product_information .product_description p { font-size: 54px; }
+.mutual_bargain.share-bargain-main .information .item .product_information .product_description p span { font-size: 16px; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .product_information .product_description p span { font-size: 32px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .product_information .product_description p span { font-size: 48px; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list { display: flex; padding-bottom: 0.333333rem; background: #fff6f3; text-align: left; position: relative; border-bottom-right-radius: 0.15625rem; border-bottom-left-radius: 0.15625rem; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item { margin-top: 0.266667rem; width: 20%; display: inline-block; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic { width: 1.328125rem; height: 1.328125rem; background: #FFFFFF; border: 0.046875rem dashed  #E0E0E0; margin: 0 auto; border-radius: 1.5625rem; overflow: hidden; text-align: center; line-height: 1.328125rem; color: #CCCCCC; font-weight: bold; font-size: 16px; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic { font-size: 32px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic { font-size: 48px; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic img { width: 1.328125rem; height: 1.328125rem; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .bargain_icon { width: 1.0rem; height: 0.53125rem; background: #E09D5A; border: 0.03125rem solid #FFF6F3; border-radius: 0.203125rem; margin: 0 auto; position: relative; top: -0.15625rem; color: #fff; text-align: center; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .bargain_icon img { width: 0.3125rem; height: 0.3125rem; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .bargain_amount { line-height: 0.4375rem; color: #526069; font-size: 14px; margin-top: 0.078125rem; font-weight: bold; text-align: center; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .bargain_amount { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .bargain_amount { font-size: 42px; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list .cur { border: 0.04688rem solid #FFCC66 !important; }
+.mutual_bargain.share-bargain-main .information .item .invitation_list:after { content: " "; position: absolute; left: 0; bottom: -0.015625rem; right: 0; height: 0.015625rem; border-top: 0.015625rem solid #E8E8ED; color: #E8E8ED; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content {border-top: 1px dashed #E8E8ED; padding: 0.3125rem 0 0.5rem 0; text-align: center; position: relative;}
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content h5 { font-size: 15px; line-height: 0.46875rem; font-weight: bold; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content h5 { font-size: 30px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content h5 { font-size: 45px; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content h5 span { color: #000014; color: #ff4d32; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .progress_bar { width: 7.65625rem; background: #E0E0E0; border-radius: 0.203125rem; height: 0.25rem; display: inline-block; margin-top: 0.265625rem; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .progress_bar .bar_item { height: 100%; width: 70%; background-color: #EE4544; background: -moz-linear-gradient(-45deg, #FF8E64 0%, #EE4544 100%); background: -webkit-linear-gradient(-45deg, #FF8E64 0%, #EE4544 100%); background: linear-gradient(135deg, #FF8E64 0%, #EE4544 100%); border-radius: 0.203125rem; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .help_bargain { text-align: center; width: 8.1rem; height: 1.40625rem; margin-top: 0.34375rem; margin: 0.34375rem auto 0; position: relative; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .help_bargain span { width: 100%; position: absolute; font-size: 19px; height: 100%; line-height:1.40625rem;  color: #FFFFFF; left: 0; top: 0;  }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .help_bargain span a{color: #FFFFFF; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .help_bargain span { font-size: 38px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .help_bargain span { font-size: 57px; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .help_bargain img { width: 8.1rem; height: 1.40625rem; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content p { color: #526069; font-size: 15px; line-height: 0.46875rem; margin-top: 0.265625rem; font-weight: bold; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-pack: justify; -webkit-justify-content: center; justify-content: center; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content p { font-size: 30px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content p { font-size: 45px; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content p span { color: #ff4d32; display: block; font-size: 13px; color: #FFFFFF; background: #323232; border-radius: 0.066667rem; width: 0.466667rem; height: 0.466667rem; text-align: center; line-height: 0.426667rem; font-weight: normal; margin: 0 0.066667rem; text-align: center; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content p span { font-size: 26px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content p span { font-size: 39px; }
+
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content:after { position: absolute; content: ''; width: 0.3125rem; height: 0.3125rem; border-radius: 50%; background: #FFE2A9; left: -0.15625rem; top: -0.15625rem; z-index: 9; }
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content:before { position: absolute; content: ''; width: 0.3125rem; height: 0.3125rem; border-radius: 50%; background: #FFE2A9; right: -0.15625rem; top: -0.15625rem; z-index: 9; }
+
+
+.mutual_bargain.share-bargain-main .information .winning_list { padding: 0.3125rem 0.0625rem; }
+.mutual_bargain.share-bargain-main .information .winning_list .winning_bg { background: #E09D5A; border: 0.125rem solid #FCC868; border-radius: 0.3125rem; height: 0.359375rem; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners { padding: 0.5rem 0 0.3125rem 0; margin: 0 auto; background: #fff; border-radius: 0px 0px 0.25rem 0.25rem; text-align: center; position: relative; margin-top: 0.24rem; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_bg { height: 0.3125rem; position: absolute; top: -0.05rem; right: 0; left: 0; width: 100%; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_bg img { height: 0.3525rem; width: 100%; vertical-align: baseline; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .winners_title { color: #E09D5A; font-size: 16px; line-height: 0.46875rem; text-align: center; position: relative; display: inline-block; font-weight: bold; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners .winners_title { font-size: 32px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners .winners_title { font-size: 48px; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .winners_title:after { content: ''; position: absolute; left: -1.3125rem; width: 0.96875rem; height: 0.03125rem; background: #FCC868; top: 50%; transform: translateY(-50%); }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .winners_title:before { content: ''; position: absolute; right: -1.3125rem; width: 0.96875rem; height: 0.03125rem; background: #FCC868; top: 50%; transform: translateY(-50%); }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners p { color: #526069; font-size: 15px; line-height: 0.46875rem; margin-top: 0.3125rem; font-weight: bold; padding-bottom: 0.15625rem; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners p { font-size: 30px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners p { font-size: 45px; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners p span { color: #ff4d32; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item { max-height: 7.2rem; background: #FFF6F3; padding: 0.3125rem 0 0 0;overflow-x:auto }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award { height: 1.5625rem; padding: 0 0.4375rem 0 0.34375rem; position: relative; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_pic { width: 0.78125rem; height: 0.78125rem; border-radius: 50%; overflow: hidden; position: absolute; top: 0; left: 0.328125rem; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_pic img { width: 0.78125rem; height: 0.78125rem; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content { text-align: left; padding-left: 0.15625rem; max-width: 7.8125rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: 0.9375rem; position: relative; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .empty {  text-align: center; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content h5 { color: #374750; font-size: 14px; line-height: 0.515625rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content h5 { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content h5 { font-size: 42px; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content h5 span { color: #ff4d32; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content p { color: #374750; font-size: 14px; line-height: 0.515625rem; margin-top: 0.078125rem; font-weight: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content p { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content p { font-size: 42px; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content p span { color: #ff4d32; }
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content .dtime { position: absolute; color: #76838F; font-size: 14px; right: 0rem; top: 0; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content .dtime { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content .dtime { font-size: 42px; }
+
+/* 2018-12-26 */
+.mutual_bargain.invitation_content { position: relative; }
+.mutual_bargain.invitation_box { padding-top: 0.4rem; background: #fff6f3; position: relative; }
+.mutual_bargain.invitation_box .invitation_box_title { color: #526069; font-size: 15px; text-align: center; font-weight: bold; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 0 0.4rem; }
+[data-dpr="2"] .mutual_bargain.invitation_box .invitation_box_title { font-size: 30px; }
+[data-dpr="3"] .mutual_bargain.invitation_box .invitation_box_title { font-size: 45px; }
+
+.mutual_bargain.invitation_box:after { position: absolute; content: ''; left: 0; top: 0; right: 0; height: 0.015625rem; border-top: 0.015625rem solid #E8E8ED; color: #E8E8ED; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+
+.mutual_bargain.take_away { background-color: #E63225; background: -moz-linear-gradient(-45deg, #FF8E64 0%, #E63225 100%); background: -webkit-linear-gradient(-45deg, #FF8E64 0%, #E63225 100%); background: linear-gradient(135deg, #FF8E64 0%, #E63225 100%); color: #FFEECC; font-size: 14px; padding: 0.066667rem 0.133333rem; display: inline-block; }
+[data-dpr="2"] .mutual_bargain.take_away { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.take_away { font-size: 42px; }
+
+.mutual_bargain.remaining_text {  color: #37474F; font-size: 14px;font-weight: normal; }
+[data-dpr="2"] .mutual_bargain.remaining_text { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.remaining_text { font-size: 42px; }
+
+.mutual_bargain.elastic_layer { position: fixed; top: 0; right: 0; left: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 66;  }
+.mutual_bargain.elastic_layer .layer_item { margin: 50% 0.666667rem 0; background: #fff; border-radius: 0.32rem; position: relative; }
+.mutual_bargain.elastic_layer .layer_item .layer_close { width: 0.666667rem; height: 0.666667rem; position: absolute; top: -1rem; right: 0; border-radius: 50%; z-index: 66; }
+.mutual_bargain.elastic_layer .layer_item .layer_close img { width: 0.666667rem; height: 0.666667rem; }
+.mutual_bargain.elastic_layer .layer_item .bargain_icon { width: 0.933333rem; height: 0.933333rem; border-radius: #fff; border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); top: -0.466667rem; }
+.mutual_bargain.elastic_layer .layer_item .bargain_icon img { width: 0.933333rem; height: 0.933333rem; }
+.mutual_bargain.elastic_layer .bg_top { height: 2.0rem; background: #FFF6F3; border-radius: 0.32rem 0.32rem 0px 0px; padding-top: 0.693333rem; }
+.mutual_bargain.elastic_layer .bg_top h5 { color: #526069; font-size: 16px; text-align: center; line-height: 0.48rem; font-weight: bold; }
+[data-dpr="2"] .mutual_bargain.elastic_layer .bg_top h5 { font-size: 32px; }
+[data-dpr="3"] .mutual_bargain.elastic_layer .bg_top h5 { font-size: 48px; }
+.mutual_bargain.elastic_layer .bg_top h5 span { color: #ff4d32; }
+.mutual_bargain.elastic_layer .bg_top p { color: #54626A; font-size: 16px; text-align: center; line-height: 0.48rem; }
+[data-dpr="2"] .mutual_bargain.elastic_layer .bg_top p { font-size: 32px; }
+[data-dpr="3"] .mutual_bargain.elastic_layer .bg_top p { font-size: 48px; }
+.mutual_bargain.elastic_layer .get_gift { padding: 0.293333rem 0 0.16rem 0; background: #fff; color: #37474F; line-height: 0.64rem; font-size: 19px; text-align: center; font-weight: bold; }
+[data-dpr="2"] .mutual_bargain.elastic_layer .get_gift { font-size: 38px; }
+[data-dpr="3"] .mutual_bargain.elastic_layer .get_gift { font-size: 57px; }
+.mutual_bargain.elastic_layer .get_gift_description { margin: 0 0.266667rem 0 0.266667rem; height: 1.333333rem; background: #F8F4F5; height: 2.133333rem; display: -webkit-box; display: -webkit-flex; display: flex; }
+.mutual_bargain.elastic_layer .get_gift_description .gift_pic { width: 1.866667rem; height: 1.866667rem; padding: 0.133333rem; }
+.mutual_bargain.elastic_layer .get_gift_description .gift_pic img { width: 1.866667rem; height: 1.866667rem; }
+.mutual_bargain.elastic_layer .get_gift_description .gift_text { line-height: 2.133333rem; color: #37474F; font-weight: bold; font-size: 16px; padding-left: 0.266667rem; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+[data-dpr="2"] .mutual_bargain.elastic_layer .get_gift_description .gift_text { font-size: 32px; }
+[data-dpr="3"] .mutual_bargain.elastic_layer .get_gift_description .gift_text { font-size: 48px; }
+.mutual_bargain.elastic_layer .receiving_gifts { position: relative; padding: 0.4rem 0.266667rem 0.266667rem 0.266667rem; }
+.mutual_bargain.elastic_layer .receiving_gifts img { height: 1.333333rem; width: 100%; }
+.mutual_bargain.elastic_layer .receiving_gifts span { position: absolute; color: #FFFFFF; font-size: 20px; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+[data-dpr="2"] .mutual_bargain.elastic_layer .receiving_gifts span { font-size: 40px; }
+[data-dpr="3"] .mutual_bargain.elastic_layer .receiving_gifts span { font-size: 60px; }
+
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .initiate {  height: 1.2rem; line-height: 1.1rem; text-align: center; margin: 0.266667rem 0.6rem 0 0.6rem; border: 0.0625rem solid rgba(248,82,60,0.5); border-radius: 45px; color: #F8523C; font-size: 20px; display: block; font-weight: bold; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .initiate { font-size: 40px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .initiate { font-size: 60px; }
+
+.mutual_bargain.elastic_layer2 { position: fixed; right: 0; left: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 101; }
+.mutual_bargain.elastic_layer2 .layer2_item { margin: 60% 0.933333rem 0 0.933333rem; background: #fff; padding: 0.6rem; border-radius: 0.32rem; position: relative; }
+.mutual_bargain.elastic_layer2 .layer2_item h5 { color: #37474F; font-size: 17px; line-height: 0.64rem; font-weight: bold; padding-bottom: 0.2rem; }
+[data-dpr="2"] .mutual_bargain.elastic_layer2 .layer2_item h5 { font-size: 34px; }
+[data-dpr="3"] .mutual_bargain.elastic_layer2 .layer2_item h5 { font-size: 51px; }
+.mutual_bargain.elastic_layer2 .layer2_item p { color: #54626A; font-size: 15px; line-height: 0.533333rem; }
+[data-dpr="2"] .mutual_bargain.elastic_layer2 .layer2_item p { font-size: 30px; }
+[data-dpr="3"] .mutual_bargain.elastic_layer2 .layer2_item p { font-size: 45px; }
+.mutual_bargain.elastic_layer2 .layer2_close { width: 0.666667rem; height: 0.666667rem; position: absolute; left: 50%; transform: translateX(-50%); bottom: -1.633333rem; border-radius: 50%; }
+.mutual_bargain.elastic_layer2 .layer2_close img { width: 0.666667rem; height: 0.666667rem; }
+
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .help_bargain_gray { background: #CCCCCC; }
+
+/* 2018-12-27 */
+.mutual_bargain.share-bargain-main .information .winning_list .list_contenttext { background: #fff; padding: 0.173333rem 0.466667rem; }
+
+.mutual_bargain.share-bargain-main .information .winning_list .list_contenttext span { display: block; line-height: 0.533333rem; color: #526069; font-size: 14px; text-align: left; margin-top: 0.133333rem; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .winning_list .list_contenttext span { font-size: 28px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .winning_list .list_contenttext span { font-size: 42px; }
+
+.mutual_bargain.share-bargain-main .information .winning_list .winning_bg { position: absolute; right: 0.16rem; left: 0.16rem; z-index: 99; }
+
+.mutual_bargain.arrow_bullet_layer { position: fixed; right: 0; left: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 100; }
+.mutual_bargain.arrow_bullet_layer .arrow_item { position: absolute; right: 0.666667rem; top: 0.266667rem; }
+.mutual_bargain.arrow_bullet_layer .arrow_item h5 { width: 2.36rem; height: 2.213333rem; }
+.mutual_bargain.arrow_bullet_layer .arrow_item h5 img { width: 2.36rem; height: 2.213333rem; }
+.mutual_bargain.arrow_bullet_layer .arrow_item .arrow_item_text { position: absolute; right: 0.9rem; width: 200%; text-align: right; }
+.mutual_bargain.arrow_bullet_layer .arrow_item .arrow_item_text p { color: #F2F2F2; font-size: 18px; display: block; }
+[data-dpr="2"] .mutual_bargain.arrow_bullet_layer .arrow_item .arrow_item_text p { font-size: 36px; }
+[data-dpr="3"] .mutual_bargain.arrow_bullet_layer .arrow_item .arrow_item_text p { font-size: 54px; }
+.mutual_bargain.arrow_bullet_layer .arrow_item .arrow_item_text p span { position: relative; top: -0.133333rem; font-size: 20px; padding: 0 0.066667rem; }
+[data-dpr="2"] .mutual_bargain.arrow_bullet_layer .arrow_item .arrow_item_text p span { font-size: 40px; }
+[data-dpr="3"] .mutual_bargain.arrow_bullet_layer .arrow_item .arrow_item_text p span { font-size: 60px; }
+
+.mutual_bargain.share-bargain-main .information .item .product_information .product_description { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; }
+
+.mutual_bargain.share-bargain-main .information .item .product_information .product_description .bot-flex {align-items: center; display: -webkit-box; display: -webkit-flex; display: flex; }
+
+.remaining_text { position: relative; bottom: 0; -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; text-align: right; }
+
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .help_bargain span { font-weight: bold; }
+
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .bargain_icon { line-height: 0.53125rem; font-weight: bold; }
+
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic { font-size: 0; line-height: 0; }
+
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic img { width: 100%; height: 100%; }
+
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic span { line-height: 1.328125rem; font-size: 16px; }
+[data-dpr="2"] .mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic span { font-size: 32px; }
+[data-dpr="3"] .mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .invitation_pic span { font-size: 48px; }
+
+.mutual_bargain.share-bargain-main .information .item .invitation_list .cur { border: inherit !important; }
+
+.mutual_bargain.share-bargain-main .information .item .invitation_list .cur .invitation_pic { border: 0.04688rem solid #FFCC66 !important; }
+
+.mutual_bargain.share-bargain-main .information .item .invitation_list .invitation_item .bargain_icon img { vertical-align: baseline; }
+.mutual_bargain.share-bargain-main .information .item .share-message { padding-top: 1.5em; }
+
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content { max-width: inherit; }
+
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners .list_winners_item .award .award_content .dtime { line-height: 0.515625rem; }
+
+.mutual_bargain.share-bargain-main .information .winning_list .winning_bg { z-index: 1; }
+
+.mutual_bargain.elastic_layer .layer_item { margin: 0; width: 8.4375rem; position: absolute; left: 50%; top: 45%; transform: translate(-50%, -50%); }
+
+.mutual_bargain.elastic_layer .receiving_gifts span { font-weight: bold; }
+
+.mutual_bargain.elastic_layer2 .layer2_item { margin: 0; position: absolute; width: 8.4375rem; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+
+.mutual_bargain.share-bargain-main .information .item .mutual_bargain.invitation_content .initiate { width: 8.1rem; margin: 0.2rem auto 0; }
+
+.mutual_bargain.share-bargain-main .information .winning_list .list_winners { margin-top: 0.24rem; z-index: 2; }
+
+.mutual_bargain.share-bargain-main .hide {
+    display: none;
+
+}
+/*# sourceMappingURL=share-bargain.css.map */

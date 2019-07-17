@@ -1,0 +1,7 @@
+/*这里是Example2的私有样式， 可以覆盖公用样式*/
+.example2 .test{
+    color: dodgerblue;
+}
+.example2 .img{
+    background: url('../../../media/images/exampleLogo.svg');
+}

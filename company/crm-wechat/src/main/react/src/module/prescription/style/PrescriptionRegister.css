@@ -1,0 +1,650 @@
+@charset "UTF-8";
+html, body {
+    height: 100%;
+}
+
+.prescription-register-main .prescription_register .prescription-register {
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.prescription-register-main .prescription_register .prescription-register .mt {
+    padding: 0.3125rem 0.40625rem;
+    background-color: #fff;
+}
+
+.prescription-register-main .prescription_register .prescription-register .mt .cont {
+    min-height: 2.5rem;
+    padding: 0.375rem 0.9375rem 0.375rem 2.34375rem;
+    position: relative;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.0625rem 0.21875rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.prescription-register-main .prescription_register .prescription-register .mt .cont .pic {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    position: absolute;
+    left: 0.46875rem;
+    top: 0.46875rem;
+}
+
+.prescription-register-main .prescription_register .prescription-register .mt .cont .pic img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+}
+
+.prescription-register-main .prescription_register .prescription-register .mt .cont .title {
+    max-height: 1.0rem;
+    line-height: 0.5rem;
+    overflow: hidden;
+    color: #37474F;
+    font-size: 15px;
+    margin-bottom: 0.1875rem;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .mt .cont .title {
+    font-size: 30px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .mt .cont .title {
+    font-size: 45px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .mt .cont .price {
+    line-height: 0.578125rem;
+    color: #37474F;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .mt .cont .price {
+    font-size: 30px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .mt .cont .price {
+    font-size: 45px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .address {
+    padding: 0.390625rem 0 0.359375rem 0.90625rem;
+    background: #fff url(../../../media/images/diqu2.png) no-repeat 0.40625rem 0.46875rem/0.35938rem 0.4375rem;
+    position: relative;
+}
+
+.prescription-register-main .prescription_register .prescription-register .address:before {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #E8E8ED;
+    color: #E8E8ED;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.prescription-register-main .prescription_register .prescription-register .address .addr-hd {
+    height: 0.625rem;
+    line-height: 0.625rem;
+    color: #526069;
+    font-size: 16px;
+    margin-bottom: 0.078125rem;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .address .addr-hd {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .address .addr-hd {
+    font-size: 48px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .address .addr-hd span {
+    padding-right: 0.3rem;
+}
+
+.prescription-register-main .prescription_register .prescription-register .address .addr-bd {
+    min-height: 0.71875rem;
+    position: relative;
+}
+
+.prescription-register-main .prescription_register .prescription-register .address .addr-bd:after {
+    content: " ";
+    display: inline-block;
+    height: 0.186667rem;
+    width: 0.186667rem;
+    border-width: 0.053333rem 0.053333rem 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: absolute;
+    top: 0.15625rem;
+    right: 0.40625rem;
+}
+
+.prescription-register-main .prescription_register .prescription-register .address .addr-bd span {
+    display: block;
+    line-height: 0.515625rem;
+    padding-right: 1.21875rem;
+    color: #76838F;
+    font-size: 14px;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .address .addr-bd span {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .address .addr-bd span {
+    font-size: 42px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .order-quantity {
+    background-color: #fff;
+    padding: 0.390625rem 0.40625rem 0.390625rem 3.09375rem;
+    min-height: 1.40625rem;
+    position: relative;
+}
+
+.prescription-register-main .prescription_register .prescription-register .order-quantity .lable {
+    line-height: 0.625rem;
+    position: absolute;
+    left: 0.40625rem;
+    top: 0.390625rem;
+    color: #526069;
+    font-size: 16px;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .order-quantity .lable {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .order-quantity .lable {
+    font-size: 48px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .order-quantity .lable i {
+    color: #F96868;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: -0.21875rem;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .order-quantity .lable i {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .order-quantity .lable i {
+    font-size: 42px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .order-quantity input {
+    display: block;
+    width: 100%;
+    height: 0.625rem;
+    line-height: 0.625rem;
+    color: #526069;
+    font-size: 16px;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .order-quantity input {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .order-quantity input {
+    font-size: 48px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .remark {
+    background-color: #fff;
+    padding: 0.390625rem 0.40625rem 0.390625rem 3.09375rem;
+    min-height: 1.40625rem;
+    position: relative;
+}
+
+.prescription-register-main .prescription_register .prescription-register .remark .lable {
+    line-height: 0.625rem;
+    position: absolute;
+    left: 0.40625rem;
+    top: 0.390625rem;
+    color: #526069;
+    font-size: 16px;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .remark .lable {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .remark .lable {
+    font-size: 48px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .remark input {
+    display: block;
+    width: 100%;
+    height: 0.625rem;
+    line-height: 0.625rem;
+    color: #526069;
+    font-size: 16px;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .remark input {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .remark input {
+    font-size: 48px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic {
+    margin-top: 0.15625rem;
+    padding: 0.3125rem 0.40625rem;
+    background-color: #fff;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model1 {
+    height: 2.03125rem;
+    position: relative;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model1 .btn-upload {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 1.15625rem;
+    text-align: center;
+    color: #526069;
+    font-size: 14px;
+    background: #fff url(../../../media/images/add-model1.png) no-repeat 0 0/100% 100%;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model1 .btn-upload {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model1 .btn-upload {
+    font-size: 42px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model1 input[type="file"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 {
+    min-height: 2.03125rem;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 .pic-item {
+    width: 2.03125rem;
+    height: 2.03125rem;
+    float: left;
+    margin: 0 0.3125rem 0.3125rem 0;
+    position: relative;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 .pic-item img {
+    width: 2.03125rem;
+    height: 2.03125rem;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 .pic-item .del-btn {
+    display: block;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background-color: #FF6600;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    z-index: 3;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 .pic-item .del-btn:before {
+    content: '';
+    width: 0.25rem;
+    height: 0.0625rem;
+    border-radius: 0.03125rem;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 .pic-item .btn-upload {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 1.15625rem;
+    text-align: center;
+    color: #526069;
+    font-size: 14px;
+    background: #fff url(../../../media/images/add-model2.png) no-repeat 0 0/100% 100%;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 .pic-item .btn-upload {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 .pic-item .btn-upload {
+    font-size: 42px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .pre-pic .pre-model2 .pic-item input[type="file"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prescription-register-main .prescription_register .prescription-register .tip-tex {
+    padding: 0.28125rem 0.40625rem;
+    line-height: 0.625rem;
+    color: #A3AFB7;
+    font-size: 16px;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .tip-tex {
+    font-size: 32px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .tip-tex {
+    font-size: 48px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .bot-box {
+    height: 1.40625rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.prescription-register-main .prescription_register .prescription-register .bot-box .consult-btn {
+    display: block;
+    width: 50%;
+    height: 1.40625rem;
+    line-height: 1.40625rem;
+    position: relative;
+    color: #374750;
+    font-size: 18px;
+    text-align: center;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .bot-box .consult-btn {
+    font-size: 36px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .bot-box .consult-btn {
+    font-size: 54px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .bot-box .consult-btn .consult-icon {
+    vertical-align: middle;
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.21875rem;
+    background: url(../../../media/images/consult-icon.png) no-repeat 0 0/100% 100%;
+}
+
+.prescription-register-main .prescription_register .prescription-register .bot-box .consult-btn:before {
+    box-sizing: border-box;
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #E8E8ED;
+    color: #E8E8ED;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.prescription-register-main .prescription_register .prescription-register .bot-box .sub-btn {
+    display: block;
+    width: 50%;
+    height: 1.40625rem;
+    line-height: 1.40625rem;
+    color: #fff;
+    background-color: rgba(98, 168, 234, 0.5);
+    font-size: 18px;
+    text-align: center;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .prescription-register .bot-box .sub-btn {
+    font-size: 36px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .prescription-register .bot-box .sub-btn {
+    font-size: 54px;
+}
+
+.prescription-register-main .prescription_register .prescription-register .bot-box .sub-btn .sub-icon {
+    vertical-align: middle;
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.515625rem;
+    margin-right: 0.21875rem;
+    background: url(../../../media/images/sub-icon.png) no-repeat 0 0/100% 100%;
+}
+
+.prescription-register-main .prescription_register .prescription-register .bot-box .sub-btn.active {
+    background-color: #62a8ea;
+}
+
+.prescription-register-main .prescription_register .compile-layer {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 21;
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box {
+    width: 84%;
+    border-radius: 0.375rem;
+    background-color: #fff;
+    position: absolute;
+    left: 8%;
+    top: 24%;
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box .mc {
+    text-align: center;
+    padding: 0.875rem 0 0.71875rem;
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box .mc span {
+    color: #333;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 0.75rem;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .compile-layer .compile-box .mc span {
+    font-size: 38px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .compile-layer .compile-box .mc span {
+    font-size: 57px;
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box .md {
+    width: 100%;
+    height: 1.375rem;
+    position: relative;
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box .md:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box .md a {
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 1.375rem;
+    line-height: 1.375rem;
+    font-size: 17px;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .compile-layer .compile-box .md a {
+    font-size: 34px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .compile-layer .compile-box .md a {
+    font-size: 51px;
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box .md .cancel {
+    color: #666666;
+    position: relative;
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box .md .cancel:before {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 1.375rem;
+    border-right: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+}
+
+.prescription-register-main .prescription_register .compile-layer .compile-box .md .confirm {
+    color: #007AFF;
+}
+
+/* 提交成功 */
+.prescription-register-main .prescription_register .tips-layer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 21;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prescription-register-main .prescription_register .tips-layer .cont {
+    position: absolute;
+    left: 0.78125rem;
+    right: 0.78125rem;
+    top: 3.125rem;
+    padding: 0.71875rem 0.3125rem 0.859375rem 0.625rem;
+    background-color: #fff;
+    border-radius: 0.375rem;
+}
+
+.prescription-register-main .prescription_register .tips-layer .cont h5 {
+    color: #526069;
+    font-size: 19px;
+    line-height: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 0.3125rem;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .tips-layer .cont h5 {
+    font-size: 38px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .tips-layer .cont h5 {
+    font-size: 57px;
+}
+
+.prescription-register-main .prescription_register .tips-layer .cont p {
+    line-height: 0.5625rem;
+    color: #76838F;
+    font-size: 17px;
+    margin-bottom: 0.15625rem;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .tips-layer .cont p {
+    font-size: 34px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .tips-layer .cont p {
+    font-size: 51px;
+}
+
+.prescription-register-main .prescription_register .tips-layer .cont span {
+    line-height: 0.5625rem;
+    color: #76838F;
+    font-size: 15px;
+}
+
+[data-dpr="2"] .prescription-register-main .prescription_register .tips-layer .cont span {
+    font-size: 30px;
+}
+
+[data-dpr="3"] .prescription-register-main .prescription_register .tips-layer .cont span {
+    font-size: 45px;
+}
+
+.prescription-register-main .prescription_register .tips-layer .cont .close {
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: url(../../../media/images/chachu.png) no-repeat 0 0/100% 100%;
+    position: absolute;
+    left: 50%;
+    bottom: -1.34375rem;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/*# sourceMappingURL=prescription-register.css.map */

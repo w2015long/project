@@ -1,0 +1,140 @@
+.cancellation-order .reason-layer {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 12;
+}
+
+.cancellation-order .reason-layer .reason-box {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.cancellation-order .reason-layer .reason-box .mt {
+    height: 1.40625rem;
+    line-height: 1.40625rem;
+    position: relative;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+
+[data-dpr="2"] .cancellation-order .reason-layer .reason-box .mt {
+    font-size: 28px;
+}
+
+[data-dpr="3"] .cancellation-order .reason-layer .reason-box .mt {
+    font-size: 42px;
+}
+
+.cancellation-order .reason-layer .reason-box .mt:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.cancellation-order .reason-layer .reason-box .mt .close {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../../../media/images/icon-del3.png) no-repeat center center/auto 0.29688rem;
+    position: absolute;
+    right: 0;
+    top: 0.1875rem;
+}
+
+.cancellation-order .reason-layer .reason-box .mc {
+    height: 7.1rem;
+    padding: 0 0.40625rem;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.cancellation-order .reason-layer .reason-box .mc .item {
+    margin-top: 0.15625rem;
+    height: 1.2rem;
+    padding-right: 0.625rem;
+}
+
+.cancellation-order .reason-layer .reason-box .mc .item a {
+    display: block;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    color: #526069;
+    font-size: 13px;
+}
+
+[data-dpr="2"] .cancellation-order .reason-layer .reason-box .mc .item a {
+    font-size: 26px;
+}
+
+[data-dpr="3"] .cancellation-order .reason-layer .reason-box .mc .item a {
+    font-size: 39px;
+}
+
+.cancellation-order .reason-layer .reason-box .mc .cur {
+    background: url(../../../media/images/icon-gou.png) no-repeat 100% center/0.26563rem auto;
+}
+
+.cancellation-order .reason-layer .reason-box .mc .cur a {
+    color: #62A8EA;
+}
+
+.cancellation-order .reason-layer .reason-box .md {
+    padding: 0.3125rem 0;
+    position: relative;
+    height: 1.5625rem;
+}
+
+.cancellation-order .reason-layer .reason-box .md a {
+    display: block;
+    width: 7.5rem;
+    height: 0.9375rem;
+    line-height: 0.9375rem;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    background-color: #62A8EA;
+    border-radius: 0.46875rem;
+    box-shadow: 0 0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.6);
+}
+
+[data-dpr="2"] .cancellation-order .reason-layer .reason-box .md a {
+    font-size: 26px;
+}
+
+[data-dpr="3"] .cancellation-order .reason-layer .reason-box .md a {
+    font-size: 39px;
+}
+
+.cancellation-order .reason-layer .reason-box .md:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #D9D9D9;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+html, body { height: 100%; background-color: #f5f5f5; }
+
+.interrogation_record .questionnaire-main { padding-top: 10px; }
+.interrogation_record .questionnaire-main .inquiry { background: #fff; margin-bottom: 10px; }
+.interrogation_record .questionnaire-main .inquiry .title { height: 44px; line-height: 44px; position: relative; font-weight: 500; color: #666666; font-size: 16px; padding-left: 16px; }
+.interrogation_record .questionnaire-main .inquiry .title a { position: absolute; right: 110px; top: 0px; font-weight: 500; color: #999999; font-size: 14px; }
+.interrogation_record .questionnaire-main .inquiry .title:after { content: " "; position: absolute; left: 0; bottom: 0; right: 0; height: 1px; border-bottom: 1px solid #ddd; color: #ddd; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.interrogation_record .questionnaire-main .inquiry .content-box { display: -webkit-box; display: -webkit-flex; display: flex; padding: 10px 16px; }
+.interrogation_record .questionnaire-main .inquiry .content-box .pic { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; }
+.interrogation_record .questionnaire-main .inquiry .content-box .pic img { width: 40px; height: 40px; }
+.interrogation_record .questionnaire-main .inquiry .content-box .text-content { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; overflow: hidden; margin-left: 15px; }
+.interrogation_record .questionnaire-main .inquiry .content-box .text-content h5 { font-size: 16px; font-weight: 600; color: #222222; }
+.interrogation_record .questionnaire-main .inquiry .content-box .text-content .text-box { font-weight: 500; color: #666666; font-size: 14px; }
+.interrogation_record .questionnaire-main .inquiry .content-box .text-content .text-box p { display: -webkit-box; display: -webkit-flex; display: flex; margin-bottom: 0; height: 30px; line-height: 30px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.interrogation_record .questionnaire-main .inquiry .content-box .text-content .text-box p span { display: inline-block; margin-right: 30px; color: #666666; font-size: 14px; }
+.interrogation_record .questionnaire-main .inquiry .btn-box { padding: 8px 16px  8px 0; text-align: right; position: relative; }
+.interrogation_record .questionnaire-main .inquiry .btn-box a { display: inline-block; height: 28px; line-height: 26px; border-radius: 14px; border: 1px solid #62a8ea; padding: 0 10px; font-weight: 500; color: #62a8ea; font-size: 14px; }
+.interrogation_record .questionnaire-main .inquiry .btn-box:after { content: " "; position: absolute; left: 0; top: 0; right: 0; height: 1px; border-bottom: 1px solid #ddd; color: #ddd; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+

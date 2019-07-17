@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*1px 像素线*/
+/*继承 @extend .setTopLine;*/
+html { height: 100%; background-color: #f5f5f5; }
+
+.ydyInShop .details-coupon .list-item .cell-bd { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; padding: 0 0.32rem; overflow: hidden; }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-top { height: 2.1rem; padding-top: 0.2rem; padding-right: 1.333rem; position: relative; }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-top .title { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 14px; line-height: 18px; margin-bottom: 0.2rem; color: #222222; }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-top .validity { color: #999999; font-size: 12px; position: absolute; bottom: 0.3rem; left: 0; text-overflow: ellipsis; overflow: hidden; }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-top .tag { display: inline-block; height: 16px; line-height: 14px; border-radius: 9px; margin-top: -2px; margin-right: 5px; padding: 0 5px; font-size: 10px; font-weight: bold; vertical-align: middle; border: 1px solid #62a8ea; color: #62a8ea; }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-bot { display: -webkit-box; display: -webkit-flex; display: flex; position: relative; height: 0.907rem; line-height: 0.907rem; }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-bot:before { box-sizing: border-box; content: " "; position: absolute; left: 0; top: 0; right: 0; height: 1px; border-top: 1px solid #E5E5E5; color: #E5E5E5; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-bot .bot-lt { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; margin-right: 0.267rem; text-overflow: ellipsis; white-space: nowrap; color: #999999; font-size: 12px; overflow: hidden; }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-bot .cp-dt { color: #F35744; font-size: 12px; line-height: 0.907rem; padding-right: 0.32rem; }
+.ydyInShop .details-coupon .list-item .cell-bd .bd-bot span { padding: 0 2px; }
+.ydyInShop .details-coupon .list-item .cell-bd .use-btn { display: inline-block; height: 25px; line-height: 25px; padding: 0 5px; color: #fff; border-radius: 13px; background-color: #62A8EA; box-shadow: 0 0.04rem 0.107rem rgba(98, 168, 234, 0.6); position: absolute; right: 0.32rem; top: 50%; margin-top: -20px; }
+.ydyInShop .details-coupon .list-item .cell-bd .cancel-btn { display: inline-block; font-size: 13px; height: 26px; line-height: 27px; padding: 0 10px; color: #62A8EA; background-color: #fff; box-sizing: border-box; text-align: center; overflow: hidden; word-break: break-word; white-space: nowrap; position: absolute; right: 0.32rem; top: 50%; margin-top: -20px; border-radius: 13px; }
+.ydyInShop .details-coupon .list-item .cell-bd .cancel-btn:before { content: ""; position: absolute; left: 0; top: 0; width: 200%; height: 200%; border: 1px solid #62A8EA; border-radius: 26px; -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5); -webkit-box-sizing: border-box; box-sizing: border-box; pointer-events: none; }
+.ydyInShop .details-coupon .list-item .state-box { position: absolute; right: 0; top: 0; }
+.ydyInShop .details-coupon .list-item .state-box img { width: 1.2rem; }
+.ydyInShop .details-coupon .list-item .used-box { position: absolute; right: 0; top: 0; }
+.ydyInShop .details-coupon .list-item .used-box img { width: 1.493rem; }
+.ydyInShop .details-coupon .qr-code { padding-top: 20px; background: #fff; margin-bottom: 10px; }
+.ydyInShop .details-coupon .qr-code .qrcode-top { height: 260px; }
+.ydyInShop .details-coupon .qr-code .qrcode-top .top-pic { width: 210px; height: 210px; margin: 0 auto; border-radius: 8px; border: 2px dashed #222222; text-align: center; padding-top: 7px; }
+.ydyInShop .details-coupon .qr-code .qrcode-top .top-pic img { width: 190px; height: 190px; display: inline-block; }
+.ydyInShop .details-coupon .qr-code .qrcode-top .top-tips { font-weight: 500; color: #222222; font-size: 14px; text-align: center; margin-top: 10px; }
+.ydyInShop .details-coupon .qr-code .qrcode-bottom { height: 60px; text-align: center; }
+.ydyInShop .details-coupon .qr-code .qrcode-bottom a { display: inline-block; width: 124px; height: 30px; border: 1px solid #62a8ea; border-radius: 15px; text-align: left; font-weight: 500; color: #62a8ea; line-height: 28px; font-size: 14px; margin-top: 10px; padding-left: 14px; }
+.ydyInShop .details-coupon .qr-code .qrcode-bottom a span { margin-right: 3px; display: inline-block; width: 18px; height: 18px; position: relative; top: 5px; }
+.ydyInShop .details-coupon .qr-code .qrcode-bottom a span img { width: 17px; height: 17px; vertical-align: top; }
+.ydyInShop .details-coupon .store-list .s-title { height: 36px; background: white; line-height: 36px; padding-left: 16px; font-size: 16px; font-weight: 600; color: #222222; }
+.ydyInShop .details-coupon .store-list .s-nav { height: 44px; line-height: 44px; font-weight: 400; color: #666666; font-size: 14px; background: #fff; display: -webkit-box; display: -webkit-flex; display: flex; position: relative; }
+.ydyInShop .details-coupon .store-list .s-nav .item { width: 114px; text-align: center; }
+.ydyInShop .details-coupon .store-list .s-nav .cur { font-weight: 600; color: #62a8ea; position: relative; }
+.ydyInShop .details-coupon .store-list .s-nav .cur:after { content: ''; position: absolute; width: 40px; height: 2px; background: #62a8ea; left: 50%; transform: translateX(-50%); -ms-transform: translateX(-50%); -moz-transform: translateX(-50%); -webkit-transform: translateX(-50%); -o-transform: translateX(-50%); bottom: 0; }
+.ydyInShop .details-coupon .store-list .s-nav:after { content: ''; position: absolute; left: 16px; right: 16px; height: 1px; background: #e4e4e4; bottom: 0; }
+.ydyInShop .details-coupon .store-list .special-product { height: 50px; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; font-size: 14px; background: #fff; padding-top: 10px; color: #999999; padding-left: 16px; position: relative; }
+.ydyInShop .details-coupon .store-list .special-product:after { content: ''; position: absolute; left: 16px; right: 16px; bottom: 0; height: 1px; background: #e4e4e4; }
+.ydyInShop .details-coupon .store-list .special-product-text { height: 36px; line-height: 36px; background: #fff; font-weight: 400; color: #666666; font-size: 14px; padding-left: 16px; }
+.ydyInShop .details-coupon .store-list .special-product-text span { padding-left: 2px; }
+.ydyInShop .details-coupon .store-list .store-item { padding: 0.4rem 0.427rem; display: -webkit-box; display: -webkit-flex; display: flex; background: #fff; }
+.ydyInShop .details-coupon .store-list .store-item .store-pic { width: 2.933rem; height: 2.933rem; }
+.ydyInShop .details-coupon .store-list .store-item .store-pic img { width: 2.933rem; height: 2.933rem; }
+.ydyInShop .details-coupon .store-list .store-item .store-content { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; margin-left: 0.267rem; position: relative; padding-bottom: 0.6rem; }
+.ydyInShop .details-coupon .store-list .store-item .store-content .title { color: #222222; font-size: 14px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; max-height: 32px; line-height: 16px; }
+.ydyInShop .details-coupon .store-list .store-item .store-content .tips { background: rgba(255, 102, 0, 0.08); border-radius: 4px; font-weight: 500; color: #ff6600; font-size: 12px; padding: 1px 3px; display: inline-block; margin-top: 0.1rem; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.ydyInShop .details-coupon .store-list .store-item .store-content .factory { font-weight: 500; color: #999999; font-size: 12px; line-height: 14px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; max-height: 28px; margin-top: 0.1rem; }
+.ydyInShop .details-coupon .store-list .store-item .store-content .product-information { position: absolute; bottom: 0; width: 100%; }
+.ydyInShop .details-coupon .store-list .store-item .store-content .product-information .quantity { font-weight: 500; color: #999999; font-size: 12px; float: left; position: relative; top: 6px; }
+.ydyInShop .details-coupon .store-list .store-item .store-content .product-information .price { font-weight: 600; color: #ff6600; font-size: 18px; float: right; }
+.ydyInShop .details-coupon .store-list .store-item .store-content .product-information .price i { font-size: 15px; }
+.ydyInShop .details-coupon .store-list .store-item .store-content .product-information .price span { font-weight: 500; color: #999999; font-size: 12px; }
+
+.ydyInShop .details-coupon .store-list .commodity-item { height: 2.467rem; position: relative; padding: 0.573rem 0.427rem 0.64rem 0.427rem; background: #fff; width: 100%; }
+.ydyInShop .details-coupon .store-list .commodity-item .commodity-name { color: #222222; font-size: 16px; max-width: 7rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.ydyInShop .details-coupon .store-list .commodity-item .commodity-name .commodity-name-item { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; max-width: 3.853rem; float: left; }
+.ydyInShop .details-coupon .store-list .commodity-item .commodity-name .tips { font-weight: 500; color: #ff6600; font-size: 12px; padding: 0.053rem 0.187rem  0.063rem; background: rgba(255, 102, 0, 0.1); border-radius: 0.053rem; float: left; margin-left: 0.267rem; }
+.ydyInShop .details-coupon .store-list .commodity-item .commodity-content { font-weight: 500; color: #999; font-size: 14px; margin-top: 0.4rem; max-width: 6.667rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.ydyInShop .details-coupon .store-list .commodity-item .commodity-addressicon { position: absolute; right: 0.56rem; top: 0.537rem; font-size: 14px; font-weight: 500; color: #999999; }
+/*.ydyInShop .details-coupon .store-list .commodity-item .commodity-addressicon:after { content: ''; position: absolute; width: 0.41rem; height: 0.373rem; background: url("../../../media/images/add28.png") no-repeat -0.02rem 0/0.4rem 0.373rem; left: -0.4rem; top: 0rem; }*/
+.ydyInShop .details-coupon .store-list .commodity-item .commodity-enter { position: absolute; width: 1.947rem; height: 0.667rem; background: #62a8ea; box-shadow: 0rem 0.04rem 0.107rem 0rem rgba(98, 168, 234, 0.6); border-radius: 0.4rem; right: 0.427rem; bottom: 0.5rem; text-align: center; line-height: 0.667rem; font-weight: 500; color: white; font-size: 13px; }
+.ydyInShop .details-coupon .store-list .commodity-item:after { content: ''; position: absolute; left: 0; right: 0; height: 1px; background: #e4e4e4; bottom: 0; }
+.ydyInShop .details-coupon .store-list .commodity-itemoff .commodity-name .tips { background: rgba(153, 153, 153, 0.4); color: #666666; }
+.ydyInShop .details-coupon .store-list .commodity-itemoff .commodity-enter { background: #d4d4d4; color: #fff; box-shadow: none; }
+.ydyInShop .details-coupon .store-list .commodity-itemoffff .commodity-enter { background: #d4d4d4; color: #fff; box-shadow: none; }
+
+.ydyInShop .unavailable { padding-top: 0.293rem; text-align: center; }
+.ydyInShop .unavailable span { display: inline-block; width: 0.427rem; height: 0.427rem; margin-right: 0.16rem; position: relative; top: -0.027rem; }
+.ydyInShop .unavailable span img { width: 0.427rem; height: 0.427rem; }
+
+/*# sourceMappingURL=in-stock.css.map */

@@ -1,0 +1,25 @@
+.delivery-time-selector .times-layer { background: rgba(0, 0, 0, 0.4); position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 12; }
+.delivery-time-selector .times-layer .select-times { background-color: #fff; position: absolute; left: 0; right: 0; bottom: 0; border-radius: 0.25rem 0.25rem 0 0; }
+.delivery-time-selector .times-layer .select-times .mt { height: 1.40625rem; line-height: 1.40625rem; position: relative; text-align: center; color: #333; font-size: 14px; }
+[data-dpr="2"] .delivery-time-selector .times-layer .select-times .mt { font-size: 28px; }
+[data-dpr="3"] .delivery-time-selector .times-layer .select-times .mt { font-size: 42px; }
+.delivery-time-selector .times-layer .select-times .mt:before { content: " "; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; border-top: 1px solid #D9D9D9; color: #D9D9D9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.delivery-time-selector .times-layer .select-times .mt .close { display: block; width: 1rem; height: 1rem; background: url(../../../media/images/icon-del3.png) no-repeat center center/auto 0.29688rem; position: absolute; right: 0; top: 0.1875rem; }
+.delivery-time-selector .times-layer .select-times .mc { overflow: hidden; position: relative; }
+.delivery-time-selector .times-layer .select-times .mc dl { width: 3.75rem;margin-bottom: 0; }
+.delivery-time-selector .times-layer .select-times .mc dt span { display: block; padding-left: 0.40625rem; height: 1.40625rem; line-height: 1.40625rem; color: #53606A; font-size: 14px; overflow: hidden; background-color: #f5f5f5; cursor: pointer; }
+[data-dpr="2"] .delivery-time-selector .times-layer .select-times .mc dt span { font-size: 28px; }
+[data-dpr="3"] .delivery-time-selector .times-layer .select-times .mc dt span { font-size: 42px; }
+.delivery-time-selector .times-layer .select-times .mc dd { position: absolute; width: 6.25rem; left: 3.75rem; top: 0; background-color: #fff; }
+.delivery-time-selector .times-layer .select-times .mc dl:last-child dt span { height: 1.5625rem; }
+.delivery-time-selector .times-layer .select-times .mc .item { height: 1.40625rem; line-height: 1.40625rem; color: #53606A; padding-left: 0.625rem; font-size: 14px; cursor: pointer; overflow: hidden; }
+[data-dpr="2"] .delivery-time-selector .times-layer .select-times .mc .item { font-size: 28px; }
+[data-dpr="3"] .delivery-time-selector .times-layer .select-times .mc .item { font-size: 42px; }
+.delivery-time-selector .times-layer .select-times .mc .item.selected { color: #62A8EA; background: url(../../../media/images/icon-gou.png) no-repeat 94% center/0.4rem auto; }
+.delivery-time-selector .times-layer .select-times .mc .cur dt span { color: #62A8EA; background-color: #fff; }
+.delivery-time-selector .times-layer .select-times .mc .cur dd { display: block; }
+.delivery-time-selector .times-layer .select-times .md { padding: 0.3125rem 0; position: relative; height: 1.5625rem; }
+.delivery-time-selector .times-layer .select-times .md a { display: block; width: 7.5rem; height: 0.9375rem; line-height: 0.9375rem; margin: 0 auto; text-align: center; color: #fff; font-size: 13px; background-color: #62A8EA; border-radius: 0.46875rem; box-shadow: 0 0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.6); }
+[data-dpr="2"] .delivery-time-selector .times-layer .select-times .md a { font-size: 26px; }
+[data-dpr="3"] .delivery-time-selector .times-layer .select-times .md a { font-size: 39px; }
+.delivery-time-selector .times-layer .select-times .md:before { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 1px; border-top: 1px solid #D9D9D9; color: #D9D9D9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }

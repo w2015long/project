@@ -1,0 +1,45 @@
+html, body { background-color: #fff; }
+
+.card .get-coupon .mt { padding: 0.9375rem 0.390625rem 0.625rem; background-color: #fff; text-align: center; }
+.card .get-coupon .mt .icon-box { width: 2.5rem; height: 2.5rem; margin: 0 auto 0.75rem; background: url(../../../media/images/icon_jihuo.png) no-repeat 0 0/100% auto; }
+.card .get-coupon .mt h4 { color: #333333; font-size: 21px; margin-bottom: 0.34375rem; }
+[data-dpr="2"] .card .get-coupon .mt h4 { font-size: 42px; }
+[data-dpr="3"] .card .get-coupon .mt h4 { font-size: 63px; }
+.card .get-coupon .mt p { line-height: 0.578125rem; color: #888; font-size: 13px; }
+[data-dpr="2"] .card .get-coupon .mt p { font-size: 26px; }
+[data-dpr="3"] .card .get-coupon .mt p { font-size: 39px; }
+.card .get-coupon .mt .weui-btn { margin-top: 0.625rem; border-radius: 0.078125rem; box-sizing: border-box; color: #ffffff; display: block; font-size: 16px; line-height: 1.40625rem; margin-left: auto; margin-right: auto; overflow: hidden; padding-left: 0.21875rem; padding-right: 0.21875rem; position: relative; text-align: center; text-decoration: none; background-color: #1AAD19; }
+[data-dpr="2"] .card .get-coupon .mt .weui-btn { font-size: 32px; }
+[data-dpr="3"] .card .get-coupon .mt .weui-btn { font-size: 48px; }
+.card .get-coupon .mt .weui-btn::after { border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 0.15625rem; box-sizing: border-box; content: " "; height: 200%; left: 0; position: absolute; top: 0; transform: scale(0.5); transform-origin: 0 0 0; width: 200%; }
+.card .get-coupon h5 { text-align: center; color: #37474F; font-size: 17px; font-weight: bold; margin: 0.78125rem 0.46875rem; position: relative; border-bottom: 0.03125rem solid rgba(5, 5, 5, 0.1); }
+[data-dpr="2"] .card .get-coupon h5 { font-size: 34px; }
+[data-dpr="3"] .card .get-coupon h5 { font-size: 51px; }
+.card .get-coupon h5 span { display: inline-block; padding: 0 0.28125rem; background-color: #F2F2F2; color: #333333; font-size: 15px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+[data-dpr="2"] .card .get-coupon h5 span { font-size: 30px; }
+[data-dpr="3"] .card .get-coupon h5 span { font-size: 45px; }
+.card .get-coupon .coupon-box { width: 9.21875rem; background-color: #fff; height: 2.5rem; border-radius: 0.125rem; padding: 0.1875rem 0.25rem 0 3.0625rem; position: relative; margin: 0.46875rem auto 0; box-shadow: 0 0.125rem 0.25rem rgba(98, 168, 234, 0.25); position: relative; overflow: hidden; }
+.card .get-coupon .coupon-box .box-left { width: 2.8125rem; height: 2.5rem; position: absolute; left: 0; top: 0; background-color: #62A8EA; background: -moz-linear-gradient(left, #62A8EA 0%, #28C8FF 100%); background: -webkit-linear-gradient(left, #62A8EA 0%, #28C8FF 100%); background: linear-gradient(to right, #62A8EA 0%, #28C8FF 100%); }
+.card .get-coupon .coupon-box .box-left .cont { display: flex; justify-content: center; align-items: center; color: #fff; width: 2.8125rem; height: 2.5rem; background: url(../../../media/images/icon4x13.png) repeat-y 100% 0.03125rem/0.0625rem auto; }
+.card .get-coupon .coupon-box .box-left i { font-style: normal; font-size: 11px; }
+[data-dpr="2"] .card .get-coupon .coupon-box .box-left i { font-size: 22px; }
+[data-dpr="3"] .card .get-coupon .coupon-box .box-left i { font-size: 33px; }
+.card .get-coupon .coupon-box .box-left span { font-weight: bold; font-size: 25px; }
+[data-dpr="2"] .card .get-coupon .coupon-box .box-left span { font-size: 50px; }
+[data-dpr="3"] .card .get-coupon .coupon-box .box-left span { font-size: 75px; }
+.card .get-coupon .coupon-box .title { max-height: 0.9375rem; line-height: 0.46875rem; color: #526069; font-size: 13px; font-weight: bold; overflow: hidden; }
+[data-dpr="2"] .card .get-coupon .coupon-box .title { font-size: 26px; }
+[data-dpr="3"] .card .get-coupon .coupon-box .title { font-size: 39px; }
+.card .get-coupon .coupon-box .full { display: inline-block; margin: 0.125rem 0; height: 0.5rem; line-height: 0.5rem; padding: 0 0.125rem; background-color: #fff2eb; color: #666666; font-size: 12px; }
+[data-dpr="2"] .card .get-coupon .coupon-box .full { font-size: 24px; }
+[data-dpr="3"] .card .get-coupon .coupon-box .full { font-size: 36px; }
+.card .get-coupon .coupon-box .full span { padding: 0 0.03125rem; font-weight: bold; }
+.card .get-coupon .coupon-box .full .time { line-height: 0.515625rem; color: #76838F; font-size: 12px; }
+[data-dpr="2"] .card .get-coupon .coupon-box .full .time { font-size: 24px; }
+[data-dpr="3"] .card .get-coupon .coupon-box .full .time { font-size: 36px; }
+.card .activation-main .icon-box-ing { width: 2.5rem; height: 2.5rem; margin: 0.9375rem auto 0.75rem; background: url(../../../media/images/jihuozhon.png) no-repeat 0 0/100% auto; }
+.card .activation-main p { color: #333333; text-align: center; font-size: 21px; }
+[data-dpr="2"] .card .activation-main p { font-size: 42px; }
+[data-dpr="3"] .card .activation-main p { font-size: 63px; }
+
+/*# sourceMappingURL=activate-success.css.map */

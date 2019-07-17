@@ -1,0 +1,27 @@
+/**
+ * @author chencheng
+ * @date 2018/3/31
+ */
+
+export const COMMON_AFFIX_FOR_LIST_CHANGE_INDEX = 'COMMON_AFFIX_FOR_LIST_CHANGE_INDEX';
+
+//收货地址
+export const COMMON_ADDRESS_INIT = "COMMON_ADDRESS_INIT";
+export const COMMON_ADDRESS_ADD = 'COMMON_ADDRESS_ADD';
+
+//物流信息
+export const COMMON_GET_LOGISTICS_INFO = 'COMMON_GET_LOGISTICS_INFO';
+
+//确认框
+export const COMMON_CONFIRM = 'COMMON_CONFIRM';
+
+//短信发送时间间隔
+export const COMMON_SEND_SMS_FREQUENCY = 'COMMON_SEND_SMS_FREQUENCY';
+
+//分享指导箭头
+export const COMMON_SET_SHOW_SHARE_GUIDE = 'COMMON_SET_SHOW_SHARE_GUIDE';
+
+//离开确认
+export const COMMON_SET_PROMPT = 'COMMON_SET_PROMPT';
+
+

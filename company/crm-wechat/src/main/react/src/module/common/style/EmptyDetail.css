@@ -1,0 +1,31 @@
+.empty-detail { height: 100%;background-color: #F5F5F5; }
+
+.empty-detail .loading-main { background: #f4f4f4; }
+.empty-detail .loading-main .topbig-gb { width: 100%; height: 9.333333rem; background: rgba(0, 0, 0, 0.05); }
+.empty-detail .loading-main .bottom-bg { padding-top: 0.506667rem; }
+.empty-detail .loading-main .bottom-bg .bottom-bg1 { height: 0.453333rem; margin-left: 0.733333rem; margin-right: 0.733333rem; background: rgba(0, 0, 0, 0.05); }
+.empty-detail .loading-main .bottom-bg .bottom-bg2 { height: 0.346667rem; margin-left: 0.733333rem; margin-right: 0.733333rem; background: rgba(0, 0, 0, 0.05); margin-top: 0.133333rem; }
+.empty-detail .loading-main .bottom-bg .bottom-bg3 { height: 0.106667rem; margin-left: 0.733333rem; margin-right: 0.733333rem; background: rgba(0, 0, 0, 0.05); margin-top: 0.346667rem; }
+.empty-detail .loading-main .bottom-bg .bottom-bg4 { height: 0.933333rem; margin-left: 0.733333rem; margin-right: 0.733333rem; background: rgba(0, 0, 0, 0.05); margin-top: 0.373333rem; }
+.empty-detail .loading-main .bottom-bg .bottom-bg5 { height: 0.333333rem; margin-left: 0.733333rem; margin-right: 0.733333rem; background: rgba(0, 0, 0, 0.05); margin-top: 0.2rem; }
+.empty-detail .loading-main .bottom-bg2 { padding: 0 0.333333rem; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; margin-top: 0.933333rem; }
+.empty-detail .loading-main .bottom-bg2 .bg1-left { width: 1.6rem; height: 1.6rem; background: rgba(0, 0, 0, 0.05); }
+.empty-detail .loading-main .bottom-bg2 .bg1-right { margin-left: 0.266667rem; flex: 1; }
+.empty-detail .loading-main .bottom-bg2 .bg1-right .right-bgt { height: 0.533333rem; background: rgba(0, 0, 0, 0.05); margin-top: 0.4rem; }
+.empty-detail .loading-main .bottom-bg2 .bg1-right .right-bgb { height: 0.266667rem; margin-top: 0.133333rem; background: rgba(0, 0, 0, 0.05); }
+
+.empty-detail .hello-main { padding-top: 0.333333rem; }
+.empty-detail .hello-main .bg1 { background: rgba(0, 0, 0, 0.05); height: 0.933333rem; margin: 0 0.333333rem 0 0.333333rem; }
+.empty-detail .hello-main .bg2 { height: 0.8rem; background: rgba(0, 0, 0, 0.05); margin: 0.4rem 0.333333rem 0 0.333333rem; }
+.empty-detail .hello-main .bg3 { display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; -webkit-justify-content: space-between; justify-content: space-between; margin: 0.626667rem 0.333333rem 0 0.333333rem; }
+.empty-detail .hello-main .bg3 .bg3-l { width: 1.866667rem; height: 1.866667rem; background: rgba(0, 0, 0, 0.05); }
+.empty-detail .hello-main .bg3 .bg3-r { flex: 1; margin-left: 0.226667rem; }
+.empty-detail .hello-main .bg3 .bg3-r .gb3r-t { height: 0.533333rem; background: rgba(0, 0, 0, 0.05); margin-top: 0.333333rem; }
+.empty-detail .hello-main .bg3 .bg3-r .gb3r-c { height: 0.266667rem; background: rgba(0, 0, 0, 0.05); margin-top: 0.32rem; }
+.empty-detail .hello-main .bg3 .bg3-r .gb3r-b { height: 0.266667rem; margin-top: 0.133333rem; background: rgba(0, 0, 0, 0.05); }
+.empty-detail .hello-main .bg4 { height: 0.533333rem; background: rgba(0, 0, 0, 0.05); margin: 0.586667rem 0.333333rem 0 0.333333rem; }
+.empty-detail .hello-main .bg5 { background: rgba(0, 0, 0, 0.05); height: 4.933333rem; margin: 0.266667rem 0 0 0.266667rem; }
+.empty-detail .hello-main .bg6 { background: rgba(0, 0, 0, 0.05); height: 0.533333rem; margin: 1.5rem 0.333333rem 0 0.333333rem; }
+.empty-detail .hello-main .bg7 { background: rgba(0, 0, 0, 0.05); position: absolute; bottom: 0; left: 0.333333rem; right: 0.333333rem; height: 3.466667rem; }
+
+/*# sourceMappingURL=loading2.css.map */

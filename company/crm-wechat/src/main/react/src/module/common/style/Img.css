@@ -1,0 +1,45 @@
+
+.commonImg .arrive {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.53125rem;
+    line-height: 0.53125rem;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.commonImg .bg-green {
+    background-color: rgba(58, 169, 158, 0.8);
+}
+
+.commonImg .arrive {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.53125rem;
+    line-height: 0.53125rem;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.commonImg .bg-blue {
+    background-color: rgba(98, 168, 234, 0.8);
+}
+
+/*商品视频*/
+.swiper-container iframe {
+    margin-top: 1.75rem;
+    height: 100% !important;
+    width: 100% !important;
+}

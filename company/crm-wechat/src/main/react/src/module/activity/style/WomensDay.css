@@ -1,0 +1,72 @@
+.womens-day {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.womens-day .inner {
+    width: 10rem;
+    margin: 0 auto;
+    min-height: 100.1%;
+    min-height: calc(100% + 2px);
+    background-color: #ffd0d6;
+}
+
+.womens-day .sp-top img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.womens-day .get-coupon {
+    margin-top: 1rem;
+    position: relative;
+}
+
+.womens-day .get-coupon img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -1px;
+}
+
+.womens-day .get-coupon .get-5 {
+    display: block;
+    width: 2.8rem;
+    height: 3.266667rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 2.85rem;
+}
+
+.womens-day .get-coupon .get-10 {
+    display: block;
+    width: 2.85rem;
+    height: 3.266667rem;
+    position: absolute;
+    left: 3.6rem;
+    top: 2.85rem;
+}
+
+.womens-day .get-coupon .get-30 {
+    display: block;
+    width: 2.8rem;
+    height: 3.266667rem;
+    position: absolute;
+    right: 0.45rem;
+    top: 2.85rem;
+}
+
+.womens-day .subject-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.womens-day .subject-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -1px;
+}
+
+/*# sourceMappingURL=womens-day.css.map */

@@ -1,0 +1,64 @@
+.prescription-add { height: 100%; background-color: #f5f5f5; }
+
+.prescription-add .prescription-main .mt { height: 1.375rem; line-height: 1.375rem; padding: 0 1.40625rem; text-align: center; background-color: #fff; position: fixed; z-index: 2; left: 0; right: 0; top: 0; }
+.prescription-add .prescription-main .mt:before { content: " "; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; border-top: 1px solid #D9D9D9; color: #D9D9D9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.prescription-add .prescription-main .mt span { color: #333; font-size: 18px; }
+[data-dpr="2"] .prescription-add .prescription-main .mt span { font-size: 36px; }
+[data-dpr="3"] .prescription-add  .prescription-main .mt span { font-size: 54px; }
+.prescription-add .prescription-main .mt .rule-btn { position: absolute; top: 0; right: 0.40625rem; color: #76838F; font-size: 16px; }
+[data-dpr="2"] .prescription-add .prescription-main .mt .rule-btn { font-size: 32px; }
+[data-dpr="3"] .prescription-add .prescription-main .mt .rule-btn { font-size: 48px; }
+.prescription-add .prescription-main .mt .back { display: block; width: 1.375rem; height: 1.375rem; position: absolute; left: 0; top: 0; }
+.prescription-add .prescription-main .mt .back:after { content: " "; display: inline-block; height: 0.28125rem; width: 0.28125rem; border-width: 0 0 0.0625rem 0.0625rem; border-color: #303030; border-style: solid; -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); position: absolute; top: 50%; margin-top: -0.1406rem; margin-right: -0.1406rem; right: 50%; }
+.prescription-add .prescription-main .mc { padding-bottom: 0.78125rem; }
+.prescription-add .prescription-main .mc .up-pic { padding: 0.34375rem 0 0.53125rem 0.40625rem; background-color: #fff; margin-bottom: 0.15625rem; }
+.prescription-add .prescription-main .mc .up-pic p { line-height: 0.625rem; color: #526069; font-size: 14px; }
+[data-dpr="2"] .prescription-add .prescription-main .mc .up-pic p { font-size: 28px; }
+[data-dpr="3"] .prescription-add .prescription-main .mc .up-pic p { font-size: 42px; }
+.prescription-add .prescription-main .mc .up-pic .pic-box { margin-top: 0.21875rem;  overflow: hidden; }
+.prescription-add .prescription-main .mc .up-pic .pic-box .item { width: 1.5625rem; height: 1.5625rem; float: left; margin-right: 0.34375rem; margin-bottom: 0.15625rem; position: relative; overflow: hidden; }
+.prescription-add .prescription-main .mc .up-pic .pic-box .item img { width: 1.5625rem; height: 1.5625rem; }
+.prescription-add .prescription-main .mc .up-pic .pic-box .item .del-btn { display: block; width: 0.453125rem; height: 0.453125rem; background: url(../../../media/images/guanbi2.png) no-repeat 0 0/100% 100%; position: absolute; right: 0; top: 0; }
+.prescription-add .prescription-main .mc .up-pic .pic-box .item .add-btn { display: block; width: 1.5625rem; height: 1.5625rem; border: 1px dashed #ddd; background: url(../../../media/images/icon-plus2.png) no-repeat center center/0.48438rem auto; }
+.prescription-add .prescription-main .mc .cont { margin-bottom: 0.15625rem; }
+.prescription-add .prescription-main .mc .cont .item { padding: 0.46875rem 0.40625rem; position: relative; background-color: #fff; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: flex-start; -webkit-align-items: flex-start; align-items: flex-start; }
+.prescription-add .prescription-main .mc .cont .cell-hd { width: 2.65625rem; height: 0.75rem; line-height: 0.75rem; color: #526069; font-size: 14px; }
+[data-dpr="2"] .prescription-add .prescription-main .mc .cont .cell-hd { font-size: 28px; }
+[data-dpr="3"] .prescription-add .prescription-main .mc .cont .cell-hd { font-size: 42px; }
+.prescription-add .prescription-main .mc .cont .cell-bd { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; position: relative; }
+.prescription-add .prescription-main .mc .cont .cell-bd input { display: block; height: 0.75rem; color: #526069; font-size: 14px; line-height: 0.75rem; width: 100%; }
+[data-dpr="2"] .prescription-add .prescription-main .mc .cont .cell-bd input { font-size: 28px; }
+[data-dpr="3"] .prescription-add .prescription-main .mc .cont .cell-bd input { font-size: 42px; }
+.prescription-add .prescription-main .mc .cont .cell-bd textarea { width: 100%; border: none; color: #526069; padding-top: 0.065rem; line-height: 0.625rem; font-size: 14px; }
+[data-dpr="2"] .prescription-add .prescription-main .mc .cont .cell-bd textarea { font-size: 28px; }
+[data-dpr="3"] .prescription-add .prescription-main .mc .cont .cell-bd textarea { font-size: 42px; }
+.prescription-add .prescription-main .mc .cont .cell-bd .unit { height: 0.75rem; line-height: 0.75rem; position: absolute; right: 0; top: 0; color: #526069; font-size: 14px; }
+[data-dpr="2"] .prescription-add .prescription-main .mc .cont .cell-bd .unit { font-size: 28px; }
+[data-dpr="3"] .prescription-add .prescription-main .mc .cont .cell-bd .unit { font-size: 42px; }
+.prescription-add .prescription-main .mc .cont .cell-bd .switchery { display: inline-block; border: 0.046875rem solid #dfdfdf; width: 1.125rem; height: 0.65625rem; cursor: pointer; border-radius: 0.328125rem; box-sizing: content-box; position: relative; vertical-align: middle; transition: border 0.4s ease 0s, background-color 0.4s ease 0s; }
+.prescription-add .prescription-main .mc .cont .cell-bd .switchery i { background: #fff none repeat scroll 0 0; border-radius: 100%; box-shadow: 0 1px 0.04688rem rgba(0, 0, 0, 0.4); height: 0.65625rem; position: absolute; top: 0; width: 0.65625rem; left: 0; transition: background-color 0.4s ease 0s, left 0.2s ease 0s; }
+.prescription-add .prescription-main .mc .cont .cell-bd .switchery.checked { background-color: #4CD964; border-color: #4CD964; }
+.prescription-add .prescription-main .mc .cont .cell-bd .switchery.checked i { background-color: #fff; left: 0.46875rem; }
+.prescription-add .prescription-main .mc .cont .text-right { text-align: right; }
+.prescription-add .prescription-main .mc .cont .item:before { content: " "; position: absolute; left: 0; top: 0; right: 0; height: 1px; border-top: 1px solid #e5e5e5; color: #e5e5e5; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); left: 0.40625rem; z-index: 2; }
+.prescription-add .prescription-main .mc .cont .item:first-child:before { display: none; }
+.prescription-add .prescription-main .mc .next-btn { display: block; height: 0.9375rem; line-height: 0.9375rem; width: 75%; margin: 0.703125rem auto 0; border-radius: 0.46875rem; background-color: #62A8EA; color: #FFFFFF; text-align: center; font-size: 14px; box-shadow: 0 0.04688rem 0.125rem 0 rgba(98, 168, 234, 0.6); }
+[data-dpr="2"] .prescription-add .prescription-main .mc .next-btn { font-size: 28px; }
+[data-dpr="3"] .prescription-add .prescription-main .mc .next-btn { font-size: 42px; }
+.prescription-add .prescription-main .mc .default-btn { opacity: 0.4; cursor: default; }
+
+.prescription-add .hold-div-top { height: 1.375rem; }
+
+.prescription-add .rule-layer { background: rgba(0, 0, 0, 0.4); position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 12; }
+.prescription-add .rule-layer .rule-box { width: 84%; border-radius: 0.375rem; background-color: #fff; position: absolute; left: 8%; top: 50%; transform: translateY(-50%); }
+.prescription-add .rule-layer .rule-box .mc { text-align: left; padding: 0.71875rem 0.78125rem 0.59375rem 0.625rem; }
+.prescription-add .rule-layer .rule-box .mc h5 { color: #37474F; font-size: 17px; font-weight: bold; line-height: 0.75rem; margin-bottom: 0.3125rem; }
+[data-dpr="2"] .prescription-add .rule-layer .rule-box .mc h5 { font-size: 34px; }
+[data-dpr="3"] .prescription-add .rule-layer .rule-box .mc h5 { font-size: 51px; }
+.prescription-add .rule-layer .rule-box .mc .mc-cont { max-height: 9rem; overflow: hidden; overflow-y: auto; }
+.prescription-add .rule-layer .rule-box .mc p { color: #76838F; line-height: 0.5625rem; font-size: 14px; }
+[data-dpr="2"] .prescription-add .rule-layer .rule-box .mc p { font-size: 28px; }
+[data-dpr="3"] .prescription-add .rule-layer .rule-box .mc p { font-size: 42px; }
+.prescription-add .rule-layer .rule-box .close-btn { display: block; width: 0.6875rem; height: 0.6875rem; border: 0.04688rem solid rgba(255, 255, 255, 0.2); border-radius: 50%; background: url(../../../media/images/icon-del2.png) no-repeat center center/0.26563rem auto; position: absolute; bottom: -1.2rem; left: 50%; cursor: pointer; transform: translateX(-50%); }
+
+/*# sourceMappingURL=prescription-info.css.map */

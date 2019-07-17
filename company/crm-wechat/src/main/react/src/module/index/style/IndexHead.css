@@ -1,0 +1,29 @@
+
+
+.index-head{ height: 100%; background-color: #fff; }
+
+ .index-head.bg_top { height: 1.866667rem; position: relative; }
+ .index-head.bg_top img { height: 1.866667rem; width: 100%; }
+ .index-head.bg_top .addr_text { padding-right: 0.2rem;display: block;font-size: 16px; color: #FFFFFF; position: absolute; left: -0.13rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 7rem; top: 0.466667rem; font-weight: bold; padding-left: 0.7rem; padding-bottom:0.1rem;padding-top: 0.1rem; }
+[data-dpr="2"]  .index-head.bg_top .addr_text { font-size: 32px; }
+[data-dpr="3"]  .index-head.bg_top .addr_text { font-size: 48px; }
+ .index-head.bg_top .code_sm { position: absolute; height: 0.586667rem; right: 0.346667rem; top: 0.4rem; display: flex; }
+ .index-head.bg_top .code_sm .code_item { display: block; width: 0.6875rem; height: 0.6875rem; border-radius: 50%; background: rgba(255, 255, 255, 0.2); position: relative; }
+ .index-head.bg_top .code_sm .code_item:after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 0.373333rem; height: 0.373333rem; background: url(../../../media/images/saomacopy.png) no-repeat center/0.37333rem auto; }
+ .index-head.bg_top .code_sm .nearby { display: block; font-size: 12px; color: #FFFFFF; background: rgba(255, 255, 255, 0.2); border-radius: 0.34375rem; width: 1.71875rem; text-align: center; height: 0.6875rem; line-height: 0.6875rem; margin-left: 0.266667rem; }
+[data-dpr="2"]  .index-head.bg_top .code_sm .nearby { font-size: 24px; }
+[data-dpr="3"]  .index-head.bg_top .code_sm .nearby { font-size: 36px; }
+
+.index-head .bg_top .addr_text { font-size: 15px; color: #FFFFFF; position: absolute; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 6rem; top: 0.466667rem; font-weight: bold; padding-left: 0.5rem; padding-right: 0.3rem; }
+[data-dpr="2"] .index-head.bg_top .addr_text { font-size: 30px; }
+[data-dpr="3"] .index-head.bg_top .addr_text { font-size: 45px; }
+.index-head  .index-head.bg_top .spa1 { font-weight: 600; color: white; font-size: 16px; }
+[data-dpr="2"] .index-head.bg_top .addr_text .spa1 { font-size: 32px; }
+[data-dpr="3"] .index-head.bg_top .addr_text .spa1 { font-size: 48px; }
+.index-head.bg_top .spa2 { font-weight: 400; color: white; font-size: 12px; padding: 0 0.08rem; }
+[data-dpr="2"] .index-head.bg_top .addr_text .spa2 { font-size: 24px; }
+[data-dpr="3"] .index-head.bg_top .addr_text .spa2 { font-size: 36px; }
+.index-head.bg_top .addr_text .spa3 { font-weight: 400; color: white; font-size: 12px; position: relative; }
+[data-dpr="2"] .index-head.bg_top .addr_text .spa3 { font-size: 24px; }
+[data-dpr="3"] .index-head .bg_top .addr_text .spa3 { font-size: 36px; }
+

@@ -1,0 +1,33 @@
+
+
+
+
+.common-footer .footer { width: 100%; height: 1.5625rem; background-color: #fff; position: fixed; left: 0; bottom: 0; z-index: 11; }
+.common-footer .footer:before { content: " "; position: absolute; left: 0; top: 0; width: 100%; height: 1px; border-top: 1px solid #D9D9D9; color: #D9D9D9; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); }
+.common-footer .footer .item { width: 20%; text-align: center; float: left; height: 1.5625rem; }
+.common-footer .footer .homeindex span { display: inline-block; text-align: center; padding-top: 0.9375rem; height: 0.515625rem; line-height: 0.515625rem; cursor: pointer; color: #AAAEB9; font-size: 12px; background: url(../../../media/images/icon_shouye.png) no-repeat center 0.23438rem/0.65625rem auto; }
+[data-dpr="2"] .common-footer .footer .homeindex span { font-size: 24px; }
+[data-dpr="3"] .common-footer .footer .homeindex span { font-size: 36px; }
+.common-footer .footer .homeindex.cur span { background: url(../../../media/images/icon_shouye_s.png) no-repeat center 0.23438rem/0.65625rem auto; }plus
+.common-footer .footer .sp-cart span { display: inline-block; width: 1.25rem; height: 1.25rem; padding-top: 0.140625rem; border-radius: 50%; cursor: pointer; position: relative; background: #F8F8F8 url(../../../media/images/gouwuche.png) no-repeat center center/0.65625rem auto; }
+.common-footer .footer .sp-cart span i { display: inline-block; height: 0.4375rem; line-height: 0.4375rem; color: #fff; padding: 0 0.140625rem  0.240625rem 0.140625rem; font-size: 10px; position: absolute; left: 72%; top: 0.078125rem; box-shadow: 0 0.03125rem 0.0625rem 0 rgba(0, 0, 0, 0.1); border-radius: 0.21875rem; border: 1px solid #F8F8F8; background-color: #62A8EA; }
+[data-dpr="2"] .common-footer .footer .sp-cart span i { font-size: 20px; }
+[data-dpr="3"] .common-footer .footer .sp-cart span i { font-size: 30px; }
+.common-footer .footer .straight span { display: inline-block; text-align: center; padding-top: 0.9375rem; height: 0.515625rem; line-height: 0.515625rem; cursor: pointer; color: #AAAEB9; font-size: 12px; background: url(../../../media/images/icon_shanchen.png) no-repeat center 0.23438rem/0.625rem auto; }
+[data-dpr="2"] .common-footer .footer .straight span { font-size: 24px; }
+[data-dpr="3"] .common-footer .footer .straight span { font-size: 36px; }
+.common-footer .footer .straight.cur span { background: url(../../../media/images/icon_shanchen_a.png) no-repeat center 0.23438rem/0.625rem auto; }
+.common-footer .footer .home-page span { display: inline-block; text-align: center; padding-top: 0.9375rem; height: 0.907rem; line-height: 0.707rem; cursor: pointer; color: #AAAEB9; font-size: 12px; background: url(../../../media/images/icon_saomao.png) no-repeat center 0/0.907rem 0.907rem; position: relative; top: -0.133rem; }
+[data-dpr="2"] .common-footer .footer .home-page span { font-size: 24px; }
+[data-dpr="3"] .common-footer .footer .home-page span { font-size: 36px; }
+.common-footer .footer .my-info span { display: inline-block; text-align: center; padding-top: 0.9375rem; height: 0.515625rem; line-height: 0.515625rem; cursor: pointer; color: #AAAEB9; font-size: 12px; background: url(../../../media/images/icon_gouwuche.png) no-repeat center 0.23438rem/0.64063rem auto; }
+[data-dpr="2"] .common-footer .footer .my-info span { font-size: 24px; }
+[data-dpr="3"] .common-footer .footer .my-info span { font-size: 36px; }
+.common-footer .footer .sp-cart.have span { background: url(../../../media/images/icon_gouwuche_s.png) no-repeat center center/0.65625rem auto; }
+.common-footer .footer .sp-cart.have span i { border: 1px solid #fff; color: #fff; background-color: #62a8ea; }
+.common-footer .footer .wode span { display: inline-block; text-align: center; padding-top: 0.9375rem; height: 0.515625rem; line-height: 0.515625rem; cursor: pointer; color: #AAAEB9; font-size: 12px; background: url(../../../media/images/icon_wode.png) no-repeat center 0.23438rem/0.64063rem auto; }
+[data-dpr="2"] .common-footer .footer .wode span { font-size: 24px; }
+[data-dpr="3"] .common-footer .footer .wode span { font-size: 36px; }
+.common-footer .footer .home-page.cur span { color: #62A8EA; background: url(../../../media/images/icon_saomao_s.png) no-repeat center 0/0.907rem auto; }
+.common-footer .footer .my-info.cur span { color: #62A8EA; background: url(../../../media/images/icon_gouwuche_s.png) no-repeat center 0.23438rem/0.64063rem auto; }
+.common-footer .footer .wode.cur span { background: url(../../../media/images/icon_wode_s.png) no-repeat center 0.23438rem/0.64063rem auto; }

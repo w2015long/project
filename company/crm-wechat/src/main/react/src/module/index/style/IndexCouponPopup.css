@@ -1,0 +1,11 @@
+ .coupon-hide {display: none}
+ .new-pop-ups { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 100}
+ .new-pop-ups .item { background: #fff; position: absolute; bottom: 0; left: 0; right: 0; }
+ .new-pop-ups .item .item-top { height: 3.933rem; }
+ .new-pop-ups .item .item-top .touch-area { width: 50%; padding-top: 1.067rem; float: left; }
+ .new-pop-ups .item .item-top .touch-area .touch-area-pic { width: 1.173rem; height: 1.173rem; margin: 0 auto; }
+ .new-pop-ups .item .item-top .touch-area .touch-area-pic img { width: 1.173rem; height: 1.173rem; }
+ .new-pop-ups .item .item-top .touch-area .touch-area-text { text-align: center; margin-top: 0.107rem; }
+ .new-pop-ups .item .item-bottom { height: 1.227rem; text-align: center; line-height: 1.227rem; font-weight: 400; color: #999999; font-size: 16px; }
+[data-dpr="2"] .new-pop-ups .item .item-bottom { font-size: 32px; }
+[data-dpr="3"] .new-pop-ups .item .item-bottom { font-size: 48px; }
