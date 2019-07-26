@@ -48,17 +48,7 @@ module.exports = {
 			{//处理高级语法ES5/6/7
 				test:/\.js$/,
 				exclude:/(node_modules)/,
-				use:{
-					loader:'babel-loader',
-					options:{
-						presets: ['env','es2015','stage-3'],//编译语法
-						plugins:['transform-runtime',["component", [ {
-												      "libraryName": "mint-ui",
-												      "style": true }]
-												      ]
-								],//插件
-					}
-				}
+				use:{loader:'babel-loader'}
 			},
 			{test:/\.vue$/,loader:'vue-loader'},//vue loader
 		]

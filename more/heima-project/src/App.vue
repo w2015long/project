@@ -1,12 +1,14 @@
 <template>
 	<div>
-		<mt-header title="long long long long title">
+		<mt-header flxed title="黑马程序员">
 		  <router-link to="/" slot="left">
-		    <mt-button icon="back">back</mt-button>
+		    <mt-button icon="back">返回</mt-button>
 		  </router-link>
 		  <mt-button icon="more" slot="right"></mt-button>
-		</mt-header>
-		<router-link></router-link>
+		</mt-header>		
+		<h1>APP</h1>
+		
+
 		<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item mui-active" href="#tabbar">
 				<span class="mui-icon mui-icon-home"></span>
@@ -32,11 +34,7 @@
 	export default {
 		name:"App",
 		methods:{
-			show(){
-				Toast({
-				  message: '操作成功',
-				});				
-			}	
+	
 		}
 	}
 </script>
