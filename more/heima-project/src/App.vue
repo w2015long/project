@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="container">
 		<mt-header flxed title="黑马程序员">
 		  <router-link to="/" slot="left">
 		    <mt-button icon="back">返回</mt-button>
@@ -8,7 +8,9 @@
 		</mt-header>		
 		
 		<!-- 主体container区域 -->
-		<router-view></router-view>
+		<transition>
+			<router-view></router-view>
+		</transition>	
 
 		<nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -39,6 +41,21 @@
 		}
 	}
 </script>
-<style scoped>
-	
+<style lang="sass" scoped>
+	.container{
+		overflow-x: hidden;
+	}
+	.v-enter{
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	.v-leave-to{
+		opacity: 0;
+		transform: translateX(-100%);
+		position: absolute;		
+	}
+	.v-enter-active,
+	.v-leave-active{
+		transition: all .6s ease;
+	}
 </style>
