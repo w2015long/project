@@ -6,7 +6,6 @@
 		  </router-link>
 		  <mt-button icon="more" slot="right"></mt-button>
 		</mt-header>		
-		
 		<!-- 主体container区域 -->
 		<transition>
 			<router-view></router-view>
