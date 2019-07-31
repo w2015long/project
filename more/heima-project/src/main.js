@@ -1,15 +1,13 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
+import filters from './filters';
+//注册全局过滤器
+Object.keys(filters).forEach(key=>Vue.filter(key,filters[key]));
 
-import { Header } from 'mint-ui';
+import { Header,Button,Swipe, SwipeItem } from 'mint-ui';
 Vue.component(Header.name, Header);
-
-import { Button } from 'mint-ui';
 Vue.component(Button.name, Button);
-
-import { Swipe, SwipeItem } from 'mint-ui';
-
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 

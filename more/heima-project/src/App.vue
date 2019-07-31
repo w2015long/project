@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<mt-header flxed title="黑马程序员">
+		<mt-header fixed  title="黑马程序员">
 		  <router-link to="/" slot="left">
 		    <mt-button icon="back">返回</mt-button>
 		  </router-link>
@@ -42,6 +42,8 @@
 </script>
 <style lang="sass" scoped>
 	.container{
+		padding-top: 40px;
+		padding-bottom: 50px;
 		overflow-x: hidden;
 	}
 	.v-enter{

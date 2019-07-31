@@ -61,11 +61,7 @@ module.exports = {
 	devServer:{
 		contentBase:"./dist",
 		open:true,
-		port:8989,
-		hot:true,//启用热更新
-	    proxy: [{//跨域请求
-	      context: ['/auth', '/api'],
-	      target: 'http://localhost:8989',
-	    }]		
+		port:3000,
+		hot:true,//启用热更新	
 	}
 }

@@ -5,7 +5,7 @@ export const request = (options)=>{
 		const obj = {
 		  method:options.method || 'get',
 		  url:options.url || '',
-		  withCredentials: true//我想要跨域带上cookies
+		  //withCredentials: true//我想要跨域带上cookies
 		};
 		switch(obj.method.toUpperCase()){
 			//GET 与 DELETE请求发送数据为 params

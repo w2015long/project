@@ -2,7 +2,7 @@
 	<div class="home">
 		<mt-swipe :auto="4000">
 		  <mt-swipe-item v-for="(item,index) in bannerList" :key="index">
-		  	<img :src="item.imgUrl">
+		  	<img :src="item.img" />
 		  </mt-swipe-item>
 		</mt-swipe>	
 		<!-- 九宫格 -->
@@ -30,6 +30,7 @@
 </template>
 <script>
 	import { request } from '../../util';
+	import { Toast } from 'mint-ui';
 	export default {
 		name:"Home",
 		data(){
@@ -52,21 +53,24 @@
 			}
 		},
 		created(){
-			// this.getBannerList();
+			this.getBannerList();
 		},
 		methods:{
 			getBannerList:function(){
 				request({
 					method:"get",
-					url:"http://vue.studyit.io/api/getlunbo"
+					url:"http://www.liulongbin.top:3005/api/getlunbo"
 				})
 				.then(data=>{
-					if (data.code == 200) {
-						this.bannerList = data.bannerList;
+					if (data.status == 0) {
+						this.bannerList = data.message;
 					}
 				})
 				.catch(err=>{
-					console.log('>>>>>>>>>>>>>>>>err')					
+					Toast({
+					  message: '请求数据失败',
+					  iconClass: 'icon icon-success'
+					});				
 				});
 			},
 
