@@ -10,9 +10,9 @@
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/news">
                     <span class="mui-icon mui-icon-map"></span>
                     <div class="mui-media-body">新闻资讯</div></router-link></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photoList">
                     <span class="mui-icon mui-icon-image"></span>
-                    <div class="mui-media-body">图片分享</div></a></li>
+                    <div class="mui-media-body">图片分享</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                     <span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
                     <div class="mui-media-body">商品购物</div></a></li>
@@ -53,8 +53,18 @@
 			}
 		},
 		created(){
+			console.log(this.$route)
+			
 			this.getBannerList();
 		},
+		beforeRouteLeave (to, from, next) {
+		// 导航离开该组件的对应路由时调用
+		// 可以访问组件实例 `this`
+		// console.log('to',to);
+		// console.log('from',from);
+		// console.log('next',next);
+			next()
+		},		
 		methods:{
 			getBannerList:function(){
 				request({
@@ -68,7 +78,7 @@
 				})
 				.catch(err=>{
 					Toast({
-					  message: '请求数据失败',
+					  message: '请求轮播图失败',
 					  iconClass: 'icon icon-success'
 					});				
 				});

@@ -2,14 +2,15 @@
 	<div class="container">
 		<h3 class="title">发表评论</h3>
 		<hr>
-		<textarea placeholder="请输入评论内容(最多吐槽120个字)" maxlength="120"></textarea>
-		<mt-button type="primary" size="large">发表评论</mt-button>
+		<textarea placeholder="请输入评论内容(最多吐槽120个字)" 
+		maxlength="120" v-model="msg"></textarea>
+		<mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
 
 		<div class="cmt-list">
-			<div class="cmt-item">
-				<p class="cmt-title">第一楼&nbsp;&nbsp;用户:匿名用户&nbsp;&nbsp;发表时间:2015-10-10</p>
+			<div class="cmt-item" v-for="(item,i) in comments" :key="i">
+				<p class="cmt-title">第{{i+1}}楼&nbsp;&nbsp;用户:{{item.user_name}}&nbsp;&nbsp;发表时间:{{item.add_time | dateFormat }}</p>
 				<p class="cmt-body">
-					人生若只如初见，何事秋风悲画扇
+					{{ item.content == 'undefined' ?"该用户很懒，什么都没有评论" : item.content }}
 				</p>
 			</div>
 		</div>
@@ -24,7 +25,8 @@
 		data() {
 			return {
 				pageIndex:1,
-				comments:[]
+				comments:[],
+				msg:''
 			}
 		},
 		props:['id'],
@@ -34,12 +36,12 @@
 		methods:{
 			getComments(){
 				request({
-					url:"http://www.liulongbin.top:3005/api/getcomments/"+this.id+"?pageIndex="+this.pageIndex
+					url:"http://www.liulongbin.top:3005/api/getcomments/"+this.id+"?pageindex="+this.pageIndex
 				})
 				.then(data=>{
-					console.log(data)
+					// console.log(data)
 					if(data.status == 0){
-						this.comments = this.comments.concat(this.data.message);
+						this.comments = this.comments.concat(data.message);
 					}
 				})
 				.catch(err=>{
@@ -49,6 +51,28 @@
 			getMore(){
 				this.pageIndex++;
 				this.getComments();
+			},
+			postComment(){
+				if(!this.msg.trim()) return Toast('请输入内容后再评论');
+				request({
+					url:"http://www.liulongbin.top:3005/api/postcomment/"+this.$route.params.id,
+					data:{
+						msg:this.msg.trim()
+					},
+					method:'post'
+				})
+				.then(data=>{
+					if(data.status == 0){
+						let cmt = {
+							user_name:'匿名用户',
+							add_time:new Date(),
+							content:this.msg.trim()
+						}
+						this.comments.unshift(cmt);
+						this.msg = '';
+						Toast(data.message);
+					}
+				})
 			}
 		}
 	}

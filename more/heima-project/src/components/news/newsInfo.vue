@@ -15,11 +15,11 @@
 <script type="text/javascript">
 	import { request } from '../../util/index.js';
 	import { Toast } from 'mint-ui';
-	import comment from '../subComponents/comment.vue';
+	import Comment from '../subComponents/comment.vue';
 	export default {
 		name:"news",
 		components:{
-			comment
+			comment:Comment
 		},
 		data() {
 			return {

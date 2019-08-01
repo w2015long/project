@@ -1,9 +1,9 @@
 <template>
 	<div class="container">
 		<mt-header fixed  title="黑马程序员">
-		  <router-link to="/" slot="left">
+		  <a href="#" slot="left" @click="goBack">
 		    <mt-button icon="back">返回</mt-button>
-		  </router-link>
+		  </a>
 		  <mt-button icon="more" slot="right"></mt-button>
 		</mt-header>		
 		<!-- 主体container区域 -->
@@ -36,7 +36,9 @@
 	export default {
 		name:"App",
 		methods:{
-	
+			goBack(){
+				window.history.go(-1);
+			}
 		}
 	}
 </script>
