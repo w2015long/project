@@ -87,7 +87,7 @@
 		}
 	}
 </script>
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 	.mint-swipe{
 		height: 200px;
 		.mint-swipe-items-wrap{

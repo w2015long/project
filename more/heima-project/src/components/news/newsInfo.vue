@@ -47,7 +47,7 @@
 		}
 	}
 </script>
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 	.container{
 		padding: 0 4px;
 		.flag{

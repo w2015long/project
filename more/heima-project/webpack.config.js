@@ -28,7 +28,7 @@ module.exports = {
 		rules:[//第三方模块匹配规则
 			{test:/\.css$/i,use:['style-loader','css-loader']},
 			{test:/\.less$/i,use:['style-loader','css-loader','less-loader']},
-			{test:/\.sass$/i,use:['style-loader','css-loader','sass-loader']},
+			{test:/\.s[ca]ss$/i,use:['style-loader','css-loader','sass-loader']},
 			{//url-loader处理图片
 				test:/\.(jpg|png|gif|jpeg|bmp)/i,
 				use:[{
