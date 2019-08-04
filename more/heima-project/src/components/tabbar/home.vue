@@ -13,9 +13,9 @@
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photoList">
                     <span class="mui-icon mui-icon-image"></span>
                     <div class="mui-media-body">图片分享</div></router-link></li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/goodsList">
                     <span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
-                    <div class="mui-media-body">商品购物</div></a></li>
+                    <div class="mui-media-body">商品购物</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                     <span class="mui-icon mui-icon-extra mui-icon-extra-topic"></span>
                     <div class="mui-media-body">留言反馈</div></a></li>
@@ -52,9 +52,7 @@
 				]
 			}
 		},
-		created(){
-			console.log(this.$route)
-			
+		created(){			
 			this.getBannerList();
 		},
 		beforeRouteLeave (to, from, next) {

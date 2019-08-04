@@ -9,6 +9,8 @@ import Shopcar from '../components/tabbar/shopcar.vue';
 import News from '../components/news/news.vue';
 import NewsInfo from '../components/news/newsInfo.vue';
 import PhotoList from '../components/photos/photoList.vue';
+import PhotoInfo from '../components/photos/photoInfo.vue';
+import goodsList from '../components/goods/goodsList.vue';
 
 export default new VueRouter({
 	routes :[
@@ -20,6 +22,8 @@ export default new VueRouter({
 		{path:'/home/news',component:News},
 		{path:'/home/news/:id',component:NewsInfo},
 		{path:'/home/photoList',component:PhotoList},
+		{path:'/home/photoList/:id',component:PhotoInfo},
+		{path:'/home/goodsList/',component:goodsList},
 	],
 	linkActiveClass:"mui-active",
 });

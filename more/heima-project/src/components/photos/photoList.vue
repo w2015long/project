@@ -17,13 +17,13 @@
 		</div>
 		<!-- 图片 -->
 		<ul class="photo-list">
-		  <li v-for="item in list" :key="item.category_id">
+		  <router-link v-for="item in list" :key="item.category_id" tag="li" :to="'/home/photoList/'+item.id">
 		    <img v-lazy="item.img_url">
 		    <div class="content">
 		    	<h2>{{item.title}}</h2>
 		    	<p class="text">{{ item.seo_description }}</p>
 		    </div>
-		  </li>
+		  </router-link>
 		</ul>		
 	</div>
 </template>
