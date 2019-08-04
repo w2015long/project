@@ -1,7 +1,7 @@
 <template>
 	<div class="goods-list">
 
-		<div class="goods-item" v-for="item in goodsList" :key="item.id">
+		<div class="goods-item" v-for="item in goodsList" :key="item.id" @click="goGoodsInfo(item.id)">
 			<img :src="item.img_url">
 			<h1 class="title">{{ item.title }}</h1>
 			<div class="info">
@@ -55,6 +55,10 @@
 			getMore(){
 				this.pageindex++;
 				this.getGoodsList();
+			},
+			goGoodsInfo(id){
+				//编程式的导航
+				this.$router.push({ name: 'goodsInfo', params: { id }})
 			}
 		}
 	}

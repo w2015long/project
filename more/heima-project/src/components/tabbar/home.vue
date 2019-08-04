@@ -1,10 +1,6 @@
 <template>
 	<div class="home">
-		<mt-swipe :auto="4000">
-		  <mt-swipe-item v-for="(item,index) in bannerList" :key="index">
-		  	<img :src="item.img" />
-		  </mt-swipe-item>
-		</mt-swipe>	
+		<swiper  :carousel="bannerList" :isFull="true" />
 		<!-- 九宫格 -->
         <ul class="mui-table-view mui-grid-view mui-grid-9">
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/news">
@@ -31,8 +27,12 @@
 <script>
 	import { request } from '../../util';
 	import { Toast } from 'mint-ui';
+	import swiper from '../subComponents/swiper.vue';
 	export default {
 		name:"Home",
+		components:{
+			swiper
+		},
 		data(){
 			return {
 				bannerList:[
@@ -54,14 +54,6 @@
 		},
 		created(){			
 			this.getBannerList();
-		},
-		beforeRouteLeave (to, from, next) {
-		// 导航离开该组件的对应路由时调用
-		// 可以访问组件实例 `this`
-		// console.log('to',to);
-		// console.log('from',from);
-		// console.log('next',next);
-			next()
 		},		
 		methods:{
 			getBannerList:function(){
@@ -86,16 +78,7 @@
 	}
 </script>
 <style lang="scss" scoped>
-	.mint-swipe{
-		height: 200px;
-		.mint-swipe-items-wrap{
-			background-color: #cece;
-			height: 200px;
-			img{
-				height: 200px;
-			}
-		}
-	}
+
 	.mui-table-view{
 		.mui-icon{
 			color: #f67;
