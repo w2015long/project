@@ -21,7 +21,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item-me" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart" id="carBox"><span class="mui-badge">0</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-me" to="/search">
@@ -35,6 +35,11 @@
 	import { Toast } from 'mint-ui';
 	export default {
 		name:"App",
+		data () {
+			return {
+				carBox:this.$refs.carBox
+			}
+		},
 		methods:{
 			goBack(){
 				window.history.go(-1);

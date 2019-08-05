@@ -1,5 +1,13 @@
 <template>
 	<div class="goods-info">
+		<transition
+			v-on:before-enter="beforeEnter"
+			v-on:enter="enter"
+			v-on:after-enter="afterEnter"
+		>
+			<!-- 购物车xiaoqiu -->
+			<div class="ball" v-show="flagBall" ref="ball"></div>			
+		</transition>			
 		<!-- 商品图 -->
 		<div class="mui-card">
 			<div class="mui-card-content">
@@ -11,6 +19,7 @@
 			<div class="mui-card-header">{{ goodsinfo.title }}</div>
 			<div class="mui-card-content">
 				<div class="mui-card-content-inner">
+
 					<p class="price">
 						市场价:<del>￥{{goodsinfo.market_price}}</del>&nbsp;&nbsp;销售价<span class="now-price">￥{{goodsinfo.sell_price}}</span>	
 					</p>
@@ -59,6 +68,7 @@
 				id:this.$route.params.id,
 				carousel:[],
 				goodsinfo:{},//获取到的商品信息
+				flagBall:false
 			}
 		},
 		created(){
@@ -104,7 +114,28 @@
 			},
 			goComment(id){
 				this.$router.push({name:"goodsComment",params:{ id }});
-			}
+			},
+			addToShopCar () {
+				this.flagBall = !this.flagBall;
+			},
+			beforeEnter (el) {
+				el.style.transform = 'translate(0,0)';
+
+			},
+			enter (el, done) {
+				el.offsetWidth;
+				const BallPosition = el.getBoundingClientRect();
+
+				const carBoxPosition = document.getElementById('carBox').getBoundingClientRect();
+				const disX = carBoxPosition.left - BallPosition.left;
+				const disY = carBoxPosition.top - BallPosition.top;				
+				el.style.transform = `translate(${disX}px,${disY}px)`
+				el.style.transition = 'all 0.5s cubic-bezier(.4,-0.3,1,.68)';
+				done()
+			},
+			afterEnter (el) {
+				this.flagBall = !this.flagBall;
+			},			
 		}
 	}
 </script>
@@ -124,25 +155,28 @@
 	        }
 	    }
 	    .mui-card-content{
-	        p{
-	            margin-left:15px;
-	        }
+	    	.mui-card-content-inner{	    		
+		        p{
+		            margin-left:15px;
+		        }	    		
+	    	}
+
 	        
 	    }
-	    // .ball{
-	    //     width: 15px;
-	    //     height: 15px;
-	    //     border-radius:50%;
-	    //     background-color: red;
-	    //     position: absolute;
-	    //     top: 390px;
-	    //     left: 163px;
-	    //     z-index: 99;
-	       
-	    // }
+
 	    .mui-icon-extra{
 	        font-size: 17px;
-	    }		
+	    }
+	    .ball{
+	        width: 15px;
+	        height: 15px;
+	        border-radius:50%;
+	        background-color: red;
+	        position: absolute;
+	        top: 370px;
+	        left: 163px;
+	        z-index: 99;
+	    }	    		
 	}		
 
 

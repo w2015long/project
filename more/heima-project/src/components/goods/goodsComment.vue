@@ -1,40 +1,27 @@
 <template>
 	<div class="goods-comment">
-		<h2>goods comment</h2>				
+		<comment :id="id" />				
 	</div>
 </template>
 <script type="text/javascript">
 	import { request } from '../../util/index.js';
 	import { Toast } from 'mint-ui';
+	import Comment from '../subComponents/comment.vue';
 	export default {
 		name:"goodsComment",
 		components:{
+			comment:Comment
 		},
 		data() {
 			return {
-
+				id:this.$route.params.id
 			}
 		},
 		created(){
-			// this.getGoodsList();
 		},
 		mounted(){
 		},
 		methods:{
-			getGoodsList(){
-				request({
-					url:"http://www.liulongbin.top:3005/api/getgoods?pageindex=" + this.pageindex
-				})
-				.then(data=>{
-					if(data.status == 0){
-						this.goodsList = this.goodsList.concat(data.message);						
-					}
-
-				})
-				.catch(err=>{
-					Toast('获取商品列表失败')
-				})
-			},
 
 		}
 	}

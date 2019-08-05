@@ -1,7 +1,8 @@
 <template>
 	<div class="goods-desc">
-
-		<h2>goods desc</h2>				
+        <h3>{{info.title}}</h3>
+        <hr>
+        <div class="content" v-html="info.content"></div>			
 	</div>
 </template>
 <script type="text/javascript">
@@ -13,36 +14,48 @@
 		},
 		data() {
 			return {
-
+				id:this.$route.params.id,
+				info:{}
 			}
 		},
 		created(){
-			// this.getGoodsList();
+			this.getGoodsDesc();
 		},
 		mounted(){
 		},
 		methods:{
-			getGoodsList(){
+			getGoodsDesc(){
 				request({
-					url:"http://www.liulongbin.top:3005/api/getgoods?pageindex=" + this.pageindex
+					url:"http://www.liulongbin.top:3005/api/goods/getdesc/" + this.id
 				})
 				.then(data=>{
 					if(data.status == 0){
-						this.goodsList = this.goodsList.concat(data.message);						
+						this.info = data.message[0];						
 					}
 
 				})
 				.catch(err=>{
-					Toast('获取商品列表失败')
-				})
+					Toast('获取商品详情失败')
+				});
 			},
 
 		}
 	}
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 	.goods-desc{
-
+	    padding: 4px;
+	    h3{
+	        font-size: 16px;
+	        color:#226aff;
+	        text-align: center;
+	        margin: 10px 0;
+	    }
+	    .content{
+	        img{
+	            width: 100%;
+	        }
+	    }
 	}		
 
 
