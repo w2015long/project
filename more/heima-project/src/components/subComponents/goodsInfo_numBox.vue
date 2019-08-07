@@ -1,5 +1,5 @@
 <template>
-	<div class="mui-numbox" data-numbox-min='1' data-numbox-max='9'>
+	<div class="mui-numbox" data-numbox-min='1' :data-numbox-max='max'>
 		<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
 		<input id="test" class="mui-input-numbox" type="number"  value="1" @change="sendCount" ref="numBox"/>
 		<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
@@ -14,9 +14,10 @@
 				// count:1
 			}
 		},
+		props:['max'],
 	    mounted(){
 	        //初始化数字选择框
-	        // mui('.mui-numbox').numbox();
+	        mui('.mui-numbox').numbox();
 	    },	
 	    methods:{
 	    	sendCount(){
@@ -25,7 +26,13 @@
 	    },
 	    computed:{
 
-	    },	
+	    },
+	    watch: {
+	    	max: function (newVal) {
+	    		mui('.mui-numbox').numbox()
+	    		.setOption('max',newVal);
+	    	}
+	    }	
 	}
 </script>
 <style lang="scss" scoped>
