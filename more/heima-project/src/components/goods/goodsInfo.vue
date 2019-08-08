@@ -116,12 +116,14 @@
 			goComment(id){
 				this.$router.push({name:"goodsComment",params:{ id }});
 			},
-			addToShopCar () {
+			addToShopCar () {//加入购物车
 				this.flagBall = !this.flagBall;
+				var goodsInfo = {id:this.id,count:this.selectedCount,price:this.goodsinfo.sell_price,selected:true}
+				this.$store.dispatch('addCar',goodsInfo); 
+				console.log(this.$store.state)
 			},
 			beforeEnter (el) {
 				el.style.transform = 'translate(0,0)';
-
 			},
 			enter (el, done) {
 				el.offsetWidth;
@@ -139,7 +141,6 @@
 			},
 			getSelectedCount (count) {
 				this.selectedCount = count;
-				console.log(this.selectedCount)
 			}			
 		}
 	}

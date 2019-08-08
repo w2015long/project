@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import filters from './filters';
+import store from './store';
 Vue.config.devtools = true;
 Vue.config.productionTip = false;
 //注册全局过滤器
@@ -25,5 +26,6 @@ import './lib/mui/css/icons-extra.css';
 
 new Vue({
 	router,
+	store,
 	render: h => h(App)
 }).$mount('#app');
