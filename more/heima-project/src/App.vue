@@ -47,7 +47,7 @@
 		}
 	}
 </script>
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 	.container{
 		padding-top: 40px;
 		padding-bottom: 50px;
