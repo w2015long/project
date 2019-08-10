@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<mt-header fixed  title="黑马程序员">
-		  <a href="#" slot="left" @click="goBack">
+		  <a href="javascript:;" slot="left" @click="goBack" v-show="flag">
 		    <mt-button icon="back">返回</mt-button>
 		  </a>
 		  <mt-button icon="more" slot="right"></mt-button>
@@ -21,7 +21,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item-me" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart" id="carBox"><span class="mui-badge">{{ $store.getters.totalCar }}</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart" id="carBox"><span class="mui-badge">{{ totalCar }}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-me" to="/search">
@@ -33,16 +33,28 @@
 </template>
 <script>
 	import { Toast } from 'mint-ui';
+	import { mapGetters } from 'vuex';
 	export default {
 		name:"App",
 		data () {
 			return {
-				carBox:this.$refs.carBox
+				flag:false
 			}
+		},
+		created(){
+			this.flag = this.flag = !(this.$route.path == '/home')
+		},
+		computed:{
+			...mapGetters(['totalCar'])
 		},
 		methods:{
 			goBack(){
-				window.history.go(-1);
+				this.$router.go(-1);
+			}
+		},
+		watch:{
+			'$route.path': function (newVal) {
+				this.flag = !(newVal == '/home')
 			}
 		}
 	}

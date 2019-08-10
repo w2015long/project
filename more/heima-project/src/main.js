@@ -8,11 +8,12 @@ Vue.config.productionTip = false;
 //注册全局过滤器
 Object.keys(filters).forEach(key=>Vue.filter(key,filters[key]));
 
-import { Header,Button,Swipe, SwipeItem,Lazyload } from 'mint-ui';
+import { Header,Button,Swipe, SwipeItem,Lazyload ,Switch} from 'mint-ui';
 Vue.component(Header.name, Header);
 Vue.component(Button.name, Button);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Switch.name, Switch);
 Vue.use(Lazyload);
 
 // 图片预览插件
