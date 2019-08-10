@@ -20,13 +20,13 @@ export default {
     },
     getSelectedCountAndAmount (state) {
         let opt = {
-            selectedCount:0,
-            selectedAmount:0
+            selectedCount:0,//勾选的数量
+            selectedAmount:0//勾选的总价
         };
         state.car.forEach(elem=>{
             if (elem.selected) {
                 opt.selectedCount += elem.count;
-                opt.selectedAmount += elem.price;
+                opt.selectedAmount += parseFloat(elem.price) * parseFloat(elem.count);
             }
         });
         return opt;

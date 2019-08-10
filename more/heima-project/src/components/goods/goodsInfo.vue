@@ -118,7 +118,12 @@
 			},
 			addToShopCar () {//加入购物车
 				this.flagBall = !this.flagBall;
-				var goodsInfo = {id:this.id,count:this.selectedCount,price:this.goodsinfo.sell_price,selected:true}
+				var goodsInfo = {
+					id:this.id,
+					count:this.selectedCount,
+					price:this.goodsinfo.sell_price,
+					selected:true
+				}
 				this.$store.dispatch('addCar',goodsInfo);
 			},
 			beforeEnter (el) {
