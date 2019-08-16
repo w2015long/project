@@ -7,6 +7,8 @@ const Order = () => import('../pages/Order/Order.vue');
 const Profile = () => import('../pages/Profile/Profile.vue');
 const Search = () => import('../pages/Search/Search.vue');
 
+import Login from '../pages/Login/Login';
+
 export default new VueRouter({
     routes:[
         {path:'/',redirect:'/msite'},
@@ -37,7 +39,11 @@ export default new VueRouter({
             meta: {
                 showFooter: true
             }
-        },
+        },{
+            path: '/login',
+            component: Login,
+        }
+
     ],
     linkActiveClass:'on'
 })

@@ -1,5 +1,5 @@
 <template>
-    <div class="footer_guide">
+    <div class="footer_guide" v-show="$route.meta.showFooter">
         <router-link to="/msite" class="guide_item">
       <span class="item_icon">
         <i class="iconfont icon-waimai"></i>
