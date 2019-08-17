@@ -3,7 +3,7 @@
 
         <section class="msite">
             <!--首页头部-->
-            <HeaderTop title="昌平区北七家宏福科技园(337省道北)">
+            <HeaderTop :title="address.name">
                 <span class="header_search" slot="left">
                     <i class="iconfont icon-sousuo"></i>
                 </span>
@@ -15,104 +15,12 @@
             <nav class="msite_nav">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="javascript:" class="link_to_food">
+                        <div class="swiper-slide" v-for="(minArr,idx) in getTwoLevelCate" :key="idx">
+                            <a href="javascript:" class="link_to_food" v-for="(item,index) in minArr" :key="index">
                                 <div class="food_container">
-                                    <img src="./images/nav/1.jpg">
+                                    <img :src="baseUrl+item.image_url">
                                 </div>
-                                <span>甜品饮品</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/2.jpg">
-                                </div>
-                                <span>商超便利</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/3.jpg">
-                                </div>
-                                <span>美食</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/4.jpg">
-                                </div>
-                                <span>简餐</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/5.jpg">
-                                </div>
-                                <span>新店特惠</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/6.jpg">
-                                </div>
-                                <span>准时达</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/7.jpg">
-                                </div>
-                                <span>预订早餐</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/8.jpg">
-                                </div>
-                                <span>土豪推荐</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/9.jpg">
-                                </div>
-                                <span>甜品饮品</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/10.jpg">
-                                </div>
-                                <span>商超便利</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/11.jpg">
-                                </div>
-                                <span>美食</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/12.jpg">
-                                </div>
-                                <span>简餐</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/13.jpg">
-                                </div>
-                                <span>新店特惠</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/14.jpg">
-                                </div>
-                                <span>准时达</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/1.jpg">
-                                </div>
-                                <span>预订早餐</span>
-                            </a>
-                            <a href="javascript:" class="link_to_food">
-                                <div class="food_container">
-                                    <img src="./images/nav/2.jpg">
-                                </div>
-                                <span>土豪推荐</span>
+                                <span>{{ item.title }}</span>
                             </a>
                         </div>
                     </div>
@@ -137,11 +45,12 @@
     import 'swiper/dist/css/swiper.min.css';
     import ShopList from '../../components/ShopList/ShopList.vue';
     import HeaderTop from '../../components/HeaderTop/HeaderTop.vue';
+    import { mapState ,mapActions  } from 'vuex'
     export default {
         name: "MSite",
         data(){
             return {
-
+                baseUrl:'https://fuss10.elemecdn.com'
             }
         },
         components: {
@@ -149,6 +58,8 @@
             HeaderTop
         },
         mounted(){
+            //获取首页轮播图
+            this.getFoodCategory();
             new Swiper('.swiper-container', {
                 loop: true, // 可以循环轮播
                 pagination: {
@@ -157,8 +68,31 @@
             });
         },
         methods:{
-
+            ...mapActions (['getFoodCategory'])
         },
+        computed: {
+            ...mapState(['address','categorys']),
+            /**
+             * 根据category生成一个二维数组
+             */
+            getTwoLevelCate () {
+                const outArr = [];
+                let minArr = [];
+                this.categorys.forEach((elem)=>{
+                    if (minArr.length == 8) {
+                        minArr = [];
+                    }
+
+                    if (!minArr.length) {
+                        outArr.push(minArr);
+                    }
+
+                    minArr.push(elem);
+                });
+                return outArr;
+            }
+
+        }
     }
 </script>
 
