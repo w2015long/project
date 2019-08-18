@@ -89,6 +89,10 @@ body {
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+/*解决[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See URL报错*/
+* {
+  touch-action: pan-y;
+}
 
 /*显示省略号*/
 .ellipsis{
