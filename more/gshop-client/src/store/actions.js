@@ -12,7 +12,8 @@ import {
 }from './mutation-types.js'
 export default{
 	async getAddress({commit,state}){
-		const geohash = state.latitude + ',' + state.longitude
+		const geohash = state.latitude + ',' + state.longitude;
+
 		const result = await reqAddress(geohash);
 		if (result.code == 0) {
 			const address = result.data;

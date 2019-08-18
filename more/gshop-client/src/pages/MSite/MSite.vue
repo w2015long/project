@@ -13,7 +13,7 @@
             </HeaderTop>
             <!--首页导航-->
             <nav class="msite_nav">
-                <div class="swiper-container">
+                <div class="swiper-container" v-if="categorys.length">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" v-for="(minArr,idx) in getTwoLevelCate" :key="idx">
                             <a href="javascript:" class="link_to_food" v-for="(item,index) in minArr" :key="index">
@@ -27,6 +27,7 @@
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
+                <img src="./images/msite_back.svg" alt="back" v-else>
             </nav>
             <!--首页附近商家-->
             <div class="msite_shop_list">
@@ -58,17 +59,24 @@
             HeaderTop
         },
         mounted(){
-            //获取首页轮播图
-            this.getFoodCategory();
-            new Swiper('.swiper-container', {
-                loop: true, // 可以循环轮播
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
+            this.getFoodCategory();//获取首页轮播图
+            this.getShops();//获取商家信息
+        },
+        watch: {
+            categorys () {//数据更新执行
+                //界面更新就立即创建Swiper对象
+                this.$nextTick(() => {//将回调延迟到下次 DOM 更新循环之后执行
+                    new Swiper('.swiper-container', {
+                        loop: true, // 可以循环轮播
+                        pagination: {
+                            el: '.swiper-pagination',
+                        },
+                    });
+                })
+            }
         },
         methods:{
-            ...mapActions (['getFoodCategory'])
+            ...mapActions (['getFoodCategory','getShops'])
         },
         computed: {
             ...mapState(['address','categorys']),
