@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="login_content">
-                <form>
+                <form @submit.prevent="goLogin()">
                     <div :class="{on:loginWay}">
                         <section class="login_message">
                             <input type="tel" maxlength="11" placeholder="手机号" v-model="phone">
@@ -20,7 +20,7 @@
                             >{{ codeTimer ? `请${codeTimer}s后再发送`: '获取验证码'}}</button>
                         </section>
                         <section class="login_verification">
-                            <input type="tel" maxlength="8" placeholder="验证码">
+                            <input type="tel" maxlength="8" placeholder="验证码" v-model="code">
                         </section>
                         <section class="login_hint">
                             温馨提示：未注册硅谷外卖帐号的手机号，登录时将自动注册，且代表已同意
@@ -30,11 +30,11 @@
                     <div :class="{on:!loginWay}">
                         <section>
                             <section class="login_message">
-                                <input type="tel" maxlength="11" placeholder="手机/邮箱/用户名">
+                                <input type="text" maxlength="11" placeholder="手机/邮箱/用户名" v-model="name">
                             </section>
                             <section class="login_verification">
                                 <input type="tel" maxlength="8" placeholder="密码" v-model="password" v-if="showPwd">
-                                <input type="password" maxlength="8" placeholder="密码" v-model="password" v-else>
+                                <input type="password" maxlength="12" placeholder="密码" v-model="password" v-else>
                                 <div class="switch_button"
                                      :class="[showPwd ? 'on' : 'off']"
                                      @click="showPwd=!showPwd">
@@ -43,7 +43,7 @@
                                 </div>
                             </section>
                             <section class="login_message">
-                                <input type="text" maxlength="11" placeholder="验证码">
+                                <input type="text" maxlength="11" placeholder="验证码" v-model="captcha">
                                 <img class="get_verification" src="./images/captcha.svg" alt="captcha">
                             </section>
                         </section>
@@ -56,10 +56,12 @@
                 <i class="iconfont icon-jiantou2"></i>
             </a>
         </div>
+        <AlertTip :alertText="alertText" @closeTip="closeTip" v-if="showTip"/>
     </section>
 </template>
 
 <script>
+    import AlertTip from '../../components/AlertTip/AlertTip';
     const phoneReg = /^1\d{10}/;
     export default {
         name: "Login",
@@ -70,7 +72,15 @@
                 codeTimer: 0,//验证码倒计时
                 password:'',
                 showPwd: false,//是否显示密码
+                code: '',//手机验证码
+                name: '',//用户名
+                captcha:'',//图形验证码
+                showTip: false,//默认不提示
+                alertText: '',//提示
             }
+        },
+        components: {
+            AlertTip
         },
         computed: {
             rightPhone () {
@@ -78,6 +88,14 @@
             },
         },
         methods: {
+            showAlert (text) {
+                this.showTip = true;
+                this.alertText = text;
+            },
+            closeTip () {
+                this.showTip = false;
+                this.alertText = '';
+            },
             getCode () {
                 if (this.codeTimer) return;
                 this.codeTimer = 30;
@@ -87,6 +105,46 @@
                         clearInterval(timerId)
                     }
                 },1000)
+            },
+            goLogin () {
+                const phnoeReg = /^1\d{10}$/;
+                const codeReg = /^\d{6}$/;
+                const pwdReg = /\w{8,12}/;
+                if (this.loginWay) {//短信登录
+                    const { code, phone} = this;
+                    if (!phone.trim()) {
+                        //请输入手机号
+                        this.showAlert('请输入手机号');
+                    } else if (!phnoeReg.test(phone)) {
+                        //手机号不正确
+                        this.showAlert('手机号不正确');
+                    }
+                    else if (!code.trim()) {
+                        //请输入验证码
+                        this.showAlert('请输入验证码');
+                    } else if (!codeReg.test(code)) {
+                        //验证码不正确
+                        this.showAlert('验证码不正确');
+                    }
+
+                } else {//密码登录
+                    const { name, password,captcha} = this;
+                    if (!name.trim()) {
+                        //请输入用户名
+                        this.showAlert('请输入用户名');
+                    }else if (!password) {
+                        this.showAlert('请输入密码');
+                    } else if (!pwdReg.test(password)) {
+                        //密码不正确
+                        this.showAlert('密码不正确');
+                    }else if (!captcha.trim()) {
+                        //请输入图形验证码
+                        this.showAlert('请输入图形验证码');
+                    }
+                    // else if (!codeReg.test(captcha)) {
+                    //     //验证码不正确
+                    // }
+                }
             }
         },
     }
@@ -153,6 +211,7 @@
                                 color #ccc
                                 font-size 14px
                                 background transparent
+                                outline none
                                 &.right-phone
                                     color #000
                         .login_verification
