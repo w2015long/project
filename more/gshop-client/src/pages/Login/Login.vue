@@ -44,7 +44,7 @@
                             </section>
                             <section class="login_message">
                                 <input type="text" maxlength="11" placeholder="验证码" v-model="captcha">
-                                <img class="get_verification" src="./images/captcha.svg" alt="captcha">
+                                <img class="get_verification" src="http://localhost:4000/captcha" alt="captcha" @click="getCaptcha($event)">
                             </section>
                         </section>
                     </div>
@@ -62,6 +62,7 @@
 
 <script>
     import AlertTip from '../../components/AlertTip/AlertTip';
+    import {reqSendCode} from '../../api';
     const phoneReg = /^1\d{10}/;
     export default {
         name: "Login",
@@ -96,15 +97,26 @@
                 this.showTip = false;
                 this.alertText = '';
             },
-            getCode () {
+            async getCode () {
+                //启动倒计时
                 if (this.codeTimer) return;
                 this.codeTimer = 30;
-                const timerId = setInterval(() => {
+                this.timerId = setInterval(() => {
                     this.codeTimer--;
                     if (!this.codeTimer) {
-                        clearInterval(timerId)
+                        clearInterval(this.timerId)
                     }
-                },1000)
+                },1000);
+                //倒计时同时发送验证码
+                const  result = await reqSendCode(this.phone);
+                if (result.code == 1) {
+                    this.showAlert(result.msg);
+                    if (this.codeTimer) {
+                        this.codeTimer = 0;
+                        clearInterval(this.timerId);
+                        this.timerId = null;
+                    }
+                }
             },
             goLogin () {
                 const phnoeReg = /^1\d{10}$/;
@@ -145,6 +157,9 @@
                     //     //验证码不正确
                     // }
                 }
+            },
+            getCaptcha (ev) {
+                ev.target.src = 'http://localhost:4000/captcha?time='+Date.now();
             }
         },
     }
