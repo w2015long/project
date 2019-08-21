@@ -3,12 +3,14 @@ import {
 	reqAddress,
 	reqFoodCategorys,
 	reqShops,
+	reqUserInfo
 } from '../api';
 
 import {
 	GET_ADDRESS,
 	GET_FOOD_CATEGORY,
-	GET_SHOPS
+	GET_SHOPS,
+	GET_USER_INFO,
 }from './mutation-types.js'
 export default{
 	async getAddress({commit,state}){
@@ -36,4 +38,14 @@ export default{
 		}
 
 	},
+	recordUserInfo({commit},userInfo){
+		commit(GET_USER_INFO,{userInfo})
+	},
+	async getUserInfo({commit}){
+		const result = await reqUserInfo();
+		if (result.code == 0) {
+			const userInfo = result.data;
+			commit(GET_USER_INFO,{userInfo})
+		}
+	}
 }

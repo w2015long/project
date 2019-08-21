@@ -44,7 +44,7 @@
                             </section>
                             <section class="login_message">
                                 <input type="text" maxlength="11" placeholder="验证码" v-model="captcha">
-                                <img class="get_verification" src="http://localhost:4000/captcha" alt="captcha" @click="getCaptcha($event)">
+                                <img class="get_verification" ref="captcha" src="http://localhost:4000/captcha" alt="captcha" @click="getCaptcha()">
                             </section>
                         </section>
                     </div>
@@ -62,7 +62,7 @@
 
 <script>
     import AlertTip from '../../components/AlertTip/AlertTip';
-    import {reqSendCode} from '../../api';
+    import {reqSendCode,reqPwdLogin,reqSmsLogin} from '../../api';
     const phoneReg = /^1\d{10}/;
     export default {
         name: "Login",
@@ -118,48 +118,67 @@
                     }
                 }
             },
-            goLogin () {
+            async goLogin () {
                 const phnoeReg = /^1\d{10}$/;
                 const codeReg = /^\d{6}$/;
-                const pwdReg = /\w{8,12}/;
+                const pwdReg = /\w/;
+                let result;
                 if (this.loginWay) {//短信登录
                     const { code, phone} = this;
                     if (!phone.trim()) {
                         //请输入手机号
                         this.showAlert('请输入手机号');
+                        return
                     } else if (!phnoeReg.test(phone)) {
                         //手机号不正确
                         this.showAlert('手机号不正确');
+                        return
                     }
                     else if (!code.trim()) {
                         //请输入验证码
                         this.showAlert('请输入验证码');
+                        return
                     } else if (!codeReg.test(code)) {
                         //验证码不正确
                         this.showAlert('验证码不正确');
+                        return
                     }
+                    result = await reqSmsLogin({phone,code});
+
 
                 } else {//密码登录
                     const { name, password,captcha} = this;
                     if (!name.trim()) {
                         //请输入用户名
                         this.showAlert('请输入用户名');
+                        return
                     }else if (!password) {
                         this.showAlert('请输入密码');
+                        return
                     } else if (!pwdReg.test(password)) {
                         //密码不正确
                         this.showAlert('密码不正确');
+                        return
                     }else if (!captcha.trim()) {
                         //请输入图形验证码
                         this.showAlert('请输入图形验证码');
+                        return
                     }
-                    // else if (!codeReg.test(captcha)) {
-                    //     //验证码不正确
-                    // }
+                    result = await reqPwdLogin({name,pwd:password,captcha})
+                }
+
+                if (result.code ==0) {//登录成功
+                    //用户信息保存到store
+                    this.$store.dispatch('recordUserInfo',result.data);
+                    //跳转个人中心
+                    this.$router.replace('/profile');
+                } else {
+                    this.getCaptcha();//刷新验证码
+                    this.showAlert(result.msg);
                 }
             },
-            getCaptcha (ev) {
-                ev.target.src = 'http://localhost:4000/captcha?time='+Date.now();
+            getCaptcha () {
+                this.$refs.captcha.src = 'http://localhost:4000/captcha?time='+Date.now();
             }
         },
     }

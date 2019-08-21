@@ -2,7 +2,8 @@
 import {
 	GET_ADDRESS,
 	GET_FOOD_CATEGORY,
-	GET_SHOPS
+	GET_SHOPS,
+	GET_USER_INFO
 }from './mutation-types.js'
 export default{
 	[GET_ADDRESS](state,{address}){
@@ -14,4 +15,7 @@ export default{
 	[GET_SHOPS](state,{shops}){
 		state.shops = shops;
 	},
+	[GET_USER_INFO](state,{userInfo}){
+		state.userInfo = userInfo;
+	}
 }
