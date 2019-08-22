@@ -3,7 +3,8 @@ import {
 	reqAddress,
 	reqFoodCategorys,
 	reqShops,
-	reqUserInfo
+	reqUserInfo,
+	reqLogout
 } from '../api';
 
 import {
@@ -11,6 +12,7 @@ import {
 	GET_FOOD_CATEGORY,
 	GET_SHOPS,
 	GET_USER_INFO,
+	RESET_USER_INFO
 }from './mutation-types.js'
 export default{
 	async getAddress({commit,state}){
@@ -46,6 +48,12 @@ export default{
 		if (result.code == 0) {
 			const userInfo = result.data;
 			commit(GET_USER_INFO,{userInfo})
+		}
+	},
+	async goLogout({commit}){
+		const result = await reqLogout();
+		if (result.code == 0) {
+			commit(RESET_USER_INFO)
 		}
 	}
 }

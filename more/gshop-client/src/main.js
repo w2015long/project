@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 Vue.config.productionTip = false
 
+import { Button } from 'mint-ui';
+
+Vue.component(Button.name, Button);
+
 new Vue({
   router,
   store,

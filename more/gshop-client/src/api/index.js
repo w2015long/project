@@ -14,4 +14,6 @@ export const reqPwdLogin = ({name,pwd,captcha}) => ajax({url:`${BASE_URL}/login_
 export const reqSmsLogin = ({phone,code}) => ajax({url:BASE_URL+'login_sms',data:{phone,code},method: 'post'})
 //9、根据会话获取用户信息
 export const reqUserInfo = () => ajax({url:BASE_URL+'/userinfo'});
+//10、用户登出
+export const reqLogout = () => ajax({url:BASE_URL+'/logout'});
 
