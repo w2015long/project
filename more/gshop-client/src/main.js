@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import './mock/mockServer';// 加载mockServer即可
 Vue.config.productionTip = false
 
 import { Button } from 'mint-ui';

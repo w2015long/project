@@ -8,6 +8,10 @@ const Profile = () => import('../pages/Profile/Profile.vue');
 const Search = () => import('../pages/Search/Search.vue');
 
 import Login from '../pages/Login/Login';
+import Shop from '../pages/Shop/Shop';
+import ShopGoods from '../pages/Shop/ShopGoods/ShopGoods';
+import ShopRatings from '../pages/Shop/ShopRating/ShopRating';
+import ShopInfo from '../pages/Shop/ShopInfo/ShopInfo';
 
 export default new VueRouter({
     routes:[
@@ -42,6 +46,27 @@ export default new VueRouter({
         },{
             path: '/login',
             component: Login,
+        },{
+            path: '/shop',
+            component: Shop,
+            children: [
+                {
+                    path: '/shop/goods',
+                    component: ShopGoods
+                },
+                {
+                    path: '/shop/ratings',
+                    component: ShopRatings
+                },
+                {
+                    path: '/shop/info',
+                    component: ShopInfo
+                },
+                {
+                    path: '',
+                    redirect: '/shop/goods'
+                },
+            ]
         }
 
     ],

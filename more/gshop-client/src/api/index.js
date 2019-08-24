@@ -17,3 +17,20 @@ export const reqUserInfo = () => ajax({url:BASE_URL+'/userinfo'});
 //10、用户登出
 export const reqLogout = () => ajax({url:BASE_URL+'/logout'});
 
+
+/**
+ * 获取商家信息
+ */
+export const reqShopInfo = () => ajax({url:'/info'})
+
+/**
+ * 获取商家评价数组
+ */
+export const reqShopRatings = () => ajax({url:'/ratings'})
+
+/**
+ * 获取商家商品数组
+ */
+export const reqShopGoods = () => ajax({url:'/goods'});
+
+
