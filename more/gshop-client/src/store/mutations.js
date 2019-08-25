@@ -1,4 +1,6 @@
 
+import Vue from 'vue'
+
 import {
 	GET_ADDRESS,
 	GET_FOOD_CATEGORY,
@@ -8,7 +10,10 @@ import {
 	RECEIVE_INFO,
 	RECEIVE_RATINGS,
 	RECEIVE_GOODS,
+	INCREMENT_FOOD_COUNT,
+	DECREMENT_FOOD_COUNT,
 }from './mutation-types.js'
+
 export default{
 	[GET_ADDRESS](state,{address}){
 		state.address = address;
@@ -37,4 +42,20 @@ export default{
 	[RECEIVE_GOODS](state, {goods}) {
 		state.goods = goods
 	},
+
+	[INCREMENT_FOOD_COUNT] (state,{food}) {
+		if (!food.count) {//第一次点击
+			//向响应式对象中添加一个属性，并确保这个新属性同样是响应式的，且触发视图更新
+			Vue.set(food,'count',1);
+			// food.count = 1
+		} else {
+			food.count++
+		}
+	},
+
+	[DECREMENT_FOOD_COUNT] (state,{food}) {
+		if (food.count) {
+			food.count--
+		}
+	}
 }

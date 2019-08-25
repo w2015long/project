@@ -4,7 +4,8 @@
             <div class="menu-wrapper">
                 <ul>
                     <!--current-->
-                    <li class="menu-item" v-for="(good, index) in goods" :key="index"
+                    <li class="menu-item"
+                        v-for="(good, index) in goods" :key="index"
                         :class="{'current': index===currentIndex}" @click="clickMenuItem(index)">
                         <span class="text bottom-border-1px">
                           <img class="icon" :src="good.icon" v-if="good.icon">
@@ -34,9 +35,9 @@
                                         <span class="now">￥{{food.price}}</span>
                                         <span class="old" v-if="food.oldPrice">￥{{food.oldPrice}}</span>
                                     </div>
-                             <!--       <div class="cartcontrol-wrapper">
+                                    <div class="cartcontrol-wrapper">
                                         <CartControl :food="food"/>
-                                    </div>-->
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -50,7 +51,8 @@
 
 <script>
     import {mapState} from 'vuex';
-    import BScroll from '@better-scroll/core'
+    import BScroll from '@better-scroll/core';
+    import CartControl from '../../../components/CartControl/CartControl';
     export default {
         name: "ShopGoods",
         data(){
@@ -61,15 +63,24 @@
         },
         computed: {
             ...mapState(['goods']),
-            currentIndex () {
-                // 得到条件数据
-                const {scrollY, tops} = this;
-                // 返回这个根据条件计算产生一个结果
-                return tops.findIndex((top,i) => scrollY >= top && scrollY < tops[i+1])
+            currentIndex: {
+                get () {
+                    const {scrollY, tops} = this;
+                    // 返回这个根据条件计算产生一个结果
+                    return tops.findIndex((top,i) => scrollY >= top && scrollY < tops[i+1])
+                },
+                set (newVal) {
+                    //// 得到目标位置的scrollY
+                    this.scrollY = this.tops[newVal];
+                    // 平滑滑动右侧列表
+                    this.foodScroll.scrollTo(0,-this.scrollY,200);
+                }
+
             }
         },
 
         components: {
+            CartControl,
         },
         mounted() {
             this.$store.dispatch('getShopGoods',() => {//请求回数据后 执行回调
@@ -81,15 +92,21 @@
         },
         methods: {
             _initScroll () {
-                new BScroll('.menu-wrapper');
-                const foodScroll = new BScroll('.foods-wrapper',{
+                new BScroll('.menu-wrapper',{
+                    click:true,
+                });
+                this.foodScroll = new BScroll('.foods-wrapper',{
                     probeType:2,//滑动的过程中实时的派发 scroll 惯性滑动不会
                 });
-                foodScroll.on('scroll', ({x,y}) => {
-
+                this.foodScroll.on('scroll', ({x,y}) => {
                     this.scrollY = Math.abs(y)
                     // console.log(this.scrollY)
                 });
+                // 给右侧列表绑定scroll结束的监听
+                this.foodScroll.on('scrollEnd',({x,y}) => {
+                    console.log('scrollEnd',y);
+                    this.scrollY = Math.abs(y);
+                })
             },
             _initTops () {// 初始化tops
                 const tops = [];
@@ -102,6 +119,10 @@
                     tops.push(top);
                 });
                 this.tops = tops;
+            },
+            clickMenuItem (index) {
+                //点击左侧当前的分类 右侧显示对应的分类
+                this.currentIndex = index;
             }
         },
     }
