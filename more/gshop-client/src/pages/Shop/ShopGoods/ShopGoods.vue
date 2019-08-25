@@ -16,11 +16,15 @@
             </div>
             <div class="foods-wrapper">
                 <ul ref="foodsUl">
-                    <li class="food-list-hook" v-for="(good, index) in goods" :key="index">
+                    <li class="food-list-hook"
+                        v-for="(good, index) in goods"
+                        :key="index"
+                    >
                         <h1 class="title">{{good.name}}</h1>
                         <ul>
-                            <li class="food-item bottom-border-1px" v-for="(food, index) in good.foods"
-                                :key="index" @click="showFood(food)">
+                            <li class="food-item bottom-border-1px"
+                                v-for="(food, index) in good.foods"
+                                :key="index" @click="handleFood(food)">
                                 <div class="icon">
                                     <img width="57" height="57" :src="food.icon">
                                 </div>
@@ -46,6 +50,7 @@
             </div>
 <!--            <ShopCart />-->
         </div>
+        <Food ref="food" :food="food" />
     </div>
 </template>
 
@@ -53,12 +58,14 @@
     import {mapState} from 'vuex';
     import BScroll from '@better-scroll/core';
     import CartControl from '../../../components/CartControl/CartControl';
+    import Food from '../../../components/Food/Food';
     export default {
         name: "ShopGoods",
         data(){
             return {
                 scrollY: 0, // 右侧滑动的Y轴坐标 (滑动过程时实时变化)
                 tops: [], // 所有右侧分类li的top组成的数组  (列表第一次显示后就不再变化)
+                food:null,//传入到food组件
             }
         },
         computed: {
@@ -81,6 +88,7 @@
 
         components: {
             CartControl,
+            Food
         },
         mounted() {
             this.$store.dispatch('getShopGoods',() => {//请求回数据后 执行回调
@@ -123,6 +131,10 @@
             clickMenuItem (index) {
                 //点击左侧当前的分类 右侧显示对应的分类
                 this.currentIndex = index;
+            },
+            handleFood (food) {
+                this.$refs.food.toggleShow();
+                this.food = food;
             }
         },
     }
