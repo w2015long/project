@@ -47,7 +47,8 @@ export default{
 		if (!food.count) {//第一次点击
 			//向响应式对象中添加一个属性，并确保这个新属性同样是响应式的，且触发视图更新
 			Vue.set(food,'count',1);
-			// food.count = 1
+			//添加到购物车
+			state.shopCart.push(food)
 		} else {
 			food.count++
 		}
@@ -56,6 +57,9 @@ export default{
 	[DECREMENT_FOOD_COUNT] (state,{food}) {
 		if (food.count) {
 			food.count--
+			if (!food.count) {
+				state.shopCart.splice(state.shopCart.indexOf(food),1)
+			}
 		}
 	}
 }

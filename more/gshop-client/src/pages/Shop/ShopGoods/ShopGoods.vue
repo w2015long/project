@@ -48,7 +48,7 @@
                     </li>
                 </ul>
             </div>
-<!--            <ShopCart />-->
+            <ShopCart />
         </div>
         <Food ref="food" :food="food" />
     </div>
@@ -59,6 +59,7 @@
     import BScroll from '@better-scroll/core';
     import CartControl from '../../../components/CartControl/CartControl';
     import Food from '../../../components/Food/Food';
+    import ShopCart from '../../../components/ShopCart/ShopCart';
     export default {
         name: "ShopGoods",
         data(){
@@ -88,7 +89,8 @@
 
         components: {
             CartControl,
-            Food
+            Food,
+            ShopCart
         },
         mounted() {
             this.$store.dispatch('getShopGoods',() => {//请求回数据后 执行回调
