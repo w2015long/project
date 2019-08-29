@@ -45,6 +45,8 @@
 
 <script>
     import {mapState, mapGetters} from 'vuex'
+    import BScroll from '@better-scroll/core';
+    import { Toast,MessageBox  } from 'mint-ui';
     import CartControl from '../CartControl/CartControl'
     export default {
         name: "ShopCart",
@@ -59,8 +61,22 @@
             vitalShow () {
                 if (!this.totalPrice) {
                     this.isShow = false
-                    return false
                 }
+
+                if (this.isShow) {
+                    this.$nextTick(() => {
+                        //单利模式创建BScroll 防止多次点击事件
+                        if (!this.IScroll) {
+                            this.IScroll = new BScroll('.list-content',{
+                                click:true
+                            })
+                        } else {
+                            this.IScroll.refresh()
+                        }
+                    })
+
+                }
+
                 return this.isShow
 
             },
@@ -87,7 +103,13 @@
         },
         methods: {
             clearCart () {
-
+                MessageBox.confirm('确定要清空购物车吗?')
+                    .then(action => {
+                        this.$store.dispatch('clearCart');
+                        Toast('清空购物车成功')
+                    },cancel => {
+                        console.log(cancel)
+                    });
             },
             toggleShow () {
                 if (!this.totalPrice) return

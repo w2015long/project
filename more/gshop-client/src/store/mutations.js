@@ -12,6 +12,7 @@ import {
 	RECEIVE_GOODS,
 	INCREMENT_FOOD_COUNT,
 	DECREMENT_FOOD_COUNT,
+	CLEAR_CART
 }from './mutation-types.js'
 
 export default{
@@ -61,5 +62,13 @@ export default{
 				state.shopCart.splice(state.shopCart.indexOf(food),1)
 			}
 		}
+	},
+
+	[CLEAR_CART] (state) {
+		state.shopCart.forEach((item) => {
+			item.count = 0;
+			delete item.count
+		})
+		state.shopCart = [];
 	}
 }
