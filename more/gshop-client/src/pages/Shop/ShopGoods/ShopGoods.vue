@@ -6,7 +6,8 @@
                     <!--current-->
                     <li class="menu-item"
                         v-for="(good, index) in goods" :key="index"
-                        :class="{'current': index===currentIndex}" @click="clickMenuItem(index)">
+                        :class="{'current': index===currentIndex}"
+                        @click="clickMenuItem(index)">
                         <span class="text bottom-border-1px">
                           <img class="icon" :src="good.icon" v-if="good.icon">
                           {{good.name}}
@@ -104,7 +105,7 @@
             _initScroll () {
                 new BScroll('.menu-wrapper',{
                     click:true,
-                });
+                }).refresh();
                 this.foodScroll = new BScroll('.foods-wrapper',{
                     probeType:2,//滑动的过程中实时的派发 scroll 惯性滑动不会
                 });

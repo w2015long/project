@@ -80,7 +80,7 @@
         data () {
             return {
                 onlyShowText:false,
-                selectType:''//0:满意 1:不满意 2: 全部
+                selectType:2,//0:满意 1:不满意 2: 全部
             }
         },
         mounted () {
@@ -89,8 +89,7 @@
                 this.$nextTick(()=>{
                     new BScroll('.ratings',{
                         click:true
-                    })
-                        .refresh()
+                    }).refresh();
                 })
 
             });
@@ -99,13 +98,19 @@
             ...mapState(['info','ratings']),
             ...mapGetters(['positiveSize']),
             filterRatings () {
+                const {selectType,onlyShowText} = this
                 return this.ratings.filter((item) => {
                     /*
-                    * selectType:''//0:满意 1:不满意 2: 全部
-                    * onlyShowText, //true 显示全部由文本的
-                    * item.rateType 0:满意 1:不满意
-                    * */
-                    return true
+                    条件一
+                         selectType:''//0:满意 1:不满意 2: 全部
+                         item.rateType 0:满意 1:不满意
+                         selectType == 2 || selectType == item.rateType
+                    条件二
+                         onlyShowText, //true 只看有内容的评价
+                         item.text 有值
+                         !onlyShowText || item.text
+                    */
+                    return (selectType == 2 || selectType == item.rateType) && (!onlyShowText || item.text)
                 })
             },
 
