@@ -12,7 +12,8 @@ import {
 	RECEIVE_GOODS,
 	INCREMENT_FOOD_COUNT,
 	DECREMENT_FOOD_COUNT,
-	CLEAR_CART
+	CLEAR_CART,
+	GET_SEARCH_LIST
 }from './mutation-types.js'
 
 export default{
@@ -31,6 +32,11 @@ export default{
 	[RESET_USER_INFO](state){
 		state.userInfo = {};
 	},
+	//搜索音乐
+	[GET_SEARCH_LIST] (state,{searchResult}) {
+		state.searchResult = searchResult
+	},
+
 	//商品信息
 	[RECEIVE_INFO](state, {info}) {
 		state.info = info

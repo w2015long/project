@@ -8,6 +8,7 @@ import {
 	reqShopRatings,
 	reqShopGoods,
 	reqShopInfo,
+	reqMusic
 } from '../api';
 
 import {
@@ -22,6 +23,7 @@ import {
 	INCREMENT_FOOD_COUNT,
 	DECREMENT_FOOD_COUNT,
 	CLEAR_CART,
+	GET_SEARCH_LIST
 }from './mutation-types.js'
 export default{
 	async getAddress({commit,state}){
@@ -65,6 +67,16 @@ export default{
 			commit(RESET_USER_INFO)
 		}
 	},
+
+	//搜索歌曲
+	async getSearchList ({commit},keyword) {
+		const data = await reqMusic(keyword);
+		if (data.code == 200) {
+			const searchResult = data.result;
+			commit(GET_SEARCH_LIST,{searchResult})
+		}
+	},
+
 	// 异步获取商家信息
 	async getShopInfo({commit}) {
 		const result = await reqShopInfo()

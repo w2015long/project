@@ -17,6 +17,11 @@ export const reqUserInfo = () => ajax({url:BASE_URL+'/userinfo'});
 //10、用户登出
 export const reqLogout = () => ajax({url:BASE_URL+'/logout'});
 
+/**
+ * 音乐搜索
+ */
+export const reqMusic = (keyword) => ajax({url:`https://api.apiopen.top/searchMusic?name=${keyword}`})
+
 
 /**
  * 获取商家信息
