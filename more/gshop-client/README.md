@@ -1,4 +1,4 @@
-# gshop-client
+# gshop-client 外卖APP
 
 ## Project setup
 ```
